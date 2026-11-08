@@ -1,0 +1,71 @@
+{
+  "brand": "Harbor Health",
+  "nav": {
+    "documents": "Como funciona",
+    "knowledge": "Conhecimento",
+    "professionals": "Profissionais",
+    "menu": "Abrir navegação",
+    "close": "Fechar navegação"
+  },
+  "product": {
+    "title": "Preparar minha consulta",
+    "documents": "Documentos",
+    "levels": "Explicação",
+    "consultation": "Consulta",
+    "file": "Documento original",
+    "reading": "Conteúdo educativo",
+    "questions": "Perguntas para conversar",
+    "note": "Visualização ilustrativa, sem resultados nem dados pessoais.",
+    "coverage": "A explicação exige conteúdo aprovado para a categoria, o país e o idioma.",
+    "selected": "perguntas selecionadas",
+    "download": "Baixar PDF de exemplo",
+    "downloading": "Preparando PDF…",
+    "downloadError": "Não foi possível preparar o PDF. Tente novamente.",
+    "pdfTitle": "Perguntas para minha consulta",
+    "pdfNote": "Exemplo educativo do Harbor Health. Não é diagnóstico nem recomendação de tratamento.",
+    "pdfFile": "harbor-perguntas-exemplo.pdf",
+    "overviewTitle": "Sua próxima consulta",
+    "overviewDescription": "Documentos e perguntas em um único percurso.",
+    "files": {
+      "laboratory": "Laudo de laboratório.pdf",
+      "radiology": "Laudo de radiologia.pdf",
+      "functional": "Estudo funcional.pdf"
+    }
+  },
+  "knowledge": {
+    "source": "Base de conhecimento",
+    "result": "Explicação educativa",
+    "note": "O documento original e seus valores permanecem separados do conhecimento geral."
+  },
+  "footer": {
+    "relationship": "Um produto da Harbor Living.",
+    "measurement": "Preferências de medição",
+    "copyright": "Harbor Health",
+    "scope": "Informação educativa. Não faz diagnósticos nem recomenda tratamentos.",
+    "preview": "Conteúdo comercial em revisão."
+  },
+  "consent": {
+    "title": "Você escolhe o que é medido",
+    "description": "A medição opcional ajuda a entender o uso deste site. Não enviamos documentos, resultados, perguntas escritas nem dados de saúde para análise.",
+    "accept": "Permitir medição",
+    "reject": "Apenas necessárias",
+    "close": "Fechar preferências",
+    "unconfigured": "Esta visualização não tem um provedor de análise configurado. Não envia eventos a serviços externos.",
+    "privacySignal": "Seu navegador solicita não ser rastreado. Respeitamos essa preferência.",
+    "request": "Você permite medir o uso deste site? A medição é opcional."
+  },
+  "a11y": {
+    "skip": "Ir para o conteúdo",
+    "home": "Harbor Health, início",
+    "navigation": "Navegação principal",
+    "mobile": "Navegação móvel",
+    "chapters": "Capítulos do percurso",
+    "views": "Visualizações do percurso",
+    "category": "Tipo de documento",
+    "depth": "Profundidade de leitura",
+    "language": "Idioma",
+    "languages": "Idiomas disponíveis",
+    "selectLanguage": "Selecionar idioma. Atual:"
+  },
+  "media": { "play": "Reproduzir vídeo", "pause": "Pausar vídeo" }
+}

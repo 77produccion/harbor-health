@@ -1,0 +1,57 @@
+---
+import type { HomeScene } from '../../lib/content';
+import HomeAction from './HomeAction.astro';
+import { getUI, getLocale } from '../../lib/i18n';
+import { site } from '../../lib/content';
+interface Props {
+  scene: HomeScene;
+}
+const { scene } = Astro.props;
+const ui = getUI(Astro.url.pathname);
+const locale = getLocale(Astro.url.pathname);
+---
+
+<footer id={scene.id} class="hw-section hw-closing closing" data-home-scene={scene.id}>
+  <div class="hw-closing-atmosphere" aria-hidden="true" data-closing-atmosphere>
+    <img
+      src="/images/home-water-1600.webp"
+      srcset="/images/home-water-800.webp 800w, /images/home-water-1600.webp 1600w"
+      sizes="(max-width: 639px) 1600px, 100vw"
+      width="1916"
+      height="821"
+      alt=""
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <div class="hw-wrap wrap">
+    <div class="hw-closing-head">
+      <h2>{scene.title}</h2>
+      {scene.paragraphs.map((text) => (
+        <p>{text}</p>
+      ))}
+      <div class="hw-actions">
+        {scene.actions.map((id, i) => (
+          <HomeAction id={id} placement="closing" secondary={i > 0} />
+        ))}
+      </div>
+    </div>
+    <div class="hw-footer-bottom" data-closing-foot>
+      <div>
+        <a class="hw-footer-name" href={`/${locale}/`}>
+          {ui.brand}
+        </a>
+        <p class="hw-brand-slogan" lang="en">
+          {site.sharedCopy.es.brandSlogan.map((line) => (
+            <span>{line}</span>
+          ))}
+        </p>
+        <p>{ui.footer.relationship}</p>
+      </div>
+      <p>{ui.footer.scope}</p>
+      <button type="button" class="hw-link" data-consent-open hidden>
+        {ui.footer.measurement}
+      </button>
+    </div>
+  </div>
+</footer>

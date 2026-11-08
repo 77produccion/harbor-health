@@ -1,0 +1,13 @@
+/* Owner-directed full motion. Keep the supplied kit intact: this exception
+   belongs to Harbor, not to the vendored skill. GSAP/video policy lives in TS.
+   See docs/project-guide.md for the accessibility tradeoff. */
+@media (hover: hover) and (pointer: fine) {
+  html[data-motion='live'] .hw-button.btn:hover,
+  html[data-motion='live'] .sc-page .action:hover {
+    transform: translateY(-1px) !important;
+  }
+}
+html[data-motion='live'] .hw-button.btn:active,
+html[data-motion='live'] .sc-page .action:active {
+  transform: translateY(1px) scale(0.985) !important;
+}

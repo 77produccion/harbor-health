@@ -1,0 +1,23 @@
+---
+import { site, getPageRoutes } from '../../lib/content';
+import { getLocale } from '../../lib/i18n';
+interface Props {
+  id: string;
+  placement: string;
+}
+const { id, placement } = Astro.props;
+const action = site.actions[id as keyof typeof site.actions];
+const locale = getLocale(Astro.url.pathname);
+const routes = await getPageRoutes(locale);
+const href =
+  action && 'pageId' in action
+    ? routes[action.pageId]
+    : action && 'url' in action
+      ? action.url
+      : null;
+if (!href) throw new Error(`Enlace de Scene sin destino: ${id}`);
+---
+
+<a class="hw-link" href={href} data-marketing-action={id} data-placement={placement}>
+  {action.labels[locale]}
+</a>

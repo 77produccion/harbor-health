@@ -1,0 +1,36 @@
+---
+import { site } from '../lib/content';
+import { getLocale } from '../lib/i18n';
+interface Props {
+  actionId: keyof typeof site.actions;
+  routes: Record<string, string>;
+  secondary?: boolean;
+  demoAnchor?: boolean;
+}
+const { actionId, routes, secondary = false, demoAnchor = false } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const action = site.actions[actionId];
+const href =
+  demoAnchor && actionId === 'demo'
+    ? '#ejemplo'
+    : action.kind === 'page' && 'pageId' in action
+      ? routes[action.pageId]
+      : 'url' in action
+        ? action.url
+        : null;
+---
+
+{href ? (
+  <a class:list={['action', secondary && 'action-secondary']} href={href}>
+    {action.labels[locale]}
+  </a>
+) : (
+  <span class="pending-action">
+    <button class="action action-unconfigured" disabled aria-describedby={`pending-${actionId}`}>
+      {action.labels[locale]}
+    </button>
+    <span id={`pending-${actionId}`} class="action-note">
+      {site.sharedCopy[locale].unconfiguredAction}
+    </span>
+  </span>
+)}

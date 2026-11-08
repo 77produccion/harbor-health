@@ -1,0 +1,277 @@
+/* La imagen ocupa una escena real; no es una textura casi invisible de fondo. */
+.hw-journey {
+  background: #fff;
+  position: relative;
+}
+.hw-journey.is-live::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 2px;
+  background: var(--hw-brand-blue);
+  transform: scaleX(var(--journey-progress, 0));
+  transform-origin: left;
+}
+/* El fallback interactivo también muestra un único capítulo en escritorio.
+   No depende de que la ventana alcance la altura del modo sticky. */
+.hw-journey.is-interactive .hw-journey-chapter {
+  display: none;
+}
+.hw-journey.is-interactive[data-current-mode='documents'] #documents,
+.hw-journey.is-interactive[data-current-mode='levels'] #levels,
+.hw-journey.is-interactive[data-current-mode='consultation'] #consultation {
+  display: flex;
+}
+/* En ventanas bajas, el recorrido usa altura natural: una sola barra de
+   scroll de página, sin demo recortada ni tres pantallas de texto vacío. */
+@media (min-width: 1000px) and (max-height: 759px) {
+  .hw-journey.is-interactive > .hw-journey-grid {
+    padding-block: 120px 64px;
+    align-items: start;
+  }
+  .hw-journey.is-interactive .hw-journey-chapter {
+    min-height: 0;
+    padding: 0;
+  }
+  .hw-journey.is-interactive .hw-journey-stage {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+  }
+  .hw-journey.is-interactive .hw-product {
+    height: auto;
+  }
+  .hw-journey.is-interactive .hw-product-body {
+    overflow: visible;
+  }
+}
+.hw-journey-photo {
+  display: block;
+  margin-top: 30px;
+  aspect-ratio: 16 / 7;
+  overflow: clip;
+}
+.hw-journey-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hw-knowledge {
+  background: #061a33;
+  padding-block: clamp(72px, 7vw, 112px);
+}
+.hw-knowledge::before {
+  display: none;
+}
+.hw-knowledge-feature {
+  display: contents;
+}
+.hw-knowledge > .hw-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: clamp(48px, 8vw, 128px);
+  row-gap: 40px;
+}
+.hw-knowledge-feature .hw-section-head {
+  display: block;
+  margin: 0;
+}
+.hw-knowledge-feature h2 {
+  font-size: clamp(38px, 4vw, 58px);
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+.hw-knowledge-feature p {
+  border: 0;
+  padding: 0;
+  font: 400 16px/1.85 var(--hw-sans);
+}
+.hw-knowledge-photo {
+  display: block;
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: stretch;
+  min-height: 0;
+  overflow: clip;
+}
+.hw-knowledge-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hw-knowledge-node {
+  position: relative;
+  display: block;
+  padding: 22px 0;
+  border: 0;
+  border-top: 1px solid #ffffff30;
+}
+.hw-knowledge-node::before {
+  content: '';
+  position: absolute;
+  inset: -1px 0 auto;
+  height: 2px;
+  background: #8fd4dd;
+  transform: scaleX(var(--node-progress, 1));
+  transform-origin: left;
+}
+.hw-knowledge-node:first-child,
+.hw-knowledge-node:last-child {
+  padding: 22px 0;
+}
+.hw-knowledge-node h3 {
+  min-height: 0;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+.hw-knowledge-route {
+  grid-column: 1;
+  grid-template-columns: 1fr;
+  border: 0;
+  padding: 0;
+}
+.hw-knowledge-trace {
+  display: none;
+}
+.hw-knowledge-foot {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 28px;
+  border-top: 1px solid #ffffff30;
+}
+.hw-knowledge-node p {
+  font-family: var(--hw-sans);
+  font-size: 14px;
+}
+.hw-section {
+  padding-top: clamp(72px, 7vw, 112px);
+  padding-bottom: clamp(72px, 7vw, 112px);
+}
+.hw-professional-layout {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  gap: clamp(40px, 5vw, 80px);
+  align-items: start;
+}
+.hw-professional-layout .hw-professional-paths {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.hw-professional-layout .hw-professional-paths article {
+  padding: 20px 0 0;
+}
+.hw-professional-layout .hw-professional-paths h3 {
+  font-size: clamp(24px, 2.2vw, 30px);
+  margin-bottom: 14px;
+}
+.hw-professional-paths p {
+  font-family: var(--hw-sans);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.hw-faq {
+  background: #fff;
+}
+.hw-faq-photo {
+  display: block;
+  aspect-ratio: 3 / 2;
+  margin-top: 32px;
+  overflow: clip;
+}
+.hw-faq-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hw-journey-chapter > p,
+.hw-journey-topics,
+.hw-section-head > p,
+.hw-faq-head > p,
+.hw-closing-head > p {
+  font-family: var(--hw-sans);
+}
+.hw-section-head > p {
+  font-size: 17px;
+  line-height: 1.85;
+}
+.hw-footer-bottom .hw-brand-slogan {
+  font-family: var(--hw-sans);
+}
+.hw-closing h2 {
+  max-width: 1000px;
+  font-size: clamp(44px, 6vw, 88px);
+  letter-spacing: -0.04em;
+}
+.hw-closing .hw-button {
+  box-shadow: none;
+}
+.hw-closing-atmosphere {
+  top: auto;
+  height: 620px;
+  max-height: 100%;
+}
+.hw-closing-atmosphere::after {
+  background: linear-gradient(180deg, #041b28, #041b2826 45%, #041b2859);
+}
+.hw-knowledge-node h3,
+.hw-faq-answers h3 {
+  font-size: clamp(24px, 2.2vw, 30px);
+}
+.hw-journey-chapter > p {
+  font-size: 16px;
+  line-height: 1.85;
+}
+@media (max-width: 999px) {
+  .hw-journey-photo {
+    display: none;
+  }
+  .hw-knowledge > .hw-wrap {
+    column-gap: 32px;
+  }
+  .hw-knowledge-feature h2 {
+    font-size: 38px;
+  }
+  .hw-professional-layout {
+    grid-template-columns: 1fr;
+  }
+  .hw-professional-layout .hw-professional-paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 639px) {
+  .hw-section {
+    padding-block: 56px;
+  }
+  .hw-knowledge > .hw-wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .hw-knowledge-feature h2 {
+    font-size: 32px;
+  }
+  .hw-knowledge-feature p {
+    font-size: 15px;
+  }
+  .hw-knowledge-photo {
+    grid-column: 1;
+    grid-row: 2;
+    aspect-ratio: 16 / 10;
+  }
+  .hw-knowledge-route {
+    grid-row: 3;
+  }
+  .hw-knowledge-foot {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .hw-professional-layout .hw-professional-paths {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hw-faq-photo {
+    aspect-ratio: 16 / 9;
+    margin-top: 24px;
+  }
+}

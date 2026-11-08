@@ -1,0 +1,57 @@
+---
+schemaVersion: 1
+id: health.trust
+locale: es
+route: /es/conocimiento-y-limites/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds: [owner-product, code-explanations, code-questions, concept-people, concept-professionals]
+seo:
+  title: "Conocimiento y límites | Harbor Health"
+  description: "Comprenda qué papel tiene la base de conocimiento de Harbor, para qué se utiliza la IA y qué límites debe tener presentes."
+sections:
+  - id: hero
+    type: hero
+    title: "La confianza empieza por explicar de dónde sale la información."
+    text: "Una explicación, una pregunta y una decisión médica no son lo mismo. Harbor debe mantener esas funciones separadas y hacer visibles sus límites."
+  - id: sources
+    type: comparison
+    title: "Dos funciones distintas, dos alcances distintos."
+    items:
+      - id: knowledge
+        title: "Base de conocimiento para las explicaciones."
+        text: "El flujo de laboratorio busca contenido disponible en la KB y comprueba su procedencia. La cobertura depende de qué contenido haya sido incorporado y aprobado."
+      - id: ai
+        title: "IA como ayuda para redactar preguntas."
+        text: "Las preguntas sirven para preparar una conversación. No deben presentarse como diagnóstico, prescripción ni revisión médica individual."
+  - id: missing
+    type: prose
+    title: "Reconocer un límite es parte del producto."
+    text: "El flujo de explicación contempla un estado sin información verificada. La falta de contenido no debe ocultarse ni completarse con una conclusión inventada."
+  - id: responsibility
+    type: prose
+    title: "El contexto clínico sigue siendo imprescindible."
+    text: "La extracción puede necesitar correcciones, una referencia puede no cubrir su situación y una pregunta puede requerir reformulación. Utilice la información para conversar, no para sustituir una valoración profesional."
+    noticeKey: scope
+  - id: privacy
+    type: prose
+    title: "Sus documentos no pertenecen al chat comercial."
+    text: "El asistente de esta web está pensado para dudas del producto y de la demostración. No le envíe documentos médicos ni datos personales de salud. Antes de utilizar la aplicación, revise sus condiciones y su información de privacidad."
+  - id: closing
+    type: conversion
+    title: "Conozca el enfoque. Compruebe el alcance."
+    text: "Explore el ejemplo y consulte las funciones disponibles antes de decidir."
+    actions: [demo, access-options]
+---
+
+## Explicar no es interpretar su situación individual
+
+Explicar una prueba es describir qué mide y cuál es el alcance general de la
+información. Interpretar su resultado requiere valorar su contexto clínico. Esa
+responsabilidad corresponde al profesional que le atiende.

@@ -1,0 +1,72 @@
+---
+schemaVersion: 1
+id: health.access
+locale: pt
+route: /pt/acesso/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds:
+  - owner-decisions
+  - code-levels
+  - code-entitlements
+  - concept-people
+  - concept-professionals
+seo:
+  title: Acesso ao Harbor Health | Pessoas e profissionais
+  description: Conheça os percursos e confira o escopo do acesso antes de contratar.
+sections:
+  - id: hero
+    type: hero
+    title: Escolha seu percurso. Entenda seu acesso.
+    text: Este site apresenta o Harbor Health. As funções são usadas no aplicativo
+      sob as condições aplicáveis à sua conta.
+    actions:
+      - access
+      - professional-access
+  - id: options
+    type: cards
+    title: Dois públicos, necessidades distintas.
+    items:
+      - id: people
+        title: Para pessoas.
+        text: Informação explicativa e preparação de perguntas para conversar com seu
+          profissional de saúde.
+      - id: professionals
+        title: Para profissionais.
+        text: Conheça as referências por exame e os requisitos do acesso profissional.
+    actions:
+      - people
+      - professionals
+  - id: levels
+    type: prose
+    title: Os níveis descrevem profundidade, não uma tarifa.
+    text: L1 Claro, L2 Com fontes e L3 Profissional são níveis de explicação. O nome
+      não determina sozinho preço, funções contratadas ou credenciais
+      profissionais.
+  - id: availability
+    type: prose
+    title: Confirme a cobertura necessária.
+    text: Antes de contratar, confira documentos, funções, idiomas e conteúdo. Uma
+      interface traduzida não implica a mesma cobertura de conhecimento em todos
+      os países.
+    noticeKey: availability
+  - id: account
+    type: prose
+    title: Antes de continuar ao aplicativo.
+    text: Leia as condições de acesso e privacidade. Não envie documentos médicos ao
+      assistente informativo deste site.
+  - id: closing
+    type: conversion
+    title: Ainda tem dúvidas sobre o produto?
+    text: Veja o exemplo ou consulte a Harbor sobre o escopo necessário.
+    actions:
+      - demo
+      - contact
+updatedAt: 2026-11-08
+---

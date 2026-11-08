@@ -1,0 +1,28 @@
+---
+import { site, getPageRoutes } from '../lib/content';
+import { getLocale } from '../lib/i18n';
+const locale = getLocale(Astro.url.pathname);
+const shared = site.sharedCopy[locale];
+const routes = await getPageRoutes(locale);
+const links = ['people', 'professionals', 'how-it-works', 'trust', 'access-options'] as const;
+---
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href={`/${locale}/`}>{site.product}</a>
+      <p class="brand-slogan" lang="en">
+        {site.sharedCopy.es.brandSlogan.map((line) => (
+          <span>{line}</span>
+        ))}
+      </p>
+      <p>{shared.brandRelationship}</p>
+    </div>
+    <nav class="footer-navigation" aria-label={shared.footerNavigation}>
+      {links.map((id) => (
+        <a href={routes[site.actions[id].pageId]}>{site.actions[id].labels[locale]}</a>
+      ))}
+    </nav>
+  </div>
+  <div class="footer-bottom">{shared.previewNotice}</div>
+</footer>

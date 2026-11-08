@@ -1,0 +1,55 @@
+---
+schemaVersion: 1
+id: health.how-it-works
+locale: es
+route: /es/como-funciona/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds: [concept-people, code-documents, code-explanations, code-questions]
+seo:
+  title: "Cómo funciona Harbor Health | Del documento a sus preguntas"
+  description: "Conozca el recorrido de Harbor Health: documento, revisión de datos, explicación disponible y preparación de preguntas para la consulta."
+sections:
+  - id: hero
+    type: hero
+    title: "Del documento a las preguntas que quiere hacer."
+    text: "Un recorrido para comprender la información disponible sin confundir una explicación general con una valoración médica individual."
+    actions: [demo]
+  - id: documents
+    type: prose
+    title: "Primero, compruebe la cobertura."
+    text: "Harbor contempla documentos de laboratorio y radiología, entre otras categorías del producto. Los formatos y las funciones disponibles deben confirmarse para su país, idioma y acceso. Un informe de radiología no equivale a que el sistema diagnostique imágenes."
+    noticeKey: availability
+  - id: process
+    type: steps
+    title: "Cuatro momentos, una conversación al final."
+    items:
+      - id: upload
+        title: "El documento entra en la aplicación."
+        text: "La web comercial muestra el producto; los documentos se gestionan en el entorno de la aplicación, no en el chat informativo."
+      - id: review
+        title: "La extracción se comprueba."
+        text: "Reconocer un dato no garantiza que se haya leído correctamente. Revise la información antes de utilizarla."
+      - id: knowledge
+        title: "Se consulta el contenido disponible."
+        text: "La explicación de laboratorio utiliza la base de conocimiento admitida para ese resultado. Si falta contenido verificado, el flujo debe indicarlo."
+      - id: prepare
+        title: "Se preparan preguntas para conversar."
+        text: "Las preguntas asistidas por IA son una ayuda de preparación. Coméntelas con su profesional; no son instrucciones de tratamiento."
+  - id: limits
+    type: prose
+    title: "Una explicación no conoce toda su situación."
+    text: "Los síntomas, los antecedentes y el contexto individual pueden cambiar el significado de un resultado. Esa valoración corresponde a su profesional de salud."
+    noticeKey: scope
+  - id: closing
+    type: conversion
+    title: "Véalo antes de utilizarlo."
+    text: "Explore un ejemplo ilustrativo y conozca cómo se presenta la información."
+    actions: [demo, access]
+---

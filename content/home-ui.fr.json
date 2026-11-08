@@ -1,0 +1,71 @@
+{
+  "brand": "Harbor Health",
+  "nav": {
+    "documents": "Fonctionnement",
+    "knowledge": "Connaissances",
+    "professionals": "Professionnels",
+    "menu": "Ouvrir la navigation",
+    "close": "Fermer la navigation"
+  },
+  "product": {
+    "title": "Préparer ma consultation",
+    "documents": "Documents",
+    "levels": "Explication",
+    "consultation": "Consultation",
+    "file": "Document original",
+    "reading": "Contenu éducatif",
+    "questions": "Questions à discuter",
+    "note": "Vue illustrative, sans résultats ni données personnelles.",
+    "coverage": "Une explication nécessite un contenu approuvé pour la catégorie, le pays et la langue.",
+    "selected": "questions sélectionnées",
+    "download": "Télécharger le PDF d’exemple",
+    "downloading": "Préparation du PDF…",
+    "downloadError": "Impossible de préparer le PDF. Réessayez.",
+    "pdfTitle": "Questions pour ma consultation",
+    "pdfNote": "Exemple éducatif Harbor Health. Ni diagnostic ni recommandation de traitement.",
+    "pdfFile": "harbor-questions-exemple.pdf",
+    "overviewTitle": "Votre prochaine consultation",
+    "overviewDescription": "Documents et questions dans un même parcours.",
+    "files": {
+      "laboratory": "Compte rendu de laboratoire.pdf",
+      "radiology": "Compte rendu de radiologie.pdf",
+      "functional": "Examen fonctionnel.pdf"
+    }
+  },
+  "knowledge": {
+    "source": "Base de connaissances",
+    "result": "Explication éducative",
+    "note": "Le document original et ses valeurs restent séparés des connaissances générales."
+  },
+  "footer": {
+    "relationship": "Un produit Harbor Living.",
+    "measurement": "Préférences de mesure",
+    "copyright": "Harbor Health",
+    "scope": "Informations éducatives. Ni diagnostic ni recommandation de traitement.",
+    "preview": "Contenu commercial en cours de révision."
+  },
+  "consent": {
+    "title": "Vous choisissez ce qui est mesuré",
+    "description": "La mesure facultative aide à comprendre l’utilisation du site. Aucun document, résultat, question écrite ou donnée de santé n’est envoyé aux outils d’analyse.",
+    "accept": "Autoriser la mesure",
+    "reject": "Nécessaires uniquement",
+    "close": "Fermer les préférences",
+    "unconfigured": "Aucun fournisseur d’analyse n’est configuré pour cet aperçu. Aucun événement n’est transmis à des services externes.",
+    "privacySignal": "Votre navigateur demande de ne pas être suivi. Nous respectons ce choix.",
+    "request": "Autorisez-vous la mesure de l’utilisation du site ? Elle est facultative."
+  },
+  "a11y": {
+    "skip": "Aller au contenu",
+    "home": "Harbor Health, accueil",
+    "navigation": "Navigation principale",
+    "mobile": "Navigation mobile",
+    "chapters": "Chapitres du parcours",
+    "views": "Vues du parcours",
+    "category": "Type de document",
+    "depth": "Niveau de lecture",
+    "language": "Langue",
+    "languages": "Langues disponibles",
+    "selectLanguage": "Choisir la langue. Actuelle :"
+  },
+  "media": { "play": "Lire la vidéo", "pause": "Mettre la vidéo en pause" }
+}

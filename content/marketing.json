@@ -1,0 +1,7 @@
+{
+  "attributionAllowlist": {
+    "utm_source": ["google", "bing", "linkedin", "newsletter"],
+    "utm_medium": ["organic", "cpc", "email", "social"],
+    "utm_campaign": []
+  }
+}

@@ -1,0 +1,39 @@
+# Imágenes y vídeos utilizados
+
+Solo se versionan recursos con consumidor en la web, en sus pruebas o en la generación del build. No se incluyen carpetas maestras de marca, stock de prototipos, capturas de auditoría ni vídeos en reserva.
+
+## Originales de build
+
+En `public/images/`; se conservan intactos. Los nombres aportados se mantienen para no perder su trazabilidad.
+
+| Original | Uso / derivados generados |
+| --- | --- |
+| `harbor-health.png` | Logo aportado; `harbor-health-symbol.webp` para navegación y `favicon.png`. |
+| `9c56b27b-189b-4bf5-b585-020fa04d786f.png` | Manos escribiendo: `home-preparation-1536.webp`, `home-preparation-960.webp`, `editorial-writing-1400.webp`. |
+| `b87f262f-a492-4ef8-ac85-de128a1a4eef.png` | Documentos/cuaderno: `home-documents-1400.webp`, `editorial-notes-1400.webp`. |
+| `98bbb4c4-4ab4-4b05-a495-fcfc87a9b568.png` | Preparación de preguntas: `editorial-questions-1400.webp`, hero del ejemplo. |
+| `ad93f76a-3fe9-4a15-bbfe-bba72801806d.png` | Retrato ilustrativo: `home-professional-900.webp`, `editorial-clinician-1000.webp`. |
+| `2154c642-f58e-4b4c-8ad8-96a1a357701d.png` | Agua de cierres: `home-water-800.webp`, `home-water-1600.webp`, `editorial-ocean-1600.webp`. |
+
+`scripts/build-assets.mjs` y sus dos módulos de imágenes regeneran los derivados y las siete imágenes Open Graph `og-health*.png` desde los MDX. No necesitan archivos de carpetas hermanas ni servicios externos. También se incluyen los derivados actuales para disponer de ellos desde el primer checkout.
+
+## Vídeos y posters
+
+| Clip en `public/videos/` | Consumidor | Poster en `public/images/` |
+| --- | --- | --- |
+| `harbor-line-visual.mp4` | Hero de home. | `home-workspace-poster-{800,1600}.webp`. |
+| `harbor-line-visual (1).mp4` | Sección profesional de home y hero de profesionales. | `home-clinician-poster-{800,1600}.webp`. |
+
+Los cuatro posters se conservan como recursos ya extraídos de los clips, a 0,5 segundos para evitar el inicio negro. Se sirven con `srcset`; no hace falta FFmpeg para construir. Si cambia un clip, sustituir también sus dos posters y ejecutar las pruebas de medios.
+
+Los MP4 originales pesan aproximadamente 14,4 y 9 MB. La carga por escena no sustituye su optimización. No se incluyen los clips `(2)` de ejercicio ni `(3)` de tensión arterial: no están integrados y no acreditan prestaciones de Health.
+
+## Fuentes y CSS
+
+Lora/Poppins se instalan con npm y se incorporan al build local: no se suben carpetas maestras de fuentes ni `node_modules/`. GSAP y Lucide también se resuelven desde `package-lock.json`.
+
+`public/assets/motion/motion.css` es el único recurso de la skill que carga la web; su copia se conserva en el repo, sin requerir `.agents/`. La política propia de Harbor está separada en `src/styles/motion-policy.css`. Ver [avisos de terceros](../THIRD_PARTY_NOTICES.md).
+
+## Derechos y publicación
+
+Las fotografías/vídeos son ilustrativos, no testimonios ni capturas de pacientes o del equipo de Harbor. Sus derechos, consentimiento de personas y aprobación final siguen pendientes. Mantener el bloqueo editorial de recursos antes de una publicación comercial.

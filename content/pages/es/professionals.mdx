@@ -1,0 +1,97 @@
+---
+schemaVersion: 1
+id: health.professionals
+locale: es
+route: /es/profesionales/
+audience: professionals
+status: draft
+revision: 2
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds: [owner-product, concept-professionals, code-levels, code-entitlements]
+seo:
+  title: "Harbor Health para profesionales | Conocimiento y explicaciones"
+  description: "Conozca la propuesta de Harbor Health para profesionales: referencia por prueba, fuentes y una explicación comprensible para la conversación con el paciente."
+sections:
+  - id: hero
+    type: hero
+    title: "Conocimiento por prueba. Claridad para la conversación."
+    text: "Conozca una propuesta que reúne material de referencia por prueba y explicaciones para pacientes, sin sustituir su criterio clínico."
+    actions: [professional-access, demo]
+    noticeKey: availability
+  - id: reference
+    type: cards
+    title: "Las preguntas que dan contexto a una prueba."
+    text: "El recorrido profesional se plantea alrededor de ocho preguntas de consulta. Explore el enfoque y consulte qué contenido está disponible para su práctica."
+    items:
+      - id: indication
+        title: "¿Cuándo se solicita?"
+        text: "Indicaciones generales y finalidad de la prueba."
+      - id: meaning
+        title: "¿Qué dice y qué no dice?"
+        text: "Alcance y limitaciones de la información que aporta."
+      - id: ranges
+        title: "¿Qué rangos se utilizan?"
+        text: "Referencias de la guía y diferencias respecto del informe del laboratorio."
+      - id: performance
+        title: "¿Qué rendimiento tiene?"
+        text: "Sensibilidad, especificidad y utilidad para confirmar o descartar, según la evidencia disponible."
+      - id: interference
+        title: "¿Qué puede alterar el resultado?"
+        text: "Interferencias de medicamentos, toma de muestra u otras condiciones."
+      - id: limitations
+        title: "¿En qué situaciones puede inducir a error?"
+        text: "Limitaciones y escenarios que requieren especial cautela."
+      - id: followup
+        title: "¿Qué seguimiento describe la referencia?"
+        text: "Información general sobre repetición, pruebas complementarias y remisión; no una decisión automatizada para un paciente."
+      - id: sources
+        title: "¿Cuál es la fuente y cuándo cambió?"
+        text: "Origen del contenido y contexto de sus revisiones."
+  - id: patient-view
+    type: prose
+    title: "La explicación al paciente también forma parte de la conversación."
+    text: "El concepto de Harbor contempla una vista de lo que se explica al paciente. El objetivo es conectar el lenguaje de consulta con una explicación que la persona pueda comprender, no reemplazar el encuentro clínico."
+    actions: [people]
+  - id: governance
+    type: prose
+    title: "La confianza necesita fuentes y un proceso de revisión."
+    text: "Conozca cómo se diferencia el contenido de referencia de las preguntas asistidas por IA y qué límites tiene la información presentada."
+    actions: [trust]
+  - id: participation
+    type: prose
+    title: "¿Quiere participar en la mejora del conocimiento?"
+    text: "Consulte con Harbor las posibilidades de colaboración y revisión de contenido. La participación y los permisos deben acordarse antes de incorporar cambios a una base publicada."
+    actions: [contact]
+  - id: laboratories
+    type: prose
+    title: "Conversemos sobre su laboratorio."
+    text: "Si su organización quiere acompañar resultados con explicaciones, consulte el alcance de una posible colaboración. Las integraciones y sus condiciones se revisan para cada caso."
+    actions: [contact]
+  - id: access
+    type: conversion
+    title: "Conozca el acceso adecuado para su práctica."
+    text: "La profundidad del contenido, la disponibilidad y los requisitos de acceso profesional deben confirmarse antes de contratar."
+    actions: [professional-access, access-options]
+  - id: faq
+    type: faq
+    title: "Antes de empezar."
+    items:
+      - id: judgment
+        title: "¿Es una decisión clínica automatizada?"
+        text: "No es el propósito de este recorrido. El material de referencia no sustituye el juicio clínico ni la evaluación individual del paciente."
+      - id: editing
+        title: "¿Puedo modificar directamente las respuestas publicadas?"
+        text: "No debe asumirse edición directa. Consulte con Harbor los mecanismos de participación, revisión y autorización que estén disponibles."
+      - id: connection
+        title: "¿Puedo conectar mi laboratorio?"
+        text: "Consulte su caso con el equipo. La compatibilidad, la disponibilidad del conector y las condiciones deben validarse antes de comprometer una integración."
+  - id: closing
+    type: conversion
+    title: "Más claridad para explicar. Su criterio para decidir."
+    text: "Explore el enfoque de Harbor Health y consulte cómo encaja en su práctica."
+    actions: [demo, professional-access]
+---

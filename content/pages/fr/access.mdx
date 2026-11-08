@@ -1,0 +1,74 @@
+---
+schemaVersion: 1
+id: health.access
+locale: fr
+route: /fr/acces/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds:
+  - owner-decisions
+  - code-levels
+  - code-entitlements
+  - concept-people
+  - concept-professionals
+seo:
+  title: Accès à Harbor Health | Particuliers et professionnels
+  description: Découvrez les parcours et vérifiez la portée de votre accès avant
+    de souscrire.
+sections:
+  - id: hero
+    type: hero
+    title: Choisissez votre parcours. Comprenez votre accès.
+    text: Ce site présente Harbor Health. Les fonctionnalités s’utilisent dans
+      l’application selon les conditions de votre compte.
+    actions:
+      - access
+      - professional-access
+  - id: options
+    type: cards
+    title: Deux publics, des besoins distincts.
+    items:
+      - id: people
+        title: Pour les particuliers.
+        text: Informations explicatives et préparation de questions à discuter avec
+          votre professionnel de santé.
+      - id: professionals
+        title: Pour les professionnels.
+        text: Découvrez les références par examen et les conditions d’accès
+          professionnel.
+    actions:
+      - people
+      - professionals
+  - id: levels
+    type: prose
+    title: Les niveaux décrivent la profondeur, pas un tarif.
+    text: L1 Clair, L2 Avec sources et L3 Professionnel sont des niveaux
+      d’explication. Le nom seul ne détermine ni prix, ni fonctionnalités
+      souscrites, ni qualification professionnelle.
+  - id: availability
+    type: prose
+    title: Vérifiez la couverture nécessaire.
+    text: Avant de souscrire, vérifiez documents, fonctions, langues et contenus.
+      Une interface traduite n’implique pas la même couverture de connaissances
+      dans tous les pays.
+    noticeKey: availability
+  - id: account
+    type: prose
+    title: Avant de poursuivre vers l’application.
+    text: Lisez les conditions d’accès et les informations de confidentialité.
+      N’envoyez pas de documents médicaux à l’assistant informatif du site.
+  - id: closing
+    type: conversion
+    title: Encore des questions sur le produit ?
+    text: Voyez l’exemple ou demandez à Harbor la portée correspondant à vos besoins.
+    actions:
+      - demo
+      - contact
+updatedAt: 2026-11-08
+---

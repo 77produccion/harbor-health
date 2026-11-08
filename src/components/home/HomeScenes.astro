@@ -1,0 +1,171 @@
+---
+import type { HomeScene } from '../../lib/content';
+import ProductJourney from './ProductJourney.astro';
+import HomeAction from './HomeAction.astro';
+import HomeTextLink from './HomeTextLink.astro';
+import EditorialVideo from '../EditorialVideo.astro';
+import ExplorePages from '../ExplorePages.astro';
+import { getUI } from '../../lib/i18n';
+interface Props {
+  scenes: HomeScene[];
+}
+const { scenes } = Astro.props;
+const ui = getUI(Astro.url.pathname);
+const journeyIds = new Set(['documents', 'levels', 'consultation']);
+---
+
+{scenes.map((scene, index) => {
+  if (journeyIds.has(scene.id))
+    return index === scenes.findIndex((item) => journeyIds.has(item.id)) ? (
+      <ProductJourney scenes={scenes} />
+    ) : null;
+  if (scene.kind === 'product-hero')
+    return (
+      <section id="hero" class="hw-hero hero" data-home-scene="hero" aria-labelledby="home-title">
+        <EditorialVideo
+          id="hero-workspace"
+          class="hw-hero-media"
+          src="/videos/harbor-line-visual.mp4"
+          poster="home-workspace"
+          hero
+        />
+        <div class="hw-wrap wrap hw-hero-container">
+          <div class="hw-hero-copy" data-hero-copy>
+            <h1 id="home-title" data-home-title>
+              {scene.title}
+            </h1>
+            {scene.paragraphs.map((text) => (
+              <p>{text}</p>
+            ))}
+            <div class="hw-actions">
+              {scene.actions.map((id) => (
+                <HomeAction id={id} placement="hero" />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  if (scene.kind === 'knowledge-provenance')
+    return (
+      <section
+        id={scene.id}
+        class="hw-section hw-knowledge"
+        data-home-scene={scene.id}
+        aria-labelledby="knowledge-title"
+      >
+        <div class="hw-wrap wrap">
+          <div class="hw-knowledge-feature">
+            <div class="hw-section-head">
+              <h2 id="knowledge-title">{scene.title}</h2>
+              {scene.paragraphs.map((text) => (
+                <p>{text}</p>
+              ))}
+            </div>
+            <picture class="hw-knowledge-photo" aria-hidden="true">
+              <img
+                src="/images/home-documents-1400.webp"
+                width="1400"
+                height="934"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <div class="hw-knowledge-route diagram" data-knowledge-route>
+            {scene.items.map((item) => {
+              return (
+                <article class="hw-knowledge-node" data-knowledge-node>
+                  <h3>{item.title}</h3>
+                  {item.paragraphs.map((text) => (
+                    <p>{text}</p>
+                  ))}
+                </article>
+              );
+            })}
+            <span class="hw-knowledge-trace" aria-hidden="true" data-knowledge-trace></span>
+          </div>
+          <div class="hw-knowledge-foot">
+            {[...new Set([...scene.actions, ...scene.items.flatMap((item) => item.actions)])].map(
+              (id) => (
+                <HomeTextLink id={id} placement="journey" />
+              ),
+            )}
+            <p>{ui.knowledge.note}</p>
+          </div>
+        </div>
+      </section>
+    );
+  if (scene.kind === 'professional-paths')
+    return (
+      <section
+        id={scene.id}
+        class="hw-section hw-professionals"
+        data-home-scene={scene.id}
+        aria-labelledby="professionals-title"
+      >
+        <div class="hw-wrap wrap">
+          <div class="hw-section-head">
+            <h2 id="professionals-title">{scene.title}</h2>
+            {scene.paragraphs.map((text) => (
+              <p>{text}</p>
+            ))}
+          </div>
+          <div class="hw-professional-layout">
+            <EditorialVideo
+              id="professional-workspace"
+              class="hw-professional-portrait"
+              src="/videos/harbor-line-visual%20(1).mp4"
+              poster="home-clinician"
+              sizes="(max-width: 639px) calc(100vw - 48px), 42vw"
+            />
+            <div class="hw-professional-paths">
+              {scene.items.map((item) => (
+                <article data-professional-path>
+                  <h3>{item.title}</h3>
+                  {item.paragraphs.map((text) => (
+                    <p>{text}</p>
+                  ))}
+                  {item.actions.map((id) => (
+                    <HomeAction id={id} placement="professionals" secondary />
+                  ))}
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  if (scene.kind === 'questions')
+    return (
+      <section
+        id={scene.id}
+        class="hw-section hw-faq"
+        data-home-scene={scene.id}
+        aria-labelledby="faq-title"
+      >
+        <div class="hw-wrap wrap hw-faq-grid">
+          <div class="hw-faq-head">
+            <h2 id="faq-title">{scene.title}</h2>
+            {scene.paragraphs.map((text) => (
+              <p>{text}</p>
+            ))}
+          </div>
+          <div class="hw-faq-answers">
+            {scene.items.map((item) => (
+              <article>
+                <h3>{item.title}</h3>
+                {item.paragraphs.map((text) => (
+                  <p>{text}</p>
+                ))}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  throw new Error(`Scene sin renderer: ${scene.kind}`);
+})}
+
+<ExplorePages />

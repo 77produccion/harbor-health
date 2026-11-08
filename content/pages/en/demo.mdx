@@ -1,0 +1,60 @@
+---
+schemaVersion: 1
+id: health.demo
+locale: en
+route: /en/example/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds:
+  - concept-people
+  - code-explanations
+  - code-questions
+seo:
+  title: Discover Harbor Health | Sample journey
+  description: Explore documents, explanations and consultation questions in an
+    illustrative demonstration without patient data.
+sections:
+  - id: hero
+    type: hero
+    title: First, see how a result is presented.
+    text: This demonstration introduces the journey; it does not assess your health.
+      No personal document is needed to explore the proposal.
+    noticeKey: demoNotice
+  - id: preview
+    type: steps
+    title: What the example shows.
+    items:
+      - id: document
+        title: Document
+        text: A fictional report, identified as an example.
+      - id: extracted
+        title: Data
+        text: Extracted information and a review step before continuing.
+      - id: explanation
+        title: Explanation
+        text: Example content illustrating how an available explanation is presented.
+      - id: questions
+        title: Questions
+        text: Ideas to organize questions, without medical instructions.
+  - id: no-coverage
+    type: prose
+    title: Knowing when there is no answer matters too.
+    text: If verified content is unavailable for a result, the system should
+      communicate that limit. A convincing explanation is not necessarily a
+      supported explanation.
+  - id: next
+    type: conversion
+    title: Explore the product or learn more about the approach?
+    text: Continue to the application or explore the difference between explanations
+      and AI-assisted questions.
+    actions:
+      - access
+      - trust
+updatedAt: 2026-11-08
+---

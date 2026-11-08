@@ -1,0 +1,71 @@
+{
+  "brand": "Harbor Health",
+  "nav": {
+    "documents": "So funktioniert es",
+    "knowledge": "Wissen",
+    "professionals": "Fachpersonen",
+    "menu": "Navigation öffnen",
+    "close": "Navigation schließen"
+  },
+  "product": {
+    "title": "Meinen Termin vorbereiten",
+    "documents": "Dokumente",
+    "levels": "Erklärung",
+    "consultation": "Gespräch",
+    "file": "Originaldokument",
+    "reading": "Bildungsinhalte",
+    "questions": "Fragen für das Gespräch",
+    "note": "Illustrative Ansicht ohne Ergebnisse oder personenbezogene Daten.",
+    "coverage": "Eine Erklärung erfordert freigegebene Inhalte für Kategorie, Land und Sprache.",
+    "selected": "Fragen ausgewählt",
+    "download": "Beispiel-PDF herunterladen",
+    "downloading": "PDF wird vorbereitet…",
+    "downloadError": "Das PDF konnte nicht erstellt werden. Bitte erneut versuchen.",
+    "pdfTitle": "Fragen für meinen Termin",
+    "pdfNote": "Harbor Health Bildungsbeispiel. Keine Diagnose oder Behandlungsempfehlung.",
+    "pdfFile": "harbor-beispielfragen.pdf",
+    "overviewTitle": "Dein nächster Termin",
+    "overviewDescription": "Dokumente und Fragen in einem Ablauf.",
+    "files": {
+      "laboratory": "Laborbericht.pdf",
+      "radiology": "Radiologiebericht.pdf",
+      "functional": "Funktionsuntersuchung.pdf"
+    }
+  },
+  "knowledge": {
+    "source": "Wissensbasis",
+    "result": "Erklärung zu Bildungszwecken",
+    "note": "Das Originaldokument und seine Werte bleiben vom allgemeinen Wissen getrennt."
+  },
+  "footer": {
+    "relationship": "Ein Produkt von Harbor Living.",
+    "measurement": "Messeinstellungen",
+    "copyright": "Harbor Health",
+    "scope": "Bildungsinformationen. Keine Diagnosen oder Behandlungsempfehlungen.",
+    "preview": "Kommerzielle Inhalte werden geprüft."
+  },
+  "consent": {
+    "title": "Du entscheidest, was gemessen wird",
+    "description": "Optionale Messung hilft uns, die Nutzung dieser Website zu verstehen. Wir senden keine Dokumente, Ergebnisse, geschriebenen Fragen oder Gesundheitsdaten an Analysedienste.",
+    "accept": "Messung erlauben",
+    "reject": "Nur notwendige",
+    "close": "Einstellungen schließen",
+    "unconfigured": "Für diese Vorschau ist kein Analyseanbieter eingerichtet. Es werden keine Ereignisse an externe Dienste gesendet.",
+    "privacySignal": "Dein Browser fordert an, nicht verfolgt zu werden. Wir respektieren diese Einstellung.",
+    "request": "Dürfen wir die Nutzung dieser Website messen? Die Messung ist freiwillig."
+  },
+  "a11y": {
+    "skip": "Zum Inhalt springen",
+    "home": "Harbor Health, Startseite",
+    "navigation": "Hauptnavigation",
+    "mobile": "Mobile Navigation",
+    "chapters": "Kapitel des Ablaufs",
+    "views": "Ansichten des Ablaufs",
+    "category": "Dokumenttyp",
+    "depth": "Lesetiefe",
+    "language": "Sprache",
+    "languages": "Verfügbare Sprachen",
+    "selectLanguage": "Sprache wählen. Aktuell:"
+  },
+  "media": { "play": "Video abspielen", "pause": "Video pausieren" }
+}

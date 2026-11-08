@@ -1,0 +1,164 @@
+---
+import { FileText, BookOpen, MessagesSquare, Download, Check } from '@lucide/astro';
+import type { HomeScene } from '../../lib/content';
+import { getUI } from '../../lib/i18n';
+interface Props {
+  scenes: HomeScene[];
+  overview?: boolean;
+}
+const { scenes, overview = false } = Astro.props;
+const ui = getUI(Astro.url.pathname);
+const documents = scenes.find((scene) => scene.id === 'documents')!;
+const levels = scenes.find((scene) => scene.id === 'levels')!;
+const consultation = scenes.find((scene) => scene.id === 'consultation')!;
+const modes = [
+  { id: 'documents', label: ui.product.documents, Icon: FileText },
+  { id: 'levels', label: ui.product.levels, Icon: BookOpen },
+  { id: 'consultation', label: ui.product.consultation, Icon: MessagesSquare },
+];
+---
+
+{overview ? (
+  <div
+    class="hw-overview hw-app-frame app-frame"
+    data-enter-media
+    role="img"
+    aria-label={ui.product.overviewDescription}
+  >
+    <div class="hw-app-top">
+      <span class="hw-app-brand">Harbor Health</span>
+      <span>{ui.product.overviewTitle}</span>
+    </div>
+    <div class="hw-overview-body">
+      <div class="hw-overview-files">
+        <FileText size={23} stroke-width={1.4} aria-hidden="true" />
+        <span>{documents.items[0].title}</span>
+        <p>{documents.items[0].paragraphs[0]}</p>
+        <div class="hw-overview-file-rule"></div>
+        <div class="hw-overview-secondary">
+          <BookOpen size={23} stroke-width={1.4} aria-hidden="true" />
+          <span>{levels.items[0].title}</span>
+          <p>{levels.items[0].paragraphs[0]}</p>
+        </div>
+      </div>
+      <div class="hw-overview-questions">
+        <p class="hw-overview-heading">{ui.product.questions}</p>
+        {consultation.items.map((item) => (
+          <div class="hw-overview-question">
+            <Check size={17} stroke-width={1.7} aria-hidden="true" />
+            <span>{item.title}</span>
+          </div>
+        ))}
+        <div class="hw-overview-pdf">
+          <Download size={18} stroke-width={1.5} aria-hidden="true" />
+          <span>PDF</span>
+        </div>
+      </div>
+    </div>
+    <p class="hw-app-note">{ui.product.note}</p>
+  </div>
+) : (
+  <div
+    class="hw-product hw-app-frame app-frame"
+    id="product-stage"
+    data-product-window
+    data-mode="documents"
+  >
+    <div class="hw-app-top">
+      <span class="hw-app-brand">Harbor Health</span>
+      <span>{ui.product.title}</span>
+    </div>
+    <div class="hw-product-inner">
+      <nav class="hw-product-nav" aria-label={ui.a11y.views}>
+        {modes.map(({ id, label, Icon }) => (
+          <button
+            type="button"
+            data-product-mode={id}
+            aria-pressed={id === 'documents' ? 'true' : 'false'}
+          >
+            <Icon size={20} stroke-width={1.4} aria-hidden="true" />
+            <span>{label}</span>
+          </button>
+        ))}
+      </nav>
+      <div class="hw-product-body">
+        <div data-product-panel="documents" class="hw-product-panel">
+          <h3>{ui.product.file}</h3>
+          <div class="hw-file-picker" role="group" aria-label={ui.a11y.category}>
+            {documents.items.map((item, index) => (
+              <button
+                type="button"
+                data-category={item.id}
+                aria-pressed={index === 0 ? 'true' : 'false'}
+              >
+                <FileText size={19} stroke-width={1.4} aria-hidden="true" />
+                <span>{ui.product.files[item.id as keyof typeof ui.product.files]}</span>
+              </button>
+            ))}
+          </div>
+          <div class="hw-original-sheet" data-original-sheet>
+            {documents.items.map((item, index) => (
+              <div data-category-panel={item.id} hidden={index !== 0}>
+                <FileText size={32} stroke-width={1.1} aria-hidden="true" />
+                <h4>{item.title}</h4>
+                <p>{item.paragraphs[0]}</p>
+                <div class="hw-document-lines" aria-hidden="true">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div data-product-panel="levels" class="hw-product-panel" hidden>
+          <h3>{ui.product.reading}</h3>
+          <div class="hw-level-picker" role="group" aria-label={ui.a11y.depth}>
+            {levels.items.map((item, index) => (
+              <button
+                type="button"
+                data-reading-level={item.id}
+                aria-pressed={index === 0 ? 'true' : 'false'}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
+          <div class="hw-reading-sheet">
+            {levels.items.map((item, index) => (
+              <div data-reading-panel={item.id} hidden={index !== 0}>
+                <BookOpen size={34} stroke-width={1.2} aria-hidden="true" />
+                <h4>{item.title}</h4>
+                <p>{item.paragraphs[0]}</p>
+                <div class="hw-knowledge-reference">{ui.product.coverage}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div data-product-panel="consultation" class="hw-product-panel" hidden>
+          <h3>{ui.product.questions}</h3>
+          <div class="hw-question-list">
+            {consultation.items.map((item) => (
+              <label class="hw-question-choice">
+                <input type="checkbox" data-question-choice={item.id} checked />
+                <span>{item.title}</span>
+              </label>
+            ))}
+          </div>
+          <div class="hw-selection-summary" aria-live="polite">
+            <strong data-selected-count>3</strong> {ui.product.selected}
+          </div>
+          <button class="hw-pdf-button" type="button" data-download-pdf>
+            <Download size={18} stroke-width={1.5} aria-hidden="true" />
+            <span>{ui.product.download}</span>
+          </button>
+          <p class="hw-pdf-error" data-pdf-error hidden role="status">
+            {ui.product.downloadError}
+          </p>
+        </div>
+      </div>
+    </div>
+    <p class="hw-app-note">{ui.product.note}</p>
+  </div>
+)}

@@ -1,0 +1,54 @@
+---
+import { Menu, X } from '@lucide/astro';
+import BrandWordmark from '../BrandWordmark.astro';
+import { getUI, getLocale } from '../../lib/i18n';
+import { getPageRoutes } from '../../lib/content';
+import HomeAction from './HomeAction.astro';
+const ui = getUI(Astro.url.pathname);
+const locale = getLocale(Astro.url.pathname);
+const routes = await getPageRoutes(locale);
+---
+
+<a class="hw-skip skip-link" href="#contenido">
+  {ui.a11y.skip}
+</a>
+<header class="hw-nav nav harbor-header" data-home-nav>
+  <div class="hw-wrap wrap hw-nav-inner">
+    <a class="hw-wordmark" href={`/${locale}/`} aria-label={ui.a11y.home}>
+      <img
+        src="/images/harbor-health-symbol.webp"
+        alt=""
+        width="192"
+        height="208"
+        data-source="client:concept-health"
+        data-subject="Harbor Health"
+      />
+      <BrandWordmark />
+    </a>
+    <nav class="hw-desktop-nav" aria-label={ui.a11y.navigation}>
+      <a href={routes['health.how-it-works']}>{ui.nav.documents}</a>
+      <a href={routes['health.trust']}>{ui.nav.knowledge}</a>
+      <a href={routes['health.professionals']}>{ui.nav.professionals}</a>
+    </nav>
+    <div class="hw-nav-action">
+      <HomeAction id="app" placement="header" secondary />
+    </div>
+    <details class="hw-mobile-menu mobile-navigation">
+      <summary aria-label={ui.nav.menu}>
+        <Menu size={22} class="hw-menu-open" aria-hidden="true" />
+        <X size={22} class="hw-menu-close" aria-hidden="true" />
+      </summary>
+      <nav aria-label={ui.a11y.mobile}>
+        <a href={routes['health.how-it-works']}>{ui.nav.documents}</a>
+        <a href={routes['health.trust']}>{ui.nav.knowledge}</a>
+        <a href={routes['health.professionals']}>{ui.nav.professionals}</a>
+        <HomeAction id="app" placement="header" secondary />
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  import { initSiteHeader } from '../../scripts/site-header';
+  initSiteHeader();
+</script>

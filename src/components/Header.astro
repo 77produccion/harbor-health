@@ -1,0 +1,11 @@
+---
+// Una sola cabecera para home y páginas interiores.
+import HomeNav from './home/HomeNav.astro';
+interface Props {
+  routes: Record<string, string>;
+  audience?: string;
+  overlay?: boolean;
+}
+---
+
+<HomeNav />

@@ -1,0 +1,40 @@
+---
+import '@fontsource-variable/lora';
+import '@fontsource-variable/lora/wght-italic.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '../styles/global.css';
+import '../styles/scene-pages.css';
+import '../styles/site-header.css';
+import '../styles/motion-policy.css';
+import SeoHead from '../components/SeoHead.astro';
+import LanguageSelector from '../components/LanguageSelector.astro';
+import { getLocale } from '../lib/i18n';
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+---
+
+<!doctype html>
+<html lang={locale} data-type="software" data-motion="live" data-radius="soft" data-buttons="solid">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <SeoHead title={title} description={description} />
+    <meta name="theme-color" content="#061a33" />
+    <meta name="page-type" content="software" />
+    <meta name="site-kind" content="software" />
+  </head>
+  <body>
+    <slot />
+    <LanguageSelector />
+    <script>
+      import { initMotion } from '../scripts/motion';
+      initMotion();
+    </script>
+  </body>
+</html>

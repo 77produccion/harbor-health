@@ -1,0 +1,409 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Action from './Action.astro';
+import EditorialVideo from './EditorialVideo.astro';
+import ExplorePages from './ExplorePages.astro';
+import { site } from '../lib/content';
+import { getLocale } from '../lib/i18n';
+import { editorialMedia } from '../lib/editorial-media';
+
+interface Props {
+  page: CollectionEntry<'pages'>;
+  routes: Record<string, string>;
+}
+
+type Family = 'process' | 'example' | 'evidence' | 'clinical' | 'choice';
+type HeroLayout = 'split' | 'stage' | 'manifesto' | 'cinema' | 'offset';
+type ProseVariant = 'feature' | 'panel' | 'quiet';
+type ClosingLayout = 'left' | 'center' | 'split';
+
+const pageArt: Record<
+  string,
+  {
+    family: Family;
+    hero: HeroLayout;
+    closing: ClosingLayout;
+    prose: ProseVariant[];
+    featureReverse: boolean;
+  }
+> = {
+  'health.how-it-works': {
+    family: 'process',
+    hero: 'split',
+    closing: 'left',
+    prose: ['feature', 'panel'],
+    featureReverse: false,
+  },
+  'health.demo': {
+    family: 'example',
+    hero: 'stage',
+    closing: 'center',
+    prose: ['feature'],
+    featureReverse: true,
+  },
+  'health.trust': {
+    family: 'evidence',
+    hero: 'manifesto',
+    closing: 'left',
+    prose: ['feature', 'panel', 'quiet'],
+    featureReverse: true,
+  },
+  'health.professionals': {
+    family: 'clinical',
+    hero: 'cinema',
+    closing: 'left',
+    prose: ['feature', 'quiet', 'quiet', 'panel'],
+    featureReverse: false,
+  },
+  'health.access': {
+    family: 'choice',
+    hero: 'offset',
+    closing: 'split',
+    prose: ['quiet', 'quiet', 'quiet'],
+    featureReverse: false,
+  },
+};
+
+const { page, routes } = Astro.props;
+const [hero, ...sections] = page.data.sections;
+const locale = getLocale(Astro.url.pathname);
+const shared = site.sharedCopy[locale];
+const media = editorialMedia[page.data.id] ?? editorialMedia['health.how-it-works'];
+const art = pageArt[page.data.id] ?? {
+  family: 'process' as Family,
+  hero: 'split' as HeroLayout,
+  closing: 'left' as ClosingLayout,
+  prose: ['quiet'] as ProseVariant[],
+  featureReverse: false,
+};
+
+const proseIds = sections
+  .filter((section) => section.type === 'prose')
+  .map((section) => section.id);
+const proseImages = [media.detail, media.accent, media.accent, media.detail] as const;
+
+function imageForProse(id: string) {
+  const proseIndex = proseIds.indexOf(id);
+  if (proseIndex < 0) return null;
+  return proseImages[proseIndex] ?? null;
+}
+
+const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
+---
+
+<main
+  id="contenido"
+  class:list={['sc-page', `sc-page-${art.family}`]}
+  data-editorial-page={page.data.id}
+  data-page-family={art.family}
+>
+  <section class:list={['sc-hero', `sc-hero-${art.hero}`]} aria-labelledby="editorial-title">
+    {'video' in media && media.video ? (
+      <EditorialVideo
+        id="editorial-professional"
+        class="hw-hero-media sc-hero-video"
+        src={media.video}
+        poster="home-clinician"
+        hero
+      />
+    ) : (
+      <div class="sc-hero-media" aria-hidden="true">
+        <img
+          src={media.hero}
+          width="1536"
+          height="1024"
+          alt=""
+          fetchpriority="high"
+          loading="eager"
+        />
+      </div>
+    )}
+    <div class="sc-hero-copy" data-scene-copy>
+      <h1 id="editorial-title">{hero.title}</h1>
+      {hero.text && <p class="sc-hero-lede">{hero.text}</p>}
+      <div class="sc-actions">
+        {hero.actions?.map((actionId) => (
+          <Action actionId={actionId as keyof typeof site.actions} routes={routes} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="sc-intro">
+    <p>{shared.previewNotice}</p>
+    {hero.noticeKey && <p>{shared[hero.noticeKey as keyof typeof shared]}</p>}
+  </div>
+
+  {sections.map((section) => {
+    const actions = section.actions?.map((actionId) => (
+      <Action actionId={actionId as keyof typeof site.actions} routes={routes} />
+    ));
+
+    if (section.type === 'steps' && section.items) {
+      return (
+        <section
+          class="sc-steps"
+          id={section.id}
+          data-visual-scene
+          aria-labelledby={`section-${section.id}`}
+        >
+          <div class="sc-steps-stage">
+            <div class="sc-steps-head" data-scene-copy>
+              <h2 id={`section-${section.id}`}>{section.title}</h2>
+              {section.text && <p>{section.text}</p>}
+            </div>
+            <div class="sc-steps-rail">
+              {section.items.map((item) => (
+                <article class="sc-step" data-scene-copy>
+                  <span class="sc-step-mark" aria-hidden="true"></span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+            {stepsImage && (
+              <figure class="sc-steps-media">
+                <img
+                  src={stepsImage}
+                  width="1400"
+                  height="900"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            )}
+            {section.noticeKey && (
+              <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
+            )}
+            {actions?.length ? <div class="sc-actions">{actions}</div> : null}
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === 'comparison' && section.items) {
+      return (
+        <section
+          class="sc-compare"
+          id={section.id}
+          data-visual-scene
+          aria-labelledby={`section-${section.id}`}
+        >
+          <div class="sc-compare-head" data-scene-copy>
+            <h2 id={`section-${section.id}`}>{section.title}</h2>
+            {section.text && <p>{section.text}</p>}
+          </div>
+          <div class="sc-compare-grid">
+            {section.items.map((item) => (
+              <article data-scene-copy>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          {section.noticeKey && (
+            <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
+          )}
+          {actions?.length ? <div class="sc-actions">{actions}</div> : null}
+        </section>
+      );
+    }
+
+    if (section.type === 'cards' && section.items) {
+      if (page.data.id === 'health.access') {
+        const pathImages = [media.detail, null];
+        return (
+          <section
+            class="sc-paths"
+            id={section.id}
+            data-visual-scene
+            aria-labelledby={`section-${section.id}`}
+          >
+            <div class="sc-paths-head" data-scene-copy>
+              <h2 id={`section-${section.id}`}>{section.title}</h2>
+              {section.text && <p>{section.text}</p>}
+            </div>
+            <div class="sc-paths-grid">
+              {section.items.map((item, index) => {
+                const linkedAction = section.actions?.find((actionId) => actionId === item.id);
+                return (
+                  <article class:list={['sc-path', index === 1 && 'sc-path-solid']} data-scene-copy>
+                    {pathImages[index] && (
+                      <div class="sc-path-media" aria-hidden="true">
+                        <img
+                          src={pathImages[index]}
+                          width="1400"
+                          height="1000"
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    )}
+                    <div class="sc-path-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                      {linkedAction && (
+                        <Action
+                          actionId={linkedAction as keyof typeof site.actions}
+                          routes={routes}
+                        />
+                      )}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+            {section.noticeKey && (
+              <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
+            )}
+          </section>
+        );
+      }
+
+      return (
+        <section
+          class="sc-reference"
+          id={section.id}
+          data-visual-scene
+          aria-labelledby={`section-${section.id}`}
+        >
+          <div class="sc-reference-aside" data-scene-copy>
+            <h2 id={`section-${section.id}`}>{section.title}</h2>
+            {section.text && <p>{section.text}</p>}
+            <figure class="sc-reference-media">
+              <img
+                src={media.accent}
+                width="1400"
+                height="1000"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+          <div class="sc-reference-list">
+            {section.items.map((item) => (
+              <article data-scene-copy>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          {section.noticeKey && (
+            <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
+          )}
+          {actions?.length ? <div class="sc-actions">{actions}</div> : null}
+        </section>
+      );
+    }
+
+    if (section.type === 'faq' && section.items) {
+      return (
+        <section
+          class="sc-faq"
+          id={section.id}
+          data-visual-scene
+          aria-labelledby={`section-${section.id}`}
+        >
+          <div class="sc-faq-head" data-scene-copy>
+            <h2 id={`section-${section.id}`}>{section.title}</h2>
+            {section.text && <p>{section.text}</p>}
+          </div>
+          <div class="sc-faq-list">
+            {section.items.map((item) => (
+              <article data-scene-copy>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          {section.noticeKey && (
+            <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
+          )}
+          {actions?.length ? <div class="sc-actions">{actions}</div> : null}
+        </section>
+      );
+    }
+
+    if (section.type === 'conversion') {
+      return (
+        <section
+          class:list={['sc-closing', `sc-closing-${art.closing}`]}
+          id={section.id}
+          data-visual-scene
+          aria-labelledby={`section-${section.id}`}
+        >
+          <div class="sc-closing-media" aria-hidden="true">
+            <img
+              src={media.closing}
+              width="1600"
+              height="800"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="sc-closing-copy" data-scene-copy>
+            <h2 id={`section-${section.id}`}>{section.title}</h2>
+            {section.text && <p>{section.text}</p>}
+            {actions?.length ? <div class="sc-actions">{actions}</div> : null}
+            {section.noticeKey && (
+              <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
+            )}
+          </div>
+        </section>
+      );
+    }
+
+    const proseIndex = proseIds.indexOf(section.id);
+    const variant = art.prose[proseIndex] ?? 'quiet';
+    const image = imageForProse(section.id);
+
+    return (
+      <section
+        class:list={[
+          'sc-chapter',
+          `sc-chapter-${variant}`,
+          variant === 'feature' && art.featureReverse && 'is-reverse',
+        ]}
+        id={section.id}
+        data-visual-scene
+        aria-labelledby={`section-${section.id}`}
+      >
+        <div class="sc-chapter-copy" data-scene-copy>
+          <h2 id={`section-${section.id}`}>{section.title}</h2>
+          {section.text && <p>{section.text}</p>}
+          {section.noticeKey && (
+            <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
+          )}
+          {actions?.length ? <div class="sc-actions">{actions}</div> : null}
+        </div>
+        {variant === 'feature' && image && (
+          <figure class="sc-chapter-media">
+            <img src={image} width="1400" height="1000" alt="" loading="lazy" decoding="async" />
+          </figure>
+        )}
+        {variant === 'panel' && image && (
+          <figure class="sc-chapter-media" aria-hidden="true">
+            <img src={image} width="1400" height="1000" alt="" loading="lazy" decoding="async" />
+          </figure>
+        )}
+      </section>
+    );
+  })}
+
+  {page.body?.trim() && (
+    <div class="sc-extra">
+      <slot />
+    </div>
+  )}
+
+  <ExplorePages />
+</main>
+
+<script>
+  import { initSceneMotion } from '../scripts/scene-motion';
+  initSceneMotion();
+</script>

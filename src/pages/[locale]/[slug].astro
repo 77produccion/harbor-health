@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import CommercialLayout from '../../layouts/CommercialLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import EditorialPage from '../../components/EditorialPage.astro';
+import { getPageRoutes } from '../../lib/content';
+import { getLocale } from '../../lib/i18n';
+export async function getStaticPaths() {
+  return (await getCollection('pages'))
+    .filter((page) => page.data.id !== 'health.people')
+    .map((page) => ({
+      params: { locale: page.data.locale, slug: page.data.route.split('/').filter(Boolean)[1] },
+      props: { page },
+    }));
+}
+const { page } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const routes = await getPageRoutes(locale);
+const { Content } = await render(page);
+---
+
+<CommercialLayout {...page.data.seo}>
+  <Header routes={routes} audience={page.data.audience} />
+  <EditorialPage page={page} routes={routes}>
+    <Content />
+  </EditorialPage>
+  <Footer />
+</CommercialLayout>

@@ -1,0 +1,78 @@
+{
+  "sources": {
+    "docs-health-november": "Harbor-docs/web-harbor-health.md; corte 2026-11-06. Base comercial y destinos Web/App. Evidencia documental, no nueva auditoría autenticada.",
+    "docs-state-november": "Harbor-docs/estado-actual.md y fuentes-y-validacion.md; corte 2026-11-06. Alcance de documentos, consultas, PDF, idiomas y límites.",
+    "docs-medical-november": "Harbor-docs/developer-y-revision-medica.md; corte 2026-11-06. L3 independiente, espacio médico y publicación separados.",
+    "owner-product": "Descripción del producto aportada por el responsable en la conversación; no sustituye aprobación clínica o legal.",
+    "owner-decisions": "Decisiones confirmadas: Health primero, marca Living, siete idiomas/mercados, referencia visual comercial, agente solo de producto.",
+    "concept-people": "Harbor_websites_overdracht_developer/harbor-health-concept-en.html: particulares, explicación y límites; contiene notas de revisión pendientes.",
+    "concept-professionals": "Harbor_websites_overdracht_developer/harbor-health-concept-en.html: referencia profesional y ocho preguntas por prueba; estado conceptual.",
+    "code-levels": "Harbor-web/lib/i18n/health/es.ts y lib/health-subscription-layout.ts: L1 Claro, L2 Con fuentes, L3 Profesional.",
+    "code-entitlements": "Harbor-web/app/api/health/entitlements/route.ts: unlock/subscription; no verifica en esta ruta pago ni acreditación profesional.",
+    "code-explanations": "Harbor-web/lib/health-deterministic-explanation-bff.ts: NL/neerlandés, procedencia y estado not_found.",
+    "code-questions": "Harbor-web/lib/health-questions-client.ts: preparación de preguntas; idiomas es/en/nl; backend no verificado.",
+    "code-documents": "Harbor-web/app/api/health/documents/route.ts y lib/health-extraction-client.ts: categorías y extracción; backend no verificado."
+  },
+  "pending": [
+    {
+      "id": "translation-review",
+      "status": "needs_approval",
+      "description": "Seis traducciones de trabajo adicionales (en/nl/fr/pt/de/pap), en MDX y controles compartidos. Requieren revisión nativa, especialmente papiamentu de Curazao, además de las revisiones comercial, clínica y legal. No acreditan cobertura de KB ni autorización de publicación.",
+      "affects": ["health.people.hero", "health.trust.sources", "health.professionals.reference"]
+    },
+    {
+      "id": "video-assets",
+      "status": "needs_approval",
+      "description": "Dos vídeos aportados por el responsable usados en hero y profesionales, con posters y controles. Confirmar derechos de uso, aprobación visual, calidad del bucle y derivados optimizados: los MP4 originales pesan 9–14 MB. No son capturas de Harbor ni evidencia de prestación clínica. Ver docs/home-video.md.",
+      "affects": ["health.people.hero", "health.people.professionals"]
+    },
+    {
+      "id": "visual-assets",
+      "status": "needs_approval",
+      "description": "Recursos visuales pendientes de aprobación y derechos antes de producción. La home usa tres PNG aportados por el responsable (manos escribiendo, retrato editorial y agua), con originales conservados y derivados en scripts/build-home-images.mjs; ver docs/home-images-and-language.md. Sustituyen el stock provisional anterior. Verificar origen, derechos de personas y aprobación visual antes de publicar.",
+      "affects": ["health.people.hero", "health.people.documents", "health.people.professionals"]
+    },
+    {
+      "id": "professional-feedback",
+      "status": "requested_not_verified",
+      "description": "Comentarios y propuestas de cambios a respuestas de KB por profesionales.",
+      "affects": ["health.professionals.participation"]
+    },
+    {
+      "id": "laboratory-connectors",
+      "status": "requested_not_verified",
+      "description": "Conectores concretos a laboratorios y condiciones de integración.",
+      "affects": ["health.professionals.laboratories"]
+    },
+    {
+      "id": "commercial-plans",
+      "status": "needs_decision",
+      "description": "Básico/Intermedio/Profesional: prestaciones, cobro, límites y verificación médica; no equiparar con L1/L2/L3.",
+      "affects": ["health.people.closing", "health.professionals.access", "health.access.options"]
+    },
+    {
+      "id": "coverage",
+      "status": "needs_validation",
+      "description": "Cobertura real por función, país e idioma; siete traducciones no implican siete KB clínicas.",
+      "affects": ["health.people.documents", "health.how-it-works.documents", "health.access.availability"]
+    },
+    {
+      "id": "scientific-attribution",
+      "status": "needs_approval",
+      "description": "Nombre, credenciales, alcance de curaduría PhD, revisión clínica, fuentes publicables y fecha/versiones.",
+      "affects": ["health.people.knowledge", "health.trust.sources", "health.professionals.reference"]
+    },
+    {
+      "id": "professional-portal",
+      "status": "concept_not_verified",
+      "description": "Confirmar equivalencia del portal operativo con las ocho preguntas y vista paciente del concepto.",
+      "affects": ["health.professionals.hero", "health.professionals.reference", "health.professionals.patient-view", "health.people.professionals"]
+    },
+    {
+      "id": "privacy-policy",
+      "status": "needs_legal_review",
+      "description": "Responsable, conservación, proveedores, derechos y texto legal por mercado; no redactar garantías sin comprobarlas.",
+      "affects": ["health.access.account", "health.trust.privacy"]
+    }
+  ]
+}

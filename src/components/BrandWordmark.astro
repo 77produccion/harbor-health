@@ -1,0 +1,49 @@
+---
+import { site } from '../lib/content';
+const [name, product] = site.product.split(' ');
+---
+
+<span class="brand-wordmark" aria-hidden="true">
+  <span class="brand-wordmark-name">{name}</span>
+  <span class="brand-wordmark-product">
+    {Array.from(product).map((letter) => <span>{letter}</span>)}
+  </span>
+</span>
+
+<style>
+  .brand-wordmark {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: normal;
+  }
+  .brand-wordmark-name {
+    display: block;
+    color: #061a33;
+    font: 400 25px/1 'Lora Variable', Georgia, serif;
+    letter-spacing: 0.12em;
+    margin-right: -0.12em;
+  }
+  .brand-wordmark-product {
+    display: flex;
+    justify-content: space-between;
+    color: #4971d1;
+    font: 500 10px/1.2 'Poppins', system-ui, sans-serif;
+    letter-spacing: normal;
+  }
+  @media (max-width: 639px) {
+    .brand-wordmark {
+      gap: 4px;
+    }
+    .brand-wordmark-name {
+      font-size: 22px;
+    }
+    .brand-wordmark-product {
+      font-size: 9px;
+    }
+  }
+</style>

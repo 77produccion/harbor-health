@@ -1,0 +1,132 @@
+---
+import { pageVersions } from '../lib/content';
+import { getLocale, getUI, locales, languageNames } from '../lib/i18n';
+const pages = await pageVersions();
+const current = getLocale(Astro.url.pathname);
+const ui = getUI(Astro.url.pathname);
+const currentPage = pages.find((page) => page.route === Astro.url.pathname);
+const options = locales.flatMap((locale) => {
+  const translated = pages.find((page) => page.locale === locale && page.id === currentPage?.id);
+  return translated ? [{ locale, label: languageNames[locale], route: translated.route }] : [];
+});
+const currentName =
+  current === 'pap'
+    ? languageNames.pap
+    : (new Intl.DisplayNames([current], { type: 'language' }).of(current) ??
+      languageNames[current]);
+---
+
+<div class="language-selector">
+  <button
+    type="button"
+    class="language-trigger"
+    popovertarget="language-options"
+    aria-label={`${ui.a11y.selectLanguage} ${currentName}`}
+  >
+    {current.toUpperCase()}
+  </button>
+  <nav id="language-options" popover aria-label={ui.a11y.languages}>
+    <p>{ui.a11y.language}</p>
+    <ul>
+      {options.map(({ locale, label, route }) => (
+        <li>
+          <a
+            href={route}
+            hreflang={locale}
+            lang={locale}
+            aria-current={locale === current ? 'true' : undefined}
+          >
+            <span class="language-code">{locale.toUpperCase()}</span>
+            <span>{label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</div>
+
+<style>
+  .language-trigger {
+    position: fixed;
+    z-index: 35;
+    right: max(24px, env(safe-area-inset-right));
+    bottom: max(24px, env(safe-area-inset-bottom));
+    width: 58px;
+    height: 46px;
+    border: 1px solid #ccd6df;
+    border-radius: 5px;
+    background: #fbfcfa;
+    color: #061a33;
+    box-shadow: 0 4px 20px #061a3326;
+    font:
+      500 13px/1 'Poppins',
+      system-ui,
+      sans-serif;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  }
+  .language-trigger:hover {
+    background: #edf2f8;
+  }
+  #language-options {
+    position: fixed;
+    inset: auto max(24px, env(safe-area-inset-right))
+      max(82px, calc(env(safe-area-inset-bottom) + 58px)) auto;
+    margin: 0;
+    width: min(260px, calc(100vw - 48px));
+    padding: 18px 12px 12px;
+    border: 1px solid #ccd6df;
+    border-radius: 8px;
+    background: #fbfcfa;
+    color: #061a33;
+    box-shadow: 0 8px 40px #061a3326;
+    font:
+      400 14px/1.5 'Poppins',
+      system-ui,
+      sans-serif;
+  }
+  #language-options p {
+    margin: 0 12px 12px;
+    color: #39495c;
+    font-size: 12px;
+  }
+  #language-options ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #language-options a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 48px;
+    padding: 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+  }
+  #language-options a[aria-current] {
+    background: #eaf0fc;
+    font-weight: 500;
+  }
+  #language-options a:hover {
+    background: #edf2f8;
+  }
+  .language-code {
+    min-width: 28px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  :is(.language-trigger, #language-options a):focus-visible {
+    outline: 3px solid #01919f;
+    outline-offset: 3px;
+  }
+  :global(body.hw-menu-visible) .language-selector {
+    visibility: hidden;
+  }
+  @media print {
+    .language-selector {
+      display: none;
+    }
+  }
+</style>

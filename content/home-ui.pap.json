@@ -1,0 +1,71 @@
+{
+  "brand": "Harbor Health",
+  "nav": {
+    "documents": "Kon e ta funshoná",
+    "knowledge": "Konosementu",
+    "professionals": "Profeshonalnan",
+    "menu": "Habri navegashon",
+    "close": "Sera navegashon"
+  },
+  "product": {
+    "title": "Prepará mi konsulta",
+    "documents": "Dokumentonan",
+    "levels": "Splikashon",
+    "consultation": "Konsulta",
+    "file": "Dokumento original",
+    "reading": "Kontenido edukativo",
+    "questions": "Preguntanan pa papia",
+    "note": "Bista ilustrativo, sin resultadonan ni datonan personal.",
+    "coverage": "Un splikashon ta rekerí kontenido aprobá pa e kategoria, e pais i e idioma.",
+    "selected": "preguntanan selektá",
+    "download": "Deskargá PDF di ehempel",
+    "downloading": "Ta prepará PDF…",
+    "downloadError": "No por a prepará e PDF. Purba atrobe.",
+    "pdfTitle": "Preguntanan pa mi konsulta",
+    "pdfNote": "Ehempel edukativo di Harbor Health. No ta un diagnóstiko ni rekomendashon di tratamentu.",
+    "pdfFile": "harbor-preguntanan-ehempel.pdf",
+    "overviewTitle": "Bo próksimo konsulta",
+    "overviewDescription": "Dokumentonan i preguntanan den un solo trayekto.",
+    "files": {
+      "laboratory": "Rapòrt di laboratorio.pdf",
+      "radiology": "Rapòrt di radiologia.pdf",
+      "functional": "Estudio funshonal.pdf"
+    }
+  },
+  "knowledge": {
+    "source": "Base di konosementu",
+    "result": "Splikashon edukativo",
+    "note": "E dokumento original i su balornan ta keda separá for di konosementu general."
+  },
+  "footer": {
+    "relationship": "Un produkto di Harbor Living.",
+    "measurement": "Preferensianan di midimentu",
+    "copyright": "Harbor Health",
+    "scope": "Informashon edukativo. No ta hasi diagnóstiko ni rekomendá tratamentu.",
+    "preview": "Kontenido komersial bou di revishon."
+  },
+  "consent": {
+    "title": "Bo ta skohe kiko ta wordu midí",
+    "description": "Midimentu opshonal ta yuda komprondé uso di e wèpsait. Nos no ta manda dokumentonan, resultadonan, preguntanan skirbí ni datonan di salú pa análisi.",
+    "accept": "Permití midimentu",
+    "reject": "Solamente nesesario",
+    "close": "Sera preferensianan",
+    "unconfigured": "E bista aki no tin un proveedó di análisi konfigurá. E no ta manda eventonan na servisio eksterno.",
+    "privacySignal": "Bo nabegadó ta pidi pa no sigui bo. Nos ta respetá e preferensia ei.",
+    "request": "Bo ta permití midí uso di e wèpsait? Midimentu ta opshonal."
+  },
+  "a11y": {
+    "skip": "Bai na kontenido",
+    "home": "Harbor Health, inicio",
+    "navigation": "Navegashon prinsipal",
+    "mobile": "Navegashon móbil",
+    "chapters": "Kapítulonan di e trayekto",
+    "views": "Bistanan di e trayekto",
+    "category": "Tipo di dokumento",
+    "depth": "Profundidat di lesa",
+    "language": "Idioma",
+    "languages": "Idiomanan disponibel",
+    "selectLanguage": "Skohe idioma. Aktual:"
+  },
+  "media": { "play": "Reprodusí video", "pause": "Pousá video" }
+}

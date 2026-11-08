@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import { site } from '../lib/content';
+import { getLocale } from '../lib/i18n';
+import { editorialMedia } from '../lib/editorial-media';
+const locale = getLocale(Astro.url.pathname);
+const pages = await getCollection('pages');
+const choices = ['how-it-works', 'trust', 'professionals'] as const;
+const cards = choices
+  .map((id) => {
+    const page = pages.find(
+      (page) => page.data.id === site.actions[id].pageId && page.data.locale === locale,
+    )!;
+    return {
+      title: site.actions[id].labels[locale],
+      route: page.data.route,
+      image: editorialMedia[page.data.id as keyof typeof editorialMedia].hero,
+    };
+  })
+  .filter((card) => card.route !== Astro.url.pathname);
+---
+
+<nav class="sc-explore" aria-label={site.sharedCopy[locale].footerNavigation} data-explore-rail>
+  {cards.map((card) => (
+    <a href={card.route} class="sc-explore-link">
+      <div>
+        <img src={card.image} width="1200" height="800" alt="" loading="lazy" decoding="async" />
+      </div>
+      <span>{card.title}</span>
+    </a>
+  ))}
+</nav>

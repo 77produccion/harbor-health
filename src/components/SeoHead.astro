@@ -1,0 +1,71 @@
+---
+import { buildMetadata, serializeJsonLd } from '../lib/seo-policy.mjs';
+import { pageVersions } from '../lib/content';
+import { getLocale, getUI } from '../lib/i18n';
+interface Props {
+  title: string;
+  description: string;
+  route?: string;
+  faq?: { title: string; text: string }[];
+  publishable?: boolean;
+}
+const {
+  title,
+  description,
+  route = Astro.url.pathname,
+  faq = [],
+  publishable = false,
+} = Astro.props;
+const locale = getLocale(route);
+const ui = getUI(route);
+const versions = await pageVersions();
+const pageId = versions.find((page) => page.route === route)?.id;
+const meta = buildMetadata({
+  siteUrl: import.meta.env.SITE_URL,
+  route,
+  locale,
+  title,
+  description,
+  faq,
+  indexable: publishable && import.meta.env.HARBOR_PUBLISH === 'true',
+});
+---
+
+<title>{meta.title}</title>
+<meta name="description" content={meta.description} />
+<meta name="robots" content={meta.robots} />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+{meta.canonical && <link rel="canonical" href={meta.canonical} />}
+{meta.canonical &&
+  pageId &&
+  versions
+    .filter((page) => page.id === pageId)
+    .map((page) => (
+      <link
+        rel="alternate"
+        hreflang={page.locale}
+        href={new URL(page.route, meta.canonical!).href}
+      />
+    ))}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Harbor Health" />
+<meta property="og:title" content={meta.title} />
+<meta property="og:description" content={meta.description} />
+{meta.canonical && <meta property="og:url" content={meta.canonical} />}
+<meta property="og:image" content={meta.image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={`Harbor Health: ${ui.product.overviewDescription}`} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={meta.title} />
+<meta name="twitter:description" content={meta.description} />
+<meta name="twitter:image" content={meta.image} />
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link rel="apple-touch-icon" href="/images/favicon.png" />
+{import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION && (
+  <meta name="google-site-verification" content={import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION} />
+)}
+{import.meta.env.PUBLIC_BING_SITE_VERIFICATION && (
+  <meta name="msvalidate.01" content={import.meta.env.PUBLIC_BING_SITE_VERIFICATION} />
+)}
+<script type="application/ld+json" set:html={serializeJsonLd(meta.graph)} />

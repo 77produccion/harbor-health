@@ -1,0 +1,28 @@
+---
+import { site } from '../../lib/content';
+import { getLocale } from '../../lib/i18n';
+interface Props {
+  id: string;
+  placement: string;
+  secondary?: boolean;
+}
+const { id, placement, secondary = false } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const action = site.actions[id as keyof typeof site.actions];
+if (!action || action.kind !== 'external' || !('url' in action) || !action.url)
+  throw new Error(`Acción pública sin destino: ${id}`);
+---
+
+<a
+  class:list={[
+    'hw-button',
+    'btn',
+    secondary ? 'hw-button-secondary btn--secondary' : 'btn--primary',
+  ]}
+  href={action.url}
+  rel="noreferrer"
+  data-marketing-action={id}
+  data-placement={placement}
+>
+  {action.labels[locale]}
+</a>

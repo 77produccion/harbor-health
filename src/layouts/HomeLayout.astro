@@ -1,0 +1,57 @@
+---
+import '@fontsource-variable/lora';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '../styles/home.css';
+import '../styles/hero.css';
+import '../styles/editorial-images.css';
+import '../styles/scene-pages.css';
+import '../styles/photographic-home.css';
+import '../styles/site-header.css';
+import '../styles/motion-policy.css';
+import SeoHead from '../components/SeoHead.astro';
+import Consent from '../components/home/Consent.astro';
+import LanguageSelector from '../components/LanguageSelector.astro';
+import { getLocale, getUI } from '../lib/i18n';
+import { serializeJsonLd } from '../lib/seo-policy.mjs';
+interface Props {
+  title: string;
+  description: string;
+  faq: { title: string; text: string }[];
+  publishable?: boolean;
+}
+const { title, description, faq, publishable = false } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const ui = getUI(Astro.url.pathname);
+---
+
+<!doctype html>
+<html lang={locale} data-type="software" data-motion="live" data-radius="soft" data-buttons="solid">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#061a33" />
+    <meta name="page-type" content="software" />
+    <meta name="site-kind" content="software" />
+    <SeoHead
+      title={title}
+      description={description}
+      faq={faq}
+      route={Astro.url.pathname}
+      publishable={publishable}
+    />
+    <link rel="stylesheet" href="/assets/motion/motion.css" />
+  </head>
+  <body>
+    <slot />
+    <Consent />
+    <LanguageSelector />
+    <script type="application/json" id="harbor-product-ui" set:html={serializeJsonLd(ui.product)} />
+    <script>
+      import { initHome } from '../scripts/home';
+      import { initMarketing } from '../scripts/marketing';
+      initHome();
+      initMarketing();
+    </script>
+  </body>
+</html>

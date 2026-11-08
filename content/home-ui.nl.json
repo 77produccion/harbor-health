@@ -1,0 +1,71 @@
+{
+  "brand": "Harbor Health",
+  "nav": {
+    "documents": "Hoe het werkt",
+    "knowledge": "Kennis",
+    "professionals": "Professionals",
+    "menu": "Open navigatie",
+    "close": "Sluit navigatie"
+  },
+  "product": {
+    "title": "Mijn consult voorbereiden",
+    "documents": "Documenten",
+    "levels": "Uitleg",
+    "consultation": "Consult",
+    "file": "Origineel document",
+    "reading": "Educatieve inhoud",
+    "questions": "Vragen om te bespreken",
+    "note": "Illustratieve weergave, zonder uitslagen of persoonsgegevens.",
+    "coverage": "Uitleg vereist goedgekeurde inhoud voor de categorie, het land en de taal.",
+    "selected": "vragen geselecteerd",
+    "download": "Download voorbeeld-pdf",
+    "downloading": "Pdf voorbereiden…",
+    "downloadError": "De pdf kon niet worden gemaakt. Probeer het opnieuw.",
+    "pdfTitle": "Vragen voor mijn consult",
+    "pdfNote": "Educatief voorbeeld van Harbor Health. Geen diagnose of behandeladvies.",
+    "pdfFile": "harbor-voorbeeldvragen.pdf",
+    "overviewTitle": "Je volgende consult",
+    "overviewDescription": "Documenten en vragen in één traject.",
+    "files": {
+      "laboratory": "Laboratoriumverslag.pdf",
+      "radiology": "Radiologieverslag.pdf",
+      "functional": "Functioneel onderzoek.pdf"
+    }
+  },
+  "knowledge": {
+    "source": "Kennisbank",
+    "result": "Educatieve uitleg",
+    "note": "Het originele document en de waarden blijven gescheiden van algemene kennis."
+  },
+  "footer": {
+    "relationship": "Een product van Harbor Living.",
+    "measurement": "Meetvoorkeuren",
+    "copyright": "Harbor Health",
+    "scope": "Educatieve informatie. Geen diagnoses of behandeladviezen.",
+    "preview": "Commerciële inhoud wordt beoordeeld."
+  },
+  "consent": {
+    "title": "Jij bepaalt wat wordt gemeten",
+    "description": "Optionele meting helpt ons het gebruik van deze website te begrijpen. We sturen geen documenten, uitslagen, geschreven vragen of gezondheidsgegevens naar analytics.",
+    "accept": "Meting toestaan",
+    "reject": "Alleen noodzakelijk",
+    "close": "Sluit voorkeuren",
+    "unconfigured": "Voor deze preview is geen analyticsaanbieder ingesteld. Er worden geen gebeurtenissen naar externe diensten verstuurd.",
+    "privacySignal": "Je browser vraagt om niet gevolgd te worden. We respecteren die voorkeur.",
+    "request": "Mogen we het gebruik van deze website meten? Meting is optioneel."
+  },
+  "a11y": {
+    "skip": "Ga naar inhoud",
+    "home": "Harbor Health, startpagina",
+    "navigation": "Hoofdnavigatie",
+    "mobile": "Mobiele navigatie",
+    "chapters": "Hoofdstukken van het traject",
+    "views": "Weergaven van het traject",
+    "category": "Documenttype",
+    "depth": "Leesdiepgang",
+    "language": "Taal",
+    "languages": "Beschikbare talen",
+    "selectLanguage": "Selecteer taal. Huidig:"
+  },
+  "media": { "play": "Video afspelen", "pause": "Video pauzeren" }
+}

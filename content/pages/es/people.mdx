@@ -1,0 +1,185 @@
+---
+schemaVersion: 2
+id: health.people
+locale: es
+route: /es/
+audience: people
+status: draft
+revision: 6
+updatedAt: "2026-11-08"
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds: [docs-health-november, docs-state-november, docs-medical-november]
+seo:
+  title: "Harbor Health | Documentos médicos y preparación de consultas"
+  description: "Organiza tus documentos médicos, revisa los datos extraídos y consulta explicaciones educativas disponibles. Prepara preguntas y llévalas a tu consulta en PDF."
+---
+
+<Scene id="hero" kind="product-hero">
+
+# Tu próxima consulta empieza aquí.
+
+Organiza tus documentos y prepara tus preguntas.
+
+[Entrar a Harbor Health](action:access)
+
+</Scene>
+
+<Scene id="documents" kind="document-explorer" items="laboratory,radiology,functional">
+
+## Tu información empieza en el documento.
+
+Revisa el original y los datos extraídos. Puedes cargar documentos o pegar su
+texto en la aplicación.
+
+Admite PDF e imágenes de hasta 50 MB.
+
+### Laboratorio
+
+Valores, unidades y rangos del documento, separados de la explicación educativa.
+
+### Radiología
+
+Consulta el texto del informe. Procesar un documento no significa diagnosticar
+sus imágenes.
+
+### Estudios funcionales
+
+Revisa la extracción del estudio. La explicación depende de una KB funcional
+aprobada para su país e idioma.
+
+</Scene>
+
+<Scene id="levels" kind="clinical-reader" items="l1,l2">
+
+## El dato y su explicación, separados.
+
+Los valores y rangos vienen del documento. La explicación procede de conocimiento
+publicado y aprobado para tu contexto, cuando está disponible.
+
+### Lectura clara
+
+Comprende qué se ha medido con una explicación accesible.
+
+### Lectura con fuentes
+
+Consulta el detalle y las referencias disponibles para ese contenido.
+
+</Scene>
+
+<Scene id="consultation" kind="consultation-builder" items="context,followup,preparation">
+
+## Lleva tus preguntas a la consulta.
+
+Selecciona tus preguntas, añade las tuyas y guarda la preparación. Puedes
+retomarla después o descargar la selección en PDF.
+
+### ¿Qué información adicional necesitas para valorar este resultado?
+
+Una pregunta general para conversar sobre el contexto que necesita tu profesional.
+
+### ¿Qué seguimiento conviene comentar en mi próxima consulta?
+
+Una forma de ordenar tus dudas, sin indicar un tratamiento.
+
+### ¿Qué documentos o antecedentes debería llevar a la cita?
+
+Prepara la conversación con el profesional que conoce tu situación.
+
+</Scene>
+
+<Scene id="knowledge" kind="knowledge-provenance" items="origin,review,publication">
+
+## Conocimiento con un origen identificable.
+
+Las explicaciones educativas se apoyan en versiones publicadas de la base de
+conocimiento. Las propuestas, revisiones y cambios conservan su historial.
+
+### Propuesta médica
+
+Un editor autorizado propone cambios de contenido y fuentes dentro de su alcance.
+
+### Revisión independiente del autor
+
+Otro actor autorizado revisa la propuesta y puede aprobarla o solicitar cambios.
+
+### Publicación controlada
+
+La aprobación y la publicación se registran por separado. Health consulta el
+contenido publicado que corresponde al contexto.
+
+[Conocer las fuentes y los límites](action:trust)
+
+</Scene>
+
+<Scene id="professionals" kind="professional-paths" items="reader,editor">
+
+## Dos recorridos para profesionales.
+
+Consultar contenido profesional y participar en su revisión son responsabilidades
+distintas. Cada recorrido requiere su autorización.
+
+### Consultar la biblioteca
+
+El acceso L3 permite consultar contenido profesional publicado. Es independiente
+de la suscripción y no concede permisos de edición.
+
+[Entrar como profesional](action:professional-access)
+
+### Participar en la revisión
+
+El espacio médico editorial permite presentar propuestas y seguir sus decisiones,
+según el alcance autorizado.
+
+[Abrir el espacio médico](action:medical-editor)
+
+</Scene>
+
+<Scene id="faq" kind="questions" items="diagnosis,scans,coverage,phone,laboratory">
+
+## Antes de entrar a Harbor Health.
+
+Estas son las diferencias que conviene conocer antes de usar el producto.
+
+### ¿Harbor Health hace un diagnóstico?
+
+No. Ofrece organización y explicación educativa. No recomienda tratamientos ni
+sustituye la evaluación individual de un profesional sanitario.
+
+### ¿Puedo subir un examen escaneado?
+
+Sí. Admite PDF escaneado e imágenes. La calidad del documento afecta al
+reconocimiento; revisa siempre la información extraída.
+
+### ¿Todos los documentos tienen explicación?
+
+No necesariamente. La extracción y la explicación son etapas distintas. Una
+explicación requiere una KB aprobada para la categoría, el país y el idioma correspondientes.
+
+### ¿Puedo usar Harbor en mi teléfono?
+
+Existe una experiencia Web/PWA adaptable al teléfono. No se presenta como una
+aplicación distribuida en tiendas móviles.
+
+### ¿Se conecta automáticamente con mi laboratorio?
+
+Por ahora, cargas tus documentos o pegas su texto. La conexión automática con
+laboratorios sigue pendiente.
+
+</Scene>
+
+<Scene id="closing" kind="product-access">
+
+## Prepara tu próxima consulta con Harbor Health.
+
+Organiza tus documentos, consulta el contenido disponible y lleva tus preguntas.
+El registro actual requiere mayoría de edad y aceptación de las condiciones vigentes.
+
+[Entrar a Harbor Health](action:access)
+
+[Abrir la App](action:app)
+
+</Scene>

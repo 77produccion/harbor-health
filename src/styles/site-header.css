@@ -1,0 +1,176 @@
+/* Cabecera compartida: geometría, navegación y CTA idénticos entre rutas. */
+.harbor-header.hw-nav {
+  position: fixed;
+  inset: 16px 16px auto;
+  z-index: 30;
+  height: 80px;
+  border: 0;
+  border-radius: 12px;
+  background: #fbfcfa;
+  color: #061a33;
+  backdrop-filter: none;
+  transform: none;
+  box-shadow: 0 5px 24px #061a3310;
+}
+.harbor-header.hw-nav.is-scrolled {
+  height: 80px;
+  background: #fbfcfa;
+  box-shadow: 0 5px 24px #061a3317;
+}
+.harbor-header .hw-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-inline: 28px;
+}
+.harbor-header .hw-wordmark {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 13px;
+}
+.harbor-header .hw-wordmark img {
+  width: 38px;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.harbor-header .hw-desktop-nav {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  font:
+    400 14px/1.5 'Poppins',
+    system-ui,
+    sans-serif;
+}
+.harbor-header .hw-desktop-nav a {
+  position: relative;
+  padding: 13px 0;
+}
+.harbor-header .hw-desktop-nav a::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 5px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+.harbor-header .hw-desktop-nav a:hover::after {
+  transform: scaleX(1);
+}
+.harbor-header .hw-nav-action {
+  margin-left: 18px;
+}
+.harbor-header .hw-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 23px;
+  border: 1px solid #adbbc9;
+  border-radius: 7px;
+  background: transparent;
+  color: #061a33;
+  box-shadow: none;
+  font:
+    500 13px/1.5 'Poppins',
+    system-ui,
+    sans-serif;
+}
+.harbor-header .hw-button:hover {
+  background: #e7edf5;
+  border-color: #061a33;
+}
+.harbor-header .hw-mobile-menu {
+  display: none;
+}
+body.hw-menu-visible {
+  overflow: hidden;
+}
+@media (max-width: 999px) {
+  .harbor-header.hw-nav,
+  .harbor-header.hw-nav.is-scrolled {
+    height: 76px;
+  }
+  .harbor-header .hw-desktop-nav {
+    display: none;
+  }
+  .harbor-header .hw-nav-action {
+    margin-left: auto;
+  }
+  .harbor-header .hw-mobile-menu {
+    display: block;
+  }
+  .harbor-header .hw-mobile-menu summary {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    list-style: none;
+    cursor: pointer;
+  }
+  .harbor-header summary::-webkit-details-marker {
+    display: none;
+  }
+  .harbor-header .hw-menu-close,
+  .harbor-header .hw-mobile-menu[open] .hw-menu-open {
+    display: none;
+  }
+  .harbor-header .hw-mobile-menu[open] .hw-menu-close {
+    display: block;
+  }
+  .harbor-header .hw-mobile-menu nav {
+    position: fixed;
+    inset: 92px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 36px;
+    background: #fbfcfa;
+    font:
+      400 22px/1.5 'Lora Variable',
+      Georgia,
+      serif;
+    overflow-y: auto;
+  }
+  .harbor-header .hw-mobile-menu nav > a {
+    padding-block: 15px;
+  }
+  .harbor-header .hw-mobile-menu nav .hw-button {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 639px) {
+  .harbor-header.hw-nav,
+  .harbor-header.hw-nav.is-scrolled {
+    inset: 10px 10px auto;
+    height: 72px;
+    border-radius: 8px;
+  }
+  .harbor-header .hw-nav-inner {
+    gap: 12px;
+    padding-inline: 16px;
+  }
+  .harbor-header .hw-wordmark {
+    gap: 10px;
+  }
+  .harbor-header .hw-wordmark img {
+    width: 32px;
+  }
+  .harbor-header .hw-nav-action {
+    display: none;
+  }
+  .harbor-header .hw-mobile-menu {
+    margin-left: auto;
+  }
+  .harbor-header .hw-mobile-menu nav {
+    inset: 82px 0 0;
+    padding: 32px 24px;
+  }
+}

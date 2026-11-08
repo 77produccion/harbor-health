@@ -1,0 +1,60 @@
+---
+schemaVersion: 1
+id: health.demo
+locale: fr
+route: /fr/exemple/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds:
+  - concept-people
+  - code-explanations
+  - code-questions
+seo:
+  title: Découvrir Harbor Health | Exemple de parcours
+  description: Explorez documents, explications et questions dans une
+    démonstration illustrative sans données de patients.
+sections:
+  - id: hero
+    type: hero
+    title: Voyez d’abord comment un résultat est présenté.
+    text: Cette démonstration présente le parcours, sans évaluer votre santé. Aucun
+      document personnel n’est nécessaire.
+    noticeKey: demoNotice
+  - id: preview
+    type: steps
+    title: Ce que montre l’exemple.
+    items:
+      - id: document
+        title: Document
+        text: Un compte rendu fictif, identifié comme exemple.
+      - id: extracted
+        title: Données
+        text: Les informations extraites et une vérification avant de continuer.
+      - id: explanation
+        title: Explication
+        text: Un contenu d’exemple montrant la présentation d’une explication
+          disponible.
+      - id: questions
+        title: Questions
+        text: Des idées pour organiser vos questions, sans consignes médicales.
+  - id: no-coverage
+    type: prose
+    title: Savoir quand il n’y a pas de réponse compte aussi.
+    text: Si aucun contenu vérifié n’est disponible, le système doit signaler cette
+      limite. Une explication convaincante n’est pas nécessairement étayée.
+  - id: next
+    type: conversion
+    title: Découvrir le produit ou approfondir l’approche ?
+    text: Continuez vers l’application ou découvrez la différence entre explications
+      et questions assistées par IA.
+    actions:
+      - access
+      - trust
+updatedAt: 2026-11-08
+---

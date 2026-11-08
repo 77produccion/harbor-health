@@ -1,0 +1,71 @@
+{
+  "brand": "Harbor Health",
+  "nav": {
+    "documents": "How it works",
+    "knowledge": "Knowledge",
+    "professionals": "Professionals",
+    "menu": "Open navigation",
+    "close": "Close navigation"
+  },
+  "product": {
+    "title": "Prepare my consultation",
+    "documents": "Documents",
+    "levels": "Explanation",
+    "consultation": "Consultation",
+    "file": "Original document",
+    "reading": "Educational content",
+    "questions": "Questions to discuss",
+    "note": "Illustrative view, without results or personal data.",
+    "coverage": "An explanation requires approved content for the category, country and language.",
+    "selected": "questions selected",
+    "download": "Download sample PDF",
+    "downloading": "Preparing PDF…",
+    "downloadError": "The PDF could not be prepared. Please try again.",
+    "pdfTitle": "Questions for my consultation",
+    "pdfNote": "Harbor Health educational example. Not a diagnosis or treatment recommendation.",
+    "pdfFile": "harbor-sample-questions.pdf",
+    "overviewTitle": "Your next consultation",
+    "overviewDescription": "Documents and questions in one journey.",
+    "files": {
+      "laboratory": "Laboratory report.pdf",
+      "radiology": "Radiology report.pdf",
+      "functional": "Functional study.pdf"
+    }
+  },
+  "knowledge": {
+    "source": "Knowledge base",
+    "result": "Educational explanation",
+    "note": "The original document and its values remain separate from general knowledge."
+  },
+  "footer": {
+    "relationship": "A Harbor Living product.",
+    "measurement": "Measurement preferences",
+    "copyright": "Harbor Health",
+    "scope": "Educational information. No diagnoses or treatment recommendations.",
+    "preview": "Commercial content under review."
+  },
+  "consent": {
+    "title": "You choose what is measured",
+    "description": "Optional measurement helps us understand use of this website. We do not send documents, results, written questions or health data to analytics.",
+    "accept": "Allow measurement",
+    "reject": "Necessary only",
+    "close": "Close preferences",
+    "unconfigured": "No analytics provider is configured for this preview. It sends no events to external services.",
+    "privacySignal": "Your browser requests no tracking. We respect that preference.",
+    "request": "May we measure use of this website? Measurement is optional."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "Harbor Health, home",
+    "navigation": "Main navigation",
+    "mobile": "Mobile navigation",
+    "chapters": "Journey chapters",
+    "views": "Journey views",
+    "category": "Document type",
+    "depth": "Reading depth",
+    "language": "Language",
+    "languages": "Available languages",
+    "selectLanguage": "Select language. Current:"
+  },
+  "media": { "play": "Play video", "pause": "Pause video" }
+}

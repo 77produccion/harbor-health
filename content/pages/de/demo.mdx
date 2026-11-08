@@ -1,0 +1,59 @@
+---
+schemaVersion: 1
+id: health.demo
+locale: de
+route: /de/beispiel/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds:
+  - concept-people
+  - code-explanations
+  - code-questions
+seo:
+  title: Harbor Health kennenlernen | Beispielablauf
+  description: Entdecke Dokumente, Erklärungen und Fragen in einer illustrativen
+    Demonstration ohne Patientendaten.
+sections:
+  - id: hero
+    type: hero
+    title: Sieh zuerst, wie ein Ergebnis dargestellt wird.
+    text: Die Demonstration zeigt den Ablauf und beurteilt nicht deine Gesundheit.
+      Ein persönliches Dokument ist nicht erforderlich.
+    noticeKey: demoNotice
+  - id: preview
+    type: steps
+    title: Das zeigt das Beispiel.
+    items:
+      - id: document
+        title: Dokument
+        text: Ein fiktiver Bericht, als Beispiel gekennzeichnet.
+      - id: extracted
+        title: Daten
+        text: Ausgelesene Angaben und ein Prüfschritt vor dem Fortfahren.
+      - id: explanation
+        title: Erklärung
+        text: Beispielinhalt zur Darstellung einer verfügbaren Erklärung.
+      - id: questions
+        title: Fragen
+        text: Ideen zum Ordnen von Fragen, ohne medizinische Handlungsanweisungen.
+  - id: no-coverage
+    type: prose
+    title: Auch zu wissen, wann es keine Antwort gibt, ist wichtig.
+    text: Fehlen geprüfte Inhalte, muss das System diese Grenze mitteilen. Eine
+      überzeugende Erklärung ist nicht automatisch belegt.
+  - id: next
+    type: conversion
+    title: Das Produkt entdecken oder den Ansatz vertiefen?
+    text: Gehe zur Anwendung oder lerne den Unterschied zwischen Erklärungen und
+      KI-gestützten Fragen kennen.
+    actions:
+      - access
+      - trust
+updatedAt: 2026-11-08
+---

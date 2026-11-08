@@ -1,0 +1,49 @@
+---
+schemaVersion: 1
+id: health.demo
+locale: es
+route: /es/ejemplo/
+audience: all
+status: draft
+revision: 2
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds: [concept-people, code-explanations, code-questions]
+seo:
+  title: "Conozca Harbor Health | Ejemplo del recorrido"
+  description: "Explore cómo Harbor Health organiza un documento, presenta una explicación y ayuda a preparar preguntas. Demostración ilustrativa sin datos de pacientes."
+sections:
+  - id: hero
+    type: hero
+    title: "Primero, vea cómo se cuenta un resultado."
+    text: "Una demostración para conocer el recorrido, no para evaluar su salud. No necesita aportar un documento personal para entender la propuesta."
+    noticeKey: demoNotice
+  - id: preview
+    type: steps
+    title: "Lo que verá en el ejemplo."
+    items:
+      - id: document
+        title: "Documento"
+        text: "Un informe ficticio, identificado como ejemplo."
+      - id: extracted
+        title: "Datos"
+        text: "El dato extraído y el paso de revisión antes de continuar."
+      - id: explanation
+        title: "Explicación"
+        text: "Contenido de ejemplo que muestra cómo se presenta una explicación disponible."
+      - id: questions
+        title: "Preguntas"
+        text: "Ideas para ordenar las dudas, sin indicar una conducta médica."
+  - id: no-coverage
+    type: prose
+    title: "También importa saber cuándo no hay respuesta."
+    text: "Si no existe contenido verificado para un resultado, el sistema debe comunicar esa limitación. Mostrar una explicación convincente no es lo mismo que disponer de una explicación respaldada."
+  - id: next
+    type: conversion
+    title: "¿Quiere conocer el producto o profundizar en su enfoque?"
+    text: "Continúe a la aplicación o conozca cómo se distinguen las explicaciones y las preguntas asistidas por IA."
+    actions: [access, trust]
+---

@@ -1,0 +1,46 @@
+---
+import { X } from '@lucide/astro';
+import { getUI } from '../../lib/i18n';
+import policy from '../../../content/marketing.json';
+import { measurementConfig } from '../../lib/marketing-policy.mjs';
+import { serializeJsonLd } from '../../lib/seo-policy.mjs';
+const ui = getUI(Astro.url.pathname);
+const configuration = {
+  ...measurementConfig(import.meta.env.PUBLIC_GA4_ID, import.meta.env.PUBLIC_GTM_ID),
+  allowlists: policy.attributionAllowlist,
+};
+---
+
+<script
+  type="application/json"
+  id="harbor-measurement-config"
+  set:html={serializeJsonLd(configuration)}
+/>
+<aside class="hw-consent-request" data-consent-request hidden aria-label={ui.consent.title}>
+  <p>{ui.consent.request}</p>
+  <button type="button" class="hw-button" data-consent-accept>
+    {ui.consent.accept}
+  </button>
+  <button type="button" class="hw-link" data-consent-reject>
+    {ui.consent.reject}
+  </button>
+</aside>
+<dialog class="hw-consent-dialog" data-consent-dialog aria-labelledby="measurement-title">
+  <button type="button" class="hw-dialog-close" data-consent-close aria-label={ui.consent.close}>
+    <X size={22} aria-hidden="true" />
+  </button>
+  <h2 id="measurement-title">{ui.consent.title}</h2>
+  <p>{ui.consent.description}</p>
+  {configuration.provider === 'none' && <p>{ui.consent.unconfigured}</p>}
+  <p data-privacy-signal hidden>
+    {ui.consent.privacySignal}
+  </p>
+  <div class="hw-actions">
+    <button class="hw-button" type="button" data-consent-accept>
+      {ui.consent.accept}
+    </button>
+    <button class="hw-button hw-button-secondary" type="button" data-consent-reject>
+      {ui.consent.reject}
+    </button>
+  </div>
+</dialog>

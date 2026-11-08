@@ -1,0 +1,59 @@
+---
+schemaVersion: 1
+id: health.demo
+locale: nl
+route: /nl/voorbeeld/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds:
+  - concept-people
+  - code-explanations
+  - code-questions
+seo:
+  title: Ontdek Harbor Health | Voorbeeldtraject
+  description: Bekijk documenten, uitleg en consultvragen in een illustratieve
+    demonstratie zonder patiëntgegevens.
+sections:
+  - id: hero
+    type: hero
+    title: Bekijk eerst hoe een uitslag wordt gepresenteerd.
+    text: De demonstratie toont het traject en beoordeelt je gezondheid niet. Je
+      hoeft geen eigen document aan te leveren.
+    noticeKey: demoNotice
+  - id: preview
+    type: steps
+    title: Dit zie je in het voorbeeld.
+    items:
+      - id: document
+        title: Document
+        text: Een fictief verslag, herkenbaar als voorbeeld.
+      - id: extracted
+        title: Gegevens
+        text: De uitgelezen informatie en een controle voor het vervolg.
+      - id: explanation
+        title: Uitleg
+        text: Voorbeeldinhoud die laat zien hoe beschikbare uitleg wordt gepresenteerd.
+      - id: questions
+        title: Vragen
+        text: Ideeën om vragen te ordenen, zonder medische instructies.
+  - id: no-coverage
+    type: prose
+    title: Ook weten wanneer er geen antwoord is, telt.
+    text: Als geverifieerde inhoud ontbreekt, moet het systeem die grens aangeven.
+      Overtuigende uitleg is niet hetzelfde als onderbouwde uitleg.
+  - id: next
+    type: conversion
+    title: Het product ontdekken of meer weten over de aanpak?
+    text: Ga naar de toepassing of ontdek het verschil tussen uitleg en door AI
+      ondersteunde vragen.
+    actions:
+      - access
+      - trust
+updatedAt: 2026-11-08
+---

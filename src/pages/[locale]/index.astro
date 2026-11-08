@@ -1,0 +1,23 @@
+---
+import { getHome } from '../../lib/content';
+import HomeLayout from '../../layouts/HomeLayout.astro';
+import HomeNav from '../../components/home/HomeNav.astro';
+import HomeScenes from '../../components/home/HomeScenes.astro';
+import HomeClosing from '../../components/home/HomeClosing.astro';
+import { locales } from '../../lib/i18n';
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale }, props: { locale } }));
+}
+const home = await getHome(Astro.props.locale);
+const faq = home.scenes
+  .find((scene) => scene.id === 'faq')!
+  .items.map((item) => ({ title: item.title, text: item.paragraphs.join(' ') }));
+---
+
+<HomeLayout {...home.data.seo} faq={faq} publishable={home.data.status === 'approved'}>
+  <HomeNav />
+  <main id="contenido">
+    <HomeScenes scenes={home.scenes.filter((scene) => scene.id !== 'closing')} />
+  </main>
+  <HomeClosing scene={home.scenes.find((scene) => scene.id === 'closing')!} />
+</HomeLayout>

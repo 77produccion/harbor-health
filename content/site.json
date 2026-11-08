@@ -1,0 +1,277 @@
+{
+  "brand": "Harbor Living",
+  "product": "Harbor Health",
+  "authoringLocale": "es",
+  "defaultPublicLocale": null,
+  "locales": [
+    "es",
+    "en",
+    "nl",
+    "fr",
+    "pt",
+    "de",
+    "pap"
+  ],
+  "markets": [
+    "CO",
+    "MX",
+    "ES",
+    "US",
+    "NL",
+    "CW",
+    "AW"
+  ],
+  "translations": {
+    "es": "draft",
+    "en": "draft",
+    "nl": "draft",
+    "fr": "draft",
+    "pt": "draft",
+    "de": "draft",
+    "pap": "draft"
+  },
+  "actions": {
+    "access": {
+      "kind": "external",
+      "url": "https://harbor-web-rho.vercel.app/health/login",
+      "labels": {
+        "es": "Entrar a Harbor Health",
+        "en": "Enter Harbor Health",
+        "nl": "Naar Harbor Health",
+        "fr": "Accéder à Harbor Health",
+        "pt": "Entrar no Harbor Health",
+        "de": "Harbor Health öffnen",
+        "pap": "Drenta Harbor Health"
+      }
+    },
+    "professional-access": {
+      "kind": "external",
+      "url": "https://harbor-web-rho.vercel.app/health/login",
+      "labels": {
+        "es": "Entrar como profesional",
+        "en": "Professional sign-in",
+        "nl": "Inloggen als professional",
+        "fr": "Connexion professionnelle",
+        "pt": "Entrar como profissional",
+        "de": "Anmeldung für Fachpersonen",
+        "pap": "Drenta komo profeshonal"
+      }
+    },
+    "app": {
+      "kind": "external",
+      "url": "https://harbor-app-beta.vercel.app/",
+      "labels": {
+        "es": "Abrir la App",
+        "en": "Open the App",
+        "nl": "Open de App",
+        "fr": "Ouvrir l’App",
+        "pt": "Abrir o App",
+        "de": "App öffnen",
+        "pap": "Habri e App"
+      }
+    },
+    "medical-editor": {
+      "kind": "external",
+      "url": "https://harbor-developer.vercel.app/medical/login",
+      "labels": {
+        "es": "Abrir el espacio médico",
+        "en": "Open the medical workspace",
+        "nl": "Open de medische werkruimte",
+        "fr": "Ouvrir l’espace médical",
+        "pt": "Abrir o espaço médico",
+        "de": "Medizinischen Arbeitsbereich öffnen",
+        "pap": "Habri e espasio médiko"
+      }
+    },
+    "contact": {
+      "kind": "external",
+      "url": null,
+      "labels": {
+        "es": "Consultar con Harbor",
+        "en": "Contact Harbor",
+        "nl": "Neem contact op met Harbor",
+        "fr": "Contacter Harbor",
+        "pt": "Falar com a Harbor",
+        "de": "Harbor kontaktieren",
+        "pap": "Kontakto ku Harbor"
+      }
+    },
+    "demo": {
+      "kind": "page",
+      "pageId": "health.demo",
+      "labels": {
+        "es": "Ver un ejemplo",
+        "en": "See an example",
+        "nl": "Bekijk een voorbeeld",
+        "fr": "Voir un exemple",
+        "pt": "Ver um exemplo",
+        "de": "Beispiel ansehen",
+        "pap": "Mira un ehempel"
+      }
+    },
+    "trust": {
+      "kind": "page",
+      "pageId": "health.trust",
+      "labels": {
+        "es": "Conocer las fuentes y los límites",
+        "en": "Explore sources and limits",
+        "nl": "Bekijk bronnen en grenzen",
+        "fr": "Découvrir les sources et les limites",
+        "pt": "Conhecer fontes e limites",
+        "de": "Quellen und Grenzen kennenlernen",
+        "pap": "Konosé e fuentenan i limitashonnan"
+      }
+    },
+    "how-it-works": {
+      "kind": "page",
+      "pageId": "health.how-it-works",
+      "labels": {
+        "es": "Cómo funciona",
+        "en": "How it works",
+        "nl": "Hoe het werkt",
+        "fr": "Fonctionnement",
+        "pt": "Como funciona",
+        "de": "So funktioniert es",
+        "pap": "Kon e ta funshoná"
+      }
+    },
+    "access-options": {
+      "kind": "page",
+      "pageId": "health.access",
+      "labels": {
+        "es": "Conocer las opciones de acceso",
+        "en": "Explore access options",
+        "nl": "Bekijk toegangsmogelijkheden",
+        "fr": "Découvrir les accès",
+        "pt": "Conhecer opções de acesso",
+        "de": "Zugangsmöglichkeiten ansehen",
+        "pap": "Mira e opshonnan di akseso"
+      }
+    },
+    "people": {
+      "kind": "page",
+      "pageId": "health.people",
+      "labels": {
+        "es": "Para personas",
+        "en": "For individuals",
+        "nl": "Voor particulieren",
+        "fr": "Pour les particuliers",
+        "pt": "Para pessoas",
+        "de": "Für Privatpersonen",
+        "pap": "Pa personanan"
+      }
+    },
+    "professionals": {
+      "kind": "page",
+      "pageId": "health.professionals",
+      "labels": {
+        "es": "Para profesionales",
+        "en": "For professionals",
+        "nl": "Voor professionals",
+        "fr": "Pour les professionnels",
+        "pt": "Para profissionais",
+        "de": "Für Fachpersonen",
+        "pap": "Pa profeshonalnan"
+      }
+    }
+  },
+  "sharedCopy": {
+    "es": {
+      "brandRelationship": "Harbor Health, un producto de Harbor Living.",
+      "brandSlogan": [
+        "Understanding your Health.",
+        "Understanding Why.™"
+      ],
+      "scope": "Harbor Health ofrece información explicativa. No realiza diagnósticos ni indica tratamientos. La interpretación de sus resultados individuales corresponde a su profesional de salud.",
+      "demoNotice": "Ejemplo ilustrativo. No contiene datos de pacientes ni sustituye una evaluación médica.",
+      "availability": "La disponibilidad del contenido y de las funciones puede variar según el país, el idioma y su acceso.",
+      "agentTitle": "Pregunte sobre Harbor",
+      "agentWelcome": "Puedo ayudarle a conocer Harbor Health y su demostración. No envíe documentos ni datos personales de salud por este chat.",
+      "agentPlaceholder": "¿Qué le gustaría saber sobre Harbor Health?",
+      "agentOutOfScope": "Este asistente responde sobre el producto, no sobre resultados médicos o tratamientos. Para una consulta sobre su salud, contacte con su profesional.",
+      "agentUnknown": "No dispongo de información confirmada sobre ese punto. Puede consultarlo con el equipo de Harbor.",
+      "agentUnavailable": "El asistente no está disponible en este momento. Puede consultar la información de esta web.",
+      "unconfiguredAction": "El destino de esta acción está pendiente de configuración.",
+      "previewScope": "Información para comprender. Su profesional interpreta.",
+      "previewNotice": "Prototipo de diseño · Contenido en revisión.",
+      "previewDocumentTitle": "Informe de laboratorio",
+      "previewDocumentColumn": "Estudio",
+      "previewValueColumn": "Resultado",
+      "previewExplanationLabel": "Una explicación, con contexto.",
+      "previewIllustration": "Representación ilustrativa, sin datos clínicos.",
+      "previewNavigation": "Explorar el recorrido del ejemplo",
+      "previewQuestion": "¿Qué información adicional necesita para valorar este resultado?",
+      "exploreLabel": "Conozca Harbor",
+      "knowledgeNote": "La explicación informa. La conversación aporta el contexto individual.",
+      "professionalImageAlt": "Detalle de una pluma escribiendo sobre papel.",
+      "demoSheetTitle": "Su documento, sin perder el contexto.",
+      "footerNavigation": "Explore Harbor Health",
+      "readingLevels": "Niveles de lectura, no tarifas de contratación.",
+      "readingNavigation": "Elegir profundidad de lectura",
+      "viewControls": "Ajustar la vista del ejemplo",
+      "zoomIn": "Acercar documento",
+      "zoomOut": "Alejar documento",
+      "resetView": "Restablecer encuadre"
+    },
+    "en": {
+      "brandRelationship": "Harbor Health, a Harbor Living product.",
+      "scope": "Harbor Health provides explanatory information. It does not diagnose or prescribe treatment. Individual results must be interpreted by your healthcare professional.",
+      "demoNotice": "Illustrative example. No patient data; not a substitute for medical assessment.",
+      "availability": "Content and feature availability may vary by country, language and access.",
+      "unconfiguredAction": "The destination for this action is awaiting configuration.",
+      "previewNotice": "Design prototype · Content under review.",
+      "footerNavigation": "Explore Harbor Health",
+      "exploreLabel": "Discover Harbor"
+    },
+    "nl": {
+      "brandRelationship": "Harbor Health, een product van Harbor Living.",
+      "scope": "Harbor Health biedt toelichtende informatie. Het stelt geen diagnoses en schrijft geen behandelingen voor. Je zorgprofessional interpreteert je individuele uitslagen.",
+      "demoNotice": "Illustratief voorbeeld. Geen patiëntgegevens; geen vervanging van medische beoordeling.",
+      "availability": "Beschikbaarheid van inhoud en functies kan verschillen per land, taal en toegang.",
+      "unconfiguredAction": "De bestemming van deze actie moet nog worden ingesteld.",
+      "previewNotice": "Ontwerpprototype · Inhoud wordt beoordeeld.",
+      "footerNavigation": "Ontdek Harbor Health",
+      "exploreLabel": "Ontdek Harbor"
+    },
+    "fr": {
+      "brandRelationship": "Harbor Health, un produit Harbor Living.",
+      "scope": "Harbor Health fournit des informations explicatives. Il ne pose pas de diagnostic et ne prescrit pas de traitement. L’interprétation individuelle relève de votre professionnel de santé.",
+      "demoNotice": "Exemple illustratif. Sans données de patients ; ne remplace pas une évaluation médicale.",
+      "availability": "La disponibilité des contenus et fonctions peut varier selon le pays, la langue et l’accès.",
+      "unconfiguredAction": "La destination de cette action reste à configurer.",
+      "previewNotice": "Prototype de conception · Contenu en révision.",
+      "footerNavigation": "Explorer Harbor Health",
+      "exploreLabel": "Découvrir Harbor"
+    },
+    "pt": {
+      "brandRelationship": "Harbor Health, um produto da Harbor Living.",
+      "scope": "O Harbor Health oferece informação explicativa. Não faz diagnósticos nem indica tratamentos. A interpretação individual cabe ao seu profissional de saúde.",
+      "demoNotice": "Exemplo ilustrativo. Sem dados de pacientes; não substitui avaliação médica.",
+      "availability": "A disponibilidade de conteúdo e funções pode variar conforme país, idioma e acesso.",
+      "unconfiguredAction": "O destino desta ação ainda não foi configurado.",
+      "previewNotice": "Protótipo de design · Conteúdo em revisão.",
+      "footerNavigation": "Explorar Harbor Health",
+      "exploreLabel": "Conhecer Harbor"
+    },
+    "de": {
+      "brandRelationship": "Harbor Health, ein Produkt von Harbor Living.",
+      "scope": "Harbor Health bietet erläuternde Informationen. Es stellt keine Diagnosen und verordnet keine Behandlung. Individuelle Ergebnisse beurteilt deine medizinische Fachperson.",
+      "demoNotice": "Illustratives Beispiel. Keine Patientendaten; kein Ersatz für eine medizinische Beurteilung.",
+      "availability": "Inhalte und Funktionen können je nach Land, Sprache und Zugang unterschiedlich verfügbar sein.",
+      "unconfiguredAction": "Das Ziel dieser Aktion muss noch eingerichtet werden.",
+      "previewNotice": "Designprototyp · Inhalte werden geprüft.",
+      "footerNavigation": "Harbor Health entdecken",
+      "exploreLabel": "Harbor kennenlernen"
+    },
+    "pap": {
+      "brandRelationship": "Harbor Health, un produkto di Harbor Living.",
+      "scope": "Harbor Health ta ofresé informashon splikativo. E no ta hasi diagnóstiko ni indiká tratamentu. Bo profeshonal di salú ta interpretá bo resultadonan individual.",
+      "demoNotice": "Ehempel ilustrativo. Sin datonan di pashènt; no ta remplasá evaluashon médiko.",
+      "availability": "Disponibilidat di kontenido i funshonnan por varia segun pais, idioma i akseso.",
+      "unconfiguredAction": "E destino di e akshon aki mester wordu konfigurá ainda.",
+      "previewNotice": "Prototipo di diseño · Kontenido bou di revishon.",
+      "footerNavigation": "Eksplorá Harbor Health",
+      "exploreLabel": "Konosé Harbor"
+    }
+  }
+}

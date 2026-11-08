@@ -1,0 +1,53 @@
+---
+schemaVersion: 1
+id: health.access
+locale: es
+route: /es/acceso/
+audience: all
+status: draft
+revision: 1
+review:
+  commercial: pending
+  clinical: pending
+  legal: pending
+agentEligible: false
+sourceIds: [owner-decisions, code-levels, code-entitlements, concept-people, concept-professionals]
+seo:
+  title: "Acceso a Harbor Health | Personas y profesionales"
+  description: "Conozca los recorridos de Harbor Health para personas y profesionales y consulte el alcance del acceso antes de contratar."
+sections:
+  - id: hero
+    type: hero
+    title: "Elija su recorrido. Conozca qué incluye su acceso."
+    text: "La web le permite conocer Harbor Health. El uso de sus funciones continúa en la aplicación, con las condiciones que correspondan a su cuenta."
+    actions: [access, professional-access]
+  - id: options
+    type: cards
+    title: "Dos públicos, necesidades distintas."
+    items:
+      - id: people
+        title: "Para personas."
+        text: "Información explicativa y preparación de preguntas para conversar con su profesional de salud."
+      - id: professionals
+        title: "Para profesionales."
+        text: "Conozca el enfoque de referencia por prueba y consulte los requisitos del acceso profesional."
+    actions: [people, professionals]
+  - id: levels
+    type: prose
+    title: "Los niveles describen profundidad, no una tarifa."
+    text: "L1 Claro, L2 Con fuentes y L3 Profesional son niveles de explicación. El nombre de un nivel no determina por sí mismo el precio, las prestaciones contratadas o la acreditación de quien accede."
+  - id: availability
+    type: prose
+    title: "Confirme la cobertura que necesita."
+    text: "Antes de contratar, compruebe qué documentos, funciones, idiomas y contenidos están disponibles para su caso. Una interfaz traducida no implica la misma cobertura de conocimiento en todos los países."
+    noticeKey: availability
+  - id: account
+    type: prose
+    title: "Antes de continuar a la aplicación."
+    text: "Revise las condiciones de acceso y privacidad del servicio. No facilite documentos médicos al asistente informativo de esta web."
+  - id: closing
+    type: conversion
+    title: "¿Todavía tiene dudas sobre el producto?"
+    text: "Vea el ejemplo o consulte con Harbor el alcance que necesita."
+    actions: [demo, contact]
+---

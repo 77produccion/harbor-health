@@ -1,0 +1,71 @@
+---
+import type { HomeScene } from '../../lib/content';
+import ProductWindow from './ProductWindow.astro';
+import { getUI } from '../../lib/i18n';
+interface Props {
+  scenes: HomeScene[];
+}
+const { scenes } = Astro.props;
+const ui = getUI(Astro.url.pathname);
+const chapters = scenes.filter((scene) =>
+  ['documents', 'levels', 'consultation'].includes(scene.id),
+);
+---
+
+<section
+  class="hw-journey"
+  data-journey
+  id="recorrido"
+  data-big-scene="product-journey"
+  data-big-scene-opts='{"hold":1}'
+  data-current-mode="documents"
+  aria-label={ui.product.overviewDescription}
+>
+  <div class="hw-wrap wrap hw-journey-grid">
+    <nav class="hw-journey-mobile-nav" aria-label={ui.a11y.chapters}>
+      {chapters.map((scene) => (
+        <a
+          href={`#${scene.id}`}
+          data-chapter-choice={scene.id}
+          aria-current={scene.id === 'documents' ? 'step' : undefined}
+        >
+          {ui.product[scene.id as 'documents' | 'levels' | 'consultation']}
+        </a>
+      ))}
+    </nav>
+    <div class="hw-journey-copy">
+      {chapters.map((scene) => (
+        <section
+          id={scene.id}
+          class="hw-journey-chapter"
+          data-home-scene={scene.id}
+          data-journey-chapter={scene.id}
+          aria-labelledby={`${scene.id}-title`}
+        >
+          <h2 id={`${scene.id}-title`}>{scene.title}</h2>
+          {scene.paragraphs.map((text) => (
+            <p>{text}</p>
+          ))}
+          <div class="hw-journey-topics">
+            {scene.items.map((item) => (
+              <span>{item.title}</span>
+            ))}
+          </div>
+        </section>
+      ))}
+      <picture class="hw-journey-photo" aria-hidden="true">
+        <img
+          src="/images/home-preparation-960.webp"
+          width="960"
+          height="640"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+    </div>
+    <div class="hw-journey-stage">
+      <ProductWindow scenes={scenes} />
+    </div>
+  </div>
+</section>
