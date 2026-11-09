@@ -28,7 +28,7 @@ for (const [locale, [title, how, trust]] of Object.entries(copy)) {
     for (const link of await page.locator('.hw-desktop-nav a').all()) {
       expect(await link.getAttribute('href')).not.toContain('#');
     }
-    await expect(page.locator('#knowledge a')).toHaveAttribute('href', `/${locale}/${trust}/`);
+    await expect(page.locator('#knowledge [data-marketing-action="trust"]')).toHaveAttribute('href', `/${locale}/${trust}/`);
     const graph = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent() ?? '{}');
     expect(graph['@graph'].find((item: Record<string, unknown>) => item['@type'] === 'WebPage').inLanguage).toBe(locale);
     expect((await request.get(`/${locale}/${how}/`)).status()).toBe(200);

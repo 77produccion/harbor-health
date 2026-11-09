@@ -35,7 +35,7 @@ test('OS reduce no apaga la experiencia completa solicitada por el responsable',
   await page.goto('/es/');
   const hero = page.locator('[data-editorial-video="hero-workspace"]');
   await expect(hero).toHaveAttribute('data-playing', 'true');
-  const photo = page.locator('.hw-knowledge-photo');
+  const photo = page.locator('.hw-knowledge-capture img');
   await expect(photo).toHaveCSS('clip-path', /inset/);
   await photo.scrollIntoViewIfNeeded();
   await photo.evaluate((el) =>

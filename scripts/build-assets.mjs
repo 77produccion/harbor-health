@@ -4,6 +4,7 @@ import sharp from 'sharp';
 import { loadContent } from './content-model.mjs';
 import './build-home-images.mjs';
 import './build-editorial-images.mjs';
+import './build-product-images.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const { pages } = await loadContent(root);
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');

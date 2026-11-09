@@ -5,6 +5,7 @@ import HomeAction from './HomeAction.astro';
 import HomeTextLink from './HomeTextLink.astro';
 import EditorialVideo from '../EditorialVideo.astro';
 import ExplorePages from '../ExplorePages.astro';
+import ProductCapture from '../ProductCapture.astro';
 import { getUI } from '../../lib/i18n';
 interface Props {
   scenes: HomeScene[];
@@ -62,16 +63,9 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
                 <p>{text}</p>
               ))}
             </div>
-            <picture class="hw-knowledge-photo" aria-hidden="true">
-              <img
-                src="/images/home-documents-1400.webp"
-                width="1400"
-                height="934"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
+            <div class="hw-knowledge-capture">
+              <ProductCapture id="medical-proposal" />
+            </div>
           </div>
           <div class="hw-knowledge-route diagram" data-knowledge-route>
             {scene.items.map((item) => {
@@ -130,6 +124,7 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
                   {item.actions.map((id) => (
                     <HomeAction id={id} placement="professionals" secondary />
                   ))}
+                  {item.id === 'editor' && <ProductCapture id="medical-status" compact />}
                 </article>
               ))}
             </div>
@@ -169,3 +164,19 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
 })}
 
 <ExplorePages />
+
+<style>
+  .hw-knowledge-capture {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    width: min(100%, 379px);
+    justify-self: center;
+  }
+  @media (max-width: 639px) {
+    .hw-knowledge-capture {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+</style>

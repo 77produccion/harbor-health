@@ -267,7 +267,7 @@ export function initHome() {
 
     // Distinct chapter treatments, not the same fade/slide on every block.
     document
-      .querySelectorAll<HTMLElement>('.hw-knowledge-photo, .hw-professional-portrait')
+      .querySelectorAll<HTMLElement>('.hw-knowledge-capture img, .hw-professional-portrait')
       .forEach((visual) => openMedia(visual));
     document.querySelectorAll<HTMLElement>('[data-knowledge-node]').forEach((node) => {
       gsap.fromTo(
@@ -285,6 +285,25 @@ export function initHome() {
   media.add('(min-width: 1000px) and (min-height: 760px)', () => {
     if (!journey) return;
     journey.classList.add('is-live');
+    // Capturas, traducciones y zoom pueden exceder la escena sticky.
+    // Medir todos los capítulos antes de fijarla; el fallback conserva altura natural.
+    const grid = journey.querySelector<HTMLElement>('.hw-journey-grid');
+    const chapters = [...journey.querySelectorAll<HTMLElement>('[data-journey-chapter]')];
+    const padding = grid ? getComputedStyle(grid) : null;
+    const availableHeight =
+      window.innerHeight -
+      (padding ? parseFloat(padding.paddingTop) + parseFloat(padding.paddingBottom) : 160);
+    const tooTall = chapters.some((chapter) => {
+      const previousDisplay = chapter.style.display;
+      chapter.style.display = 'flex';
+      const height = chapter.scrollHeight;
+      chapter.style.display = previousDisplay;
+      return height > availableHeight;
+    });
+    if (tooTall) {
+      journey.classList.remove('is-live');
+      return;
+    }
     const modes = ['documents', 'levels', 'consultation'];
     const progress = ScrollTrigger.create({
       trigger: journey,

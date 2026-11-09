@@ -1,0 +1,90 @@
+---
+import manifest from '../../content/product-captures.json';
+
+interface Props {
+  id: keyof typeof manifest.captures;
+  compact?: boolean;
+}
+const { id, compact = false } = Astro.props;
+const capture = manifest.captures[id];
+const widths = [480, 960, 1600].filter((width) => width < capture.width).concat(capture.width);
+const image = (width: number) => `/images/product/${id}-${width}.webp`;
+---
+
+<figure
+  class:list={['product-capture', compact && 'product-capture-compact']}
+  data-product-capture={id}
+  lang={manifest.language}
+>
+  <a
+    href={image(capture.width)}
+    target="_blank"
+    rel="noopener"
+    aria-label={`${capture.caption} ${manifest.openLabel}`}
+  >
+    <img
+      src={image(widths.find((width) => width >= 960) ?? capture.width)}
+      srcset={widths.map((width) => `${image(width)} ${width}w`).join(', ')}
+      sizes={
+        compact
+          ? '(max-width: 639px) 85vw, 430px'
+          : '(max-width: 639px) 90vw, (max-width: 999px) 85vw, 65vw'
+      }
+      width={capture.width}
+      height={capture.height}
+      alt={capture.alt}
+      loading="lazy"
+      decoding="async"
+    />
+  </a>
+  <figcaption>
+    <span>{capture.caption}</span>
+    <a href={image(capture.width)} target="_blank" rel="noopener">
+      {manifest.openLabel}
+    </a>
+  </figcaption>
+</figure>
+
+<style>
+  .product-capture {
+    min-width: 0;
+    width: 100%;
+    margin: 28px 0 0;
+    color: inherit;
+  }
+  .product-capture > a {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #b7c7d4;
+    border-radius: 6px;
+    background: #f7f9fb;
+    cursor: zoom-in;
+  }
+  .product-capture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .product-capture-compact img {
+    max-height: 220px;
+  }
+  .product-capture figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px 20px;
+    padding-top: 12px;
+    font: 400 12px/1.6 var(--hw-sans, 'Poppins', sans-serif);
+    color: inherit;
+  }
+  .product-capture figcaption a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .product-capture a:focus-visible {
+    outline: 3px solid #01919f;
+    outline-offset: 4px;
+  }
+</style>

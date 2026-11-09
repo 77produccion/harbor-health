@@ -29,6 +29,7 @@
 !/scripts/build-assets.mjs
 !/scripts/build-editorial-images.mjs
 !/scripts/build-home-images.mjs
+!/scripts/build-product-images.mjs
 !/scripts/check-content.mjs
 !/scripts/content-model.mjs
 !/scripts/publish-build.mjs
@@ -50,6 +51,7 @@
 /public/assets/motion/*
 !/public/assets/motion/motion.css
 /public/images/*
+!/public/images/product/
 !/public/images/2154c642-f58e-4b4c-8ad8-96a1a357701d.png
 !/public/images/98bbb4c4-4ab4-4b05-a495-fcfc87a9b568.png
 !/public/images/9c56b27b-189b-4bf5-b585-020fa04d786f.png

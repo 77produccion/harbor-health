@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import Action from './Action.astro';
 import EditorialVideo from './EditorialVideo.astro';
 import ExplorePages from './ExplorePages.astro';
+import ProductCapture from './ProductCapture.astro';
 import { site } from '../lib/content';
 import { getLocale } from '../lib/i18n';
 import { editorialMedia } from '../lib/editorial-media';
@@ -88,7 +89,14 @@ function imageForProse(id: string) {
   return proseImages[proseIndex] ?? null;
 }
 
-const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
+const captureForSection = (id: string) => {
+  if (page.data.id === 'health.how-it-works' && id === 'documents') return 'upload' as const;
+  if (page.data.id === 'health.professionals' && id === 'governance')
+    return 'medical-library' as const;
+  if (page.data.id === 'health.professionals' && id === 'participation')
+    return 'medical-proposal' as const;
+  return null;
+};
 ---
 
 <main
@@ -129,10 +137,11 @@ const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
     </div>
   </section>
 
-  <div class="sc-intro">
-    <p>{shared.previewNotice}</p>
-    {hero.noticeKey && <p>{shared[hero.noticeKey as keyof typeof shared]}</p>}
-  </div>
+  {hero.noticeKey && (
+    <div class="sc-intro">
+      <p>{shared[hero.noticeKey as keyof typeof shared]}</p>
+    </div>
+  )}
 
   {sections.map((section) => {
     const actions = section.actions?.map((actionId) => (
@@ -161,22 +170,11 @@ const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
                 </article>
               ))}
             </div>
-            {stepsImage && (
-              <figure class="sc-steps-media">
-                <img
-                  src={stepsImage}
-                  width="1400"
-                  height="900"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-            )}
             {section.noticeKey && (
               <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
             )}
             {actions?.length ? <div class="sc-actions">{actions}</div> : null}
+            {page.data.id === 'health.demo' && <ProductCapture id="questions" />}
           </div>
         </section>
       );
@@ -202,6 +200,9 @@ const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
               </article>
             ))}
           </div>
+          {page.data.id === 'health.trust' && section.id === 'sources' && (
+            <ProductCapture id="medical-library" />
+          )}
           {section.noticeKey && (
             <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
           )}
@@ -360,12 +361,14 @@ const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
     const proseIndex = proseIds.indexOf(section.id);
     const variant = art.prose[proseIndex] ?? 'quiet';
     const image = imageForProse(section.id);
+    const capture = captureForSection(section.id);
 
     return (
       <section
         class:list={[
           'sc-chapter',
           `sc-chapter-${variant}`,
+          capture && 'sc-chapter-with-capture',
           variant === 'feature' && art.featureReverse && 'is-reverse',
         ]}
         id={section.id}
@@ -380,12 +383,22 @@ const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
           )}
           {actions?.length ? <div class="sc-actions">{actions}</div> : null}
         </div>
-        {variant === 'feature' && image && (
+        {capture && (
+          <div
+            class:list={[
+              'sc-product-media',
+              capture === 'medical-proposal' && 'sc-product-media-portrait',
+            ]}
+          >
+            <ProductCapture id={capture} />
+          </div>
+        )}
+        {variant === 'feature' && image && !capture && (
           <figure class="sc-chapter-media">
             <img src={image} width="1400" height="1000" alt="" loading="lazy" decoding="async" />
           </figure>
         )}
-        {variant === 'panel' && image && (
+        {variant === 'panel' && image && !capture && (
           <figure class="sc-chapter-media" aria-hidden="true">
             <img src={image} width="1400" height="1000" alt="" loading="lazy" decoding="async" />
           </figure>
@@ -402,6 +415,31 @@ const stepsImage = page.data.id === 'health.demo' ? media.accent : null;
 
   <ExplorePages />
 </main>
+
+<style>
+  .sc-chapter-with-capture {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 80px);
+  }
+  .sc-chapter-with-capture .sc-chapter-copy {
+    display: block;
+    min-width: 0;
+  }
+  .sc-product-media {
+    min-width: 0;
+  }
+  .sc-product-media-portrait {
+    max-width: 379px;
+    justify-self: center;
+  }
+  @media (max-width: 999px) {
+    .sc-chapter-with-capture {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
 
 <script>
   import { initSceneMotion } from '../scripts/scene-motion';

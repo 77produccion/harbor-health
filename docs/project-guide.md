@@ -2,7 +2,7 @@
 
 ## Producto y alcance
 
-Web comercial de Harbor Health, submarca de Harbor Living. No es la aplicación autenticada ni un servicio clínico. Las interfaces de producto son representaciones ilustrativas sin datos personales; no se suben documentos ni se atienden consultas médicas aquí.
+Web comercial de Harbor Health, submarca de Harbor Living. No es la aplicación autenticada ni un servicio clínico. Combina un recorrido ilustrativo interactivo con capturas aportadas del producto, recortadas y saneadas sin datos identificables ni valores clínicos personales. No se suben documentos ni se atienden consultas médicas aquí.
 
 Hay seis vistas en siete idiomas (`es/en/nl/fr/pt/de/pap`): home, funcionamiento, ejemplo, conocimiento y límites, profesionales y acceso. La home editorial se escribe en español; las traducciones siguen en borrador. Idioma y mercado son dimensiones distintas: traducir una página no acredita cobertura clínica.
 
@@ -26,6 +26,8 @@ No cambiar IDs al traducir. No duplicar copy público en componentes ni introduc
 - Sin badges de relleno, actividad clínica ficticia ni tarjetas repetidas por sistema. Iconografía necesaria desde Lucide.
 
 Los recursos ilustrativos y sus originales están inventariados en [assets.md](assets.md). No se acredita propiedad, consentimiento de personas ni licencia de producción solo por disponer del archivo.
+
+Las capturas se integran junto a la función que ilustran y permiten abrir el WebP completo sin JavaScript. El portal médico se presenta como espacio editorial, distinto del acceso profesional de lectura. No se muestran etiquetas de versión/prototipo en la interfaz; esto no modifica los estados de revisión, `noindex` ni los bloqueos de publicación.
 
 ## Movimiento y vídeos
 

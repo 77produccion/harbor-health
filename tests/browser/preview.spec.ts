@@ -30,7 +30,7 @@ test('la navegación usa solo el símbolo y el eslogan se lee fuera del logo', a
     await expect(page.locator('header .brand-wordmark-name')).toHaveText('Harbor');
     await expect(page.locator('header .brand-wordmark-product span')).toHaveText(['H', 'e', 'a', 'l', 't', 'h']);
     await expect(page.getByRole('link', { name: 'Harbor Health, inicio', exact: true })).toBeVisible();
-    const slogan = page.locator('footer [lang="en"]');
+    const slogan = page.locator('footer .hw-brand-slogan[lang="en"], footer .brand-slogan[lang="en"]');
     await expect(slogan).toContainText('Understanding your Health.');
     await expect(slogan).toContainText('Understanding Why.™');
     await expect(page.locator('header')).not.toContainText('Understanding');

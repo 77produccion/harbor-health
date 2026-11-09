@@ -33,7 +33,7 @@ Abrir http://127.0.0.1:4321/es/. La configuración de entorno es opcional para d
 | `tests/` | Pruebas unitarias y de navegador. |
 | `docs/` | Guía del proyecto, inventario de recursos y alcance del repositorio. |
 
-Los componentes experimentales, imágenes antiguas, vídeos en reserva, skills, auditorías, capturas, grabaciones, dependencias y builds locales no forman parte del repositorio.
+Los componentes experimentales, imágenes antiguas, vídeos en reserva, skills, auditorías, capturas de auditoría, grabaciones, dependencias y builds locales no forman parte del repositorio. Las capturas de producto utilizadas y sus fuentes saneadas se conservan en `public/images/product/`.
 
 ## Validar
 

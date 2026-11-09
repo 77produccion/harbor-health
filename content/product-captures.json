@@ -1,0 +1,54 @@
+{
+  "language": "en",
+  "openLabel": "Open full image",
+  "captures": {
+    "upload": {
+      "width": 1050,
+      "height": 229,
+      "caption": "Add a photo, upload a document or paste its text.",
+      "alt": "Harbor Health document upload options: take a photo, upload a file and paste text."
+    },
+    "results": {
+      "width": 1420,
+      "height": 650,
+      "caption": "Your documents, organised by category.",
+      "alt": "Harbor Health results list with laboratory, radiology and functional study documents."
+    },
+    "laboratory": {
+      "width": 1420,
+      "height": 624,
+      "caption": "Laboratory parameters and explanation controls. Result values are hidden.",
+      "alt": "Laboratory table with test names and explanation controls; result values, ranges and statuses have been concealed."
+    },
+    "questions": {
+      "width": 1420,
+      "height": 687,
+      "caption": "Choose the reason for your next consultation.",
+      "alt": "Harbor Health Questions screen with consultation topics and a reminder that preparation does not replace medical care."
+    },
+    "mobile-questions": {
+      "width": 1080,
+      "height": 1880,
+      "caption": "Prepare your questions on your phone.",
+      "alt": "Mobile question preparation: select a document, choose the number of questions and add your own questions."
+    },
+    "medical-library": {
+      "width": 1901,
+      "height": 811,
+      "caption": "The medical editorial workspace: guidelines and texts.",
+      "alt": "Medical editorial library showing knowledge base versions and a control to propose a text change."
+    },
+    "medical-proposal": {
+      "width": 379,
+      "height": 782,
+      "caption": "Propose a change, with its reference and reason.",
+      "alt": "Medical editorial form with current text, proposed text, guideline reference, reason for change and save for review control."
+    },
+    "medical-status": {
+      "width": 1917,
+      "height": 817,
+      "caption": "Follow the status of an editorial proposal.",
+      "alt": "My proposals screen in the medical editorial workspace, showing a proposal pending review."
+    }
+  }
+}

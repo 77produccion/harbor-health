@@ -1,6 +1,7 @@
 ---
 import type { HomeScene } from '../../lib/content';
 import ProductWindow from './ProductWindow.astro';
+import ProductCapture from '../ProductCapture.astro';
 import { getUI } from '../../lib/i18n';
 interface Props {
   scenes: HomeScene[];
@@ -51,21 +52,35 @@ const chapters = scenes.filter((scene) =>
               <span>{item.title}</span>
             ))}
           </div>
+          <ProductCapture
+            id={
+              scene.id === 'documents'
+                ? 'results'
+                : scene.id === 'levels'
+                  ? 'laboratory'
+                  : 'questions'
+            }
+            compact
+          />
         </section>
       ))}
-      <picture class="hw-journey-photo" aria-hidden="true">
-        <img
-          src="/images/home-preparation-960.webp"
-          width="960"
-          height="640"
-          alt=""
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
     </div>
     <div class="hw-journey-stage">
       <ProductWindow scenes={scenes} />
     </div>
   </div>
 </section>
+
+<style>
+  .hw-journey :global(.product-capture-compact) {
+    margin-top: 18px;
+  }
+  .hw-journey :global(.product-capture-compact img) {
+    max-height: clamp(100px, calc(100svh - 720px), 180px);
+  }
+  @media (max-width: 999px) {
+    .hw-journey :global(.product-capture-compact img) {
+      max-height: none;
+    }
+  }
+</style>

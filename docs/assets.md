@@ -15,7 +15,7 @@ En `public/images/`; se conservan intactos. Los nombres aportados se mantienen p
 | `ad93f76a-3fe9-4a15-bbfe-bba72801806d.png` | Retrato ilustrativo: `home-professional-900.webp`, `editorial-clinician-1000.webp`. |
 | `2154c642-f58e-4b4c-8ad8-96a1a357701d.png` | Agua de cierres: `home-water-800.webp`, `home-water-1600.webp`, `editorial-ocean-1600.webp`. |
 
-`scripts/build-assets.mjs` y sus dos módulos de imágenes regeneran los derivados y las siete imágenes Open Graph `og-health*.png` desde los MDX. No necesitan archivos de carpetas hermanas ni servicios externos. También se incluyen los derivados actuales para disponer de ellos desde el primer checkout.
+`scripts/build-assets.mjs` y sus módulos de imágenes regeneran los derivados y las siete imágenes Open Graph `og-health*.png` desde los MDX. No necesitan archivos de carpetas hermanas ni servicios externos. También se incluyen los derivados actuales para disponer de ellos desde el primer checkout.
 
 ## Vídeos y posters
 
@@ -27,6 +27,25 @@ En `public/images/`; se conservan intactos. Los nombres aportados se mantienen p
 Los cuatro posters se conservan como recursos ya extraídos de los clips, a 0,5 segundos para evitar el inicio negro. Se sirven con `srcset`; no hace falta FFmpeg para construir. Si cambia un clip, sustituir también sus dos posters y ejecutar las pruebas de medios.
 
 Los MP4 originales pesan aproximadamente 14,4 y 9 MB. La carga por escena no sustituye su optimización. No se incluyen los clips `(2)` de ejercicio ni `(3)` de tensión arterial: no están integrados y no acreditan prestaciones de Health.
+
+## Capturas de producto
+
+`content/product-captures.json` contiene dimensiones, pies y textos alternativos de las ocho capturas integradas. Por ahora se muestran en inglés en los siete idiomas, con `lang="en"`, sin simular traducciones de la interfaz. `ProductCapture.astro` proporciona carga diferida, fuentes responsive y un enlace a la imagen completa que funciona sin JavaScript.
+
+Las imágenes de `public/images/product/source/` son fuentes recortadas y saneadas para el build, no copias de los originales privados. `scripts/build-product-images.mjs` genera los WebP de 480/960/1600 px cuando corresponde y una variante de tamaño completo, sin ampliaciones. No requiere las carpetas hermanas. Los originales aportados permanecen intactos fuera del repositorio comercial.
+
+| Fuente aportada | Fuente saneada | Consumidor |
+| --- | --- | --- |
+| `01 Harbor Web/...174046.png` | `upload.png` | Cómo funciona, documentos; solo foto/archivo/texto, sin destacar el conector pendiente. |
+| `01 Harbor Web/...174058.png` | `results.png` | Home, documentos; sin barra de cuenta. |
+| `01 Harbor Web/...174111.png` | `laboratory.png` | Home, dato y explicación; valores, rangos y estados ocultos de forma irreversible. |
+| `01 Harbor Web/...174159.png` | `questions.png` | Home, preparación de consulta; página de ejemplo. |
+| `02 Harbor App/...170710.jpg` | `mobile-questions.png` | Cierre de home, experiencia móvil; sin barra de estado del teléfono. |
+| `04 Portal Médico/...174540.png` | `medical-library.png` | Conocimiento y límites; profesionales, gobernanza. |
+| `04 Portal Médico/...174725.png` | `medical-proposal.png` | Home, procedencia; profesionales, participación. |
+| `04 Portal Médico/...174835.png` | `medical-status.png` | Home, participación editorial. |
+
+No se incluyen nombres, correos de cuenta ni conversaciones personales. No se utilizan los logins de Developer o Superadmin como prueba de funciones internas, ni el portal editorial como atención de pacientes. Las capturas no acreditan por sí solas disponibilidad, validación clínica ni autorización de publicación; los bloqueos editoriales siguen vigentes.
 
 ## Fuentes y CSS
 

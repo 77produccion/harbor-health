@@ -1,6 +1,7 @@
 ---
 import type { HomeScene } from '../../lib/content';
 import HomeAction from './HomeAction.astro';
+import ProductCapture from '../ProductCapture.astro';
 import { getUI, getLocale } from '../../lib/i18n';
 import { site } from '../../lib/content';
 interface Props {
@@ -25,15 +26,20 @@ const locale = getLocale(Astro.url.pathname);
     />
   </div>
   <div class="hw-wrap wrap">
-    <div class="hw-closing-head">
-      <h2>{scene.title}</h2>
-      {scene.paragraphs.map((text) => (
-        <p>{text}</p>
-      ))}
-      <div class="hw-actions">
-        {scene.actions.map((id, i) => (
-          <HomeAction id={id} placement="closing" secondary={i > 0} />
+    <div class="hw-closing-layout">
+      <div class="hw-closing-head">
+        <h2>{scene.title}</h2>
+        {scene.paragraphs.map((text) => (
+          <p>{text}</p>
         ))}
+        <div class="hw-actions">
+          {scene.actions.map((id, i) => (
+            <HomeAction id={id} placement="closing" secondary={i > 0} />
+          ))}
+        </div>
+      </div>
+      <div class="hw-closing-capture">
+        <ProductCapture id="mobile-questions" />
       </div>
     </div>
     <div class="hw-footer-bottom" data-closing-foot>
@@ -55,3 +61,20 @@ const locale = getLocale(Astro.url.pathname);
     </div>
   </div>
 </footer>
+
+<style>
+  .hw-closing-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    align-items: center;
+    gap: clamp(32px, 5vw, 80px);
+  }
+  .hw-closing-capture {
+    max-width: 260px;
+  }
+  @media (max-width: 999px) {
+    .hw-closing-layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
