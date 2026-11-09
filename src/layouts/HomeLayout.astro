@@ -8,6 +8,7 @@ import '../styles/editorial-images.css';
 import '../styles/scene-pages.css';
 import '../styles/photographic-home.css';
 import '../styles/site-header.css';
+import '../styles/cinematic.css';
 import '../styles/motion-policy.css';
 import SeoHead from '../components/SeoHead.astro';
 import Consent from '../components/home/Consent.astro';
@@ -42,7 +43,7 @@ const ui = getUI(Astro.url.pathname);
     />
     <link rel="stylesheet" href="/assets/motion/motion.css" />
   </head>
-  <body>
+  <body class="cinematic-site">
     <slot />
     <Consent />
     <LanguageSelector />

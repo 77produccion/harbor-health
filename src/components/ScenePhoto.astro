@@ -1,0 +1,40 @@
+---
+interface Props {
+  src: string;
+  srcset?: string;
+  sizes?: string;
+  class?: string;
+  eager?: boolean;
+}
+const {
+  src,
+  srcset,
+  sizes = '(max-width: 999px) 90vw, 45vw',
+  class: className,
+  eager = false,
+} = Astro.props;
+const responsiveNames: Record<string, string> = {
+  '/images/home-preparation-960.webp': 'preparation',
+  '/images/home-documents-1400.webp': 'documents',
+  '/images/editorial-notes-1400.webp': 'documents',
+  '/images/editorial-questions-1400.webp': 'questions',
+  '/images/home-professional-900.webp': 'clinician',
+};
+const name = responsiveNames[src];
+const sources = name
+  ? `/images/cinematic-${name}-480.webp 480w, /images/cinematic-${name}-800.webp 800w`
+  : srcset;
+---
+
+<div class:list={['scene-photo', className]} aria-hidden="true" data-photo-frame>
+  <img
+    src={src}
+    srcset={sources}
+    sizes={sizes}
+    width="1400"
+    height="1000"
+    alt=""
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+  />
+</div>

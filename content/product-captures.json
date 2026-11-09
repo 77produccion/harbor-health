@@ -1,6 +1,23 @@
 {
   "language": "en",
   "openLabel": "Open full image",
+  "viewer": {
+    "es": { "close": "Cerrar imagen", "zoomIn": "Ampliar imagen", "zoomOut": "Ajustar imagen" },
+    "en": { "close": "Close image", "zoomIn": "Zoom in", "zoomOut": "Fit image" },
+    "nl": {
+      "close": "Afbeelding sluiten",
+      "zoomIn": "Inzoomen",
+      "zoomOut": "Afbeelding passend maken"
+    },
+    "fr": { "close": "Fermer l’image", "zoomIn": "Agrandir l’image", "zoomOut": "Ajuster l’image" },
+    "pt": { "close": "Fechar imagem", "zoomIn": "Ampliar imagem", "zoomOut": "Ajustar imagem" },
+    "de": { "close": "Bild schließen", "zoomIn": "Bild vergrößern", "zoomOut": "Bild einpassen" },
+    "pap": {
+      "close": "Sera imágen",
+      "zoomIn": "Hasi imágen mas grandi",
+      "zoomOut": "Ahustá imágen"
+    }
+  },
   "captures": {
     "upload": {
       "width": 1050,

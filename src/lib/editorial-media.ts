@@ -25,7 +25,7 @@ export const editorialMedia: Record<string, EditorialMediaEntry> = {
     detail: '/images/editorial-clinician-1000.webp',
     accent: '/images/editorial-writing-1400.webp',
     closing: '/images/editorial-ocean-1600.webp',
-    video: '/videos/harbor-line-visual%20(1).mp4',
+    video: '/videos/health-professional-720.mp4',
   },
   'health.demo': {
     hero: '/images/editorial-questions-1400.webp',

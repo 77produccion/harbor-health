@@ -13,7 +13,7 @@ test('la home se genera desde Scene MDX y enlaza los accesos documentados', asyn
   await expect(page.locator('.hw-nav-action a[data-marketing-action="app"]')).toHaveAttribute('href', 'https://harbor-app-beta.vercel.app/');
   await expect(page.locator('#hero .hw-actions a')).toHaveCount(1);
   await expect(page.locator('#hero .hw-app-frame, #hero .hw-hero-atmosphere')).toHaveCount(0);
-  await expect(page.locator('#hero picture img')).toBeVisible();
+  await expect(page.locator('#hero [data-hero-image]')).toBeVisible();
   // ™ es parte del eslogan original, no un emoji ni un icono decorativo.
   const publicText = (await page.locator('body').innerText()).replaceAll('™', '');
   expect(publicText).not.toMatch(/[\u2190-\u21ff]|\p{Extended_Pictographic}/u);
@@ -177,7 +177,11 @@ test('contenido y acceso siguen disponibles sin JavaScript', async ({ browser, b
   const page = await context.newPage();
   await page.goto(`${baseURL}/es/`);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await expect(page.locator('.hw-faq-answers article')).toHaveCount(5);
+  await expect(page.locator('.hw-faq-answers details')).toHaveCount(5);
+  for (const details of await page.locator('.hw-faq-answers details').all()) {
+    if (!(await details.evaluate(el => (el as HTMLDetailsElement).open))) await details.locator('summary').click();
+    await expect(details.locator('p')).toBeVisible();
+  }
   await expect(page.locator('[data-home-scene]')).toHaveCount(8);
   await context.close();
 });
@@ -194,10 +198,9 @@ test('el scroll real hace avanzar la única escena de producto', async ({ page }
   await page.goto('/es/');
   const journey = page.locator('[data-journey]');
   await expect(journey).toHaveClass(/is-live/);
-  const top = await journey.evaluate(element => element.getBoundingClientRect().top + scrollY);
-  await page.evaluate(top => window.scrollTo({ top, behavior: 'instant' }), top + 430);
+  await page.locator('[data-journey-chapter="levels"]').evaluate(el => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 112, behavior: 'instant' }));
   await expect(page.locator('[data-product-window]')).toHaveAttribute('data-mode', 'levels');
-  await page.evaluate(top => window.scrollTo({ top, behavior: 'instant' }), top + 780);
+  await page.locator('[data-journey-chapter="consultation"]').evaluate(el => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 112, behavior: 'instant' }));
   await expect(page.locator('[data-product-window]')).toHaveAttribute('data-mode', 'consultation');
   await expect(page.locator('[data-product-panel="consultation"]')).toBeVisible();
 });

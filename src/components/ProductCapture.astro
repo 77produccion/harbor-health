@@ -1,12 +1,17 @@
 ---
 import manifest from '../../content/product-captures.json';
+import { getLocale } from '../lib/i18n';
+import { X, ZoomIn, ZoomOut } from '@lucide/astro';
 
 interface Props {
   id: keyof typeof manifest.captures;
   compact?: boolean;
+  sizes?: string;
 }
-const { id, compact = false } = Astro.props;
+const { id, compact = false, sizes } = Astro.props;
 const capture = manifest.captures[id];
+const locale = getLocale(Astro.url.pathname);
+const viewer = manifest.viewer[locale];
 const widths = [480, 960, 1600].filter((width) => width < capture.width).concat(capture.width);
 const image = (width: number) => `/images/product/${id}-${width}.webp`;
 ---
@@ -18,17 +23,18 @@ const image = (width: number) => `/images/product/${id}-${width}.webp`;
 >
   <a
     href={image(capture.width)}
-    target="_blank"
-    rel="noopener"
+    data-capture-open
+    aria-haspopup="dialog"
     aria-label={`${capture.caption} ${manifest.openLabel}`}
   >
     <img
       src={image(widths.find((width) => width >= 960) ?? capture.width)}
       srcset={widths.map((width) => `${image(width)} ${width}w`).join(', ')}
       sizes={
-        compact
+        sizes ??
+        (compact
           ? '(max-width: 639px) 85vw, 430px'
-          : '(max-width: 639px) 90vw, (max-width: 999px) 85vw, 65vw'
+          : '(max-width: 639px) 90vw, (max-width: 999px) 85vw, 65vw')
       }
       width={capture.width}
       height={capture.height}
@@ -39,11 +45,53 @@ const image = (width: number) => `/images/product/${id}-${width}.webp`;
   </a>
   <figcaption>
     <span>{capture.caption}</span>
-    <a href={image(capture.width)} target="_blank" rel="noopener">
+    <a href={image(capture.width)} data-capture-open aria-haspopup="dialog">
       {manifest.openLabel}
     </a>
   </figcaption>
 </figure>
+<dialog
+  class="capture-viewer"
+  aria-label={capture.caption}
+  lang={manifest.language}
+  data-capture-viewer
+>
+  <div class="capture-viewer-toolbar" lang={locale}>
+    <button
+      type="button"
+      data-capture-zoom
+      aria-label={viewer.zoomIn}
+      aria-pressed="false"
+      data-zoom-in={viewer.zoomIn}
+      data-zoom-out={viewer.zoomOut}
+    >
+      <span data-zoom-in-icon aria-hidden="true">
+        <ZoomIn size={22} />
+      </span>
+      <span data-zoom-out-icon aria-hidden="true" hidden>
+        <ZoomOut size={22} />
+      </span>
+    </button>
+    <button type="button" data-capture-close aria-label={viewer.close}>
+      <X size={24} />
+    </button>
+  </div>
+  <div class="capture-viewer-stage" role="region" tabindex="0" aria-label={capture.alt}>
+    <img
+      data-capture-full
+      data-src={image(capture.width)}
+      width={capture.width}
+      height={capture.height}
+      alt={capture.alt}
+      decoding="async"
+    />
+  </div>
+</dialog>
+
+<script>
+  import { initCaptureViewers } from '../scripts/capture-viewer';
+  initCaptureViewers();
+</script>
 
 <style>
   .product-capture {
@@ -86,5 +134,88 @@ const image = (width: number) => `/images/product/${id}-${width}.webp`;
   .product-capture a:focus-visible {
     outline: 3px solid #01919f;
     outline-offset: 4px;
+  }
+  .capture-viewer {
+    position: fixed;
+    inset: 0;
+    width: min(1480px, calc(100vw - 40px));
+    max-width: none;
+    max-height: calc(100svh - 40px);
+    margin: auto;
+    padding: 16px;
+    border: 1px solid #d6e0e7;
+    border-radius: 14px;
+    background: #f7f9fb;
+    color: #061a33;
+    box-shadow: 0 24px 100px #0005;
+  }
+  .capture-viewer::backdrop {
+    background: #061a33d9;
+    backdrop-filter: blur(6px);
+    animation: capture-backdrop-in 240ms ease-out;
+  }
+  .capture-viewer-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .capture-viewer-toolbar button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #bac9d6;
+    border-radius: 6px;
+    background: #fff;
+    color: #061a33;
+    cursor: pointer;
+  }
+  .capture-viewer-toolbar button:hover {
+    background: #e9eff5;
+  }
+  .capture-viewer :is(button, [tabindex]):focus-visible {
+    outline: 3px solid #01919f;
+    outline-offset: 3px;
+  }
+  .capture-viewer-stage {
+    height: min(72svh, 1000px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+  }
+  .capture-viewer .capture-viewer-stage img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: min(72svh, 1000px);
+    margin: auto;
+    cursor: zoom-in;
+  }
+  .capture-viewer .capture-viewer-stage.is-zoomed {
+    display: block;
+  }
+  .capture-viewer .capture-viewer-stage.is-zoomed img {
+    max-width: none;
+    max-height: none;
+    cursor: zoom-out;
+  }
+  @keyframes capture-backdrop-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @media (max-width: 639px) {
+    .capture-viewer {
+      width: calc(100vw - 16px);
+      max-height: calc(100svh - 24px);
+      padding: 10px;
+    }
   }
 </style>

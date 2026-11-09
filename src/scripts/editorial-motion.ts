@@ -25,7 +25,7 @@ export function enterHero(copy: HTMLElement) {
       });
     },
   });
-  const lead = copy.querySelectorAll(':scope > p');
+  const lead = copy.querySelectorAll(':scope > p, .hw-hero-intro > p');
   const actions = copy.querySelector('.hw-actions, .sc-actions');
   const opening = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.65 } });
   if (lead.length) opening.from(lead, { y: 16, clearProps: 'transform' }, 0.25);

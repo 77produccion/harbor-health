@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { enterHero, openMedia, refreshOnMedia } from './editorial-motion';
 
 export function initSceneMotion() {
@@ -16,7 +17,7 @@ export function initSceneMotion() {
 
       root
         .querySelectorAll<HTMLElement>(
-          '.sc-chapter-media, .sc-steps-media, .sc-reference-media, .sc-path-media',
+          '.sc-chapter-media, .sc-steps-media, .sc-process-photo, .sc-reference-media, .sc-path-media',
         )
         .forEach((frame) => openMedia(frame));
 
@@ -49,6 +50,10 @@ export function initSceneMotion() {
     },
     root,
   );
+
+  const disclosures = [...root.querySelectorAll<HTMLDetailsElement>('.sc-faq details')];
+  const refreshDisclosure = () => ScrollTrigger.refresh();
+  disclosures.forEach((details) => details.addEventListener('toggle', refreshDisclosure));
 
   media.add(
     '(min-width: 1000px) and (min-height: 800px)',
@@ -91,5 +96,8 @@ export function initSceneMotion() {
     root,
   );
 
-  refreshOnMedia(root, () => media.revert());
+  refreshOnMedia(root, () => {
+    disclosures.forEach((details) => details.removeEventListener('toggle', refreshDisclosure));
+    media.revert();
+  });
 }

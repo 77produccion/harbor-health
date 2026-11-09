@@ -12,6 +12,14 @@ const derivatives = [
   ['98bbb4c4-4ab4-4b05-a495-fcfc87a9b568.png', 'editorial-questions-1400.webp', 1400],
   ['b87f262f-a492-4ef8-ac85-de128a1a4eef.png', 'editorial-notes-1400.webp', 1400],
   ['ad93f76a-3fe9-4a15-bbfe-bba72801806d.png', 'editorial-clinician-1000.webp', 1000],
+  ...[
+    ['9c56b27b-189b-4bf5-b585-020fa04d786f.png', 'preparation'],
+    ['b87f262f-a492-4ef8-ac85-de128a1a4eef.png', 'documents'],
+    ['98bbb4c4-4ab4-4b05-a495-fcfc87a9b568.png', 'questions'],
+    ['ad93f76a-3fe9-4a15-bbfe-bba72801806d.png', 'clinician'],
+  ].flatMap(([source, name]) =>
+    [480, 800].map((width) => [source, `cinematic-${name}-${width}.webp`, width]),
+  ),
 ];
 
 for (const [source, target, width] of derivatives) {

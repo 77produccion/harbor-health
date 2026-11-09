@@ -4,6 +4,8 @@ import Action from './Action.astro';
 import EditorialVideo from './EditorialVideo.astro';
 import ExplorePages from './ExplorePages.astro';
 import ProductCapture from './ProductCapture.astro';
+import ScenePhoto from './ScenePhoto.astro';
+import { Plus } from '@lucide/astro';
 import { site } from '../lib/content';
 import { getLocale } from '../lib/i18n';
 import { editorialMedia } from '../lib/editorial-media';
@@ -151,7 +153,10 @@ const captureForSection = (id: string) => {
     if (section.type === 'steps' && section.items) {
       return (
         <section
-          class="sc-steps"
+          class:list={[
+            'sc-steps',
+            page.data.id === 'health.how-it-works' && 'sc-steps-photographic',
+          ]}
           id={section.id}
           data-visual-scene
           aria-labelledby={`section-${section.id}`}
@@ -170,6 +175,9 @@ const captureForSection = (id: string) => {
                 </article>
               ))}
             </div>
+            {page.data.id === 'health.how-it-works' && (
+              <ScenePhoto src="/images/editorial-questions-1400.webp" class="sc-process-photo" />
+            )}
             {section.noticeKey && (
               <p class="sc-notice">{shared[section.noticeKey as keyof typeof shared]}</p>
             )}
@@ -213,7 +221,7 @@ const captureForSection = (id: string) => {
 
     if (section.type === 'cards' && section.items) {
       if (page.data.id === 'health.access') {
-        const pathImages = [media.detail, null];
+        const pathImages = [media.detail, '/images/home-clinician-poster-800.webp'];
         return (
           <section
             class="sc-paths"
@@ -313,11 +321,14 @@ const captureForSection = (id: string) => {
             {section.text && <p>{section.text}</p>}
           </div>
           <div class="sc-faq-list">
-            {section.items.map((item) => (
-              <article data-scene-copy>
-                <h3>{item.title}</h3>
+            {section.items.map((item, index) => (
+              <details open={index === 0}>
+                <summary>
+                  <h3>{item.title}</h3>
+                  <Plus size={20} stroke-width={1.5} aria-hidden="true" />
+                </summary>
                 <p>{item.text}</p>
-              </article>
+              </details>
             ))}
           </div>
           {section.noticeKey && (

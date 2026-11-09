@@ -15,6 +15,12 @@ const cards = choices
       title: site.actions[id].labels[locale],
       route: page.data.route,
       image: editorialMedia[page.data.id as keyof typeof editorialMedia].hero,
+      srcset:
+        page.data.id === 'health.how-it-works'
+          ? '/images/cinematic-preparation-480.webp 480w, /images/cinematic-preparation-800.webp 800w'
+          : page.data.id === 'health.trust'
+            ? '/images/cinematic-documents-480.webp 480w, /images/cinematic-documents-800.webp 800w'
+            : '/images/home-clinician-poster-800.webp 800w, /images/home-clinician-poster-1600.webp 1600w',
     };
   })
   .filter((card) => card.route !== Astro.url.pathname);
@@ -24,7 +30,16 @@ const cards = choices
   {cards.map((card) => (
     <a href={card.route} class="sc-explore-link">
       <div>
-        <img src={card.image} width="1200" height="800" alt="" loading="lazy" decoding="async" />
+        <img
+          src={card.image}
+          srcset={card.srcset}
+          sizes="(max-width: 639px) 90vw, (max-width: 999px) 40vw, 30vw"
+          width="1200"
+          height="800"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <span>{card.title}</span>
     </a>

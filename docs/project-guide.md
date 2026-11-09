@@ -31,7 +31,16 @@ Las capturas se integran junto a la función que ilustran y permiten abrir el We
 
 ## Movimiento y vídeos
 
+### Rediseño fotográfico de noviembre
+
+La versión editorial anterior está guardada en el commit `478e2ec`. La nueva dirección usa `src/styles/cinematic.css`, aislado bajo `body.cinematic-site` para que el CSS compartido de Astro no pierda prioridad ante estilos de ruta. Mantiene Lora/Poppins y el copy canónico sin reescribirlo.
+
+La home combina película 16:9 completa y fotografía en portada; contexto fotográfico en documentos y consulta; retrato ilustrativo y captura editorial sobre navy; película profesional amplia; FAQ nativa con la primera respuesta crítica abierta; cierre con agua y captura móvil. `ScenePhoto.astro` contiene solo fotografías decorativas, sin una segunda fuente de copy. El proceso interior conserva su recorrido sticky reversible cuando cabe.
+
+Los pies de captura y enlaces de ampliación se mantienen por trazabilidad y lectura sin JavaScript, aunque la skill genérica los penaliza. Tampoco se fuerzan alturas exactas de pantalla, se cambia el logo ni se reescribe el contenido clínico para satisfacer su checker. El gate visual local no constituye aprobación; sus informes quedan en `.taste-skill/`. No se añaden recursos externos ni se cambia la política de movimiento reducido.
+
 - `src/scripts/home.ts`: estado y recorrido compartido de documentos, lectura y consulta; categorías, niveles, preguntas y PDF.
+- El recorrido de home fija únicamente `.hw-journey-stage` en escritorio desde 1000×600 px. Los tres capítulos de texto mantienen su altura natural y activan el panel al avanzar o retroceder; un clic de pestaña lleva al capítulo correspondiente. Las fotos y traducciones largas ya no desactivan el sticky por exceder la altura disponible. En móvil y ventanas de menos de 600 px de alto conserva la selección manual. El cuerpo del producto puede desplazarse dentro del panel en ventanas bajas, sin ocultar pestañas ni el pie.
 - `src/scripts/editorial-motion.ts`: SplitText, apertura fotográfica y refresh de geometría.
 - `src/scripts/scene-motion.ts`: proceso sticky reversible y lectura progresiva en páginas interiores. En móvil/ventanas bajas conserva altura natural.
 - `src/scripts/editorial-video.ts`: autoplay silenciado al entrar en escena, pausa fuera de pantalla y con pestaña oculta, pausa manual persistente y fallback de poster. Ahorro de datos/2G requiere play manual; el navegador también puede bloquear autoplay.
@@ -47,7 +56,7 @@ GA4 **o** GTM, nunca ambos; sin IDs reales no hay envío externo. Se requiere co
 
 ## Estado antes de lanzamiento
 
-La última revisión local pasó 25 pruebas unitarias y 56 de navegador. Check/build correctos no significan aprobación visual o accesible: el gate visual conservó **45 hallazgos abiertos** y el medidor de rendimiento **6 FAIL / 2 WARN**, principalmente peso audiovisual e imágenes sobredimensionadas. Las auditorías/capturas de esa iteración no se incluyen en este repositorio operativo.
+La revisión del rediseño incluye 29 pruebas unitarias y 64 de navegador. Check/build correctos no significan aprobación visual o accesible: el gate visual conserva **52 hallazgos abiertos** (ronda 2), con el detalle local en `.taste-skill/cinematic-gate.log`. No se han creado waivers para ocultarlos. Incluye reglas genéricas sobre alturas exactas, captions, geometría del logo, composición y detección del recorrido sticky, además de observaciones de jerarquía y alineación pendientes de revisión. El medidor de rendimiento mejoró a **0 FAIL / 5 WARN** después de optimizar los vídeos y añadir imágenes responsive; quedan avisos de transferencia total, clasificación del logo eager y agua sobredimensionada en móvil. Las mediciones son locales, no datos de usuarios ni una aprobación de producción.
 
 Pendientes principales: aprobación visual y de recursos, optimización de MP4 y fuentes responsive, contraste/foco/controles en revisión manual, revisión nativa de traducciones, cobertura real por función/mercado, destino de contacto y validación clínica/legal. Conservar los bloqueos de `content/editorial/evidence.json` hasta resolverlos con evidencia.
 

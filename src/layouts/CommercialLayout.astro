@@ -7,6 +7,7 @@ import '@fontsource/poppins/600.css';
 import '../styles/global.css';
 import '../styles/scene-pages.css';
 import '../styles/site-header.css';
+import '../styles/cinematic.css';
 import '../styles/motion-policy.css';
 import SeoHead from '../components/SeoHead.astro';
 import LanguageSelector from '../components/LanguageSelector.astro';
@@ -29,7 +30,7 @@ const locale = getLocale(Astro.url.pathname);
     <meta name="page-type" content="software" />
     <meta name="site-kind" content="software" />
   </head>
-  <body>
+  <body class="cinematic-site">
     <slot />
     <LanguageSelector />
     <script>

@@ -2,6 +2,7 @@
 import type { HomeScene } from '../../lib/content';
 import ProductWindow from './ProductWindow.astro';
 import ProductCapture from '../ProductCapture.astro';
+import ScenePhoto from '../ScenePhoto.astro';
 import { getUI } from '../../lib/i18n';
 interface Props {
   scenes: HomeScene[];
@@ -52,16 +53,30 @@ const chapters = scenes.filter((scene) =>
               <span>{item.title}</span>
             ))}
           </div>
-          <ProductCapture
-            id={
-              scene.id === 'documents'
-                ? 'results'
-                : scene.id === 'levels'
-                  ? 'laboratory'
-                  : 'questions'
-            }
-            compact
-          />
+          <div
+            class:list={['hw-chapter-visual', scene.id === 'levels' && 'hw-chapter-visual-product']}
+          >
+            {scene.id !== 'levels' && (
+              <ScenePhoto
+                sizes="(max-width: 999px) 45vw, 20vw"
+                src={
+                  scene.id === 'documents'
+                    ? '/images/home-documents-1400.webp'
+                    : '/images/editorial-questions-1400.webp'
+                }
+              />
+            )}
+            <ProductCapture
+              id={
+                scene.id === 'documents'
+                  ? 'results'
+                  : scene.id === 'levels'
+                    ? 'laboratory'
+                    : 'questions'
+              }
+              compact
+            />
+          </div>
         </section>
       ))}
     </div>
@@ -70,17 +85,3 @@ const chapters = scenes.filter((scene) =>
     </div>
   </div>
 </section>
-
-<style>
-  .hw-journey :global(.product-capture-compact) {
-    margin-top: 18px;
-  }
-  .hw-journey :global(.product-capture-compact img) {
-    max-height: clamp(100px, calc(100svh - 720px), 180px);
-  }
-  @media (max-width: 999px) {
-    .hw-journey :global(.product-capture-compact img) {
-      max-height: none;
-    }
-  }
-</style>

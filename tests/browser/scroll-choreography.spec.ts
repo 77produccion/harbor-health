@@ -35,7 +35,7 @@ test('OS reduce no apaga la experiencia completa solicitada por el responsable',
   await page.goto('/es/');
   const hero = page.locator('[data-editorial-video="hero-workspace"]');
   await expect(hero).toHaveAttribute('data-playing', 'true');
-  const photo = page.locator('.hw-knowledge-capture img');
+  const photo = page.locator('.hw-knowledge-visual > [data-photo-frame]');
   await expect(photo).toHaveCSS('clip-path', /inset/);
   await photo.scrollIntoViewIfNeeded();
   await photo.evaluate((el) =>
@@ -49,7 +49,7 @@ test('OS reduce no apaga la experiencia completa solicitada por el responsable',
       photo.evaluate((el) => parseFloat(getComputedStyle(el).clipPath.replace('inset(', ''))),
     )
     .toBeLessThan(0.01);
-  await expect(page.locator('.hw-faq-answers article').first()).toHaveCSS('opacity', '1');
+  await expect(page.locator('.hw-faq-answers details').first()).toHaveAttribute('open', '');
 });
 
 test('todas las vistas mantienen contenido y navegación sin JavaScript', async ({ browser, baseURL }) => {

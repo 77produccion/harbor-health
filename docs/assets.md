@@ -21,16 +21,18 @@ En `public/images/`; se conservan intactos. Los nombres aportados se mantienen p
 
 | Clip en `public/videos/` | Consumidor | Poster en `public/images/` |
 | --- | --- | --- |
-| `harbor-line-visual.mp4` | Hero de home. | `home-workspace-poster-{800,1600}.webp`. |
-| `harbor-line-visual (1).mp4` | Sección profesional de home y hero de profesionales. | `home-clinician-poster-{800,1600}.webp`. |
+| `health-workspace-720.mp4` | Hero de home. | `home-workspace-poster-{800,1600}.webp`. |
+| `health-professional-720.mp4` | Sección profesional de home y hero de profesionales. | `home-clinician-poster-{800,1600}.webp`. |
 
 Los cuatro posters se conservan como recursos ya extraídos de los clips, a 0,5 segundos para evitar el inicio negro. Se sirven con `srcset`; no hace falta FFmpeg para construir. Si cambia un clip, sustituir también sus dos posters y ejecutar las pruebas de medios.
 
-Los MP4 originales pesan aproximadamente 14,4 y 9 MB. La carga por escena no sustituye su optimización. No se incluyen los clips `(2)` de ejercicio ni `(3)` de tensión arterial: no están integrados y no acreditan prestaciones de Health.
+Los MP4 originales `harbor-line-visual.mp4` y `harbor-line-visual (1).mp4` se conservan intactos (14,4 y 9 MB). Los consumidores usan derivados H.264 1280×720, sin audio, CRF 29, preset slow, `yuv420p` y `faststart`: 1,38 y 0,92 MB, aproximadamente un 90% menos en conjunto. No se recorta ni cambia la duración. Se generaron con FFmpeg; se entregan ya generados y compilar no requiere instalarlo. No se incluyen los clips `(2)` de ejercicio ni `(3)` de tensión arterial: no están integrados y no acreditan prestaciones de Health.
+
+Las fotografías de `ScenePhoto.astro` usan ocho variantes `cinematic-{preparation,documents,questions,clinician}-{480,800}.webp`, regeneradas desde los originales por `scripts/build-editorial-images.mjs`. El `sizes` de cada consumidor evita descargar el original de 1400 px en marcos pequeños. Las capturas profesionales y móvil también declaran el tamaño real de su composición.
 
 ## Capturas de producto
 
-`content/product-captures.json` contiene dimensiones, pies y textos alternativos de las ocho capturas integradas. Por ahora se muestran en inglés en los siete idiomas, con `lang="en"`, sin simular traducciones de la interfaz. `ProductCapture.astro` proporciona carga diferida, fuentes responsive y un enlace a la imagen completa que funciona sin JavaScript.
+`content/product-captures.json` contiene dimensiones, pies y textos alternativos de las ocho capturas integradas, además de los controles del visor en siete idiomas. Las capturas siguen en inglés, con `lang="en"`, sin simular traducciones de la interfaz. `ProductCapture.astro` proporciona carga diferida, fuentes responsive y enlaces a la imagen completa. Con JavaScript, `src/scripts/capture-viewer.ts` abre un diálogo en la misma página, con entrada/salida suave, zoom, desplazamiento de la imagen ampliada, Escape, cierre exterior y retorno del foco. La imagen completa se carga al abrir el visor. Sin JavaScript, el enlace conserva su destino en la misma pestaña; no abre ventanas nuevas.
 
 Las imágenes de `public/images/product/source/` son fuentes recortadas y saneadas para el build, no copias de los originales privados. `scripts/build-product-images.mjs` genera los WebP de 480/960/1600 px cuando corresponde y una variante de tamaño completo, sin ampliaciones. No requiere las carpetas hermanas. Los originales aportados permanecen intactos fuera del repositorio comercial.
 

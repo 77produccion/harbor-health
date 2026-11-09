@@ -5,9 +5,10 @@ test.use({ viewport: { width: 1440, height: 900 }, video: { mode: 'on', size: { 
 test('recorrido grabado: documento, explicación y preparación', async ({ page }) => {
   await page.goto('/es/');
   await page.waitForTimeout(1400);
-  const top = await page.locator('[data-journey]').evaluate(element => element.getBoundingClientRect().top + scrollY);
-  for (const [offset, mode] of [[80, 'documents'], [430, 'levels'], [780, 'consultation']] as const) {
-    await page.evaluate(top => window.scrollTo({ top, behavior: 'smooth' }), top + offset);
+  for (const mode of ['documents', 'levels', 'consultation'] as const) {
+    await page.locator(`[data-journey-chapter="${mode}"]`).evaluate((el) => {
+      window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 112, behavior: 'smooth' });
+    });
     await expect(page.locator('[data-product-window]')).toHaveAttribute('data-mode', mode);
     if (mode === 'documents') await page.getByRole('button', { name: 'Informe de radiología.pdf', exact: true }).click();
     if (mode === 'levels') await page.getByRole('button', { name: 'Lectura con fuentes', exact: true }).click();

@@ -6,6 +6,8 @@ import HomeTextLink from './HomeTextLink.astro';
 import EditorialVideo from '../EditorialVideo.astro';
 import ExplorePages from '../ExplorePages.astro';
 import ProductCapture from '../ProductCapture.astro';
+import ScenePhoto from '../ScenePhoto.astro';
+import { Plus } from '@lucide/astro';
 import { getUI } from '../../lib/i18n';
 interface Props {
   scenes: HomeScene[];
@@ -63,8 +65,18 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
                 <p>{text}</p>
               ))}
             </div>
-            <div class="hw-knowledge-capture">
-              <ProductCapture id="medical-proposal" />
+            <div class="hw-knowledge-visual">
+              <ScenePhoto
+                src="/images/home-professional-900.webp"
+                class="hw-knowledge-photo"
+                sizes="(max-width: 639px) 80vw, 32vw"
+              />
+              <div class="hw-knowledge-capture">
+                <ProductCapture
+                  id="medical-proposal"
+                  sizes="(max-width: 639px) 38vw, (max-width: 999px) 25vw, 220px"
+                />
+              </div>
             </div>
           </div>
           <div class="hw-knowledge-route diagram" data-knowledge-route>
@@ -110,9 +122,9 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
             <EditorialVideo
               id="professional-workspace"
               class="hw-professional-portrait"
-              src="/videos/harbor-line-visual%20(1).mp4"
+              src="/videos/health-professional-720.mp4"
               poster="home-clinician"
-              sizes="(max-width: 639px) calc(100vw - 48px), 42vw"
+              sizes="(max-width: 639px) calc(100vw - 48px), 90vw"
             />
             <div class="hw-professional-paths">
               {scene.items.map((item) => (
@@ -124,7 +136,13 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
                   {item.actions.map((id) => (
                     <HomeAction id={id} placement="professionals" secondary />
                   ))}
-                  {item.id === 'editor' && <ProductCapture id="medical-status" compact />}
+                  {item.id === 'editor' && (
+                    <ProductCapture
+                      id="medical-status"
+                      sizes="(max-width: 639px) 90vw, 45vw"
+                      compact
+                    />
+                  )}
                 </article>
               ))}
             </div>
@@ -149,12 +167,15 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
           </div>
           <div class="hw-faq-answers">
             {scene.items.map((item) => (
-              <article>
-                <h3>{item.title}</h3>
+              <details open={item.id === 'diagnosis'}>
+                <summary>
+                  <h3>{item.title}</h3>
+                  <Plus size={20} stroke-width={1.5} aria-hidden="true" />
+                </summary>
                 {item.paragraphs.map((text) => (
                   <p>{text}</p>
                 ))}
-              </article>
+              </details>
             ))}
           </div>
         </div>
@@ -164,19 +185,3 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
 })}
 
 <ExplorePages />
-
-<style>
-  .hw-knowledge-capture {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    align-self: center;
-    width: min(100%, 379px);
-    justify-self: center;
-  }
-  @media (max-width: 639px) {
-    .hw-knowledge-capture {
-      grid-column: 1;
-      grid-row: auto;
-    }
-  }
-</style>

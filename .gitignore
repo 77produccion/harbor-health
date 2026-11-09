@@ -75,6 +75,7 @@
 !/public/images/editorial-questions-1400.webp
 !/public/images/editorial-notes-1400.webp
 !/public/images/editorial-clinician-1000.webp
+!/public/images/cinematic-*.webp
 !/public/images/og-health.png
 !/public/images/og-health-en.png
 !/public/images/og-health-nl.png
@@ -85,6 +86,8 @@
 /public/videos/*
 !/public/videos/harbor-line-visual.mp4
 !/public/videos/harbor-line-visual (1).mp4
+!/public/videos/health-workspace-720.mp4
+!/public/videos/health-professional-720.mp4
 
 # Siempre privados/generados, incluso dentro de directorios admitidos.
 node_modules/

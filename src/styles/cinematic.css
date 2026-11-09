@@ -1,0 +1,628 @@
+/* Photographic art direction. Shared by the home and the five interior views.
+   Natural-height fallbacks are intentional: translations and zoom must fit. */
+:root {
+  --cin-radius: 12px;
+  --cin-paper: #f4f6f4;
+}
+.cinematic-site {
+  .scene-photo {
+    min-width: 0;
+    overflow: clip;
+    border-radius: var(--cin-radius);
+    background: #e0e8e7;
+  }
+  .scene-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hw-button:where(:not(.hw-hero *)),
+  .sc-page .action {
+    border-radius: 6px;
+    min-height: 48px;
+  }
+  /* One product stage, with photographic context and source captures. */
+  .hw-journey {
+    background: var(--cin-paper);
+  }
+  .hw-journey h2 {
+    font-size: clamp(36px, 3.5vw, 52px);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .hw-journey-chapter > p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+  .hw-journey-topics {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 4px;
+    font: 400 13px/1.6 var(--hw-sans);
+    color: #42556a;
+  }
+  .hw-chapter-visual {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .hw-chapter-visual > .scene-photo {
+    height: clamp(160px, 22svh, 220px);
+  }
+  .hw-chapter-visual .product-capture {
+    margin: 0;
+  }
+  .hw-chapter-visual .product-capture img {
+    max-height: 180px;
+  }
+  .hw-chapter-visual-product {
+    display: block;
+  }
+  .hw-chapter-visual-product .product-capture img {
+    max-height: 250px;
+  }
+  .hw-chapter-visual .product-capture figcaption {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .hw-journey-stage .hw-app-frame {
+    border: 1px solid #c6d1db;
+    border-radius: var(--cin-radius);
+    box-shadow: 0 24px 64px -40px #061a3366;
+  }
+  @media (min-width: 1000px) and (min-height: 600px) {
+    .hw-journey.is-live {
+      height: auto;
+      overflow: visible;
+    }
+    .hw-journey.is-live > .hw-journey-grid {
+      position: relative;
+      height: auto;
+      overflow: visible;
+      padding-block: 120px 64px;
+      align-items: start;
+    }
+    .hw-journey.is-live .hw-journey-chapter {
+      display: flex;
+      min-height: calc(100svh - 120px);
+      padding: 0 0 96px;
+    }
+    .hw-journey.is-live .hw-journey-stage {
+      position: sticky;
+      top: 112px;
+      height: calc(100svh - 144px);
+      min-height: 0;
+      max-height: 790px;
+      margin: 0;
+    }
+    .hw-journey.is-live .hw-product {
+      height: 100%;
+    }
+    .hw-journey.is-live .hw-product-body {
+      min-height: 0;
+      overflow-y: auto;
+    }
+  }
+
+  /* Provenance is a visual composition, not an essay with a thumbnail. */
+  .hw-knowledge {
+    padding-block: 96px;
+  }
+  .hw-knowledge > .hw-wrap {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 48px 72px;
+  }
+  .hw-knowledge-feature .hw-section-head {
+    grid-column: 1;
+  }
+  .hw-knowledge-feature h2 {
+    font-size: clamp(40px, 4vw, 60px);
+    line-height: 1.08;
+  }
+  .hw-knowledge-feature p {
+    line-height: 1.75;
+    color: #d8e3ee;
+  }
+  .hw-knowledge-visual {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    position: relative;
+    align-self: stretch;
+    padding: 0 64px 72px 0;
+  }
+  .hw-knowledge-visual .hw-knowledge-photo {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+  }
+  .hw-knowledge-photo img {
+    object-position: 50% 30%;
+  }
+  .hw-knowledge-visual .hw-knowledge-capture {
+    position: absolute;
+    width: 43%;
+    max-width: 220px;
+    right: 0;
+    bottom: 0;
+  }
+  .hw-knowledge-capture .product-capture {
+    margin: 0;
+  }
+  .hw-knowledge-capture .product-capture > a {
+    border: 6px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px #0003;
+  }
+  .hw-knowledge-capture .product-capture figcaption {
+    font-size: 13px;
+    background: #061a33;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 0 6px 6px;
+  }
+  .hw-knowledge-node h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .hw-knowledge-node p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .hw-knowledge-foot {
+    padding-top: 24px;
+  }
+
+  /* Cinema first; the two professional paths sit openly below the film. */
+  .hw-professionals {
+    background: #fff;
+    padding-block: 96px;
+  }
+  .hw-professionals .hw-section-head {
+    margin-bottom: 40px;
+    align-items: end;
+  }
+  .hw-professionals .hw-section-head > p {
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .hw-professional-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .hw-professional-layout .hw-professional-portrait {
+    width: 100%;
+    border-radius: var(--cin-radius);
+  }
+  .hw-professional-layout .hw-professional-paths {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 64px;
+    width: 100%;
+  }
+  .hw-professional-layout .hw-professional-paths article {
+    padding: 24px 0 0;
+    border-top: 1px solid #cbd4dd;
+    align-self: start;
+  }
+  .hw-professional-layout .hw-professional-paths .hw-button {
+    margin-top: 16px;
+    align-self: start;
+  }
+  .hw-professional-paths p {
+    max-width: 520px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .hw-professional-paths .product-capture {
+    margin-top: 28px;
+  }
+
+  /* Native accordions retain keyboard and no-JS reading. */
+  .hw-faq {
+    background: var(--cin-paper);
+    padding-block: 96px;
+  }
+  .hw-faq .hw-faq-head {
+    position: static;
+  }
+  .hw-faq-answers {
+    display: block;
+  }
+  .hw-faq-answers details {
+    padding-block: 24px;
+    border-top: 1px solid #c4cfce;
+  }
+  .hw-faq-answers details:last-child {
+    border-bottom: 1px solid #c4cfce;
+  }
+  .hw-faq-answers summary {
+    list-style: none;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 24px;
+    cursor: pointer;
+  }
+  .hw-faq-answers summary::-webkit-details-marker {
+    display: none;
+  }
+  .hw-faq-answers summary h3 {
+    margin: 0;
+    font: 400 clamp(21px, 2vw, 27px)/1.35 var(--hw-serif);
+    letter-spacing: -0.025em;
+  }
+  .hw-faq-answers summary svg {
+    margin-top: 7px;
+    flex-shrink: 0;
+    transition: transform 240ms;
+  }
+  .hw-faq-answers details[open] summary svg {
+    transform: rotate(45deg);
+  }
+  .hw-faq-answers details > p {
+    font: 400 15px/1.8 var(--hw-sans);
+    color: #39495c;
+    margin: 20px 40px 0 0;
+  }
+
+  /* Water is visible, not buried beneath a nearly opaque gradient. */
+  .hw-closing {
+    padding-block: 96px 40px;
+    background: #061a33;
+  }
+  .hw-closing .hw-closing-atmosphere {
+    top: auto;
+    bottom: 0;
+    height: clamp(300px, 43vw, 620px);
+    max-height: 55%;
+    opacity: 1;
+  }
+  .hw-closing-atmosphere img {
+    object-position: center;
+  }
+  .hw-closing-atmosphere::after {
+    background: linear-gradient(90deg, #061a33f0, #061a33a6 65%, #061a3370);
+  }
+  .hw-closing .hw-closing-layout {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.7fr);
+    gap: 96px;
+  }
+  .hw-closing h2 {
+    font-size: clamp(42px, 4.7vw, 72px);
+    line-height: 1.08;
+  }
+  .hw-closing .hw-closing-capture {
+    width: min(100%, 290px);
+    max-width: none;
+    justify-self: end;
+  }
+  .hw-closing-capture .product-capture {
+    margin: 0;
+  }
+  .hw-closing-capture .product-capture > a {
+    border: 7px solid #fff;
+    border-radius: 20px;
+  }
+  .hw-closing .hw-footer-bottom {
+    margin-top: 64px;
+    padding-bottom: 48px;
+  }
+  .product-capture figcaption {
+    font-size: 13px;
+  }
+
+  /* Linked photography becomes a directory, not tiny documentary thumbnails. */
+  .sc-explore {
+    background: #fff;
+  }
+  .sc-explore-link > div {
+    border-radius: var(--cin-radius);
+    overflow: clip;
+  }
+  .sc-explore-link img {
+    transition: transform 500ms cubic-bezier(0.2, 0.65, 0.3, 1);
+  }
+  .sc-explore-link:hover img {
+    transform: scale(1.03);
+  }
+
+  /* Interior pages share the same large photographic frames. */
+  .sc-page {
+    --sc-edge: max(5.55%, calc((100% - 1280px) / 2));
+  }
+  .sc-hero-split,
+  .sc-hero-offset,
+  .sc-hero-manifesto,
+  .sc-hero-stage {
+    min-height: 100svh;
+  }
+  .sc-hero-manifesto {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .sc-hero-manifesto .sc-hero-media {
+    margin: 128px 11% 64px 0;
+    border-radius: var(--cin-radius);
+  }
+  .sc-hero-manifesto .sc-hero-media img {
+    filter: none;
+  }
+  .sc-hero-manifesto h1 {
+    font-size: clamp(44px, 4.7vw, 72px);
+  }
+  .sc-hero-offset .sc-hero-media {
+    border-radius: var(--cin-radius);
+  }
+  .sc-chapter-feature .sc-chapter-media,
+  .sc-reference-media {
+    border-radius: var(--cin-radius);
+  }
+  .sc-chapter-panel .sc-chapter-media::after {
+    display: none;
+  }
+  .sc-chapter-media img {
+    filter: none;
+  }
+  .sc-steps-photographic .sc-steps-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px 64px;
+  }
+  .sc-steps-photographic .sc-steps-head {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 8px;
+  }
+  .sc-steps-photographic .sc-steps-head h2 {
+    max-width: 900px;
+  }
+  .sc-steps-photographic .sc-steps-rail {
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    border: 0;
+  }
+  .sc-steps-photographic .sc-step {
+    padding: 20px 0 0;
+    border-top: 1px solid #cbd4dd;
+  }
+  .sc-steps-photographic .sc-step h3 {
+    font-size: 22px;
+  }
+  .sc-steps-photographic .sc-step p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .sc-process-photo {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 360px;
+    height: 100%;
+  }
+  .sc-process-photo img {
+    object-position: center;
+  }
+  .sc-steps-photographic .sc-notice,
+  .sc-steps-photographic .sc-actions {
+    grid-column: 1 / -1;
+  }
+  .sc-paths-grid {
+    gap: 24px;
+  }
+  .sc-path {
+    border-radius: var(--cin-radius);
+  }
+  .sc-path-media img {
+    filter: none;
+  }
+  .sc-path::after {
+    background: linear-gradient(180deg, transparent 10%, #061a33ed 92%);
+  }
+  .sc-faq-head {
+    position: static;
+  }
+  .sc-faq-list details {
+    border-top: 1px solid #cbd4dd;
+    padding: 24px 0;
+  }
+  .sc-faq-list summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 24px;
+    list-style: none;
+    cursor: pointer;
+  }
+  .sc-faq-list summary::-webkit-details-marker {
+    display: none;
+  }
+  .sc-faq-list summary svg {
+    flex-shrink: 0;
+    margin-top: 5px;
+    transition: transform 240ms;
+  }
+  .sc-faq-list details[open] summary svg {
+    transform: rotate(45deg);
+  }
+  .sc-faq-list p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .sc-faq-list summary:focus-visible {
+    outline: 3px solid #01919f;
+    outline-offset: 5px;
+  }
+
+  @media (max-width: 999px) {
+    .sc-hero-manifesto {
+      display: flex;
+      flex-direction: column;
+    }
+    .sc-hero-manifesto .sc-hero-copy {
+      padding: 144px var(--sc-edge) 40px;
+    }
+    .sc-hero-manifesto .sc-hero-media {
+      min-height: 320px;
+      margin: 0 var(--sc-edge) 48px;
+    }
+    .sc-steps-photographic .sc-steps-stage {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .sc-process-photo {
+      grid-column: 1;
+      grid-row: 3;
+      height: 320px;
+      min-height: 0;
+    }
+    .hw-chapter-visual > .scene-photo {
+      height: 220px;
+    }
+    .hw-chapter-visual .product-capture img {
+      max-height: 200px;
+    }
+    .hw-knowledge > .hw-wrap {
+      gap: 40px;
+    }
+    .hw-knowledge-visual {
+      padding: 0 40px 64px 0;
+    }
+    .hw-knowledge-visual .hw-knowledge-photo {
+      min-height: 540px;
+    }
+    .hw-knowledge-visual .hw-knowledge-capture {
+      width: 54%;
+    }
+    .hw-closing .hw-closing-layout {
+      gap: 48px;
+      grid-template-columns: minmax(0, 1fr) 220px;
+    }
+  }
+  @media (max-width: 639px) {
+    .sc-hero-manifesto .sc-hero-copy {
+      padding-top: 124px;
+    }
+    .sc-hero-manifesto h1 {
+      font-size: 42px;
+    }
+    .sc-hero-manifesto .sc-hero-media {
+      min-height: 240px;
+    }
+    .sc-steps-photographic .sc-steps-rail {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .sc-process-photo {
+      height: 260px;
+    }
+    .sc-paths-grid {
+      gap: 16px;
+    }
+    .sc-explore {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
+      overflow: visible;
+    }
+    .sc-explore-link {
+      width: 100%;
+      min-width: 0;
+    }
+    .sc-explore-link > div {
+      aspect-ratio: 16 / 9;
+      margin-bottom: 12px;
+    }
+    .hw-journey h2 {
+      font-size: 34px;
+    }
+    .hw-chapter-visual {
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .hw-chapter-visual > .scene-photo {
+      height: 176px;
+    }
+    .hw-chapter-visual .product-capture img {
+      max-height: 176px;
+    }
+    .hw-chapter-visual-product .product-capture img {
+      max-height: none;
+    }
+    .hw-knowledge,
+    .hw-professionals,
+    .hw-faq {
+      padding-block: 64px;
+    }
+    .hw-knowledge > .hw-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .hw-knowledge-feature h2 {
+      font-size: 36px;
+    }
+    .hw-knowledge-feature {
+      display: contents;
+    }
+    .hw-knowledge-visual {
+      padding: 0 40px 56px 0;
+      width: 100%;
+    }
+    .hw-knowledge-visual .hw-knowledge-photo {
+      min-height: 0;
+      height: 370px;
+    }
+    .hw-knowledge-visual .hw-knowledge-capture {
+      width: 43%;
+      max-width: 160px;
+    }
+    .hw-knowledge-route {
+      margin-top: 0;
+    }
+    .hw-knowledge-foot {
+      padding-top: 24px;
+    }
+    .hw-professional-layout {
+      gap: 32px;
+    }
+    .hw-professional-layout .hw-professional-paths {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .hw-professionals .hw-section-head {
+      margin-bottom: 32px;
+    }
+    .hw-faq-answers summary h3 {
+      font-size: 22px;
+    }
+    .hw-faq-answers details > p {
+      font-size: 15px;
+      margin-right: 0;
+    }
+    .hw-closing {
+      padding-block: 64px 32px;
+    }
+    .hw-closing .hw-closing-layout {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hw-closing .hw-closing-capture {
+      width: 210px;
+      justify-self: center;
+    }
+    .hw-closing h2 {
+      font-size: 40px;
+    }
+    .hw-closing .hw-footer-bottom {
+      margin-top: 48px;
+    }
+  }
+}

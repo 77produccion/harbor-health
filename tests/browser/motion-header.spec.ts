@@ -54,7 +54,9 @@ test('la primera escena del recorrido tiene entrada sin ocultar sus controles', 
   await page.evaluate((y) => window.scrollTo({ top: y, behavior: 'instant' }), journeyTop - 200);
   await expect(title).toHaveCSS('clip-path', 'none');
   await expect(page.locator('.hw-journey-stage')).toHaveCSS('visibility', 'visible');
-  await page.evaluate((y) => window.scrollTo({ top: y, behavior: 'instant' }), journeyTop + 430);
+  await page.locator('[data-journey-chapter="levels"]').evaluate((el) => {
+    window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 112, behavior: 'instant' });
+  });
   await expect(page.locator('[data-product-window]')).toHaveAttribute('data-mode', 'levels');
   await expect(page.locator('[data-product-panel="levels"]')).toHaveCSS('opacity', '1');
   await expect(page.locator('[data-product-mode="consultation"]')).toBeEnabled();

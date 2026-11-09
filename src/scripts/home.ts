@@ -267,7 +267,9 @@ export function initHome() {
 
     // Distinct chapter treatments, not the same fade/slide on every block.
     document
-      .querySelectorAll<HTMLElement>('.hw-knowledge-capture img, .hw-professional-portrait')
+      .querySelectorAll<HTMLElement>(
+        '.hw-knowledge-visual > [data-photo-frame], .hw-professional-portrait',
+      )
       .forEach((visual) => openMedia(visual));
     document.querySelectorAll<HTMLElement>('[data-knowledge-node]').forEach((node) => {
       gsap.fromTo(
@@ -282,45 +284,43 @@ export function initHome() {
     });
   });
 
-  media.add('(min-width: 1000px) and (min-height: 760px)', () => {
+  // Native details work without JS; refresh measurements after their geometry changes.
+  const disclosures = [...document.querySelectorAll<HTMLDetailsElement>('.hw-faq details')];
+  const refreshDisclosure = () => ScrollTrigger.refresh();
+  disclosures.forEach((details) => details.addEventListener('toggle', refreshDisclosure));
+
+  media.add('(min-width: 1000px) and (min-height: 600px)', () => {
     if (!journey) return;
     journey.classList.add('is-live');
-    // Capturas, traducciones y zoom pueden exceder la escena sticky.
-    // Medir todos los capítulos antes de fijarla; el fallback conserva altura natural.
-    const grid = journey.querySelector<HTMLElement>('.hw-journey-grid');
+    // Only the product sticks. Copy keeps its natural height, so a long
+    // translation or photograph cannot silently disable the scroll journey.
     const chapters = [...journey.querySelectorAll<HTMLElement>('[data-journey-chapter]')];
-    const padding = grid ? getComputedStyle(grid) : null;
-    const availableHeight =
-      window.innerHeight -
-      (padding ? parseFloat(padding.paddingTop) + parseFloat(padding.paddingBottom) : 160);
-    const tooTall = chapters.some((chapter) => {
-      const previousDisplay = chapter.style.display;
-      chapter.style.display = 'flex';
-      const height = chapter.scrollHeight;
-      chapter.style.display = previousDisplay;
-      return height > availableHeight;
-    });
-    if (tooTall) {
-      journey.classList.remove('is-live');
-      return;
-    }
-    const modes = ['documents', 'levels', 'consultation'];
-    const progress = ScrollTrigger.create({
+    const syncFromScroll = () => {
+      let current = chapters[0];
+      for (const chapter of chapters) {
+        if (chapter.getBoundingClientRect().top <= Math.max(160, innerHeight * 0.35))
+          current = chapter;
+      }
+      const nextMode = current?.dataset.journeyChapter;
+      if (nextMode && mode !== nextMode) setMode(nextMode);
+    };
+    ScrollTrigger.create({
       trigger: journey,
-      start: 'top top',
-      end: 'bottom bottom',
+      start: 'top 80%',
+      end: 'bottom top',
+      invalidateOnRefresh: true,
+      onRefresh: syncFromScroll,
       onUpdate: (self) => {
         journey.style.setProperty('--journey-progress', String(self.progress));
-        const nextMode = modes[Math.min(2, Math.floor(self.progress * 3))];
-        if (mode !== nextMode) setMode(nextMode);
+        syncFromScroll();
       },
     });
     // Una selección manual debe llevar también el scroll a su capítulo.
     // Antes quedaban dos estados independientes (activeChapter y mode).
     syncJourneyScroll = (value) => {
-      const index = modes.indexOf(value);
-      const target =
-        progress.start + ((index + 0.5) / modes.length) * (progress.end - progress.start);
+      const chapter = chapters.find((item) => item.dataset.journeyChapter === value);
+      if (!chapter) return;
+      const target = chapter.getBoundingClientRect().top + scrollY - 120;
       window.scrollTo({ top: target, behavior: 'instant' });
       ScrollTrigger.update();
     };
@@ -331,5 +331,8 @@ export function initHome() {
     };
   });
 
-  refreshOnMedia(document.body, () => media.revert());
+  refreshOnMedia(document.body, () => {
+    disclosures.forEach((details) => details.removeEventListener('toggle', refreshDisclosure));
+    media.revert();
+  });
 }
