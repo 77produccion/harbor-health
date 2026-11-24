@@ -8,7 +8,7 @@ interface Props {
   route?: string;
   faq?: { title: string; text: string }[];
   publishable?: boolean;
-  branded?: { name: string; kind: 'legal' | 'brand'; route: string; alternates?: { locale: string; route: string }[] };
+  branded?: { name: string; kind: 'legal' | 'brand'; route: string; canonicalRoute?: string; alternates?: { locale: string; route: string }[] };
 }
 const {
   title,
@@ -25,6 +25,7 @@ const pageId = versions.find((page) => page.route === route)?.id;
 const meta = buildMetadata({
   siteUrl: import.meta.env.SITE_URL,
   route,
+  canonicalRoute: branded?.canonicalRoute,
   locale,
   title,
   description,

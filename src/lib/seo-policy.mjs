@@ -19,10 +19,11 @@ export function serializeJsonLd(value) {
   return JSON.stringify(value).replace(/</g, '\\u003c');
 }
 
-/** @param {{ siteUrl?: string | null, route: string, title: string, description: string, locale?: string, indexable?: boolean, faq?: {title: string, text: string}[], branded?: {name: string, kind: 'legal' | 'brand'} }} options */
+/** @param {{ siteUrl?: string | null, route: string, canonicalRoute?: string, title: string, description: string, locale?: string, indexable?: boolean, faq?: {title: string, text: string}[], branded?: {name: string, kind: 'legal' | 'brand'} }} options */
 export function buildMetadata({
   siteUrl,
   route,
+  canonicalRoute = route,
   title,
   description,
   locale = 'es',
@@ -31,7 +32,8 @@ export function buildMetadata({
   branded,
 }) {
   const origin = resolveSiteUrl(siteUrl);
-  const canonical = origin ? new URL(route, `${origin}/`).href : null;
+  const canonical = origin ? new URL(canonicalRoute, `${origin}/`).href : null;
+  const pageUrl = origin ? new URL(route, `${origin}/`).href : null;
   const absolute = (path) => (origin ? new URL(path, `${origin}/`).href : path);
   const id = (suffix) => `${origin ?? ''}/#${suffix}`;
   const graph = branded ? [
@@ -52,14 +54,14 @@ export function buildMetadata({
     },
     {
       '@type': 'WebPage',
-      '@id': canonical ? `${canonical}#webpage` : '#webpage',
+      '@id': pageUrl ? `${pageUrl}#webpage` : '#webpage',
       name: title,
       description,
       inLanguage: locale,
       about: { '@id': id(branded.name.toLowerCase().replace(' ', '-')) },
       publisher: { '@id': id('integrative-wellness') },
       ...(branded.kind === 'legal' ? { genre: 'Terms and conditions' } : {}),
-      ...(canonical ? { url: canonical } : {}),
+      ...(pageUrl ? { url: pageUrl } : {}),
     },
   ] : [
     {
