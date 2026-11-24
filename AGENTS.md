@@ -15,7 +15,7 @@ Este repositorio contiene únicamente la web comercial Astro + MDX + GSAP. No re
 ## i18n: requisito para cada cambio
 
 - Toda página, sección o modificación visible se entrega en el mismo cambio para `es`, `en`, `nl`, `fr`, `pt`, `de` y `pap`. Versionar en Git tanto el copy como sus metadatos SEO, acciones, navegación y etiquetas accesibles. Mantener IDs estables y enlazar versiones equivalentes; un fallback temporal no cuenta como traducción.
-- El idioma no determina disponibilidad ni jurisdicción. Para textos jurídicos sin traducción aprobada, conservar el original en su idioma, enlazarlo con etiquetas localizadas y marcar el idioma del destino. No declarar `hreflang` para copias o traducciones no aprobadas.
+- El idioma no determina disponibilidad ni jurisdicción. Los textos jurídicos se traducen por documento completo y conservan el original por separado, enlazado con el idioma del destino. Las traducciones pendientes de revisión pueden verse en preview, pero no se anuncian en `hreflang`, sitemap ni en el índice GEO.
 
 ## Implementación
 

@@ -1,0 +1,720 @@
+{
+  "health": {
+    "description": "Condições do serviço de explicação de resultados laboratoriais da Harbor Health: acesso, assinaturas, envio de resultados e privacidade.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Quem somos e o que as palavras significam",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Health, nós: Integrative Wellness bv estabelecido em FD Rooseveltweg 280, Curaçao, registrado sob o número 153971, email: info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Usuário, você: a pessoa que possui uma conta no Harbor Health. Existem dois tipos: individual e profissional de saúde."
+          },
+          {
+            "kind": "bullet",
+            "text": "Explicação: a explicação de um resultado laboratorial fornecido por Harbor Health, escrito por médicos."
+          },
+          {
+            "kind": "bullet",
+            "text": "Material de referência: informações por exame para profissionais de saúde, com oito perguntas e respostas."
+          },
+          {
+            "kind": "bullet",
+            "text": "Web app: o ambiente no qual você faz login e abre a explicação ou o material de referência."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "O que Harbor Health é e não é",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health fornece explicações gerais e informações sobre resultados laboratoriais. Não se destina ao diagnóstico, tratamento ou prevenção de doenças, não dá aconselhamento médico e não substitui o médico ou outro profissional de saúde.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Embora as explicações sejam escritas por médicos, usar Harbor Health não cria uma relação médico-paciente entre você e nós ou esses médicos.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Para particulares, explicamos em termos gerais o que é um valor, porque é medido e o que pode significar um desvio. Não interpretamos seu resultado individual. O que um resultado significa para você só pode ser avaliado pelo seu médico, levando em consideração suas queixas, histórico médico e medicação. Os valores de referência podem diferir por laboratório. Utilize sempre os valores de referência indicados no seu próprio resultado.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Não inicie, interrompa ou altere qualquer tratamento ou medicamento com base na explicação sem consultar o seu médico. Se você tiver reclamações ou estiver preocupado, entre em contato com seu médico de família. Em caso de emergência, ligue imediatamente para os serviços de emergência. Harbor Health não é um serviço de emergência.",
+            "label": "2.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Para profissionais de saúde, Harbor Health é um material de referência geral por teste. Não contém conselhos específicos do paciente. O profissional de saúde permanece totalmente responsável pelo seu próprio julgamento clínico e por qualquer decisão sobre diagnóstico ou tratamento. Você não deve inserir dados do paciente em Harbor Health.",
+            "label": "2.5"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Conta e acesso",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Você cria uma conta com seu endereço de e-mail e uma senha. Você mantém seus dados de login em segredo e não compartilha sua conta com outras pessoas. Você é responsável por todo o uso da sua conta. Se você suspeitar que outra pessoa tem acesso à sua conta, informe-nos imediatamente.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Você deve ter pelo menos 18 anos para criar uma conta e usar Harbor Health. Ao criar uma conta, você confirma que atende a esse requisito. Poderemos encerrar a conta se isso não for o caso.",
+            "label": "3.2"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Assinatura, uploads e acesso por uso",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health oferece as seguintes formas de acesso:",
+            "label": "4.1"
+          },
+          {
+            "kind": "bullet",
+            "text": "Individual, assinatura: você tem acesso ao aplicativo (web) e à sua explicação a qualquer momento enquanto a assinatura estiver em vigor."
+          },
+          {
+            "kind": "bullet",
+            "text": "Individual, por upload: você paga por resultado que enviar. A explicação para esse upload fica disponível por 24 horas."
+          },
+          {
+            "kind": "bullet",
+            "text": "Profissional de saúde, assinatura: acesso a todos os testes enquanto durar a assinatura."
+          },
+          {
+            "kind": "clause",
+            "text": "Uma assinatura dura um período inicial de 12 meses e depois continua por um período indefinido. Você pode então cancelar a qualquer momento com um período de aviso prévio de no máximo um mês, no aplicativo (web).",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Você paga on-line através de um provedor de pagamento: com Visa (cartão de crédito) no Caribe, incluindo Curaçao e América Latina, e com Wero na União Europeia. Não armazenamos os dados do seu cartão. Os preços são indicados em dólares americanos (USD) para utilizadores nas Caraíbas, incluindo Curaçao, e na América Latina, e em euros (€) para utilizadores na União Europeia. Os preços para utilizadores na União Europeia incluem IVA.",
+            "label": "4.3"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Enviando resultados",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Você carrega apenas o seu próprio resultado ou o resultado de outra pessoa que tenha dado consentimento expresso para isso. Para uma criança ou pessoa que não consegue decidir por si mesma, você só poderá enviar um resultado se for seu representante legal.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Se você enviar o resultado de outra pessoa, você confirma que tem o consentimento expresso dela e deve ser capaz de demonstrá-lo mediante nossa solicitação. Você é responsável por qualquer dano resultante de um upload sem o consentimento necessário e nos indeniza contra reclamações feitas por essa pessoa.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Você garante que o arquivo enviado contém apenas o resultado e nenhuma outra informação de que não precisamos.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Você concorda expressamente com o processamento do resultado para criar a explicação. Você pode retirar seu consentimento a qualquer momento. Em seguida, excluímos o resultado e a explicação e você não poderá mais acessá-los. A retirada não afeta o processamento ocorrido anteriormente. Consulte a declaração de privacidade.",
+            "label": "5.4"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Uso da explicação e do material de referência",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Você não pode copiar, distribuir ou vender a explicação ou o material de referência, ou extraí-lo do aplicativo (web) por meios automatizados (como scraping). Como profissional de saúde, você pode compartilhar partes individuais com seus próprios pacientes no decorrer do seu trabalho.",
+            "label": "6.1"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Disponibilidade",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Fazemos o possível para manter o aplicativo (web) disponível, mas não podemos garantir acesso ininterrupto. Poderemos retirar o aplicativo (web) temporariamente de uso para manutenção.",
+            "label": "7.1"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Responsabilidade",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Não nos responsabilizamos por danos indiretos, incluindo danos consequenciais, perda de rendimentos e perda de dados.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Não nos responsabilizamos pela forma como você interpreta as informações no aplicativo ou por qualquer decisão que você tome com base nelas. As decisões sobre diagnóstico, tratamento ou medicação são tomadas por você e seu médico, ou pelo profissional de saúde, e permanecem de sua própria responsabilidade.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Preparamos as explicações e o material de referência com cuidado, mas não garantimos que estejam sempre completos, corretos ou atualizados.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Quando você carrega um resultado, o aplicativo lê os marcadores laboratoriais e os valores do seu arquivo. Você verifica se os marcadores e valores mostrados no aplicativo correspondem ao seu próprio resultado. Se não corresponderem, não confie na explicação e entre em contato conosco.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Não nos responsabilizamos por erros técnicos, interrupções ou falhas do aplicativo, na medida em que a lei permitir. Para o processamento de dados pessoais, aplica-se a nossa declaração de privacidade.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "As limitações deste artigo não se aplicam em caso de dolo ou negligência grave da nossa parte, ou na medida em que a lei não permita limitação.",
+            "label": "8.6"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Privacidade",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Processamos dados pessoais, incluindo dados de saúde, de acordo com a nossa declaração de privacidade.",
+            "label": "9.1"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Fim",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Você só terá acesso após recebermos seu pagamento. Se um pagamento for revertido ou não tiver sido concluído, seu acesso será interrompido e o contrato terminará. Se desejar usar Harbor Health novamente, você precisará firmar um novo contrato.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Podemos bloquear ou encerrar sua conta em caso de uso indevido ou se você violar estes termos. Se você pagou por um período que não pode mais usar, reembolsaremos essa parte, a menos que a conta tenha sido encerrada devido à sua violação.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Após o término da conta, excluímos seus resultados e explicações dentro de 30 dias, a menos que a lei exija que os mantenhamos por mais tempo.",
+            "label": "10.3"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Reclamações, legislação aplicável e alterações",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Você envia reclamações pelo app.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "artigo 16 da Parte A (lei aplicável e disputas) aplica-se em conformidade.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Podemos alterar estes termos. Para um contrato existente, as alterações só serão aplicadas 30 dias após termos notificado você no aplicativo. Se você não concordar com as alterações, poderá rescindir o contrato antes que elas entrem em vigor. Nesse caso, reembolsaremos a parte da sua assinatura que você ainda não utilizou.",
+            "label": "11.3"
+          }
+        ]
+      }
+    ],
+    "partAReference": "artigo 16 da Parte A"
+  },
+  "living": {
+    "description": "Condições da loja Harbor Living e Harbor Family: pedidos, entregas, assinaturas, desistência e litígios.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Quem somos e o que as palavras significam",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Living, nós, nós: Integrative Wellness bv, negociado como Harbor Living e Harbor Family, estabelecido em FD Rooseveltweg 280, Curaçao, registrado sob o número 153971, e-mail info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Cliente, você: o consumidor que celebra um contrato conosco através da loja virtual. Um consumidor é uma pessoa física que não atua no exercício de uma profissão ou negócio."
+          },
+          {
+            "kind": "bullet",
+            "text": "Titular dos dados: a pessoa em cuja casa os dispositivos são utilizados, por exemplo, os seus pais. Esta pode ser a mesma pessoa que o cliente."
+          },
+          {
+            "kind": "bullet",
+            "text": "Pacote: o conjunto de dispositivos que você escolhe na loja virtual, com ou sem itens que você mesmo marcou."
+          },
+          {
+            "kind": "bullet",
+            "text": "Dispositivos: os sensores, wearables e outros hardwares que fornecemos."
+          },
+          {
+            "kind": "bullet",
+            "text": "Software e aplicativo: o software e o aplicativo por meio dos quais os dispositivos funcionam e os alertas são enviados."
+          },
+          {
+            "kind": "bullet",
+            "text": "Assinatura: acesso ao software e ao aplicativo, mediante pagamento mensal."
+          },
+          {
+            "kind": "bullet",
+            "text": "Depósito: valor que você paga antecipadamente pelo pacote."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Quando estes termos se aplicam",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Estes termos se aplicam a todas as ofertas, pedidos e acordos entre nós e os consumidores através da loja virtual Harbor Living e Harbor Family.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Antes da celebração do contrato disponibilizamos estes termos no nosso site, de forma que permite guardá-los e imprimi-los.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Para o aluguer de dispositivos, aplicam-se adicionalmente os termos de aluguer da Parte B. Os termos da Parte C aplicam-se a Harbor Health.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Prevalece a legislação obrigatória do consumidor. Se uma disposição destes termos entrar em conflito com ela, essa lei se aplica.",
+            "label": "2.4"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "O que Harbor Living é e não é",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Living e Harbor Family destinam-se ao bem-estar e segurança dentro e fora de casa. Não se destinam ao diagnóstico, tratamento ou monitorização de doenças e não fornecem aconselhamento médico.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Harbor Living não é uma central de alarme e nem uma linha de emergência. Em caso de emergência, ligue imediatamente para os serviços de emergência.",
+            "label": "3.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Um alerta é uma ajuda. Alguém tem que responder a isso. Não podemos garantir que uma queda, um acontecimento ou uma alteração no ritmo diário serão sempre reconhecidos ou comunicados a tempo. Os sensores podem emitir sinais falsos e, após a instalação, o sistema tem um período de aprendizagem de algumas semanas.",
+            "label": "3.3"
+          },
+          {
+            "kind": "clause",
+            "text": "O funcionamento depende de energia, internet (wifi) e rede móvel. Em caso de falha, os alertas podem atrasar ou não chegar.",
+            "label": "3.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Os dispositivos destinam-se a ser utilizados dentro e fora de casa. Alguns dispositivos, como um relógio ou um detector de quedas vestível, são usados. Um dispositivo com reconhecimento de imagem dentro do próprio dispositivo, como a lâmpada inteligente de prevenção de quedas, é descrito como tal na loja virtual.",
+            "label": "3.5"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Oferta e celebração do acordo",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "As quantidades de dispositivos por tipo de caixa na loja online são indicativas. Registramos o pacote que você solicita em seu pedido e confirmação.",
+            "label": "4.1"
+          },
+          {
+            "kind": "clause",
+            "text": "O acordo é celebrado quando confirmamos a sua encomenda por e-mail ou quando recebemos o seu depósito.",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Entregamos apenas para clientes na União Europeia, América Latina e Caribe (a “Área de Entrega”).",
+            "label": "4.3"
+          },
+          {
+            "kind": "subclause",
+            "text": "Fora da Área de Entrega: se você estiver fora da Área de Entrega (por exemplo, na Austrália), nossa loja virtual não estará disponível para você e você não poderá fazer um pedido.",
+            "label": "(a)"
+          },
+          {
+            "kind": "subclause",
+            "text": "Dentro da Área de Entrega: se você estiver dentro da Área de Entrega, mas um pacote ou dispositivo não estiver disponível em seu país, ou não pudermos entregá-lo ou instalá-lo em seu endereço, poderemos cancelar seu pedido. Nesse caso, reembolsaremos o seu pagamento integralmente.",
+            "label": "(b)"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Preços e pagamento",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Os preços são indicados em dólares americanos (USD) para clientes nas Caraíbas, incluindo Curaçao, e América Latina, e em euros (€) para clientes na União Europeia. Os preços para clientes na União Europeia incluem IVA.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Você paga on-line através de um provedor de pagamento: com Visa (cartão de crédito) no Caribe, incluindo Curaçao e América Latina, e com Wero ou outro método de pagamento mostrado na finalização da compra na União Europeia. Não armazenamos os dados do seu cartão.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "No momento da encomenda você escolhe: pagar o depósito agora ou pagar integralmente antecipadamente. Se você pagar integralmente antecipadamente, pagará o depósito e a assinatura por 12 meses de uma só vez.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Encomendamos os dispositivos após recebermos o depósito.",
+            "label": "5.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Você paga a assinatura com um mês de antecedência, por pagamento automático com cartão de crédito ou na União Europeia, através do Wero ou por débito direto.",
+            "label": "5.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Atraso no pagamento: se você não tiver pago dentro de duas semanas da data de vencimento, enviaremos um primeiro lembrete. Se você ainda não tiver pago dentro de duas semanas após o primeiro lembrete, enviaremos um segundo lembrete. Poderemos cobrar uma taxa de atraso de pagamento de 1% do valor em atraso.",
+            "label": "5.6"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Entrega e instalação",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "O prazo de entrega é entre 1 dia e 6 semanas após recebermos o depósito, salvo acordo em contrário. Os prazos de entrega são indicativos.",
+            "label": "6.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Nós, ou um instalador indicado por nós, instalaremos o pacote no horário acordado com você. Você deve garantir que o instalador tenha acesso à casa e que haja uma fonte de alimentação e, quando necessário, uma conexão Wi-Fi disponível. Se não houver conexão Wi-Fi disponível em casa, discutiremos consigo alternativas adequadas.",
+            "label": "6.2"
+          },
+          {
+            "kind": "clause",
+            "text": "O risco de danos ou perdas passa para você quando os dispositivos são entregues ou instalados em sua casa.",
+            "label": "6.3"
+          },
+          {
+            "kind": "clause",
+            "text": "O preço dos aparelhos está indicado em nosso site. Os dispositivos tornam-se sua propriedade assim que você pagar esse preço integralmente. O valor mensal que você paga é uma taxa de assinatura pelo uso do software e não conta para o preço de compra dos dispositivos. Se você alugar os dispositivos, eles permanecerão nossa propriedade; veja as condições de aluguel.",
+            "label": "6.4"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Assinatura",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "A assinatura começa assim que o sistema funcionar em sua casa.",
+            "label": "7.1"
+          },
+          {
+            "kind": "clause",
+            "text": "A assinatura continua por tempo indeterminado. Você pode cancelar a qualquer momento com um período de aviso prévio de no máximo um mês. Afirmamos isso antes de o acordo ser concluído.",
+            "label": "7.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Você pode cancelar no aplicativo ou na loja virtual.",
+            "label": "7.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Após o término da assinatura, o aplicativo e os alertas não funcionam mais. Os dispositivos permanecem seus, mas não funcionam sem assinatura.",
+            "label": "7.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Poderemos aumentar o preço da assinatura após notificação por escrito com pelo menos 30 dias de antecedência. Você pode cancelar antes da data efetiva.",
+            "label": "7.5"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Direito de retirada",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Se for um consumidor na União Europeia e fizer uma encomenda através da loja online, pode cancelar o contrato no prazo de 14 dias sem indicar o motivo.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Para um pedido de dispositivos com instalação e assinatura, o período começa no dia seguinte ao recebimento dos dispositivos. Se a entrega for em várias partes, será no dia seguinte ao recebimento da última parte. Para uma assinatura sem dispositivos, o período começa no dia seguinte à celebração do contrato.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Você exerce o direito de desistência pela loja virtual.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Se você recebeu dispositivos, envie-nos de volta no prazo máximo de 14 dias após sua retirada. Os custos de devolução são por sua conta.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Reembolsaremos tudo o que você pagou no prazo de 14 dias após a sua retirada, mas podemos esperar até recebermos os dispositivos ou você provar que os devolveu.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Você é responsável por qualquer redução no valor dos dispositivos resultante do uso além do necessário para estabelecer sua natureza, características e funcionamento.",
+            "label": "8.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Se você solicitou expressamente o início da instalação ou da assinatura durante o período de reflexão, no saque você paga um valor proporcional ao que já entregamos naquele momento.",
+            "label": "8.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Se for um consumidor fora da União Europeia e tiver encomendado através da loja online, poderá cancelar o contrato no prazo de 14 dias após a recepção dos dispositivos, desde que os dispositivos não tenham sido instalados ou utilizados e sejam devolvidos na sua embalagem original. Os artigos 8.3 a 8.5 aplicam-se em conformidade. Isto não afecta quaisquer direitos que possa ter ao abrigo da legislação do consumidor obrigatória no seu país.",
+            "label": "8.8"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Conformidade e garantia",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Os dispositivos estão em conformidade com o acordo e são adequados para o uso para o qual são normalmente utilizados. Você tem direito à garantia legal, complementada pela garantia do fabricante quando aplicável.",
+            "label": "9.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Você relata um defeito dentro de um prazo razoável, mas não superior a 14 dias, após descobri-lo. Um relatório dentro de 14 dias é, em qualquer caso, dentro do prazo.",
+            "label": "9.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Em caso de defeito reparamos ou substituímos o aparelho. Se isso não for possível dentro de um prazo razoável ou sem maiores inconvenientes, você poderá solicitar uma redução de preço ou a rescisão do contrato.",
+            "label": "9.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Durante o período de garantia, você deve cumprir as regras de garantia. A garantia caduca se não cumprir estas regras e em caso de utilização incorreta, de reparações próprias, de danos causados ​​por terceiros que não nós, ou de alterações na habitação que afetem os dispositivos ou a sua instalação.",
+            "label": "9.4"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Uso, consentimento e outras pessoas",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Antes de os dispositivos serem colocados na casa de outra pessoa ou de serem configurados alertas sobre outra pessoa, é necessário o consentimento dessa pessoa (o titular dos dados). Caso o titular dos dados não consiga decidir por si próprio, é necessário o consentimento do representante legal. Podemos pedir que você confirme isso.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "O rastreamento de uma localização com um wearable só ocorre com o consentimento do titular dos dados.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Você escolhe quem recebe o alerta. Você garante que eles possam ser alcançados e possam responder.",
+            "label": "10.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Você não usa o sistema para seguir ou vigiar ninguém contra sua vontade.",
+            "label": "10.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Você usa os dispositivos de acordo com as instruções e não os desmonta.",
+            "label": "10.5"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Responsabilidade",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Somos responsáveis apenas por danos diretos resultantes de uma falha atribuível de nossa parte.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Não somos responsáveis ​​por danos indiretos, incluindo danos consequenciais, perda de lucros, perda de receitas, perda de dados e danos devido à interrupção dos negócios.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Nossa responsabilidade é limitada a um valor equivalente a 12 meses de mensalidades da assinatura, com um máximo de USD 1.500 por evento.",
+            "label": "11.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Os sistemas Harbor Living e Harbor Family são ferramentas de suporte. Não garantem a prevenção de roubos, incêndios, água, acidentes, incidentes de saúde ou outros eventos. Não nos responsabilizamos por danos resultantes de tais eventos, a menos que o dano seja resultado direto de uma falha atribuível de nossa parte.",
+            "label": "11.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Não nos responsabilizamos por alertas que não cheguem ou sejam atrasados ​​devido a falha de energia, Wi-Fi, internet ou rede móvel, devido a serviços ou equipamentos de terceiros (como provedores de telecomunicações, lojas de aplicativos ou seu telefone), ou porque o telefone do destinatário está desligado ou não tem cobertura.",
+            "label": "11.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Não nos responsabilizamos por danos resultantes de informações incorretas ou incompletas fornecidas por você, do não cumprimento das nossas instruções ou do manual do usuário, da não resposta a alertas ou da utilização dos dispositivos para fins diferentes daqueles a que se destinam.",
+            "label": "11.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Não nos responsabilizamos por danos resultantes de força maior conforme descrito no Artigo 14.",
+            "label": "11.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Qualquer reclamação contra nós caduca um ano após o evento que causou o dano.",
+            "label": "11.8"
+          },
+          {
+            "kind": "clause",
+            "text": "As limitações neste artigo não se aplicam em caso de dolo ou negligência grave da nossa parte, nem na medida em que a lei não permita limitação, como por danos por morte ou ferimentos pessoais.",
+            "label": "11.9"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Software e direitos",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Você recebe o direito pessoal e intransferível de usar o software e o aplicativo enquanto tiver uma assinatura. Todos os direitos do software, dos textos e do design permanecem conosco ou com nossos fornecedores.",
+            "label": "12.1"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Privacidade",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Processamos dados pessoais de acordo com nossa declaração de privacidade. Indica quais dados processamos, por que, por quanto tempo os mantemos e quais direitos você tem.",
+            "label": "13.1"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Força maior",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Força maior significa qualquer circunstância fora do nosso controle, incluindo falha de fornecedores ou transportadoras, restrições de importação, medidas governamentais, desastres naturais, condições climáticas extremas e falha prolongada de energia, internet ou rede móvel.",
+            "label": "14.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Em caso de força maior, não somos obrigados a cumprir as nossas obrigações enquanto durar o caso de força maior e não somos responsáveis ​​por quaisquer danos resultantes.",
+            "label": "14.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Se o caso de força maior durar mais de 30 dias, você poderá rescindir o contrato. Você receberá de volta o que pagou pelo que não foi entregue.",
+            "label": "14.3"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "title": "Reclamações",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Se você tiver alguma reclamação, entre em contato conosco primeiro através do chat em nosso site ou no aplicativo. Faremos o nosso melhor para resolver o problema junto com você.",
+            "label": "15.1"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "title": "Lei aplicável e disputas",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Os acordos com clientes na União Europeia são regidos pela lei holandesa. Os litígios são submetidos ao tribunal competente nos Países Baixos.",
+            "label": "16.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Os acordos com todos os outros clientes, incluindo clientes em Curaçao, em outras partes do Caribe e na América Latina, são regidos pela lei de Curaçao. As disputas são submetidas ao Tribunal de Primeira Instância de Curaçao.",
+            "label": "16.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Se for consumidor, a escolha da lei prevista neste artigo não o priva da proteção das disposições obrigatórias da lei do seu país de residência. Se for um consumidor na União Europeia, também poderá intentar ações perante os tribunais do seu país de residência, e só poderemos intentar ações contra si nesse país.",
+            "label": "16.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Estes termos podem estar disponíveis em vários idiomas. Em caso de qualquer inconsistência, a versão em inglês prevalecerá, salvo disposição em contrário da lei obrigatória.",
+            "label": "16.4"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "title": "Mudanças",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Podemos alterar estes termos. Para um contrato existente, as alterações só se aplicam depois de notificá-lo com 30 dias de antecedência, e você poderá cancelar antes da data de vigência.",
+            "label": "17.1"
+          }
+        ]
+      }
+    ]
+  }
+}

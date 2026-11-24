@@ -3,7 +3,7 @@ import CommercialLayout from '../../../layouts/CommercialLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import { getPageRoutes } from '../../../lib/content';
-import { legalUI, relatedClause, termsDocuments, termsRoute, termsSlugs } from '../../../lib/legal';
+import { getTerms, legalUI, relatedClause, termsRoute, termsSlugs } from '../../../lib/legal';
 import { locales } from '../../../lib/i18n';
 
 export function getStaticPaths() {
@@ -14,11 +14,10 @@ export function getStaticPaths() {
 }
 
 const { locale, slug } = Astro.props;
-const terms = termsDocuments[slug];
+const terms = getTerms(locale, slug);
 const ui = legalUI[locale];
 const routes = await getPageRoutes(locale);
 const living = slug === 'harbor-living';
-const title = locale === 'en' ? terms.title : `${ui.title} · ${terms.brand}`;
 const languageRoutes = locales.map((lang) => ({ locale: lang, route: termsRoute(lang, slug) }));
 
 type Block = { kind: string; text: string; label?: string };
@@ -33,31 +32,30 @@ function groupBlocks(blocks: Block[]) {
 }
 ---
 
-<CommercialLayout title={title} description={locale === 'en' ? terms.description : `${title}. ${ui.original}`} branded={{ name: terms.brand, kind: 'legal', route: termsRoute(locale, slug), canonicalRoute: terms.route }} languageRoutes={languageRoutes} publishable={locale === 'en'}>
+<CommercialLayout title={terms.title} description={terms.description} branded={{ name: terms.brand, kind: 'legal', route: termsRoute(locale, slug) }} languageRoutes={languageRoutes} publishable={locale === 'en'}>
   <Header routes={routes} />
   <main id="contenido" class:list={['terms-page', { 'terms-living': living }]}>
     <header class="terms-header">
       <div class="terms-width">
         <a class="terms-brand" href={living ? `/${locale}/harbor-living/` : `/${locale}/`}>{terms.brand}</a>
-        <h1>{title}</h1>
-        <time datetime={terms.versionMonth}>{locale === 'en' ? terms.version : ui.version}</time>
-        {locale !== 'en' && <p>{ui.original}</p>}
+        <h1>{terms.title}</h1>
+        <time datetime={terms.versionMonth}>{terms.version}</time>
+        {locale !== 'en' && <p><a class="terms-brand" href={termsRoute('en', slug)} hreflang="en">{ui.original}</a></p>}
       </div>
     </header>
     <div class="terms-width terms-grid">
       <nav class="terms-index" aria-labelledby="terms-index-title">
         <h2 id="terms-index-title">{ui.contents}</h2>
-        <ol lang="en">
+        <ol>
           {terms.sections.map((section) => (
             <li><a href={`#article-${section.number}`}>{section.title}</a></li>
           ))}
         </ol>
       </nav>
-      <article lang="en" aria-label={terms.title}>
-        {locale !== 'en' && <h2>{terms.title}</h2>}
+      <article lang={locale} aria-label={terms.title}>
         {terms.sections.map((section) => (
           <section id={`article-${section.number}`} aria-labelledby={`article-${section.number}-title`}>
-            <h2 id={`article-${section.number}-title`}>Article {section.number}. {section.title}</h2>
+            <h2 id={`article-${section.number}-title`}>{ui.article} {section.number}. {section.title}</h2>
             {groupBlocks(section.blocks).map((group) => {
               const [first] = group;
               if (first.kind !== 'clause') return (

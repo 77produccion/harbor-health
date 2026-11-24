@@ -1,0 +1,720 @@
+{
+  "health": {
+    "description": "Voorwaarden voor de uitleg van laboratoriumuitslagen bij Harbor Health: toegang, abonnementen, uploads en privacy.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Wie we zijn en wat de woorden betekenen",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Health, wij: Integrative Wellness bv gevestigd aan de FD Rooseveltweg 280, Curaçao, geregistreerd onder nummer 153971, e-mail: info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Gebruiker, jij: de persoon die een account heeft bij Harbor Health. Er zijn twee soorten: individuele zorgprofessionals en zorgprofessionals."
+          },
+          {
+            "kind": "bullet",
+            "text": "Toelichting: de toelichting op een laboratoriumuitslag die Harbor Health geeft, geschreven door artsen."
+          },
+          {
+            "kind": "bullet",
+            "text": "Referentiemateriaal: de informatie per test voor zorgprofessionals, met acht vragen en antwoorden."
+          },
+          {
+            "kind": "bullet",
+            "text": "Webapp: de omgeving waarin u inlogt en de uitleg of het referentiemateriaal opent."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Wat Harbor Health wel en niet is",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health geeft algemene uitleg en informatie over laboratoriumuitslagen. Het is niet bedoeld voor diagnose, behandeling of preventie van ziekten, het geeft geen medisch advies en het vervangt geen arts of andere beroepsbeoefenaar in de gezondheidszorg.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Hoewel de uitleg door artsen is geschreven, ontstaat door het gebruik van Harbor Health geen arts-patiëntrelatie tussen u en ons of die artsen.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Voor particulieren leggen wij in algemene termen uit wat een waarde is, waarom deze wordt gemeten en wat een afwijking kan betekenen. Wij interpreteren uw individuele uitslag niet. Alleen uw arts kan beoordelen wat een uitslag voor u betekent, rekening houdend met uw klachten, medische voorgeschiedenis en medicatie. Referentiewaarden kunnen per laboratorium verschillen. Gebruik altijd de referentiewaarden die bij uw eigen uitslag staan vermeld.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Start, stop of verander geen behandeling of medicatie op basis van de uitleg zonder overleg met uw arts. Heeft u klachten of maakt u zich zorgen, neem dan contact op met uw huisarts. In geval van nood belt u direct de hulpdiensten. Harbor Health is geen hulpdienst.",
+            "label": "2.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Voor zorgprofessionals is Harbor Health algemeen referentiemateriaal per test. Het bevat geen patiëntspecifiek advies. De beroepsbeoefenaar in de gezondheidszorg blijft volledig verantwoordelijk voor zijn eigen klinische oordeel en voor elke beslissing over diagnose of behandeling. U mag geen patiëntgegevens invoeren in Harbor Health.",
+            "label": "2.5"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Account en toegang",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "U maakt een account aan met uw e-mailadres en een wachtwoord. Je houdt je inloggegevens geheim en deelt je account niet met anderen. U bent verantwoordelijk voor al het gebruik van uw account. Als u vermoedt dat iemand anders toegang heeft tot uw account, meldt u dit direct aan ons.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "U moet minimaal 18 jaar oud zijn om een ​​account aan te maken en Harbor Health te gebruiken. Door een account aan te maken, bevestigt u dat u aan deze vereiste voldoet. Indien dit niet het geval blijkt te zijn, kunnen wij de account beëindigen.",
+            "label": "3.2"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Abonnement, uploads en toegang per gebruik",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health biedt de volgende vormen van toegang:",
+            "label": "4.1"
+          },
+          {
+            "kind": "bullet",
+            "text": "Individueel, abonnement: je hebt op elk moment toegang tot de (web)app en je uitleg zolang het abonnement loopt."
+          },
+          {
+            "kind": "bullet",
+            "text": "Individueel, per upload: je betaalt per resultaat dat je uploadt. De uitleg bij die upload is 24 uur beschikbaar."
+          },
+          {
+            "kind": "bullet",
+            "text": "Zorgprofessional, abonnement: toegang tot alle testen zolang het abonnement loopt."
+          },
+          {
+            "kind": "clause",
+            "text": "Een abonnement loopt in eerste instantie voor een periode van 12 maanden en loopt daarna door voor onbepaalde tijd. Je kunt vervolgens op elk moment opzeggen met een opzegtermijn van maximaal één maand, in de (web)app.",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "U betaalt online via een betalingsprovider: met Visa (creditcard) in het Caribisch gebied, inclusief Curaçao, en Latijns-Amerika, en met Wero in de Europese Unie. Wij slaan uw kaartgegevens niet op. Prijzen zijn vermeld in Amerikaanse dollars (USD) voor gebruikers in het Caribisch gebied, inclusief Curaçao, en Latijns-Amerika, en in euro's (€) voor gebruikers in de Europese Unie. Prijzen voor gebruikers in de Europese Unie zijn inclusief BTW.",
+            "label": "4.3"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Resultaten uploaden",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "U uploadt alleen uw eigen resultaat, of het resultaat van een ander die hiervoor uitdrukkelijk toestemming heeft gegeven. Voor een kind of persoon die niet zelf kan beslissen, kunt u alleen een resultaat uploaden als u hun wettelijke vertegenwoordiger bent.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Als u een resultaat van iemand anders uploadt, bevestigt u dat u diens uitdrukkelijke toestemming heeft en moet u dit op ons verzoek kunnen aantonen. U bent verantwoordelijk voor eventuele schade die voortvloeit uit een upload zonder de vereiste toestemming en u vrijwaart ons voor aanspraken van die persoon.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Je zorgt ervoor dat het geüploade bestand alleen het resultaat bevat, en geen andere gegevens die wij niet nodig hebben.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "U geeft uitdrukkelijk toestemming voor de verwerking van het resultaat voor het maken van de toelichting. U kunt uw toestemming op elk gewenst moment intrekken. Vervolgens verwijderen wij het resultaat en de uitleg en kunt u er niet meer bij. Intrekking heeft geen invloed op verwerkingen die eerder hebben plaatsgevonden. Zie de privacyverklaring.",
+            "label": "5.4"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Gebruik van de uitleg en het referentiemateriaal",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "U mag de uitleg of het referentiemateriaal niet kopiëren, verspreiden, verkopen of op geautomatiseerde wijze (zoals scrapen) uit de (web)app halen. Als zorgprofessional kunt u tijdens uw werk losse onderdelen delen met uw eigen patiënten.",
+            "label": "6.1"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Beschikbaarheid",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wij doen ons best om de (web)app beschikbaar te houden, maar kunnen geen ononderbroken toegang garanderen. Het kan zijn dat wij de (web)app tijdelijk buiten gebruik stellen voor onderhoud.",
+            "label": "7.1"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Aansprakelijkheid",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wij zijn niet aansprakelijk voor indirecte schade, waaronder gevolgschade, inkomstenderving en verlies van gegevens.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij zijn niet aansprakelijk voor de manier waarop u de informatie in de app interpreteert, noch voor enige beslissing die u op basis daarvan neemt. Beslissingen over diagnose, behandeling of medicatie worden door u en uw arts of door de zorgverlener genomen en blijven hun eigen verantwoordelijkheid.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij stellen de toelichtingen en het referentiemateriaal met zorg samen, maar garanderen niet dat deze altijd volledig, juist of actueel zijn.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Wanneer u een resultaat uploadt, leest de app de laboratoriummarkeringen en waarden uit uw bestand. Je controleert of de markeringen en waarden die in de app worden weergegeven overeenkomen met je eigen resultaat. Komen ze niet overeen, vertrouw dan niet op de uitleg en neem contact met ons op.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij zijn niet aansprakelijk voor technische fouten, onderbrekingen of storingen van de app, voor zover de wet dit toestaat. Voor de verwerking van persoonsgegevens is onze privacyverklaring van toepassing.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "De beperkingen in dit artikel gelden niet in geval van opzet of grove schuld onzerzijds, of voor zover de wet beperking niet toestaat.",
+            "label": "8.6"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Privacy",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wij verwerken persoonsgegevens, waaronder gezondheidsgegevens, in overeenstemming met onze privacyverklaring.",
+            "label": "9.1"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Einde",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "U krijgt pas toegang nadat wij uw betaling hebben ontvangen. Als een betaling wordt teruggeboekt of niet blijkt te zijn voltooid, stopt uw ​​toegang en eindigt de overeenkomst. Als u weer gebruik wilt maken van Harbor Health, dient u een nieuwe overeenkomst af te sluiten.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij kunnen uw account blokkeren of beëindigen in geval van misbruik of als u deze voorwaarden schendt. Als u betaald heeft voor een periode waar u geen gebruik meer van kunt maken, betalen wij dat deel terug, tenzij het account vanwege uw overtreding is beëindigd.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Nadat het account is beëindigd, verwijderen wij uw resultaten en toelichtingen binnen 30 dagen, tenzij de wet ons verplicht deze langer te bewaren.",
+            "label": "10.3"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Klachten, toepasselijk recht en wijzigingen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Klachten verstuur je via de app.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "artikel 16 van Deel A (toepasselijk recht en geschillen) is van overeenkomstige toepassing.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij kunnen deze voorwaarden wijzigen. Bij een bestaande overeenkomst gelden wijzigingen pas 30 dagen nadat wij u hiervan in de app op de hoogte hebben gesteld. Als u het niet eens bent met de wijzigingen, kunt u de overeenkomst beëindigen voordat deze in werking treden. In dat geval betalen wij het deel van je abonnement dat je nog niet hebt gebruikt terug.",
+            "label": "11.3"
+          }
+        ]
+      }
+    ],
+    "partAReference": "artikel 16 van Deel A"
+  },
+  "living": {
+    "description": "Webshopvoorwaarden van Harbor Living en Harbor Family: bestellingen, levering, abonnementen, herroeping en geschillen.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Wie we zijn en wat de woorden betekenen",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Living, wij, ons: Integrative Wellness bv, handelend onder de naam Harbor Living en Harbor Family, gevestigd aan de FD Rooseveltweg 280, Curaçao, geregistreerd onder nummer 153971, e-mail info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Klant, u: de consument die via de webshop een overeenkomst met ons aangaat. Een consument is een natuurlijk persoon die niet handelt in de uitoefening van een beroep of bedrijf."
+          },
+          {
+            "kind": "bullet",
+            "text": "Betrokkene: de persoon bij wie de apparaten thuis worden gebruikt, bijvoorbeeld uw ouder(s). Dit kan dezelfde persoon zijn als de klant."
+          },
+          {
+            "kind": "bullet",
+            "text": "Pakket: de set apparaten die je in de webshop kiest, met of zonder items die je zelf hebt aan- of uitgeschakeld."
+          },
+          {
+            "kind": "bullet",
+            "text": "Devices: de sensoren, wearables en andere hardware die wij leveren."
+          },
+          {
+            "kind": "bullet",
+            "text": "Software en app: de software en de app waarmee de apparaten werken en waarschuwingen worden verzonden."
+          },
+          {
+            "kind": "bullet",
+            "text": "Abonnement: toegang tot de software en de app, tegen maandelijkse betaling."
+          },
+          {
+            "kind": "bullet",
+            "text": "Borg: het bedrag dat u vooraf betaalt voor het pakket."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Wanneer deze voorwaarden van toepassing zijn",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Deze voorwaarden zijn van toepassing op alle aanbiedingen, bestellingen en overeenkomsten tussen ons en consumenten via de webshop van Harbor Living en Harbor Family.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Voordat de overeenkomst wordt gesloten, stellen wij deze voorwaarden op onze website beschikbaar, zodanig dat u ze kunt opslaan en afdrukken.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Voor het huren van apparaten zijn aanvullend de huurvoorwaarden uit deel B van toepassing. Op Harbor Health zijn de voorwaarden uit Deel C van toepassing.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Verplicht consumentenrecht prevaleert. Indien een bepaling in deze voorwaarden daarmee in strijd is, is dat recht van toepassing.",
+            "label": "2.4"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Wat Havenwonen wel en niet is",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Living en Harbor Family zijn bedoeld voor welzijn en veiligheid in en om het huis. Ze zijn niet bedoeld voor de diagnose, behandeling of monitoring van ziekten en geven geen medisch advies.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Harbor Living is geen alarmcentrale en geen noodlijn. In geval van nood bel je direct de hulpdiensten.",
+            "label": "3.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Een alert is een hulpmiddel. Iemand moet erop reageren. Wij kunnen niet garanderen dat een val, een gebeurtenis of een verandering in het dagritme altijd tijdig wordt herkend of gemeld. Sensoren kunnen valse signalen geven en na installatie heeft het systeem een ​​leerperiode van enkele weken.",
+            "label": "3.3"
+          },
+          {
+            "kind": "clause",
+            "text": "De werking is afhankelijk van stroom, internet (wifi) en het mobiele netwerk. In het geval van een storing kunnen waarschuwingen worden uitgesteld of niet aankomen.",
+            "label": "3.4"
+          },
+          {
+            "kind": "clause",
+            "text": "De apparaten zijn bedoeld voor gebruik in en om het huis. Sommige apparaten, zoals een horloge of een draagbare valdetector, worden gedragen. Een apparaat met beeldherkenning in het apparaat zelf, zoals de slimme valpreventielamp, wordt als zodanig beschreven in de webshop.",
+            "label": "3.5"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Aanbieding en totstandkoming van de overeenkomst",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "De aantallen apparaten per woningtype in de webshop zijn indicatief. Het door u bestelde pakket leggen wij vast in uw bestelling en bevestiging.",
+            "label": "4.1"
+          },
+          {
+            "kind": "clause",
+            "text": "De overeenkomst komt tot stand wanneer wij uw bestelling per e-mail bevestigen of wanneer wij uw aanbetaling hebben ontvangen.",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij leveren alleen aan klanten in de Europese Unie, Latijns-Amerika en het Caribisch gebied (het “Bezorggebied”).",
+            "label": "4.3"
+          },
+          {
+            "kind": "subclause",
+            "text": "Buiten het Bezorggebied: indien u zich buiten het Bezorggebied bevindt (bijvoorbeeld in Australië), is onze webshop niet voor u bereikbaar en kunt u geen bestelling plaatsen.",
+            "label": "(a)"
+          },
+          {
+            "kind": "subclause",
+            "text": "Binnen het bezorggebied: als u zich in het bezorggebied bevindt, maar een pakket of apparaat in uw land niet beschikbaar is, of we kunnen het niet op uw adres bezorgen of installeren, kunnen we uw bestelling annuleren. In dat geval betalen wij uw betaling volledig terug.",
+            "label": "(b)"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Prijzen en betaling",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Prijzen zijn vermeld in Amerikaanse dollars (USD) voor klanten in het Caribisch gebied, inclusief Curaçao, en Latijns-Amerika, en in euro's (€) voor klanten in de Europese Unie. Prijzen voor klanten in de Europese Unie zijn inclusief BTW.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "U betaalt online via een betalingsprovider: met Visa (creditcard) in het Caribisch gebied, inclusief Curaçao, en Latijns-Amerika, en met Wero of een andere betaalmethode die wordt weergegeven bij het afrekenen in de Europese Unie. Wij slaan uw kaartgegevens niet op.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bij het bestellen kiest u voor: nu de aanbetaling betalen, of het volledige bedrag vooraf betalen. Betaalt u het geheel vooraf, dan betaalt u de borg en het abonnement voor 12 maanden in één keer.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij bestellen de apparaten nadat wij de aanbetaling hebben ontvangen.",
+            "label": "5.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Je betaalt het abonnement per maand vooraf, via automatische betaling vanaf je creditcard of in de Europese Unie, via Wero of via automatische incasso.",
+            "label": "5.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Te late betaling: als u binnen twee weken na de vervaldatum niet heeft betaald, sturen wij u een eerste herinnering. Heeft u binnen twee weken na de eerste herinnering nog steeds niet betaald, dan sturen wij u een tweede herinnering. Wij kunnen een vertragingsvergoeding van 1% van het achterstallige bedrag in rekening brengen.",
+            "label": "5.6"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Levering en installatie",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "De levertijd ligt tussen 1 dag en 6 weken nadat wij de aanbetaling hebben ontvangen, tenzij wij anders overeenkomen. Levertijden zijn indicatief.",
+            "label": "6.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij, of een door ons aangewezen installateur, installeren het pakket op een met u afgesproken tijdstip. U zorgt ervoor dat de installateur toegang heeft tot de woning en dat er een stroomvoorziening en eventueel een Wi-Fi-verbinding aanwezig is. Indien er thuis geen Wi-Fi verbinding beschikbaar is, bespreken wij met u geschikte alternatieven.",
+            "label": "6.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Het risico op beschadiging of vermissing gaat op u over op het moment dat de apparaten bij u thuis zijn afgeleverd of geïnstalleerd.",
+            "label": "6.3"
+          },
+          {
+            "kind": "clause",
+            "text": "De prijs van de toestellen staat vermeld op onze website. Zodra u deze prijs volledig heeft betaald, worden de apparaten uw eigendom. Het maandbedrag dat u betaalt is abonnementsgeld voor het gebruik van de software en telt niet mee voor de aanschafprijs van de apparaten. Als u de apparaten huurt, blijven deze ons eigendom; zie de huurvoorwaarden.",
+            "label": "6.4"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Abonnement",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Het abonnement gaat in zodra het systeem bij u thuis werkt.",
+            "label": "7.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Het abonnement loopt voor onbepaalde tijd. U kunt op ieder moment opzeggen met een opzegtermijn van maximaal één maand. Dit geven wij aan voordat de overeenkomst wordt gesloten.",
+            "label": "7.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Opzeggen kan in de app of webshop.",
+            "label": "7.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Na afloop van het abonnement werken de app en de alerts niet meer. De apparaten blijven van jou, maar werken niet zonder abonnement.",
+            "label": "7.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij kunnen de prijs van het abonnement verhogen na een schriftelijke opzegtermijn van minimaal 30 dagen. U kunt vóór de ingangsdatum opzeggen.",
+            "label": "7.5"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Herroepingsrecht",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bent u consument in de Europese Unie en heeft u via de webshop besteld, dan kunt u binnen 14 dagen zonder opgave van reden de overeenkomst ontbinden.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Bij een bestelling van apparaten met installatie en abonnement gaat de termijn in op de dag nadat u de apparaten heeft ontvangen. Indien de levering in meerdere delen plaatsvindt, is dit de dag nadat u het laatste deel heeft ontvangen. Bij een abonnement zonder toestellen gaat de termijn in op de dag nadat de overeenkomst is gesloten.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "U oefent uw herroepingsrecht uit via de webshop.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Als u apparaten heeft ontvangen, stuurt u deze uiterlijk 14 dagen na uw herroeping naar ons terug. De kosten voor het retourneren zijn voor uw rekening.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Alles wat je betaald hebt, betalen wij binnen 14 dagen na herroeping terug, maar het kan zijn dat we wachten totdat we de apparaten hebben ontvangen of je hebt bewezen dat je ze hebt teruggestuurd.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "U bent aansprakelijk voor elke waardevermindering van de apparaten die voortvloeit uit gebruik dat verder gaat dan nodig is om de aard, de kenmerken en de werking ervan vast te stellen.",
+            "label": "8.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Heeft u uitdrukkelijk gevraagd om de installatie of het abonnement tijdens de bedenktijd in te laten gaan, dan betaalt u bij herroeping een bedrag naar rato van wat wij op dat moment al hebben geleverd.",
+            "label": "8.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Bent u consument buiten de Europese Unie en heeft u via de webshop besteld, dan kunt u binnen 14 dagen na ontvangst van de apparaten de overeenkomst ontbinden, op voorwaarde dat de apparaten niet zijn geïnstalleerd of gebruikt en in de originele verpakking worden geretourneerd. De artikelen 8.3 tot en met 8.5 zijn van overeenkomstige toepassing. Dit heeft geen invloed op eventuele rechten die u mogelijk heeft op grond van de verplichte consumentenwetgeving in uw land.",
+            "label": "8.8"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Conformiteit en garantie",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "De apparaten voldoen aan de overeenkomst en zijn geschikt voor het gebruik waarvoor ze normaal gesproken worden gebruikt. U heeft recht op de wettelijke garantie, eventueel aangevuld met de fabrieksgarantie.",
+            "label": "9.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Een gebrek meldt u binnen een redelijke termijn, maar uiterlijk binnen 14 dagen, nadat u het heeft ontdekt. Een melding binnen 14 dagen is in ieder geval op tijd.",
+            "label": "9.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bij een defect repareren of vervangen wij het apparaat. Indien dat niet binnen een redelijke termijn of zonder grote hinder lukt, kunt u vragen om een ​​prijsverlaging of om ontbinding van de overeenkomst.",
+            "label": "9.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Gedurende de garantieperiode dient u zich aan de garantieregels te houden. De garantie vervalt als u zich niet aan deze regels houdt en bij verkeerd gebruik, eigen reparaties, schade veroorzaakt door iemand anders dan ons of wijzigingen aan de woning die gevolgen hebben voor de apparaten of de installatie ervan.",
+            "label": "9.4"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Gebruik, toestemming en andere mensen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Voordat apparaten bij iemand anders thuis worden geplaatst, of er waarschuwingen worden ingesteld over een andere persoon, heb je toestemming nodig van die persoon (de betrokkene). Als de betrokkene niet zelf kan beslissen, is de toestemming van de wettelijke vertegenwoordiger nodig. Het kan zijn dat wij u vragen dit te bevestigen.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Het volgen van een locatie met een wearable vindt alleen plaats met toestemming van de betrokkene.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Jij kiest wie een waarschuwing ontvangt. Jij zorgt ervoor dat zij bereikbaar zijn en kunnen reageren.",
+            "label": "10.3"
+          },
+          {
+            "kind": "clause",
+            "text": "U gebruikt het systeem niet om iemand tegen zijn wil te volgen of in te kijken.",
+            "label": "10.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Je gebruikt de apparaten volgens de instructies en haalt ze niet uit elkaar.",
+            "label": "10.5"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Aansprakelijkheid",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wij zijn uitsluitend aansprakelijk voor directe schade die het gevolg is van een toerekenbare tekortkoming aan onze zijde.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij zijn niet aansprakelijk voor indirecte schade, daaronder begrepen gevolgschade, winstderving, inkomstenderving, verlies van gegevens en schade door bedrijfsstagnatie.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Onze aansprakelijkheid is beperkt tot een bedrag gelijk aan 12 maanden abonnementsgeld, met een maximum van USD 1.500,- per gebeurtenis.",
+            "label": "11.3"
+          },
+          {
+            "kind": "clause",
+            "text": "De systemen Harbor Living en Harbor Family zijn ondersteunende hulpmiddelen. Ze garanderen niet de preventie van inbraak, brand, water, ongevallen, gezondheidsincidenten of andere gebeurtenissen. Voor schade als gevolg van dergelijke gebeurtenissen zijn wij niet aansprakelijk, tenzij de schade het directe gevolg is van een toerekenbare tekortkoming van ons.",
+            "label": "11.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij zijn niet aansprakelijk voor waarschuwingen die niet aankomen of vertraging oplopen door een stroom-, wifi-, internet- of mobiele netwerkstoring, door diensten of apparatuur van derden (zoals telecomproviders, appstores of uw telefoon), of doordat de telefoon van de ontvanger uitstaat of geen bereik heeft.",
+            "label": "11.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij zijn niet aansprakelijk voor schade die voortvloeit uit door u verstrekte onjuiste of onvolledige informatie, het niet opvolgen van onze instructies of de gebruikershandleiding, het niet reageren op waarschuwingen of het gebruik van de apparaten voor andere doeleinden dan waarvoor ze zijn bedoeld.",
+            "label": "11.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Wij zijn niet aansprakelijk voor schade als gevolg van overmacht zoals omschreven in artikel 14.",
+            "label": "11.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Iedere vordering op ons vervalt één jaar na de gebeurtenis waardoor de schade is veroorzaakt.",
+            "label": "11.8"
+          },
+          {
+            "kind": "clause",
+            "text": "De beperkingen in dit artikel gelden niet in geval van opzet of grove schuld onzerzijds, noch voor zover de wet beperking niet toestaat, zoals bij schade door dood of lichamelijk letsel.",
+            "label": "11.9"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Software en rechten",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Je krijgt een persoonlijk, niet-overdraagbaar recht om de software en de app te gebruiken zolang je een abonnement hebt. Alle rechten op de software, de teksten en de vormgeving blijven bij ons of onze leveranciers.",
+            "label": "12.1"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Privacy",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wij verwerken persoonsgegevens in overeenstemming met onze privacyverklaring. Hierin staat welke gegevens wij verwerken, waarom, hoe lang wij deze bewaren en welke rechten u heeft.",
+            "label": "13.1"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Overmacht",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Onder overmacht wordt verstaan iedere omstandigheid die buiten onze macht ligt, waaronder een storing bij leveranciers of vervoerders, importbeperkingen, overheidsmaatregelen, natuurrampen, extreme weersomstandigheden en een langdurige uitval van stroom, internet of het mobiele netwerk.",
+            "label": "14.1"
+          },
+          {
+            "kind": "clause",
+            "text": "In geval van overmacht zijn wij voor de duur van de overmacht niet gehouden aan het nakomen van onze verplichtingen en zijn wij niet aansprakelijk voor de daaruit voortvloeiende schade.",
+            "label": "14.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Indien de overmacht langer dan 30 dagen duurt, kunt u de overeenkomst ontbinden. U krijgt dan terug wat u betaald heeft voor wat niet geleverd is.",
+            "label": "14.3"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "title": "Klachten",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Heeft u een klacht, neem dan eerst contact met ons op via de chat op onze website of in de app. Wij zullen ons best doen om de kwestie samen met u op te lossen.",
+            "label": "15.1"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "title": "Toepasselijk recht en geschillen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Op overeenkomsten met klanten in de Europese Unie is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in Nederland.",
+            "label": "16.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Op overeenkomsten met alle overige klanten, inclusief klanten op Curaçao, elders in het Caribisch gebied en in Latijns-Amerika, is het recht van Curaçao van toepassing. Geschillen worden voorgelegd aan de Rechtbank van Eerste Aanleg van Curaçao.",
+            "label": "16.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Als u consument bent, ontneemt de rechtskeuze in dit artikel u niet de bescherming van de dwingende bepalingen van het recht van het land waar u woont. Als u consument bent in de Europese Unie, kunt u ook een procedure aanhangig maken bij de rechtbanken van het land waar u woont, en mogen wij alleen daar een procedure tegen u aanspannen.",
+            "label": "16.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Deze voorwaarden zijn mogelijk in verschillende talen beschikbaar. In geval van tegenstrijdigheid prevaleert de Engelse versie, tenzij dwingend recht anders bepaalt.",
+            "label": "16.4"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "title": "Wijzigingen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wij kunnen deze voorwaarden wijzigen. Bij een bestaande overeenkomst gelden wijzigingen pas nadat wij u hiervan 30 dagen van tevoren op de hoogte hebben gesteld. U kunt dan vóór de ingangsdatum opzeggen.",
+            "label": "17.1"
+          }
+        ]
+      }
+    ]
+  }
+}

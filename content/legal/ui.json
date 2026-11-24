@@ -2,43 +2,57 @@
   "es": {
     "title": "Términos y condiciones",
     "contents": "Índice de artículos",
-    "original": "Texto contractual original en inglés.",
+    "original": "Consultar la versión original en inglés",
+    "article": "Artículo",
+    "shop": "tienda en línea",
     "version": "Noviembre de 2026"
   },
   "en": {
     "title": "Terms and conditions",
     "contents": "Contents",
-    "original": "Original terms in English.",
+    "original": "Read the original English version",
+    "article": "Article",
+    "shop": "webshop",
     "version": "November 2026"
   },
   "nl": {
     "title": "Algemene voorwaarden",
     "contents": "Inhoudsopgave",
-    "original": "Oorspronkelijke voorwaarden in het Engels.",
+    "original": "Lees de oorspronkelijke Engelse versie",
+    "article": "Artikel",
+    "shop": "webshop",
     "version": "November 2026"
   },
   "fr": {
     "title": "Conditions générales",
     "contents": "Sommaire des articles",
-    "original": "Texte contractuel original en anglais.",
+    "original": "Consulter la version originale en anglais",
+    "article": "Article",
+    "shop": "boutique en ligne",
     "version": "Novembre 2026"
   },
   "pt": {
     "title": "Termos e condições",
     "contents": "Índice de artigos",
-    "original": "Texto contratual original em inglês.",
+    "original": "Consultar a versão original em inglês",
+    "article": "Artigo",
+    "shop": "loja virtual",
     "version": "Novembro de 2026"
   },
   "de": {
     "title": "Allgemeine Geschäftsbedingungen",
     "contents": "Inhaltsverzeichnis",
-    "original": "Originalfassung der Vertragsbedingungen auf Englisch.",
+    "original": "Englische Originalfassung lesen",
+    "article": "Artikel",
+    "shop": "Onlineshop",
     "version": "November 2026"
   },
   "pap": {
     "title": "Término i kondishon",
     "contents": "Índise di artíkulonan",
-    "original": "Teksto original di kontrato na ingles.",
+    "original": "Lesa e vershon original na ingles",
+    "article": "Artíkulo",
+    "shop": "tienda online",
     "version": "Novèmber 2026"
   }
 }

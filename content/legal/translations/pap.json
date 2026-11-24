@@ -1,0 +1,720 @@
+{
+  "health": {
+    "description": "Kondishonnan di e servisio di splikashon di resultadonan di laboratorio di Harbor Health: akseso, abonamentu, subi resultado i privasidat.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Ken nos ta i kiko e palabranan ta nifiká",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Health, we: Integrative Wellness bv establecido na FD Rooseveltweg 280, Curaçao, registra bou number 153971, email: info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Usuario, abo: e persona ku tin un kuenta ku Harbor Health. Tin dos tipo: individual i profeshonal di kuido di salú."
+          },
+          {
+            "kind": "bullet",
+            "text": "Splikashon: e splikashon di un resultado di laboratorio ku Harbor Health ta duna, skirbí pa dòkternan."
+          },
+          {
+            "kind": "bullet",
+            "text": "Material di referensia: e informashon pa tèst pa profeshonalnan di kuido di salú, ku ocho pregunta i kontesta."
+          },
+          {
+            "kind": "bullet",
+            "text": "Web app: e ambiente den kua bo ta drenta i habri e splikashon òf e material di referensia."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Kiko Harbor Health ta i no ta",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health ta duna splikashon general i informashon tokante resultadonan di laboratorio. E no ta destiná pa diagnostiko, tratamentu òf prevenshon di malesa, e no ta duna konseho médiko, i e no ta remplasá un dòkter òf otro profeshonal di kuido médiko.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Aunke e splikashonnan ta skirbí pa dòkternan, usando Harbor Health no ta krea un relashon dòkter-pashènt entre abo i nos òf e dòkternan ei.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Pa individuonan, nos ta splika den términonan general kiko ta un balor, dikon e ta wòrdu midi i kiko un desviashon por nifiká. Nos no ta interpretá bo resultado individual. Kiko un resultado ta nifiká pa bo por wòrdu evaluá solamente dor di bo dòkter, teniendo kuenta ku bo kehonan, historia médiko i remedi. Balornan di referensia por ta diferente pa laboratorio. Semper usa e balornan di referensia indiká riba bo mes resultado.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "No kuminsá, stòp òf kambia kualke tratamentu òf remedi a base di e splikashon sin konsultá ku bo dòkter. Si bo tin keho of ta preocupa, tuma contacto cu bo dokter di cas. Den kaso di emergensia, yama servisio di emergensia mesora. Harbor Health no ta un servisio di emergensia.",
+            "label": "2.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Pa profeshonalnan di kuido di salú, Harbor Health ta material di referensia general pa tèst. E no ta kontené konseho spesífiko pa pashènt. E profeshonal di kuido di salú ta keda kompletamente responsabel pa su propio huisio klíniko i pa kualke desishon tokante diagnósis òf tratamentu. Bo no mester introdusí dato di pashènt den Harbor Health.",
+            "label": "2.5"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Kuenta i akseso",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bo ta krea un kuenta ku bo adrès di email i un kontraseña. Bo ta tene bo detayenan di login sekreto i no ta kompartí bo kuenta ku otronan. Bo ta responsabel pa tur uso di bo kuenta. Si bo ta sospechá ku un otro hende tin akseso na bo kuenta, bo ta informá nos mesora.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo mester tin por lo ménos 18 aña pa krea un kuenta i usa Harbor Health. Dor di krea un kuenta, bo ta konfirmá ku bo ta kumpli ku e rekisito aki. Nos por terminá e kuenta si esaki resultá di no ta e kaso.",
+            "label": "3.2"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Suskripshon, subida i akseso pa uso",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health ta ofresé e siguiente formanan di akseso:",
+            "label": "4.1"
+          },
+          {
+            "kind": "bullet",
+            "text": "Individual, suskripshon: bo tin akseso na e (web) app i bo splikashon na kualke momento pa tanten ku e suskripshon ta kore."
+          },
+          {
+            "kind": "bullet",
+            "text": "Individual, pa subida: bo ta paga pa resultado ku bo subi. E splikashon pa e subida ei ta disponibel pa 24 ora."
+          },
+          {
+            "kind": "bullet",
+            "text": "Profeshonal di kuido di salú, suskripshon: akseso na tur tèst pa tanten ku e suskripshon ta kore."
+          },
+          {
+            "kind": "clause",
+            "text": "Un suskripshon ta kore pa un periodo inisial di 12 luna i despues ta sigui pa un periodo indefiní. Despues bo por kanselá na kualke momento ku un periodo di preaviso di máksimo un luna, den e (web) app.",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta paga online pa medio di un dunadó di pago: ku Visa (tarheta di krédito) den Karibe, inkluyendo Kòrsou, i Latino Amérika, i ku Wero den Union Oropeo. Nos no ta warda detayenan di bo tarheta. Preisnan ta indiká den dòler merikano (USD) pa usuarionan den Karibe, inkluyendo Kòrsou, i Latino Amérika, i den euro (€) pa usuarionan den Union Oropeo. Preisnan pa usuarionan den Union Oropeo ta inkluí BBO.",
+            "label": "4.3"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Ta subindo resultadonan",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bo ta subi solamente bo mes resultado, òf e resultado di un otro persona ku a duna konsentimentu ekspreso pa esaki. Pa un mucha òf un persona ku no por disidí pa su mes, bo por subi un resultado solamente si bo ta su representante hurídiko.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Si bo subi un resultado di un otro persona, bo ta konfirmá ku bo tin nan konsentimentu ekspreso i bo mester por demostrá esaki riba nos petishon. Bo ta responsabel pa kualke daño ku ta resultá di un subida sin e konsentimentu nesesario, i bo ta indemnisá nos kontra di e demandanan di e persona ei.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta sòru pa e archivo subi ta kontené solamente e resultado, i ningun otro informashon ku nos no mester.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta duna bo konsenshi ekspresá na e prosesamentu di e resultado pa krea e splikashon. Bo por retirá bo konsentimentu na kualke momento. Despues nos ta eliminá e resultado i e splikashon, i bo no por haña akseso na nan mas. Retiro no ta afecta procesamento cu a tuma luga prome. Wak e deklarashon di privasidat.",
+            "label": "5.4"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Uso di e splikashon i e material di referensia",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bo no mag di kopia, distribuí òf bende e splikashon òf e material di referensia, òf saka esaki for di e (web) app pa medionan outomatisá (manera raspa). Komo un profeshonal di kuido di salú, bo por kompartí partinan individual ku bo mes pashèntnan den transkurso di bo trabou.",
+            "label": "6.1"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Disponibilidat",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Nos ta hasi nos máksimo esfuerso pa tene e (web) app disponibel pero no por garantisá akseso sin interupshon. Nos por kita e (web) app for di uso temporalmente pa mantenshon.",
+            "label": "7.1"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Responsabilidat",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Nos no ta responsabel pa daño indirekto, inkluyendo daño konsekuente, pèrdida di entrada i pèrdida di dato.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos no ta responsabel pa e manera ku bo ta interpretá e informashon den e app, òf pa kualke desishon ku bo tuma a base di esaki. Desishonnan tokante diagnósis, tratamentu òf remedi ta wòrdu tumá dor di abo i bo dòkter, òf dor di e profeshonal di kuido di salú, i ta keda nan propio responsabilidat.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos ta prepará e splikashonnan i e material di referensia ku kuidou, pero nos no ta garantisá ku semper nan ta kompleto, korekto òf na altura.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Ora bo subi un resultado, e app ta lesa e markadónan di laboratorio i balornan for di bo archivo. Bo ta kontrolá ku e markadónan i balornan mustra den e app ta kuadra ku bo mes resultado. Si nan no ta kuadra, no konfia riba e splikashon i tuma kontakto ku nos.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos no ta responsabel pa erornan tékniko, interupshonnan òf fayonan di e app, te na e grado ku lei ta permití. Pa e prosesamentu di datonan personal, nos deklarashon di privasidat ta konta.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "E limitashonnan den e artíkulo aki no ta konta den kaso di intenshon òf negligensia grandi di nos parti, òf te na e grado ku e lei no ta pèrmití limitashon.",
+            "label": "8.6"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Privasidat",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Nos ta prosesá datonan personal, inkluyendo datonan di salú, di akuerdo ku nos deklarashon di privasidat.",
+            "label": "9.1"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Fin",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bo ta haña akseso solamente despues ku nos a risibí bo pago. Si un pago ta wòrdu reversá òf resultá di no a wòrdu kompletá, bo akseso ta stòp i e akuerdo ta terminá. Si bo ke usa Harbor Health atrobe, lo bo mester sera un akuerdo nobo.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos por blòkia òf terminá bo kuenta den kaso di mal uso òf si bo kibra e términonan aki. Si bo a paga pa un periodo ku bo no por usa mas, nos ta debolbé e parti ei, a ménos ku e kuenta a terminá pa motibu di bo inkumplimentu.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Despues ku e kuenta terminá, nos ta eliminá bo resultadonan i splikashonnan denter di 30 dia, a ménos ku lei ta rekerí pa nos warda nan mas largu.",
+            "label": "10.3"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Kehonan, lei aplikabel i kambionan",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bo ta manda keho pa medio di e app.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Artíkulo 16 di Parte A (lei aplikabel i disputanan) ta apliká di akuerdo ku esei.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos por kambia e términonan aki. Pa un akuerdo eksistente, kambionan ta konta solamente 30 dia despues ku nos a notifiká bo den e app. Si bo no ta di akuerdo ku e kambionan, bo por terminá e akuerdo promé ku nan drenta na vigor. Den e kaso ei, nos ta debolbé e parti di bo suskripshon ku bo no a usa ainda.",
+            "label": "11.3"
+          }
+        ]
+      }
+    ],
+    "partAReference": "Artíkulo 16 di Parte A"
+  },
+  "living": {
+    "description": "Kondishonnan di e tienda online di Harbor Living i Harbor Family: pedido, entrega, abonamentu, retiro i disputa.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Ken nos ta i kiko e palabranan ta nifiká",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Living, we, us: Integrative Wellness bv, trading as Harbor Living and Harbor Family, estableci na FD Rooseveltweg 280, Curaçao, registra bou number 153971, email info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Kliente, abo: e konsumidó ku ta sera un akuerdo ku nos pa medio di e webshop. Un konsumidó ta un persona natural ku no ta aktuando den transkurso di un profeshon òf negoshi."
+          },
+          {
+            "kind": "bullet",
+            "text": "Suheto di dato: e persona na ken su kas e aparatonan ta wòrdu usá, por ehèmpel bo mayor(nan). Esaki por ta e mesun persona cu e cliente."
+          },
+          {
+            "kind": "bullet",
+            "text": "Pakete: e sèt di aparatonan ku bo ta skohe den e webshop, ku òf sin artíkulonan ku bo a marka riba òf for di bo mes."
+          },
+          {
+            "kind": "bullet",
+            "text": "Aparatonan: e sensornan, wearables i otro hardware ku nos ta suministrá."
+          },
+          {
+            "kind": "bullet",
+            "text": "Software i app: e software i e app pa medio di kua e aparatonan ta funshoná i alertanan ta wòrdu mandá."
+          },
+          {
+            "kind": "bullet",
+            "text": "Suskripshon: akseso na e software i e app, a kambio di pago mensual."
+          },
+          {
+            "kind": "bullet",
+            "text": "Depósito: e montante ku bo ta paga adelantá pa e pakete."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Ora e términonan aki ta apliká",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "E términonan aki ta konta pa tur oferta, pedido i akuerdo entre nos i konsumidónan a traves di e webshop Harbor Living i Harbor Family.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Promé ku e akuerdo keda konkluí nos ta pone e términonan aki disponibel riba nos wèpsait, na un manera ku ta permití bo warda i print nan.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Pa hür aparatonan, e kondishonnan di hür den Parte B ta konta adishonal. E términonan den Parte C ta konta pa Harbor Health.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Lei di konsumidó obligatorio ta prevalesé. Si un provishon den e términonan aki ta konflikto kuné, e lei ei ta apliká.",
+            "label": "2.4"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Kiko Harbor Living ta i no ta",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Living i Harbor Family ta destiná pa bienestar i seguridat den i rònt di kas. Nan no ta destina pa diagnostico, tratamento of monitoreo di malesa y no ta duna conseho medico.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Harbor Living no ta un sentro di alarma i no ta un liña di emergensia. Den un kaso di emergensia, yama e servisionan di emergensia mesora.",
+            "label": "3.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Un alerta ta un yudansa. Un hende mester respondé na dje. Nos no por garantisa cu un caida, un evento of un cambio den e ritmo diario semper lo wordo reconoci of raporta na tempo. Sensornan por duna señalnan falsu, i despues di instalashon e sistema tin un periodo di siñamentu di algun siman.",
+            "label": "3.3"
+          },
+          {
+            "kind": "clause",
+            "text": "E operashon ta dependé di koriente, internèt (wifi) i e ret mobil. Den kaso di un fayo, alertanan por wòrdu retrasá òf no por yega.",
+            "label": "3.4"
+          },
+          {
+            "kind": "clause",
+            "text": "E aparatonan ta destiná pa uso den i rònt di kas. Algun aparato, manera un reloj òf un detektor di kai ku por bisti, ta gastá. Un aparato ku rekonosementu di imágen paden di e aparato mes, manera e lampi di prevenshon di kai inteligente, ta wòrdu deskribí komo tal den e webshop.",
+            "label": "3.5"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Oferta i konklushon di e akuerdo",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "E kantidatnan di aparato pa tipo di bibienda den e webshop ta indikativo. Nos ta registrá e pakete ku bo ta bestel den bo pedido i konfirmashon.",
+            "label": "4.1"
+          },
+          {
+            "kind": "clause",
+            "text": "E akuerdo ta wòrdu konkluí ora nos konfirmá bo pedido via email òf ora nos a risibí bo depósito.",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos ta entregá solamente na klientenan den Union Oropeo, Latino Amérika i Karibe (e “Area di Entrega”).",
+            "label": "4.3"
+          },
+          {
+            "kind": "subclause",
+            "text": "Pafó di e Area di Entrega: si bo ta situá pafó di e Area di Entrega (por ehèmpel, na Australia), nos webshop lo no ta disponibel pa bo i bo no por hasi un pedido.",
+            "label": "(a)"
+          },
+          {
+            "kind": "subclause",
+            "text": "Den e Area di Entrega: si bo ta situá den e Area di Entrega, pero un pakete òf aparato no ta disponibel den bo pais, òf nos no por entregá òf instalá esaki na bo adrès, nos por kanselá bo pedido. Den e kaso ei, nos lo debolbé bo pago kompletamente.",
+            "label": "(b)"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Preis i pago",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Preisnan ta indiká den dòler merikano (USD) pa klientenan den Karibe, inkluyendo Kòrsou, i Latino Amérika, i den euro (€) pa klientenan den Union Oropeo. Preisnan pa klientenan den Union Oropeo ta inkluí BBO.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta paga online pa medio di un dunadó di pago: ku Visa (tarheta di krédito) den Karibe, inkluso Kòrsou, i Latino Amérika, i ku Wero òf un otro método di pago mustra na kaha na Union Oropeo. Nos no ta warda detayenan di bo tarheta.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Na momentu di hasi pedido bo ta skohe: paga e fiansa awor, òf paga kompleto adelantá. Si bo paga kompleto adelantá, bo ta paga e depósito i e suskripshon pa 12 luna den un solo biaha.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos ta bestel e aparatonan despues ku nos a risibí e fiansa.",
+            "label": "5.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta paga e suskripshon pa luna adelantá, dor di pago outomátiko for di bo tarheta di krédito òf na Union Oropeo, via Wero òf dor di debe direkto.",
+            "label": "5.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Pago lat: si bo no a paga denter di dos siman di e fecha di vensementu, nos lo manda bo un promé rekordatorio. Si ainda bo no a paga denter di dos siman di e promé rekordatorio, nos lo manda bo un di dos rekordatorio. Nos por kobra un tarifa di pago atrasá di 1% di e montante atrasá.",
+            "label": "5.6"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Entrega i instalashon",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "E tempu di entrega ta entre 1 dia i 6 siman despues ku nos risibí e depósito, a ménos ku nos bai di akuerdo otro. E tempu di entrega ta indikativo.",
+            "label": "6.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos, òf un instaladó nombrá pa nos, lo instalá e pakete na un momentu ku bo a akordá. Bo mester sòru pa e instaladó tin akseso na e kas i ku un suministro di koriente i, kaminda ta nesesario, un konekshon di Wi-Fi ta disponibel. Si no tin konekshon di Wi-Fi disponibel na kas, nos lo papia tokante alternativanan adekuá ku bo.",
+            "label": "6.2"
+          },
+          {
+            "kind": "clause",
+            "text": "E riesgo di daño òf pèrdida ta pasa pa bo ora e aparatonan a wòrdu entregá òf instalá na bo kas.",
+            "label": "6.3"
+          },
+          {
+            "kind": "clause",
+            "text": "E preis di e aparatonan ta indiká riba nos wèpsait. E aparatonan ta bira bo propiedat unabes bo a paga e preis aki kompletamente. E montante mensual ku bo ta paga ta un tarifa di suskripshon pa e uso di e software i no ta konta pa e preis di kompra di e aparatonan. Si bo hür e aparatonan, nan ta keda nos propiedat; wak e kondishonnan di hür.",
+            "label": "6.4"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Suskripshon",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "E suskripshon ta kuminsá asina ku e sistema ta funshoná na bo kas.",
+            "label": "7.1"
+          },
+          {
+            "kind": "clause",
+            "text": "E suskripshon ta kontinuá pa un periodo indefiní. Bo por kanselá na kualke momento ku un periodo di preaviso di máksimo un luna. Nos ta deklará esaki promé ku e akuerdo wòrdu konkluí.",
+            "label": "7.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo por kanselá den e app òf webshop.",
+            "label": "7.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Despues ku e suskripshon terminá, e app i e alertanan no ta funshoná mas. E aparatonan ta keda di bo pero no ta funshoná sin un suskripshon.",
+            "label": "7.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos por oumentá e preis di e suskripshon despues di por lo ménos 30 dia di aviso por eskrito. Bo por kanselá promé ku e fecha di entrada na vigor.",
+            "label": "7.5"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Derecho di retiro",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Si bo ta un konsumidó den Union Oropeo i a hasi pedido via e webshop, bo por kanselá e akuerdo denter di 14 dia sin duna un motibu.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Pa un pedido di aparatonan ku instalashon i suskripshon, e periodo ta kuminsá riba e dia despues ku bo risibí e aparatonan. Si entrega ta den varios parti, ta e dia despues cu bo ricibi e ultimo parti. Pa un suskripshon sin aparato, e periodo ta kuminsá riba e dia despues ku e akuerdo ta sera.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta ehersé bo derecho di retiro via e tienda online.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Si bo a risibí aparatonan, bo ta manda nan bèk pa nos no mas tardá ku 14 dia despues di bo retiro. E gastunan di debolbé nan ta pa bo kuenta.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos ta debolbé tur loke bo a paga denter di 14 dia despues di bo retiro, pero nos por warda te ora nos a risibí e aparatonan òf bo a proba ku bo a manda nan bèk.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta responsabel pa kualke redukshon den balor di e aparatonan ku ta resultá di uso mas ayá di loke ta nesesario pa establesé nan naturalesa, karakterístika i operashon.",
+            "label": "8.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Si bo a pidi ekspresamente pa e instalashon òf e suskripshon kuminsá durante e periodo di friamentu, e ora ei na retiro bo ta paga un montante proporshonal na loke nos a entregá kaba na e momento ei.",
+            "label": "8.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Si bo ta un konsumidó pafó di Union Oropeo i a hasi pedido via e webshop, bo por kanselá e akuerdo denter di 14 dia despues di risibí e aparatonan, basta ku e aparatonan no a wòrdu instalá òf usá i ta wòrdu debolbí den nan pakete original. Artíkulonan 8.3 te ku 8.5 ta apliká di akuerdo ku esaki. Esaki no ta afektá ningun derecho ku bo por tin bou di lei di konsumidó obligatorio den bo pais.",
+            "label": "8.8"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Konformidat i garantia",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "E aparatonan ta kumpli ku e akuerdo i ta adekuá pa e uso pa kua nan ta wòrdu usá normalmente. Bo tin derecho riba e garantia legal, suplementá pa e garantia di e fabrikante kaminda e ta apliká.",
+            "label": "9.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta informá un defekto denter di un tempu rasonabel, pero no mas ku 14 dia, despues ku bo deskubrí esaki. Un melding dentro di 14 dia ta en todo caso na tempo.",
+            "label": "9.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Den kaso di un defekto nos ta drecha òf remplasá e aparato. Si esei no ta posibel denter di un tempu rasonabel òf sin molèster grandi, bo por pidi pa baha preis òf pa disolvé e akuerdo.",
+            "label": "9.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Durante e periodo di garantia, bo mester kumpli ku e reglanan di garantia. E garantia ta kaduká si bo no kumpli ku e reglanan aki, i den kaso di uso inkorekto, bo mes reparashonnan, daño kousa pa kualke otro hende ku no ta nos, òf alterashonnan na e kas ku ta afektá e aparatonan òf nan instalashon.",
+            "label": "9.4"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Uso, konsentimentu i otro hende",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Promé ku aparatonan wòrdu poné na kas di un otro persona, òf alertanan wòrdu set tokante un otro persona, bo mester di e konsentimentu di e persona ei (e suheto di dato). Si e suheto di dato no por disidí pa su mes, e konsentimentu di e representante legal ta nesesario. Nos por pidi bo pa konfirmá esaki.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Rastreo di un lugá ku un wearable ta tuma lugá solamente ku e konsentimentu di e suheto di dato.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta skohe ken ta risibí un alerta. Bo ta sòru pa nan por wòrdu alkansá i por respondé.",
+            "label": "10.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo no ta usa e sistema pa sigui òf wak den niun hende kontra nan boluntat.",
+            "label": "10.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Bo ta usa e aparatonan di akuerdo ku e instrukshonnan i no kita nan for di otro.",
+            "label": "10.5"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Responsabilidat",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Nos ta responsabel solamente pa daño direkto ku ta resultá di un fayo atribuí di nos parti.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos no ta responsabel pa daño indirekto, inkluyendo daño konsekuente, pèrdida di ganashi, pèrdida di entrada, pèrdida di dato i daño debí na interupshon di negoshi.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos responsabilidat ta limitá na un montante igual na 12 luna di gastu di suskripshon, ku un máksimo di USD 1.500 pa evento.",
+            "label": "11.3"
+          },
+          {
+            "kind": "clause",
+            "text": "E sistemanan Harbor Living i Harbor Family ta hermentnan di sosten. Nan no ta garantisá e prevenshon di kiebro, kandela, awa, aksidente, insidentenan di salú òf otro susesonan. Nos no ta responsabel pa daño resultante di eventonan asina, a ménos ku e daño ta e resultado direkto di un fayo atribuibel di nos parti.",
+            "label": "11.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos no ta responsabel pa alertanan ku no ta yega òf ku ta tarda pa motibu di un fayo di koriente, Wi-Fi, internèt òf e ret mobil, pa motibu di servisio òf ekipo di terser parti (manera dunadónan di telekomunikashon, tiendanan di app òf bo telefon), òf pasobra e telefon di e destinatario ta paga òf no tin kobertura.",
+            "label": "11.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos no ta responsabel pa daño resultante di informashon inkorekto òf inkompleto suministrá pa bo, fayo pa sigui nos instrukshonnan òf e manual di usuario, fayo pa respondé na alertanan, òf e uso di e aparatonan pa propósitonan otro ku esnan pa kua nan ta destiná.",
+            "label": "11.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Nos no ta responsabel pa daño resultante di forsa mayor manera deskribí den artíkulo 14.",
+            "label": "11.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Kualke demanda kontra nos ta kaduká un aña despues di e suseso ku a kousa e daño.",
+            "label": "11.8"
+          },
+          {
+            "kind": "clause",
+            "text": "E limitashonnan den e artíkulo aki no ta konta den kaso di intenshon òf negligensia grandi di nos parti, ni te na e grado ku e lei no ta pèrmití limitashon, manera pa daño pa medio di morto òf leshon personal.",
+            "label": "11.9"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Software i derechonan",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bo ta risibí un derecho personal, no-transferibel pa usa e software i e app tanten ku bo tin un suskripshon. Tur derecho den e software, e tekstonan i e diseño ta keda serka nos òf nos proveedónan.",
+            "label": "12.1"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Privasidat",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Nos ta prosesá datonan personal di akuerdo ku nos deklarashon di privasidat. E ta indiká kua dato nos ta prosesá, dikon, kon largu nos ta warda esaki i kua derechonan bo tin.",
+            "label": "13.1"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Forsa mayor",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Forsa mayor ta nifiká kualke sirkunstansia fuera di nos kontrol, inkluyendo un fayo na proveedónan òf transportadónan, restrikshonnan di importashon, medidanan di gobièrnu, desasternan natural, wer ekstremo i un fayo prolongá di koriente, internèt òf e ret mobil.",
+            "label": "14.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Den kaso di forsa mayor, nos no ta obligá na kumpli ku nos obligashonnan pa tanten ku e forsa mayor ta dura, i nos no ta responsabel pa kualke daño ku por resultá.",
+            "label": "14.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Si e forsa mayor dura mas ku 30 dia, bo por disolvé e akuerdo. Despues bo ta risibí bèk loke bo a paga pa loke no a wòrdu entregá.",
+            "label": "14.3"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "title": "Kehonan",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Si bo tin un keho, tuma kontakto ku nos promé via e kòmbersashon riba nos wèpsait òf den e app. Nos lo hasi nos best pa resolvé e asuntu huntu ku bo.",
+            "label": "15.1"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "title": "Lei i disputanan aplikabel",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Acuerdonan cu clientenan den Union Europeo ta wordo regla pa ley Hulandes. Disputanan ta wordo entrega na corte competente na Hulanda.",
+            "label": "16.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Akuerdonan ku tur otro kliente, inkluyendo klientenan na Kòrsou, otro kaminda den Karibe i na Latino Amérika, ta wòrdu dirigí pa lei di Kòrsou. Disputanan ta wordo entrega na Corte di Prome Instancia di Curaçao.",
+            "label": "16.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Si bo ta un konsumidó, e eskoho di lei den e artíkulo aki no ta priva bo di e protekshon di e stipulashonnan obligatorio di e lei di bo pais di residensia. Si bo ta un konsumidó den Union Oropeo, bo por trese un proseso tambe dilanti di e kortenan di bo pais di residensia, i nos por trese un proseso kontra bo solamente einan.",
+            "label": "16.3"
+          },
+          {
+            "kind": "clause",
+            "text": "E términonan aki por ta disponibel den vários idioma. Den kaso di kualke inkonsistensia, e vershon na ingles ta prevalesé, a ménos ku lei obligatorio ta stipulá otro.",
+            "label": "16.4"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "title": "Kambionan",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Nos por kambia e términonan aki. Pa un akuerdo eksistente, kambionan ta konta solamente despues ku nos a notifiká bo 30 dia di antemano, i despues bo por kanselá promé ku e fecha efektivo.",
+            "label": "17.1"
+          }
+        ]
+      }
+    ]
+  }
+}
