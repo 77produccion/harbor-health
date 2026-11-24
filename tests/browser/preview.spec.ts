@@ -6,7 +6,7 @@ test('la home se genera desde Scene MDX y enlaza los accesos documentados', asyn
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/es/');
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Tu próxima consulta empieza aquí.');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Comprende tus resultados de laboratorio.');
   await expect(page.locator('[data-home-scene]')).toHaveCount(8);
   await expect(page.locator('[data-product-window]')).toHaveCount(1);
   await expect(page.locator('[data-home-scene="hero"] a[data-marketing-action="access"]')).toHaveAttribute('href', 'https://harbor-web-rho.vercel.app/health/login');
@@ -132,7 +132,7 @@ test('metadatos, schema y endpoints GEO no filtran borradores ni inventan canoni
   expect(faq.mainEntity.map((item: {name: string}) => item.name)).toEqual(visibleQuestions.map(item => item.trim()));
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /');
   expect(await (await request.get('/llms-full.txt')).text()).not.toContain('docs-state-november');
-  expect(await (await request.get('/llms-full.txt')).text()).not.toContain('Tu próxima consulta empieza aquí.');
+  expect(await (await request.get('/llms-full.txt')).text()).not.toContain('Comprende tus resultados de laboratorio.');
   expect((await request.get('/images/og-health.png')).status()).toBe(200);
 });
 

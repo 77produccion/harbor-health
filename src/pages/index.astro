@@ -1,3 +1,5 @@
 ---
-return Astro.redirect('/es/');
+import living from '../../content/living.json';
+
+return Astro.redirect(living.es.route);
 ---

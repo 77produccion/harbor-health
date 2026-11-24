@@ -1,12 +1,16 @@
 ---
 import { pageVersions } from '../lib/content';
 import { getLocale, getUI, locales, languageNames } from '../lib/i18n';
+interface Props { translations?: { locale: string; route: string }[] }
+const { translations } = Astro.props;
 const pages = await pageVersions();
 const current = getLocale(Astro.url.pathname);
 const ui = getUI(Astro.url.pathname);
 const currentPage = pages.find((page) => page.route === Astro.url.pathname);
 const options = locales.flatMap((locale) => {
-  const translated = pages.find((page) => page.locale === locale && page.id === currentPage?.id);
+  const translated = translations
+    ? translations.find((page) => page.locale === locale)
+    : pages.find((page) => page.locale === locale && page.id === currentPage?.id);
   return translated ? [{ locale, label: languageNames[locale], route: translated.route }] : [];
 });
 const currentName =

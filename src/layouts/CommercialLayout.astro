@@ -15,8 +15,11 @@ import { getLocale } from '../lib/i18n';
 interface Props {
   title: string;
   description: string;
+  branded?: { name: string; kind: 'legal' | 'brand'; route: string; alternates?: { locale: string; route: string }[] };
+  publishable?: boolean;
+  hideLanguageSelector?: boolean;
 }
-const { title, description } = Astro.props;
+const { title, description, branded, publishable, hideLanguageSelector } = Astro.props;
 const locale = getLocale(Astro.url.pathname);
 ---
 
@@ -25,14 +28,14 @@ const locale = getLocale(Astro.url.pathname);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <SeoHead title={title} description={description} />
+    <SeoHead title={title} description={description} branded={branded} publishable={publishable} route={branded?.route} />
     <meta name="theme-color" content="#061a33" />
     <meta name="page-type" content="software" />
     <meta name="site-kind" content="software" />
   </head>
   <body class="cinematic-site">
     <slot />
-    <LanguageSelector />
+    {!hideLanguageSelector && <LanguageSelector translations={branded?.alternates} />}
     <script>
       import { initMotion } from '../scripts/motion';
       initMotion();

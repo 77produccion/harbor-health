@@ -6,7 +6,6 @@ import HomeTextLink from './HomeTextLink.astro';
 import EditorialVideo from '../EditorialVideo.astro';
 import ExplorePages from '../ExplorePages.astro';
 import ProductCapture from '../ProductCapture.astro';
-import ScenePhoto from '../ScenePhoto.astro';
 import { Plus } from '@lucide/astro';
 import { getUI } from '../../lib/i18n';
 interface Props {
@@ -66,15 +65,11 @@ const journeyIds = new Set(['documents', 'levels', 'consultation']);
               ))}
             </div>
             <div class="hw-knowledge-visual">
-              <ScenePhoto
-                src="/images/home-professional-900.webp"
-                class="hw-knowledge-photo"
-                sizes="(max-width: 639px) 80vw, 32vw"
-              />
+              <div class="hw-knowledge-backdrop" data-knowledge-backdrop aria-hidden="true"></div>
               <div class="hw-knowledge-capture">
                 <ProductCapture
                   id="medical-proposal"
-                  sizes="(max-width: 639px) 38vw, (max-width: 999px) 25vw, 220px"
+                  sizes="(max-width: 639px) 75vw, 360px"
                 />
               </div>
             </div>

@@ -1,0 +1,252 @@
+{
+  "title": "General Terms and Conditions, Harbor Health",
+  "version": "November 2026",
+  "versionMonth": "2026-11",
+  "source": "General Terms and Conditions Harbor Health 231126.pdf",
+  "sourceSha256": "e78f2cefb1ff4a52ad59de564bc58e7e371416cc214053e1424f236074c75817",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Who we are and what the words mean",
+      "blocks": [
+        {
+          "kind": "bullet",
+          "text": "Harbor Health, we: Integrative Wellness bv established at FD Rooseveltweg 280, Curaçao, registered under number 153971, email: info@myharborliving.com."
+        },
+        {
+          "kind": "bullet",
+          "text": "User, you: the person who has an account with Harbor Health. There are two kinds: individual and healthcare professional."
+        },
+        {
+          "kind": "bullet",
+          "text": "Explanation: the explanation of a laboratory result that Harbor Health gives, written by doctors."
+        },
+        {
+          "kind": "bullet",
+          "text": "Reference material: the information per test for healthcare professionals, with eight questions and answers."
+        },
+        {
+          "kind": "bullet",
+          "text": "Web app: the environment in which you log in and open the explanation or the reference material."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "What Harbor Health is and is not",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "Harbor Health provides general explanation and information about laboratory results. It is not intended for diagnosis, treatment or the prevention of disease, it does not give medical advice, and it does not replace a doctor or other healthcare professional.",
+          "label": "2.1"
+        },
+        {
+          "kind": "clause",
+          "text": "Although the explanations are written by doctors, using Harbor Health does not create a doctor-patient relationship between you and us or those doctors.",
+          "label": "2.2"
+        },
+        {
+          "kind": "clause",
+          "text": "For individuals, we explain in general terms what a value is, why it is measured and what a deviation may mean. We do not interpret your individual result. What a result means for you can only be assessed by your doctor, taking into account your complaints, medical history and medication. Reference values may differ per laboratory. Always use the reference values stated on your own result.",
+          "label": "2.3"
+        },
+        {
+          "kind": "clause",
+          "text": "Do not start, stop or change any treatment or medication on the basis of the explanation without consulting your doctor. If you have complaints or are worried, contact your GP. In an emergency, call the emergency services immediately. Harbor Health is not an emergency service.",
+          "label": "2.4"
+        },
+        {
+          "kind": "clause",
+          "text": "For healthcare professionals, Harbor Health is general reference material per test. It contains no patient-specific advice. The healthcare professional remains fully responsible for their own clinical judgement and for any decision about diagnosis or treatment. You must not enter patient data into Harbor Health.",
+          "label": "2.5"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Account and access",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "You create an account with your email address and a password. You keep your login details secret and do not share your account with others. You are responsible for all use of your account. If you suspect that someone else has access to your account, you inform us immediately.",
+          "label": "3.1"
+        },
+        {
+          "kind": "clause",
+          "text": "You must be at least 18 years old to create an account and use Harbor Health. By creating an account, you confirm that you meet this requirement. We may end the account if this turns out not to be the case.",
+          "label": "3.2"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Subscription, uploads and access per use",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "Harbor Health offers the following forms of access:",
+          "label": "4.1"
+        },
+        {
+          "kind": "bullet",
+          "text": "Individual, subscription: you have access to the (web) app and your explanation at any time for as long as the subscription runs."
+        },
+        {
+          "kind": "bullet",
+          "text": "Individual, per upload: you pay per result you upload. The explanation for that upload is available for 24 hours."
+        },
+        {
+          "kind": "bullet",
+          "text": "Healthcare professional, subscription: access to all tests for as long as the subscription runs."
+        },
+        {
+          "kind": "clause",
+          "text": "A subscription runs for an initial period of 12 months and then continues for an indefinite period. You can then cancel at any time with a notice period of at most one month, in the (web) app.",
+          "label": "4.2"
+        },
+        {
+          "kind": "clause",
+          "text": "You pay online through a payment provider: with Visa (credit card) in the Caribbean, including Curaçao, and Latin America, and with Wero in the European Union. We do not store your card details. Prices are stated in US dollars (USD) for users in the Caribbean, including Curaçao, and Latin America, and in euros (€) for users in the European Union. Prices for users in the European Union include VAT.",
+          "label": "4.3"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Uploading results",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "You only upload your own result, or the result of another person who has given express consent for this. For a child or a person who cannot decide for themselves, you may only upload a result if you are their legal representative.",
+          "label": "5.1"
+        },
+        {
+          "kind": "clause",
+          "text": "If you upload a result of another person, you confirm that you have their express consent and you must be able to demonstrate this on our request. You are responsible for any damage resulting from an upload without the required consent, and you indemnify us against claims by that person.",
+          "label": "5.2"
+        },
+        {
+          "kind": "clause",
+          "text": "You ensure that the uploaded file only contains the result, and no other information we do not need.",
+          "label": "5.3"
+        },
+        {
+          "kind": "clause",
+          "text": "You expressly consent to the processing of the result to create the explanation. You may withdraw your consent at any time. We then delete the result and the explanation, and you can no longer access them. Withdrawal does not affect processing that took place before. See the privacy statement.",
+          "label": "5.4"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Use of the explanation and the reference material",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "You may not copy, distribute or sell the explanation or the reference material, or extract it from the (web) app by automated means (such as scraping). As a healthcare professional, you may share individual parts with your own patients in the course of your work.",
+          "label": "6.1"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Availability",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "We do our best to keep the (web) app available but cannot guarantee uninterrupted access. We may take the (web) app out of use temporarily for maintenance.",
+          "label": "7.1"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Liability",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "We are not liable for indirect damage, including consequential damage, loss of income and loss of data.",
+          "label": "8.1"
+        },
+        {
+          "kind": "clause",
+          "text": "We are not liable for the way you interpret the information in the app, or for any decision you take on the basis of it. Decisions about diagnosis, treatment or medication are made by you and your doctor, or by the healthcare professional, and remain their own responsibility.",
+          "label": "8.2"
+        },
+        {
+          "kind": "clause",
+          "text": "We prepare the explanations and the reference material with care, but we do not guarantee that they are always complete, correct or up to date.",
+          "label": "8.3"
+        },
+        {
+          "kind": "clause",
+          "text": "When you upload a result, the app reads the laboratory markers and values from your file. You check that the markers and values shown in the app match your own result. If they do not match, do not rely on the explanation and contact us.",
+          "label": "8.4"
+        },
+        {
+          "kind": "clause",
+          "text": "We are not liable for technical errors, interruptions or failures of the app, to the extent the law allows. For the processing of personal data, our privacy statement applies.",
+          "label": "8.5"
+        },
+        {
+          "kind": "clause",
+          "text": "The limitations in this article do not apply in the case of intent or gross negligence on our part, or to the extent that the law does not allow limitation.",
+          "label": "8.6"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Privacy",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "We process personal data, including health data, in accordance with our privacy statement.",
+          "label": "9.1"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Ending",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "You only get access after we have received your payment. If a payment is reversed or turns out not to have been completed, your access stops and the agreement ends. If you wish to use Harbor Health again, you will need to enter into a new agreement.",
+          "label": "10.1"
+        },
+        {
+          "kind": "clause",
+          "text": "We may block or end your account in the case of misuse or if you breach these terms. If you have paid for a period you can no longer use, we refund that part, unless the account was ended because of your breach.",
+          "label": "10.2"
+        },
+        {
+          "kind": "clause",
+          "text": "After the account ends, we delete your results and explanations within 30 days, unless the law requires us to keep them longer.",
+          "label": "10.3"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Complaints, applicable law and changes",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "You send complaints through the app.",
+          "label": "11.1"
+        },
+        {
+          "kind": "clause",
+          "text": "Article 16 of Part A (applicable law and disputes) applies accordingly.",
+          "label": "11.2"
+        },
+        {
+          "kind": "clause",
+          "text": "We may change these terms. For an existing agreement, changes only apply 30 days after we have notified you in the app. If you do not agree with the changes, you may end the agreement before they take effect. In that case, we refund the part of your subscription that you have not yet used.",
+          "label": "11.3"
+        }
+      ]
+    }
+  ]
+}

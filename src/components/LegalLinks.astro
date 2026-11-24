@@ -1,0 +1,28 @@
+---
+import { getLocale } from '../lib/i18n';
+import { termsPages } from '../lib/legal';
+
+const locale = getLocale(Astro.url.pathname);
+const labels = {
+  es: 'Términos y condiciones',
+  en: 'Terms and conditions',
+  nl: 'Algemene voorwaarden',
+  fr: 'Conditions générales',
+  pt: 'Termos e condições',
+  de: 'Allgemeine Geschäftsbedingungen',
+  pap: 'Término i kondishon',
+};
+---
+
+<nav class="legal-links" aria-label={labels[locale]}>
+  {termsPages.map((page) => (
+    <a href={page.route} hreflang="en" aria-current={Astro.url.pathname.replace(/\/?$/, '/') === page.route ? 'page' : undefined}>
+      {labels[locale]} · {page.brand}{locale !== 'en' && ' (EN)'}
+    </a>
+  ))}
+</nav>
+
+<style>
+  .legal-links { display: flex; flex-wrap: wrap; gap: .35rem 1.5rem; font-size: .82rem; }
+  .legal-links a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+</style>

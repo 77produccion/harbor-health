@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 for (const height of [618, 720, 759, 900]) {
-  test(`sticky y scroll sincronizados incluso con fotografías a ${height}px`, async ({ page }) => {
+  test(`sticky y scroll sincronizados a ${height}px`, async ({ page }) => {
     await page.setViewportSize({ width: 1865, height });
     await page.goto('/es/');
     const journey = page.locator('[data-journey]');
@@ -16,7 +16,7 @@ for (const height of [618, 720, 759, 900]) {
       expect(bounds!.y).toBeLessThanOrEqual(122);
       expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(height);
     }
-    await expect(page.locator('.hw-app-note')).toBeVisible();
+    await expect(page.locator('.hw-app-note')).toHaveCount(0);
   });
 }
 

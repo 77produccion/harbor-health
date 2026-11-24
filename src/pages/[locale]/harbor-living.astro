@@ -1,0 +1,82 @@
+---
+import CommercialLayout from '../../layouts/CommercialLayout.astro';
+import LegalLinks from '../../components/LegalLinks.astro';
+import { getUI } from '../../lib/i18n';
+import living from '../../../content/living.json';
+
+export function getStaticPaths() {
+  return Object.values(living).map((page) => ({ params: { locale: page.locale }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const ui = getUI(Astro.url.pathname);
+---
+
+<CommercialLayout title={page.title} description={page.description} branded={{ name: 'Harbor Living', kind: 'brand', route: page.route, alternates: Object.values(living) }}>
+  <a class="hw-skip skip-link" href="#contenido">{ui.a11y.skip}</a>
+  <header class="living-nav">
+    <div class="living-wrap">
+      <a href={page.route} aria-current="page"><strong>Harbor Living</strong></a>
+      <nav aria-label={ui.a11y.navigation}>
+        <a href={`/${page.locale}/`}>Harbor Health</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="living-main">
+    <section class="living-hero">
+      <div class="living-wrap">
+        <h1>{page.heading}</h1>
+        <p>{page.intro}</p>
+      </div>
+    </section>
+    <div class="living-wrap living-content">
+      <section>
+        <h2>{page.familyHeading}</h2>
+        <p>{page.family}</p>
+      </section>
+      <section>
+        <h2>{page.organizationHeading}</h2>
+        <p>{page.organization}</p>
+      </section>
+    </div>
+  </main>
+  <footer class="living-footer">
+    <div class="living-wrap">
+      <p>{page.scope}</p>
+      <p><a href={`/${page.locale}/`}>{page.health}</a></p>
+      <LegalLinks />
+    </div>
+  </footer>
+</CommercialLayout>
+
+<style>
+  .living-wrap { width: min(70rem, calc(100% - clamp(2rem, 10vw, 8rem))); margin-inline: auto; }
+  .living-nav { padding-block: 1.125rem; background: #fff; color: #061a33; }
+  .living-nav .living-wrap, .living-nav nav { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: .6rem 1.5rem; }
+  .living-nav a, .living-footer a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+  .living-nav > div > a { text-decoration: none; font-size: 1.2rem; }
+  .living-hero {
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(5rem, 13vw, 12rem);
+    color: #fff;
+    background: radial-gradient(ellipse at 85% 60%, #136772, transparent 60%), #061a33;
+  }
+  .living-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: repeating-radial-gradient(ellipse at 90% 60%, transparent 0 2rem, #a9eff321 2rem calc(2rem + 1px), transparent calc(2rem + 1px) 3.6rem);
+    mask-image: linear-gradient(100deg, transparent 15%, #000);
+  }
+  .living-hero h1 { font-size: clamp(2.75rem, 7vw, 6.25rem); line-height: 1.05; max-width: 13ch; margin-block: 0 .4em; }
+  .living-hero p { font-size: clamp(1rem, 1.8vw, 1.25rem); max-width: 43ch; }
+  .living-content { display: grid; gap: 2rem; padding-block: clamp(3rem, 8vw, 6rem); }
+  .living-content section { border-block-start: 2px solid #01919f; padding-block-start: 1.125rem; }
+  .living-content h2 { font-size: clamp(1.5rem, 3vw, 2.15rem); margin-block-end: .5em; }
+  .living-footer { background: #eaf3f4; color: #061a33; padding-block: 2rem; }
+  .living-footer p { max-width: 75ch; }
+  @media (min-width: 44rem) { .living-content { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+</style>

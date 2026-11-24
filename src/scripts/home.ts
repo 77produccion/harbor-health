@@ -268,7 +268,7 @@ export function initHome() {
     // Distinct chapter treatments, not the same fade/slide on every block.
     document
       .querySelectorAll<HTMLElement>(
-        '.hw-knowledge-visual > [data-photo-frame], .hw-professional-portrait',
+        '[data-knowledge-backdrop], .hw-professional-portrait',
       )
       .forEach((visual) => openMedia(visual));
     document.querySelectorAll<HTMLElement>('[data-knowledge-node]').forEach((node) => {

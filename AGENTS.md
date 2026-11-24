@@ -9,8 +9,13 @@ Este repositorio contiene únicamente la web comercial Astro + MDX + GSAP. No re
 3. CTA y avisos compartidos en `content/site.json`; controles en `content/home-ui.{locale}.json`. Preservar los siete idiomas y distinguirlos de los mercados.
 4. `content/editorial/evidence.json` es necesario para validar fuentes y bloqueos. Sus referencias a documentación externa son trazabilidad histórica, no dependencias de ejecución ni contenido público.
 5. No inventar funciones, testimonios, precios, resultados clínicos, cobertura, acreditaciones o garantías. L1/L2/L3 son niveles de explicación, no tres planes acreditados.
-6. Marca: Lora en títulos, Poppins en lectura/interfaz; navy `#061a33`, teal `#01919f` y azul Health `#4971d1`. Health es submarca de Living. No añadir Verified como garantía sin evidencia.
+6. Marca: Lora en títulos, Poppins en lectura/interfaz; navy `#061a33`, teal `#01919f` y azul Health `#4971d1`. Living es la marca principal y abre en `/`; Health es la app de explicación de resultados de laboratorio, con su propia página pública. No añadir Verified como garantía sin evidencia.
 7. Sin badges decorativos, numeración de relleno, estados ficticios ni grids de tarjetas por defecto. Iconos necesarios desde `@lucide/astro`, sin emojis ni flechas dibujadas a mano.
+
+## i18n: requisito para cada cambio
+
+- Toda página, sección o modificación visible se entrega en el mismo cambio para `es`, `en`, `nl`, `fr`, `pt`, `de` y `pap`. Versionar en Git tanto el copy como sus metadatos SEO, acciones, navegación y etiquetas accesibles. Mantener IDs estables y enlazar versiones equivalentes; un fallback temporal no cuenta como traducción.
+- El idioma no determina disponibilidad ni jurisdicción. Para textos jurídicos sin traducción aprobada, conservar el original en su idioma, enlazarlo con etiquetas localizadas y marcar el idioma del destino. No declarar `hreflang` para copias o traducciones no aprobadas.
 
 ## Implementación
 

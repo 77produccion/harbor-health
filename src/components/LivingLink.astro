@@ -1,0 +1,8 @@
+---
+import living from '../../content/living.json';
+import { getLocale } from '../lib/i18n';
+
+const page = living[getLocale(Astro.url.pathname)];
+---
+
+<a href={page.route} hreflang={page.locale}>Harbor Living</a>

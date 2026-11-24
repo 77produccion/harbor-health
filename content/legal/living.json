@@ -1,0 +1,473 @@
+{
+  "title": "General Terms and Conditions, Harbor Living (webshop)",
+  "version": "November 2026",
+  "versionMonth": "2026-11",
+  "source": "General Terms and Conditions Harbor Living 231126.pdf",
+  "sourceSha256": "cb72e87538cc9ec057732f92cc4705563ac9b9303116a57542bb4a0485b4d823",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Who we are and what the words mean",
+      "blocks": [
+        {
+          "kind": "bullet",
+          "text": "Harbor Living, we, us: Integrative Wellness bv, trading as Harbor Living and Harbor Family, established at FD Rooseveltweg 280, Curaçao, registered under number 153971, email info@myharborliving.com."
+        },
+        {
+          "kind": "bullet",
+          "text": "Customer, you: the consumer who enters into an agreement with us through the webshop. A consumer is a natural person who is not acting in the course of a profession or business."
+        },
+        {
+          "kind": "bullet",
+          "text": "Data subject: the person at whose home the devices are used, for example your parent(s). This may be the same person as the customer."
+        },
+        {
+          "kind": "bullet",
+          "text": "Package: the set of devices you choose in the webshop, with or without items you have ticked on or off yourself."
+        },
+        {
+          "kind": "bullet",
+          "text": "Devices: the sensors, wearables and other hardware we supply."
+        },
+        {
+          "kind": "bullet",
+          "text": "Software and app: the software and the app through which the devices work and alerts are sent."
+        },
+        {
+          "kind": "bullet",
+          "text": "Subscription: access to the software and the app, in return for monthly payment."
+        },
+        {
+          "kind": "bullet",
+          "text": "Deposit: the amount you pay in advance for the package."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "When these terms apply",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "These terms apply to all offers, orders and agreements between us and consumers through the Harbor Living and Harbor Family webshop.",
+          "label": "2.1"
+        },
+        {
+          "kind": "clause",
+          "text": "Before the agreement is concluded we make these terms available on our website, in a way that allows you to save and print them.",
+          "label": "2.2"
+        },
+        {
+          "kind": "clause",
+          "text": "For renting devices, the rental terms in Part B apply in addition. The terms in Part C apply to Harbor Health.",
+          "label": "2.3"
+        },
+        {
+          "kind": "clause",
+          "text": "Mandatory consumer law prevails. If a provision in these terms’ conflicts with it, that law applies.",
+          "label": "2.4"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "What Harbor Living is and is not",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "Harbor Living and Harbor Family are intended for wellbeing and safety in and around the home. They are not intended for diagnosis, treatment or monitoring of disease and do not give medical advice.",
+          "label": "3.1"
+        },
+        {
+          "kind": "clause",
+          "text": "Harbor Living is not an alarm centre and not an emergency line. In an emergency, call the emergency services straight away.",
+          "label": "3.2"
+        },
+        {
+          "kind": "clause",
+          "text": "An alert is an aid. Someone has to respond to it. We cannot guarantee that a fall, an event or a change in the daily rhythm will always be recognized or reported in time. Sensors can give false signals, and after installation the system has a learning period of a few weeks.",
+          "label": "3.3"
+        },
+        {
+          "kind": "clause",
+          "text": "The operation depends on power, internet (wifi) and the mobile network. In the event of a failure, alerts may be delayed or may not arrive.",
+          "label": "3.4"
+        },
+        {
+          "kind": "clause",
+          "text": "The devices are intended for use in and around the home. Some devices, such as a watch or a wearable fall detector, are worn. A device with image recognition inside the device itself, such as the smart fall prevention lamp, is described as such in the webshop.",
+          "label": "3.5"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Offer and conclusion of the agreement",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "The quantities of devices per housing type in the webshop are indicative. We record the package you order in your order and confirmation.",
+          "label": "4.1"
+        },
+        {
+          "kind": "clause",
+          "text": "The agreement is concluded when we confirm your order by email or when we have received your deposit.",
+          "label": "4.2"
+        },
+        {
+          "kind": "clause",
+          "text": "We only deliver to customers in the European Union, Latin America and the Caribbean (the “Delivery Area”).",
+          "label": "4.3"
+        },
+        {
+          "kind": "subclause",
+          "text": "Outside the Delivery Area: if you are located outside the Delivery Area (for example, in Australia), our webshop will not be available to you and you cannot place an order.",
+          "label": "(a)"
+        },
+        {
+          "kind": "subclause",
+          "text": "Within the Delivery Area: if you are located within the Delivery Area, but a package or device is not available in your country, or we cannot deliver or install it at your address, we may cancel your order. In that case, we will refund your payment in full.",
+          "label": "(b)"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Prices and payment",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "Prices are stated in US dollars (USD) for customers in the Caribbean, including Curaçao, and Latin America, and in euros (€) for customers in the European Union. Prices for customers in the European Union include VAT.",
+          "label": "5.1"
+        },
+        {
+          "kind": "clause",
+          "text": "You pay online through a payment provider: with Visa (credit card) in the Caribbean, including Curaçao, and Latin America, and with Wero or another payment method shown at checkout in the European Union. We do not store your card details.",
+          "label": "5.2"
+        },
+        {
+          "kind": "clause",
+          "text": "At the time of ordering you choose: pay the deposit now, or pay in full in advance. If you pay in full in advance, you pay the deposit and the subscription for 12 months in one go.",
+          "label": "5.3"
+        },
+        {
+          "kind": "clause",
+          "text": "We order the devices after we have received the deposit.",
+          "label": "5.4"
+        },
+        {
+          "kind": "clause",
+          "text": "You pay the subscription per month in advance, by automatic payment from your credit card or in the European Union, through Wero or by direct debit.",
+          "label": "5.5"
+        },
+        {
+          "kind": "clause",
+          "text": "Late payment: if you have not paid within two weeks of the due date, we will send you a first reminder. If you still have not paid within two weeks of the first reminder, we will send you a second reminder. We may charge a late payment fee of 1% of the overdue amount.",
+          "label": "5.6"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Delivery and installation",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "The delivery time is between 1 day and 6 weeks after we receive the deposit, unless we agree otherwise. Delivery times are indicative.",
+          "label": "6.1"
+        },
+        {
+          "kind": "clause",
+          "text": "We, or an installer appointed by us, will install the package at a time agreed with you. You shall ensure that the installer has access to the home and that a power supply and, where required, a Wi-Fi connection are available. If no Wi-Fi connection is available at the home, we will discuss suitable alternatives with you.",
+          "label": "6.2"
+        },
+        {
+          "kind": "clause",
+          "text": "The risk of damage or loss passes to you when the devices have been delivered or installed at your home.",
+          "label": "6.3"
+        },
+        {
+          "kind": "clause",
+          "text": "The price of the devices is stated on our website. The devices become your property once you have paid this price in full. The monthly amount you pay is a subscription fee for the use of the software and does not count towards the purchase price of the devices. If you rent the devices, they remain our property; see the rental terms.",
+          "label": "6.4"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Subscription",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "The subscription starts as soon as the system works at your home.",
+          "label": "7.1"
+        },
+        {
+          "kind": "clause",
+          "text": "The subscription continues for an indefinite period. You can cancel at any time with a notice period of at most one month. We state this before the agreement is concluded.",
+          "label": "7.2"
+        },
+        {
+          "kind": "clause",
+          "text": "You can cancel in the app or webshop.",
+          "label": "7.3"
+        },
+        {
+          "kind": "clause",
+          "text": "After the subscription ends, the app and the alerts no longer work. The devices remain yours but do not work without a subscription.",
+          "label": "7.4"
+        },
+        {
+          "kind": "clause",
+          "text": "We may increase the price of the subscription after at least 30 days' written notice. You can cancel before the effective date.",
+          "label": "7.5"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Right of withdrawal",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "If you are a consumer in the European Union and ordered through the webshop, you can cancel the agreement within 14 days without giving a reason.",
+          "label": "8.1"
+        },
+        {
+          "kind": "clause",
+          "text": "For an order of devices with installation and subscription, the period starts on the day after you receive the devices. If delivery is in several parts, it is the day after you receive the last part. For a subscription without devices, the period starts on the day after the agreement is concluded.",
+          "label": "8.2"
+        },
+        {
+          "kind": "clause",
+          "text": "You withdraw through the webshop.",
+          "label": "8.3"
+        },
+        {
+          "kind": "clause",
+          "text": "If you have received devices, you send them back to us no later than 14 days after your withdrawal. The costs of returning them are for your account.",
+          "label": "8.4"
+        },
+        {
+          "kind": "clause",
+          "text": "We refund everything you have paid within 14 days after your withdrawal, but we may wait until we have received the devices or you have proved that you sent them back.",
+          "label": "8.5"
+        },
+        {
+          "kind": "clause",
+          "text": "You are liable for any reduction in value of the devices resulting from use beyond what is necessary to establish their nature, characteristics and operation.",
+          "label": "8.6"
+        },
+        {
+          "kind": "clause",
+          "text": "If you have expressly asked for the installation or the subscription to start during the cooling-off period, then on withdrawal you pay an amount in proportion to what we have already delivered at that point.",
+          "label": "8.7"
+        },
+        {
+          "kind": "clause",
+          "text": "If you are a consumer outside the European Union and ordered through the webshop, you may cancel the agreement within 14 days after receiving the devices, provided that the devices have not been installed or used and are returned in their original packaging. Articles 8.3 to 8.5 apply accordingly. This does not affect any rights you may have under mandatory consumer law in your country.",
+          "label": "8.8"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Conformity and warranty",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "The devices comply with the agreement and are suitable for the use for which they are normally used. You are entitled to the statutory warranty, supplemented by the manufacturer's warranty where it applies.",
+          "label": "9.1"
+        },
+        {
+          "kind": "clause",
+          "text": "You report a defect within a reasonable time, but no longer than 14 days, after you discover it. A report within 14 days is in any case on time.",
+          "label": "9.2"
+        },
+        {
+          "kind": "clause",
+          "text": "In the case of a defect we repair or replace the device. If that is not possible within a reasonable time or without major inconvenience, you may ask for a price reduction or for the agreement to be dissolved.",
+          "label": "9.3"
+        },
+        {
+          "kind": "clause",
+          "text": "During the warranty period, you must comply with the warranty rules. The warranty lapses if you do not comply with these rules, and in the event of incorrect use, your own repairs, damage caused by anyone other than us, or alterations to the home that affect the devices or their installation.",
+          "label": "9.4"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Use, consent and other people",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "Before devices are placed at the home of another person, or alerts are set up about another person, you need the consent of that person (the data subject). If the data subject cannot decide for themselves, the consent of the legal representative is needed. We may ask you to confirm this.",
+          "label": "10.1"
+        },
+        {
+          "kind": "clause",
+          "text": "Tracking a location with a wearable only takes place with the consent of the data subject.",
+          "label": "10.2"
+        },
+        {
+          "kind": "clause",
+          "text": "You choose who receives an alert. You ensure that they can be reached and can respond.",
+          "label": "10.3"
+        },
+        {
+          "kind": "clause",
+          "text": "You do not use the system to follow or look in on anyone against their will.",
+          "label": "10.4"
+        },
+        {
+          "kind": "clause",
+          "text": "You use the devices in accordance with the instructions and do not take them apart.",
+          "label": "10.5"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Liability",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "We are only liable for direct damage resulting from an attributable failure on our part.",
+          "label": "11.1"
+        },
+        {
+          "kind": "clause",
+          "text": "We are not liable for indirect damage, including consequential damage, loss of profit, loss of income, loss of data and damage due to business interruption.",
+          "label": "11.2"
+        },
+        {
+          "kind": "clause",
+          "text": "Our liability is limited to an amount equal to 12 months of subscription fees, with a maximum of USD 1.500 per event.",
+          "label": "11.3"
+        },
+        {
+          "kind": "clause",
+          "text": "The Harbor Living and Harbor Family systems are support tools. They do not guarantee the prevention of burglary, fire, water, accidents, health incidents or other events. We are not liable for damage resulting from such events, unless the damage is the direct result of an attributable failure on our part.",
+          "label": "11.4"
+        },
+        {
+          "kind": "clause",
+          "text": "We are not liable for alerts failing to arrive or being delayed because of a failure of power, Wi-Fi, the internet or the mobile network, because of services or equipment of third parties (such as telecom providers, app stores or your phone), or because the recipient’s phone is off or has no coverage.",
+          "label": "11.5"
+        },
+        {
+          "kind": "clause",
+          "text": "We are not liable for damage resulting from incorrect or incomplete information provided by you, failure to follow our instructions or the user manual, failure to respond to alerts, or the use of the devices for purposes other than those for which they are intended.",
+          "label": "11.6"
+        },
+        {
+          "kind": "clause",
+          "text": "We are not liable for damage resulting from force majeure as described in Article 14.",
+          "label": "11.7"
+        },
+        {
+          "kind": "clause",
+          "text": "Any claim against us lapses one year after the event that caused the damage.",
+          "label": "11.8"
+        },
+        {
+          "kind": "clause",
+          "text": "The limitations in this article do not apply in the case of intent or gross negligence on our part, nor to the extent that the law does not allow limitation, such as for damage through death or personal injury.",
+          "label": "11.9"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Software and rights",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "You receive a personal, non-transferable right to use the software and the app for as long as you have a subscription. All rights in the software, the texts and the design remain with us or our suppliers.",
+          "label": "12.1"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Privacy",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "We process personal data in accordance with our privacy statement. It states which data we process, why, how long we keep it and which rights you have.",
+          "label": "13.1"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Force majeure",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "Force majeure means any circumstance beyond our control, including a failure at suppliers or carriers, import restrictions, government measures, natural disasters, extreme weather and a prolonged failure of power, internet or the mobile network.",
+          "label": "14.1"
+        },
+        {
+          "kind": "clause",
+          "text": "In the event of force majeure, we are not bound to perform our obligations for as long as the force majeure lasts, and we are not liable for any resulting damage.",
+          "label": "14.2"
+        },
+        {
+          "kind": "clause",
+          "text": "If the force majeure lasts longer than 30 days, you may dissolve the agreement. You will then receive back what you paid for what was not delivered.",
+          "label": "14.3"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Complaints",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "If you have a complaint, please contact us first through the chat on our website or in the app. We will try our best to resolve the matter together with you.",
+          "label": "15.1"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Applicable law and disputes",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "Agreements with customers in the European Union are governed by Dutch law. Disputes are submitted to the competent court in the Netherlands.",
+          "label": "16.1"
+        },
+        {
+          "kind": "clause",
+          "text": "Agreements with all other customers, including customers in Curaçao, elsewhere in the Caribbean and in Latin America, are governed by the law of Curaçao. Disputes are submitted to the Court of First Instance of Curaçao.",
+          "label": "16.2"
+        },
+        {
+          "kind": "clause",
+          "text": "If you are a consumer, the choice of law in this article does not deprive you of the protection of the mandatory provisions of the law of your country of residence. If you are a consumer in the European Union, you may also bring proceedings before the courts of your country of residence, and we may only bring proceedings against you there.",
+          "label": "16.3"
+        },
+        {
+          "kind": "clause",
+          "text": "These terms may be available in several languages. In the event of any inconsistency, the English version prevails, unless mandatory law provides otherwise.",
+          "label": "16.4"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Changes",
+      "blocks": [
+        {
+          "kind": "clause",
+          "text": "We may change these terms. For an existing agreement, changes only apply after we have notified you 30 days in advance, and you may then cancel before the effective date.",
+          "label": "17.1"
+        }
+      ]
+    }
+  ]
+}

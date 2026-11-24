@@ -22,7 +22,9 @@ for (const width of [390, 768, 1024, 1440]) {
       expect(copyBox!.y).toBeGreaterThanOrEqual(box!.y);
       expect(copyBox!.y + copyBox!.height).toBeLessThanOrEqual(box!.y + box!.height);
     }
-    await expect(page.locator('.hw-knowledge-visual [data-photo-frame]')).toBeVisible();
+    await expect(page.locator('.hw-knowledge-visual [data-knowledge-backdrop]')).toBeVisible();
+    await expect(page.locator('.hw-knowledge-capture img[loading="lazy"]')).toBeVisible();
+    await expect(page.locator('.hw-knowledge-visual [data-photo-frame]')).toHaveCount(0);
     const firstAnswer = page.locator('.hw-faq-answers details').first();
     await expect(firstAnswer).toHaveAttribute('open', '');
     await expect(firstAnswer.locator('p')).toBeVisible();
