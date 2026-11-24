@@ -1,0 +1,720 @@
+{
+  "health": {
+    "description": "Bedingungen für den Dienst zur Erläuterung von Laborergebnissen von Harbor Health: Zugang, Abonnements, Uploads und Datenschutz.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Wer wir sind und was die Worte bedeuten",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Health, wir: Integrative Wellness bv mit Sitz in FD Rooseveltweg 280, Curaçao, registriert unter der Nummer 153971, E-Mail: info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Benutzer, Sie: die Person, die ein Konto bei Harbor Health hat. Es gibt zwei Arten: Einzelpersonen und medizinisches Fachpersonal."
+          },
+          {
+            "kind": "bullet",
+            "text": "Erklärung: die von Ärzten verfasste Erklärung eines Laborergebnisses, das Harbor Health liefert."
+          },
+          {
+            "kind": "bullet",
+            "text": "Referenzmaterial: die Informationen pro Test für medizinisches Fachpersonal, mit acht Fragen und Antworten."
+          },
+          {
+            "kind": "bullet",
+            "text": "Web-App: die Umgebung, in der Sie sich anmelden und die Erklärung oder das Referenzmaterial öffnen."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Was Harbor Health ist und was nicht",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health bietet allgemeine Erläuterungen und Informationen zu Laborergebnissen. Es dient nicht der Diagnose, Behandlung oder Vorbeugung von Krankheiten, stellt keinen medizinischen Rat dar und ersetzt nicht den Besuch eines Arztes oder einer anderen medizinischen Fachkraft.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Obwohl die Erklärungen von Ärzten verfasst wurden, entsteht durch die Verwendung von Harbor Health keine Arzt-Patienten-Beziehung zwischen Ihnen und uns oder diesen Ärzten.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Für Privatpersonen erklären wir allgemein, was ein Wert ist, warum er gemessen wird und was eine Abweichung bedeuten kann. Wir interpretieren Ihr individuelles Ergebnis nicht. Was ein Ergebnis für Sie bedeutet, kann nur Ihr Arzt unter Berücksichtigung Ihrer Beschwerden, Krankengeschichte und Medikamente beurteilen. Die Referenzwerte können je nach Labor unterschiedlich sein. Benutzen Sie immer die angegebenen Referenzwerte für Ihr eigenes Ergebnis.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Beginnen, beenden oder ändern Sie keine Behandlung oder Medikamente auf der Grundlage der Erklärung, ohne Ihren Arzt zu konsultieren. Wenn Sie Beschwerden haben oder sich Sorgen machen, wenden Sie sich an Ihren Hausarzt. Rufen Sie im Notfall sofort den Rettungsdienst an. Harbor Health ist kein Notdienst.",
+            "label": "2.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Für medizinisches Fachpersonal ist Harbor Health allgemeines Referenzmaterial pro Test. Es enthält keine patientenspezifische Beratung. Das medizinische Fachpersonal trägt die volle Verantwortung für sein eigenes klinisches Urteil und für jede Entscheidung über Diagnose oder Behandlung. Sie dürfen keine Patientendaten in Harbor Health eingeben.",
+            "label": "2.5"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Konto und Zugang",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Sie erstellen ein Konto mit Ihrer E-Mail-Adresse und einem Passwort. Sie halten Ihre Zugangsdaten geheim und geben Ihr Konto nicht an andere weiter. Sie sind für die Nutzung Ihres Kontos verantwortlich. Wenn Sie den Verdacht haben, dass eine andere Person Zugriff auf Ihr Konto hat, teilen Sie uns dies bitte umgehend mit.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie müssen mindestens 18 Jahre alt sein, um ein Konto zu erstellen und Harbor Health zu verwenden. Mit der Erstellung eines Kontos bestätigen Sie, dass Sie diese Voraussetzung erfüllen. Wir können das Konto kündigen, wenn sich herausstellt, dass dies nicht der Fall ist.",
+            "label": "3.2"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Abonnement, Uploads und Zugriff pro Nutzung",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Health bietet folgende Zugriffsformen:",
+            "label": "4.1"
+          },
+          {
+            "kind": "bullet",
+            "text": "Einzelperson, Abonnement: Sie haben jederzeit Zugriff auf die (Web-)App und Ihre Erklärung, solange das Abonnement läuft."
+          },
+          {
+            "kind": "bullet",
+            "text": "Individuell, pro Upload: Sie zahlen pro hochgeladenem Ergebnis. Die Erklärung für diesen Upload ist 24 Stunden lang verfügbar."
+          },
+          {
+            "kind": "bullet",
+            "text": "Medizinisches Fachpersonal, Abonnement: Zugriff auf alle Tests, solange das Abonnement läuft."
+          },
+          {
+            "kind": "clause",
+            "text": "Ein Abonnement läuft zunächst für 12 Monate und läuft dann auf unbestimmte Zeit weiter. Anschließend können Sie jederzeit mit einer Frist von maximal einem Monat in der (Web-)App kündigen.",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie zahlen online über einen Zahlungsanbieter: mit Visa (Kreditkarte) in der Karibik, einschließlich Curaçao und Lateinamerika, und mit Wero in der Europäischen Union. Wir speichern Ihre Kartendaten nicht. Die Preise werden für Benutzer in der Karibik, einschließlich Curaçao und Lateinamerika, in US-Dollar (USD) und für Benutzer in der Europäischen Union in Euro (€) angegeben. Preise für Nutzer in der Europäischen Union verstehen sich inklusive Mehrwertsteuer.",
+            "label": "4.3"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Ergebnisse werden hochgeladen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Sie laden nur Ihr eigenes Ergebnis hoch, oder das Ergebnis einer anderen Person, die hierzu ausdrücklich ihre Einwilligung gegeben hat. Für ein Kind oder eine Person, die nicht selbst entscheiden kann, dürfen Sie ein Ergebnis nur hochladen, wenn Sie deren gesetzlicher Vertreter sind.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wenn Sie ein Ergebnis einer anderen Person hochladen, bestätigen Sie, dass Sie deren ausdrückliches Einverständnis haben und müssen dies auf unsere Anfrage hin nachweisen können. Sie haften für alle Schäden, die aus einem Upload ohne die erforderliche Zustimmung entstehen, und stellen uns von Ansprüchen dieser Person frei.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie stellen sicher, dass die hochgeladene Datei nur das Ergebnis enthält und keine anderen Informationen, die wir nicht benötigen.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie stimmen der Verarbeitung des Ergebnisses zur Erstellung der Erklärung ausdrücklich zu. Sie können Ihre Einwilligung jederzeit widerrufen. Wir löschen dann das Ergebnis und die Erklärung und Sie haben keinen Zugriff mehr darauf. Der Widerruf hat keinen Einfluss auf bereits erfolgte Verarbeitungen. Siehe Datenschutzerklärung.",
+            "label": "5.4"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Verwendung der Erklärung und des Referenzmaterials",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Es ist Ihnen nicht gestattet, die Erklärung oder das Referenzmaterial zu kopieren, zu verbreiten oder zu verkaufen oder sie mit automatisierten Mitteln (z. B. Scraping) aus der (Web-)App zu extrahieren. Als medizinisches Fachpersonal können Sie im Rahmen Ihrer Arbeit einzelne Teile mit Ihren eigenen Patienten teilen.",
+            "label": "6.1"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Verfügbarkeit",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wir tun unser Bestes, um die (Web-)App verfügbar zu halten, können jedoch keinen unterbrechungsfreien Zugriff garantieren. Wir können die (Web-)App aus Wartungsgründen vorübergehend außer Betrieb nehmen.",
+            "label": "7.1"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Haftung",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wir haften nicht für indirekte Schäden, einschließlich Folgeschäden, Einkommensverluste und Datenverluste.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir haften nicht für die Art und Weise, wie Sie die Informationen in der App interpretieren, oder für eine Entscheidung, die Sie auf dieser Grundlage treffen. Entscheidungen über Diagnose, Behandlung oder Medikamente werden von Ihnen und Ihrem Arzt oder dem medizinischen Fachpersonal getroffen und liegen in deren alleiniger Verantwortung.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir erstellen die Erläuterungen und das Referenzmaterial sorgfältig, übernehmen jedoch keine Gewähr für deren Vollständigkeit, Richtigkeit und Aktualität.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Wenn Sie ein Ergebnis hochladen, liest die App die Labormarker und -werte aus Ihrer Datei. Sie überprüfen, ob die in der App angezeigten Marker und Werte mit Ihrem eigenen Ergebnis übereinstimmen. Wenn sie nicht übereinstimmen, verlassen Sie sich nicht auf die Erklärung und kontaktieren Sie uns.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir haften nicht für technische Fehler, Unterbrechungen oder Ausfälle der App, soweit gesetzlich zulässig. Für die Verarbeitung personenbezogener Daten gilt unsere Datenschutzerklärung.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Die Einschränkungen in diesem Artikel gelten nicht im Falle von Vorsatz oder grober Fahrlässigkeit unsererseits oder in dem Umfang, in dem das Gesetz keine Einschränkung zulässt.",
+            "label": "8.6"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Datenschutz",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wir verarbeiten personenbezogene Daten, einschließlich Gesundheitsdaten, gemäß unserer Datenschutzerklärung.",
+            "label": "9.1"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Ende",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Sie erhalten Zugang erst, nachdem Ihre Zahlung bei uns eingegangen ist. Wenn eine Zahlung storniert wird oder sich herausstellt, dass sie nicht ausgeführt wurde, wird Ihr Zugriff gesperrt und der Vertrag endet. Wenn Sie Harbor Health erneut nutzen möchten, müssen Sie einen neuen Vertrag abschließen.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Bei Missbrauch oder wenn Sie gegen diese Bedingungen verstoßen, können wir Ihr Konto sperren oder schließen. Wenn Sie für einen Zeitraum bezahlt haben, den Sie nicht mehr nutzen können, erstatten wir diesen Teil, es sei denn, das Konto wurde aufgrund Ihres Verstoßes gekündigt.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Nach Ablauf des Kontos löschen wir Ihre Ergebnisse und Erklärungen innerhalb von 30 Tagen, es sei denn, das Gesetz verpflichtet uns, sie länger aufzubewahren.",
+            "label": "10.3"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Beschwerden, geltendes Recht und Änderungen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Sie senden Beschwerden über die App.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Artikel 16 von Teil A (anwendbares Recht und Streitigkeiten) gilt entsprechend.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir können diese Bedingungen ändern. Bei einem bestehenden Vertrag gelten Änderungen erst 30 Tage nach Benachrichtigung durch uns in der App. Wenn Sie mit den Änderungen nicht einverstanden sind, können Sie die Vereinbarung vor ihrem Inkrafttreten kündigen. In diesem Fall erstatten wir Ihnen den Teil Ihres Abonnements, den Sie noch nicht genutzt haben.",
+            "label": "11.3"
+          }
+        ]
+      }
+    ],
+    "partAReference": "Artikel 16 von Teil A"
+  },
+  "living": {
+    "description": "Bedingungen des Webshops von Harbor Living und Harbor Family: Bestellungen, Lieferung, Abonnements, Widerruf und Streitigkeiten.",
+    "sections": [
+      {
+        "number": 1,
+        "title": "Wer wir sind und was die Worte bedeuten",
+        "blocks": [
+          {
+            "kind": "bullet",
+            "text": "Harbor Living, wir, wir: Integrative Wellness bv, firmierend als Harbor Living und Harbor Family, gegründet am FD Rooseveltweg 280, Curaçao, registriert unter der Nummer 153971, E-Mail info@myharborliving.com."
+          },
+          {
+            "kind": "bullet",
+            "text": "Kunde, Sie: der Verbraucher, der über den Webshop einen Vertrag mit uns abschließt. Ein Verbraucher ist eine natürliche Person, die nicht in Ausübung ihrer beruflichen oder gewerblichen Tätigkeit handelt."
+          },
+          {
+            "kind": "bullet",
+            "text": "Betroffene Person: die Person, bei deren Zuhause die Geräte verwendet werden, zum Beispiel Ihre Eltern. Dabei kann es sich um dieselbe Person wie der Kunde handeln."
+          },
+          {
+            "kind": "bullet",
+            "text": "Paket: das Set an Geräten, das Sie im Webshop auswählen, mit oder ohne Artikel, die Sie selbst aktiviert oder deaktiviert haben."
+          },
+          {
+            "kind": "bullet",
+            "text": "Geräte: die Sensoren, Wearables und andere Hardware, die wir liefern."
+          },
+          {
+            "kind": "bullet",
+            "text": "Software und App: die Software und die App, über die die Geräte funktionieren und Warnungen gesendet werden."
+          },
+          {
+            "kind": "bullet",
+            "text": "Abonnement: Zugriff auf die Software und die App gegen monatliche Zahlung."
+          },
+          {
+            "kind": "bullet",
+            "text": "Anzahlung: Der Betrag, den Sie im Voraus für das Paket bezahlen."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Wenn diese Bedingungen gelten",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Diese Bedingungen gelten für alle Angebote, Bestellungen und Vereinbarungen zwischen uns und Verbrauchern über den Webshop Harbor Living und Harbor Family.",
+            "label": "2.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Vor Vertragsschluss stellen wir diese Bedingungen auf unserer Website zur Verfügung, sodass Sie sie speichern und ausdrucken können.",
+            "label": "2.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Für die Miete von Geräten gelten ergänzend die Mietbedingungen im Teil B. Die Bedingungen in Teil C gelten für Harbor Health.",
+            "label": "2.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Es gilt das zwingende Verbraucherrecht. Sollte eine Bestimmung dieser Bedingungen im Widerspruch dazu stehen, gilt das entsprechende Recht.",
+            "label": "2.4"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Was Harbor Living ist und was nicht",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Harbor Living und Harbor Family sind für Wohlbefinden und Sicherheit im und um das Haus gedacht. Sie dienen nicht der Diagnose, Behandlung oder Überwachung von Krankheiten und stellen keine medizinische Beratung dar.",
+            "label": "3.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Harbor Living ist keine Alarmzentrale und keine Notrufnummer. Rufen Sie im Notfall sofort den Rettungsdienst an.",
+            "label": "3.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Eine Warnung ist eine Hilfe. Jemand muss darauf reagieren. Wir können nicht garantieren, dass ein Sturz, ein Ereignis oder eine Veränderung im Tagesrhythmus immer rechtzeitig erkannt oder gemeldet wird. Sensoren können falsche Signale geben und nach der Installation hat das System eine Lernphase von einigen Wochen.",
+            "label": "3.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Der Betrieb ist abhängig von Strom, Internet (WLAN) und dem Mobilfunknetz. Im Falle eines Fehlers können sich die Benachrichtigungen verzögern oder gar nicht eintreffen.",
+            "label": "3.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Die Geräte sind für den Einsatz im und um das Haus bestimmt. Einige Geräte, wie etwa eine Uhr oder ein tragbarer Sturzdetektor, werden getragen. Ein Gerät mit Bilderkennung im Gerät selbst, wie zum Beispiel die smarte Sturzschutzlampe, wird im Webshop als solches beschrieben.",
+            "label": "3.5"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Angebot und Vertragsabschluss",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Die Anzahl der Geräte pro Gehäusetyp im Webshop ist Richtwert. Das von Ihnen bestellte Paket erfassen wir in Ihrer Bestellung und Bestätigung.",
+            "label": "4.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Der Vertrag kommt zustande, wenn wir Ihre Bestellung per E-Mail bestätigen oder Ihre Anzahlung bei uns eingegangen ist.",
+            "label": "4.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir liefern nur an Kunden in der Europäischen Union, Lateinamerika und der Karibik (das „Liefergebiet“).",
+            "label": "4.3"
+          },
+          {
+            "kind": "subclause",
+            "text": "Außerhalb des Liefergebiets: Wenn Sie sich außerhalb des Liefergebiets befinden (z. B. in Australien), steht Ihnen unser Webshop nicht zur Verfügung und Sie können keine Bestellung aufgeben.",
+            "label": "(a)"
+          },
+          {
+            "kind": "subclause",
+            "text": "Innerhalb des Liefergebiets: Wenn Sie sich innerhalb des Liefergebiets befinden, ein Paket oder Gerät jedoch in Ihrem Land nicht verfügbar ist oder wir es nicht an Ihre Adresse liefern oder installieren können, können wir Ihre Bestellung stornieren. In diesem Fall erstatten wir Ihnen Ihre Zahlung vollständig zurück.",
+            "label": "(b)"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Preise und Bezahlung",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Die Preise werden für Kunden in der Karibik, einschließlich Curaçao und Lateinamerika, in US-Dollar (USD) und für Kunden in der Europäischen Union in Euro (€) angegeben. Preise für Kunden in der Europäischen Union verstehen sich inklusive Mehrwertsteuer.",
+            "label": "5.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie zahlen online über einen Zahlungsanbieter: mit Visa (Kreditkarte) in der Karibik, einschließlich Curaçao und Lateinamerika, und mit Wero oder einer anderen an der Kasse angezeigten Zahlungsmethode in der Europäischen Union. Wir speichern Ihre Kartendaten nicht.",
+            "label": "5.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Bei der Bestellung haben Sie die Wahl: Zahlen Sie jetzt die Anzahlung oder zahlen Sie den Gesamtbetrag im Voraus. Bei einer vollständigen Vorauszahlung zahlen Sie die Anzahlung und das Abonnement für 12 Monate auf einmal.",
+            "label": "5.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir bestellen die Geräte nach Eingang der Anzahlung.",
+            "label": "5.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie bezahlen das Abonnement monatlich im Voraus, per automatischer Zahlung von Ihrer Kreditkarte oder in der Europäischen Union, über Wero oder per Lastschrift.",
+            "label": "5.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Zahlungsverzug: Wenn Sie nicht innerhalb von zwei Wochen nach Fälligkeit bezahlt haben, senden wir Ihnen eine erste Mahnung. Wenn Sie innerhalb von zwei Wochen nach der ersten Mahnung immer noch nicht bezahlt haben, senden wir Ihnen eine zweite Mahnung. Wir können eine Gebühr für verspätete Zahlung in Höhe von 1 % des überfälligen Betrags erheben.",
+            "label": "5.6"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Lieferung und Installation",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Die Lieferzeit beträgt zwischen 1 Tag und 6 Wochen nach Eingang der Anzahlung, sofern wir nichts anderes vereinbaren. Die Lieferzeiten sind Richtwerte.",
+            "label": "6.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir oder ein von uns beauftragter Installateur installieren das Paket zu einem mit Ihnen vereinbarten Zeitpunkt. Sie stellen sicher, dass der Installateur Zugang zur Wohnung hat und dass eine Stromversorgung und gegebenenfalls eine WLAN-Verbindung verfügbar sind. Sollte zu Hause kein WLAN-Anschluss verfügbar sein, besprechen wir mit Ihnen geeignete Alternativen.",
+            "label": "6.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Das Risiko einer Beschädigung oder eines Verlusts geht auf Sie über, sobald die Geräte geliefert oder bei Ihnen zu Hause installiert wurden.",
+            "label": "6.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Der Preis der Geräte ist auf unserer Website angegeben. Mit der vollständigen Zahlung dieses Preises gehen die Geräte in Ihr Eigentum über. Der von Ihnen monatlich gezahlte Betrag ist eine Abonnementgebühr für die Nutzung der Software und wird nicht auf den Kaufpreis der Geräte angerechnet. Sofern Sie die Geräte vermieten, bleiben diese unser Eigentum; siehe Mietbedingungen.",
+            "label": "6.4"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Abonnement",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Das Abonnement beginnt, sobald das System bei Ihnen zu Hause funktioniert.",
+            "label": "7.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Das Abonnement läuft auf unbestimmte Zeit. Sie können jederzeit mit einer Frist von maximal einem Monat kündigen. Dies erklären wir vor Vertragsschluss.",
+            "label": "7.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie können in der App oder im Webshop kündigen.",
+            "label": "7.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Nach Ablauf des Abonnements funktionieren die App und die Benachrichtigungen nicht mehr. Die Geräte bleiben Ihr Eigentum, funktionieren aber ohne Abonnement nicht.",
+            "label": "7.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir können den Preis des Abonnements mit einer Frist von mindestens 30 Tagen schriftlich erhöhen. Sie können vor dem Datum des Inkrafttretens kündigen.",
+            "label": "7.5"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Widerrufsrecht",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wenn Sie Verbraucher in der Europäischen Union sind und über den Webshop bestellt haben, können Sie den Vertrag innerhalb von 14 Tagen ohne Angabe von Gründen widerrufen.",
+            "label": "8.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Bei einer Bestellung von Geräten mit Installation und Abonnement beginnt die Frist am Tag nach Erhalt der Geräte. Erfolgt die Lieferung in mehreren Teilen, erfolgt die Lieferung am Tag nach Erhalt des letzten Teils. Bei einem Abonnement ohne Geräte beginnt die Frist am Tag nach Vertragsschluss.",
+            "label": "8.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie erklären den Widerruf über den Webshop.",
+            "label": "8.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Wenn Sie Geräte erhalten haben, senden Sie diese spätestens 14 Tage nach Ihrem Widerruf an uns zurück. Die Kosten für die Rücksendung gehen zu Ihren Lasten.",
+            "label": "8.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir erstatten Ihnen den gesamten Betrag, den Sie bezahlt haben, innerhalb von 14 Tagen nach Ihrem Widerruf, können jedoch warten, bis wir die Geräte erhalten haben oder Sie den Nachweis erbracht haben, dass Sie sie zurückgesendet haben.",
+            "label": "8.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie haften für jede Wertminderung der Geräte, die sich aus der Nutzung ergibt, die über das zur Feststellung ihrer Beschaffenheit, Eigenschaften und Funktionsweise erforderliche Maß hinausgeht.",
+            "label": "8.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Wenn Sie ausdrücklich darum gebeten haben, dass die Installation oder das Abonnement während der Bedenkzeit beginnt, zahlen Sie beim Widerruf einen Betrag im Verhältnis zu dem, was wir zu diesem Zeitpunkt bereits geliefert haben.",
+            "label": "8.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Wenn Sie Verbraucher außerhalb der Europäischen Union sind und über den Webshop bestellt haben, können Sie den Vertrag innerhalb von 14 Tagen nach Erhalt der Geräte widerrufen, sofern die Geräte nicht installiert oder verwendet wurden und in der Originalverpackung zurückgesandt werden. Die Artikel 8.3 bis 8.5 gelten entsprechend. Dies berührt nicht die Rechte, die Ihnen möglicherweise nach dem zwingenden Verbraucherrecht in Ihrem Land zustehen.",
+            "label": "8.8"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Konformität und Garantie",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Die Geräte entsprechen der Vereinbarung und sind für die Verwendung geeignet, für die sie üblicherweise verwendet werden. Ihnen steht die gesetzliche Gewährleistung zu, ggf. ergänzt durch die Herstellergarantie.",
+            "label": "9.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie melden einen Mangel innerhalb einer angemessenen Frist, jedoch nicht länger als 14 Tage, nachdem Sie ihn entdeckt haben. Eine Meldung innerhalb von 14 Tagen ist in jedem Fall rechtzeitig.",
+            "label": "9.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Im Falle eines Defekts reparieren oder ersetzen wir das Gerät. Ist dies nicht innerhalb einer angemessenen Frist oder ohne größere Unannehmlichkeiten möglich, können Sie eine Preisminderung oder die Auflösung des Vertrags verlangen.",
+            "label": "9.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Während der Garantiezeit müssen Sie die Garantiebestimmungen einhalten. Die Garantie erlischt bei Nichtbeachtung dieser Regeln durch Sie sowie bei unsachgemäßer Verwendung, eigenen Reparaturen, Schäden, die durch andere als uns verursacht wurden, oder Veränderungen am Haus, die Auswirkungen auf die Geräte oder deren Installation haben.",
+            "label": "9.4"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Nutzung, Einwilligung und andere Personen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Bevor Geräte bei einer anderen Person platziert oder Benachrichtigungen über eine andere Person eingerichtet werden, benötigen Sie die Einwilligung dieser Person (der betroffenen Person). Kann der Betroffene nicht selbst entscheiden, ist die Einwilligung des gesetzlichen Vertreters erforderlich. Möglicherweise bitten wir Sie, dies zu bestätigen.",
+            "label": "10.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Die Ortung mit einem Wearable erfolgt nur mit Einwilligung der betroffenen Person.",
+            "label": "10.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie entscheiden, wer eine Benachrichtigung erhält. Sie sorgen dafür, dass sie erreichbar sind und reagieren können.",
+            "label": "10.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie nutzen das System nicht, um jemandem gegen seinen Willen zu folgen oder bei ihm vorbeizuschauen.",
+            "label": "10.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Sie verwenden die Geräte bestimmungsgemäß und nehmen sie nicht auseinander.",
+            "label": "10.5"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Haftung",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wir haften nur für direkte Schäden, die auf ein von uns zu vertretendes Versäumnis zurückzuführen sind.",
+            "label": "11.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir haften nicht für indirekte Schäden, einschließlich Folgeschäden, entgangenen Gewinn, Einkommensverlust, Datenverlust und Schäden aufgrund von Betriebsunterbrechungen.",
+            "label": "11.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Unsere Haftung ist auf einen Betrag in Höhe der Abonnementgebühren für 12 Monate begrenzt, höchstens jedoch auf 1.500 USD pro Schadensereignis.",
+            "label": "11.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Die Systeme Harbor Living und Harbor Family sind Support-Tools. Sie gewährleisten nicht die Verhinderung von Einbruch, Feuer, Wasser, Unfällen, Gesundheitsvorfällen oder anderen Ereignissen. Wir haften nicht für Schäden, die aus solchen Ereignissen resultieren, es sei denn, der Schaden ist die unmittelbare Folge eines von uns zu vertretenden Versäumnisses.",
+            "label": "11.4"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir haften nicht für das Ausbleiben oder Verzögern von Benachrichtigungen aufgrund eines Strom-, WLAN-, Internet- oder Mobilfunkausfalls, aufgrund von Diensten oder Geräten Dritter (z. B. Telekommunikationsanbieter, App Stores oder Ihrem Telefon) oder weil das Telefon des Empfängers ausgeschaltet ist oder keinen Empfang hat.",
+            "label": "11.5"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir haften nicht für Schäden, die auf von Ihnen bereitgestellte falsche oder unvollständige Informationen, Nichtbeachtung unserer Anweisungen oder des Benutzerhandbuchs, Nichtbeantwortung von Warnmeldungen oder die Verwendung der Geräte für andere als die vorgesehenen Zwecke zurückzuführen sind.",
+            "label": "11.6"
+          },
+          {
+            "kind": "clause",
+            "text": "Wir haften nicht für Schäden, die auf höhere Gewalt im Sinne von Artikel 14 zurückzuführen sind.",
+            "label": "11.7"
+          },
+          {
+            "kind": "clause",
+            "text": "Jeder Anspruch gegen uns verjährt ein Jahr nach dem schadenverursachenden Ereignis.",
+            "label": "11.8"
+          },
+          {
+            "kind": "clause",
+            "text": "Die Einschränkungen in diesem Artikel gelten nicht im Falle von Vorsatz oder grober Fahrlässigkeit unsererseits und auch nicht in dem Umfang, in dem das Gesetz keine Einschränkungen zulässt, beispielsweise für Schäden durch Tod oder Körperverletzung.",
+            "label": "11.9"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Software und Rechte",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Sie erhalten ein persönliches, nicht übertragbares Recht zur Nutzung der Software und der App, solange Sie ein Abonnement haben. Alle Rechte an der Software, den Texten und der Gestaltung verbleiben bei uns bzw. unseren Lieferanten.",
+            "label": "12.1"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Datenschutz",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wir verarbeiten personenbezogene Daten gemäß unserer Datenschutzerklärung. Darin ist angegeben, welche Daten wir verarbeiten, warum, wie lange wir sie aufbewahren und welche Rechte Sie haben.",
+            "label": "13.1"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Höhere Gewalt",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Unter höherer Gewalt versteht man jeden Umstand, der außerhalb unserer Kontrolle liegt, einschließlich eines Ausfalls bei Lieferanten oder Spediteuren, Einfuhrbeschränkungen, behördlichen Maßnahmen, Naturkatastrophen, extremen Wetterbedingungen und einem längeren Ausfall von Strom, Internet oder Mobilfunknetz.",
+            "label": "14.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Im Falle höherer Gewalt sind wir für die Dauer der höheren Gewalt nicht an unsere Verpflichtungen gebunden und haften nicht für daraus resultierende Schäden.",
+            "label": "14.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wenn die höhere Gewalt länger als 30 Tage anhält, können Sie den Vertrag kündigen. Sie erhalten dann den Betrag zurück, den Sie für den nicht gelieferten Betrag bezahlt haben.",
+            "label": "14.3"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "title": "Beschwerden",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wenn Sie eine Beschwerde haben, kontaktieren Sie uns bitte zuerst über den Chat auf unserer Website oder in der App. Wir werden unser Bestes tun, um die Angelegenheit gemeinsam mit Ihnen zu lösen.",
+            "label": "15.1"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "title": "Anwendbares Recht und Streitigkeiten",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Verträge mit Kunden in der Europäischen Union unterliegen niederländischem Recht. Streitigkeiten werden dem zuständigen Gericht in den Niederlanden vorgelegt.",
+            "label": "16.1"
+          },
+          {
+            "kind": "clause",
+            "text": "Vereinbarungen mit allen anderen Kunden, einschließlich Kunden in Curaçao, anderswo in der Karibik und in Lateinamerika, unterliegen dem Recht von Curaçao. Streitigkeiten werden dem Gericht erster Instanz von Curaçao vorgelegt.",
+            "label": "16.2"
+          },
+          {
+            "kind": "clause",
+            "text": "Wenn Sie Verbraucher sind, entzieht Ihnen die Rechtswahl in diesem Artikel nicht den Schutz der zwingenden Bestimmungen des Rechts Ihres Wohnsitzlandes. Wenn Sie Verbraucher in der Europäischen Union sind, können Sie auch vor den Gerichten Ihres Wohnsitzlandes klagen, und wir dürfen nur dort Klage gegen Sie einreichen.",
+            "label": "16.3"
+          },
+          {
+            "kind": "clause",
+            "text": "Diese Bedingungen sind möglicherweise in mehreren Sprachen verfügbar. Im Falle von Widersprüchen ist die englische Version maßgeblich, sofern nicht zwingendes Recht etwas anderes vorsieht.",
+            "label": "16.4"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "title": "Änderungen",
+        "blocks": [
+          {
+            "kind": "clause",
+            "text": "Wir können diese Bedingungen ändern. Bei einer bestehenden Vereinbarung gelten Änderungen erst, nachdem wir Sie 30 Tage im Voraus darüber informiert haben. Sie können dann vor dem Datum des Inkrafttretens kündigen.",
+            "label": "17.1"
+          }
+        ]
+      }
+    ]
+  }
+}
