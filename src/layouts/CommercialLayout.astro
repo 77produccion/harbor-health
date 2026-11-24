@@ -15,11 +15,11 @@ import { getLocale } from '../lib/i18n';
 interface Props {
   title: string;
   description: string;
-  branded?: { name: string; kind: 'legal' | 'brand'; route: string; alternates?: { locale: string; route: string }[] };
+  branded?: { name: string; kind: 'legal' | 'brand'; route: string; canonicalRoute?: string; alternates?: { locale: string; route: string }[] };
   publishable?: boolean;
-  hideLanguageSelector?: boolean;
+  languageRoutes?: { locale: string; route: string }[];
 }
-const { title, description, branded, publishable, hideLanguageSelector } = Astro.props;
+const { title, description, branded, publishable, languageRoutes } = Astro.props;
 const locale = getLocale(Astro.url.pathname);
 ---
 
@@ -35,7 +35,7 @@ const locale = getLocale(Astro.url.pathname);
   </head>
   <body class="cinematic-site">
     <slot />
-    {!hideLanguageSelector && <LanguageSelector translations={branded?.alternates} />}
+    <LanguageSelector translations={languageRoutes ?? branded?.alternates} />
     <script>
       import { initMotion } from '../scripts/motion';
       initMotion();

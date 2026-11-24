@@ -1,6 +1,10 @@
 import { test, expect } from '@playwright/test';
 import health from '../../content/legal/health.json' with { type: 'json' };
 import living from '../../content/legal/living.json' with { type: 'json' };
+import legalUI from '../../content/legal/ui.json' with { type: 'json' };
+import site from '../../content/site.json' with { type: 'json' };
+
+const locales = site.locales as (keyof typeof legalUI)[];
 
 for (const [slug, document] of [['harbor-health', health], ['harbor-living', living]] as const) {
   test(`${slug}: texto completo, navegación e impresión sin JavaScript`, async ({ browser }) => {
@@ -25,11 +29,11 @@ for (const [slug, document] of [['harbor-health', health], ['harbor-living', liv
         );
       }
       const last = document.sections.at(-1)!;
-      await page.getByRole('navigation', { name: 'Articles' }).getByRole('link', { name: last.title }).click();
+      await page.getByRole('navigation', { name: 'Contents' }).getByRole('link', { name: last.title }).click();
       await expect(page).toHaveURL(new RegExp(`#article-${last.number}$`));
       expect(await page.evaluate(() => window.document.documentElement.scrollWidth)).toBe(375);
       await page.emulateMedia({ media: 'print' });
-      await expect(page.getByRole('navigation', { name: 'Articles' })).toBeHidden();
+      await expect(page.getByRole('navigation', { name: 'Contents' })).toBeHidden();
       await expect(page.locator(`#article-${last.number}`)).toBeVisible();
     } finally {
       await context.close();
@@ -49,8 +53,26 @@ test('Health y Living tienen accesos distintos y enlazan los términos aplicable
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(livingHeading);
   await expect(page.getByRole('link', { name: 'Harbor Health', exact: true })).toHaveAttribute('href', '/es/');
   await page.getByRole('link', { name: /Términos y condiciones · Harbor Health/ }).click();
+  await expect(page).toHaveURL(/\/es\/legal\/harbor-health\/$/);
   await page.getByRole('link', { name: 'Article 16 of Part A' }).click();
-  await expect(page).toHaveURL(/\/en\/legal\/harbor-living\/#article-16$/);
+  await expect(page).toHaveURL(/\/es\/legal\/harbor-living\/#article-16$/);
 });
+
+for (const locale of locales) {
+  test(`${locale}: selector legal reutilizado para ambos documentos`, async ({ page }) => {
+    for (const [slug, doc] of [['harbor-health', health], ['harbor-living', living]] as const) {
+      await page.goto(`/${locale}/legal/${slug}/`);
+      await expect(page.locator('html')).toHaveAttribute('lang', locale);
+      await expect(page.getByRole('navigation', { name: legalUI[locale].contents })).toBeVisible();
+      await expect(page.getByRole('article', { name: doc.title })).toHaveAttribute('lang', 'en');
+      if (locale !== 'en') await expect(page.getByText(legalUI[locale].original)).toBeVisible();
+      await page.locator('.language-trigger').click();
+      await expect(page.locator('#language-options a')).toHaveCount(locales.length);
+      const next = locale === 'en' ? 'es' : 'en';
+      await page.locator(`#language-options a[hreflang="${next}"]`).click();
+      await expect(page).toHaveURL(new RegExp(`/${next}/legal/${slug}/$`));
+    }
+  });
+}
 
 const livingHeading = 'Vivir en casa con más tranquilidad.';

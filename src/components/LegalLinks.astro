@@ -1,25 +1,20 @@
 ---
 import { getLocale } from '../lib/i18n';
-import { termsPages } from '../lib/legal';
+import { legalUI, termsDocuments, termsRoute, termsSlugs } from '../lib/legal';
 
 const locale = getLocale(Astro.url.pathname);
-const labels = {
-  es: 'Términos y condiciones',
-  en: 'Terms and conditions',
-  nl: 'Algemene voorwaarden',
-  fr: 'Conditions générales',
-  pt: 'Termos e condições',
-  de: 'Allgemeine Geschäftsbedingungen',
-  pap: 'Término i kondishon',
-};
+const { title } = legalUI[locale];
 ---
 
-<nav class="legal-links" aria-label={labels[locale]}>
-  {termsPages.map((page) => (
-    <a href={page.route} hreflang="en" aria-current={Astro.url.pathname.replace(/\/?$/, '/') === page.route ? 'page' : undefined}>
-      {labels[locale]} · {page.brand}{locale !== 'en' && ' (EN)'}
-    </a>
-  ))}
+<nav class="legal-links" aria-label={title}>
+  {termsSlugs.map((slug) => {
+    const route = termsRoute(locale, slug);
+    return (
+      <a href={route} aria-current={Astro.url.pathname.replace(/\/?$/, '/') === route ? 'page' : undefined}>
+        {title} · {termsDocuments[slug].brand}
+      </a>
+    );
+  })}
 </nav>
 
 <style>
