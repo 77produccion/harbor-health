@@ -3,6 +3,7 @@ import { resolveSiteUrl } from '../lib/seo-policy.mjs';
 import { getCollection } from 'astro:content';
 import { getHome } from '../lib/content';
 import { locales } from '../lib/i18n';
+import { termsPages } from '../lib/legal';
 export const GET: APIRoute = async () => {
   const origin = resolveSiteUrl(import.meta.env.SITE_URL);
   const published = import.meta.env.HARBOR_PUBLISH === 'true' && origin;
@@ -11,8 +12,7 @@ export const GET: APIRoute = async () => {
     ...(await Promise.all(locales.map((locale) => getHome(locale)))).map((page) => page.data),
   ];
   const urls = published
-    ? pages
-        .filter((page) => page.status === 'approved')
+    ? [...pages.filter((page) => page.status === 'approved'), ...termsPages]
         .map((page) => `<url><loc>${origin}${page.route}</loc></url>`)
         .join('')
     : '';

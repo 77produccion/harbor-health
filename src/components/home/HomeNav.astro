@@ -4,6 +4,7 @@ import BrandWordmark from '../BrandWordmark.astro';
 import { getUI, getLocale } from '../../lib/i18n';
 import { getPageRoutes } from '../../lib/content';
 import HomeAction from './HomeAction.astro';
+import LivingLink from '../LivingLink.astro';
 const ui = getUI(Astro.url.pathname);
 const locale = getLocale(Astro.url.pathname);
 const routes = await getPageRoutes(locale);
@@ -29,6 +30,7 @@ const routes = await getPageRoutes(locale);
       <a href={routes['health.how-it-works']}>{ui.nav.documents}</a>
       <a href={routes['health.trust']}>{ui.nav.knowledge}</a>
       <a href={routes['health.professionals']}>{ui.nav.professionals}</a>
+      <LivingLink />
     </nav>
     <div class="hw-nav-action">
       <HomeAction id="app" placement="header" secondary />
@@ -42,6 +44,7 @@ const routes = await getPageRoutes(locale);
         <a href={routes['health.how-it-works']}>{ui.nav.documents}</a>
         <a href={routes['health.trust']}>{ui.nav.knowledge}</a>
         <a href={routes['health.professionals']}>{ui.nav.professionals}</a>
+        <LivingLink />
         <HomeAction id="app" placement="header" secondary />
       </nav>
     </details>

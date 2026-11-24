@@ -2,7 +2,6 @@
 import type { HomeScene } from '../../lib/content';
 import ProductWindow from './ProductWindow.astro';
 import ProductCapture from '../ProductCapture.astro';
-import ScenePhoto from '../ScenePhoto.astro';
 import { getUI } from '../../lib/i18n';
 interface Props {
   scenes: HomeScene[];
@@ -53,19 +52,7 @@ const chapters = scenes.filter((scene) =>
               <span>{item.title}</span>
             ))}
           </div>
-          <div
-            class:list={['hw-chapter-visual', scene.id === 'levels' && 'hw-chapter-visual-product']}
-          >
-            {scene.id !== 'levels' && (
-              <ScenePhoto
-                sizes="(max-width: 999px) 45vw, 20vw"
-                src={
-                  scene.id === 'documents'
-                    ? '/images/home-documents-1400.webp'
-                    : '/images/editorial-questions-1400.webp'
-                }
-              />
-            )}
+          <div class="hw-chapter-visual hw-chapter-visual-product">
             <ProductCapture
               id={
                 scene.id === 'documents'

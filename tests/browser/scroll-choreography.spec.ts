@@ -35,10 +35,10 @@ test('OS reduce no apaga la experiencia completa solicitada por el responsable',
   await page.goto('/es/');
   const hero = page.locator('[data-editorial-video="hero-workspace"]');
   await expect(hero).toHaveAttribute('data-playing', 'true');
-  const photo = page.locator('.hw-knowledge-visual > [data-photo-frame]');
-  await expect(photo).toHaveCSS('clip-path', /inset/);
-  await photo.scrollIntoViewIfNeeded();
-  await photo.evaluate((el) =>
+  const backdrop = page.locator('[data-knowledge-backdrop]');
+  await expect(backdrop).toHaveCSS('clip-path', /inset/);
+  await backdrop.scrollIntoViewIfNeeded();
+  await backdrop.evaluate((el) =>
     window.scrollTo({
       top: el.getBoundingClientRect().top + scrollY + el.clientHeight / 2 - innerHeight / 2,
       behavior: 'instant',
@@ -46,7 +46,7 @@ test('OS reduce no apaga la experiencia completa solicitada por el responsable',
   );
   await expect
     .poll(() =>
-      photo.evaluate((el) => parseFloat(getComputedStyle(el).clipPath.replace('inset(', ''))),
+      backdrop.evaluate((el) => parseFloat(getComputedStyle(el).clipPath.replace('inset(', ''))),
     )
     .toBeLessThan(0.01);
   await expect(page.locator('.hw-faq-answers details').first()).toHaveAttribute('open', '');

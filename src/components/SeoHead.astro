@@ -8,6 +8,7 @@ interface Props {
   route?: string;
   faq?: { title: string; text: string }[];
   publishable?: boolean;
+  branded?: { name: string; kind: 'legal' | 'brand'; route: string; alternates?: { locale: string; route: string }[] };
 }
 const {
   title,
@@ -15,6 +16,7 @@ const {
   route = Astro.url.pathname,
   faq = [],
   publishable = false,
+  branded,
 } = Astro.props;
 const locale = getLocale(route);
 const ui = getUI(route);
@@ -27,6 +29,7 @@ const meta = buildMetadata({
   title,
   description,
   faq,
+  branded,
   indexable: publishable && import.meta.env.HARBOR_PUBLISH === 'true',
 });
 ---
@@ -47,19 +50,24 @@ const meta = buildMetadata({
         href={new URL(page.route, meta.canonical!).href}
       />
     ))}
+{meta.canonical && branded?.alternates?.map((page) => (
+  <link rel="alternate" hreflang={page.locale} href={new URL(page.route, meta.canonical!).href} />
+))}
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Harbor Health" />
+<meta property="og:site_name" content={branded?.name ?? 'Harbor Health'} />
 <meta property="og:title" content={meta.title} />
 <meta property="og:description" content={meta.description} />
 {meta.canonical && <meta property="og:url" content={meta.canonical} />}
-<meta property="og:image" content={meta.image} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content={`Harbor Health: ${ui.product.overviewDescription}`} />
-<meta name="twitter:card" content="summary_large_image" />
+{(!branded || branded.name === 'Harbor Health') && <>
+  <meta property="og:image" content={meta.image} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={`Harbor Health: ${ui.product.overviewDescription}`} />
+  <meta name="twitter:image" content={meta.image} />
+</>}
+<meta name="twitter:card" content={branded ? 'summary' : 'summary_large_image'} />
 <meta name="twitter:title" content={meta.title} />
 <meta name="twitter:description" content={meta.description} />
-<meta name="twitter:image" content={meta.image} />
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 <link rel="apple-touch-icon" href="/images/favicon.png" />
 {import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION && (

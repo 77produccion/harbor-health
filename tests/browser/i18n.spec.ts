@@ -2,15 +2,28 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { readFile } from 'node:fs/promises';
 const copy = {
-  es: ['Tu próxima consulta empieza aquí.', 'como-funciona', 'conocimiento-y-limites'],
-  en: ['Your next consultation starts here.', 'how-it-works', 'knowledge-and-limits'],
-  nl: ['Je volgende consult begint hier.', 'hoe-het-werkt', 'kennis-en-grenzen'],
-  fr: ['Votre prochaine consultation commence ici.', 'fonctionnement', 'connaissances-et-limites'],
-  pt: ['Sua próxima consulta começa aqui.', 'como-funciona', 'conhecimento-e-limites'],
-  de: ['Dein nächster Termin beginnt hier.', 'so-funktioniert-es', 'wissen-und-grenzen'],
-  pap: ['Bo próksimo konsulta ta kuminsá aki.', 'kon-e-ta-funshona', 'konosementu-i-limitashonnan'],
+  es: ['Comprende tus resultados de laboratorio.', 'como-funciona', 'conocimiento-y-limites'],
+  en: ['Understand your laboratory results.', 'how-it-works', 'knowledge-and-limits'],
+  nl: ['Begrijp je laboratoriumuitslagen.', 'hoe-het-werkt', 'kennis-en-grenzen'],
+  fr: ['Comprenez vos résultats de laboratoire.', 'fonctionnement', 'connaissances-et-limites'],
+  pt: ['Entenda seus resultados laboratoriais.', 'como-funciona', 'conhecimento-e-limites'],
+  de: ['Verstehe deine Laborergebnisse.', 'so-funktioniert-es', 'wissen-und-grenzen'],
+  pap: ['Komprondé bo resultadonan di laboratorio.', 'kon-e-ta-funshona', 'konosementu-i-limitashonnan'],
 };
 for (const [locale, [title, how, trust]] of Object.entries(copy)) {
+  test(`${locale}: Living tiene ruta y selector propios`, async ({ page }) => {
+    await page.goto(`/${locale}/`);
+    await expect(page.locator('.hw-desktop-nav a').getByText('Harbor Living', { exact: true }))
+      .toHaveAttribute('href', `/${locale}/harbor-living/`);
+    await page.goto(`/${locale}/harbor-living/`);
+    await expect(page.locator('html')).toHaveAttribute('lang', locale);
+    await expect(page.getByRole('banner').getByRole('link', { name: 'Harbor Health' }))
+      .toHaveAttribute('href', `/${locale}/`);
+    await page.locator('.language-trigger').click();
+    await expect(page.locator('#language-options a')).toHaveCount(7);
+    await expect(page.locator(`#language-options a[hreflang="${locale}"]`))
+      .toHaveAttribute('href', `/${locale}/harbor-living/`);
+  });
   test(`${locale}: home, contenido, selector y enlaces localizados`, async ({ page, request }) => {
     const errors: string[] = [];
     page.on('pageerror', error => errors.push(error.message));

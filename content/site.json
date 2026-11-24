@@ -177,7 +177,7 @@
   },
   "sharedCopy": {
     "es": {
-      "brandRelationship": "Harbor Health, un producto de Harbor Living.",
+      "brandRelationship": "Explicaciones de resultados de laboratorio.",
       "brandSlogan": [
         "Understanding your Health.",
         "Understanding Why.™"
@@ -186,7 +186,7 @@
       "demoNotice": "Ejemplo ilustrativo. No contiene datos de pacientes ni sustituye una evaluación médica.",
       "availability": "La disponibilidad del contenido y de las funciones puede variar según el país, el idioma y su acceso.",
       "agentTitle": "Pregunte sobre Harbor",
-      "agentWelcome": "Puedo ayudarle a conocer Harbor Health y su demostración. No envíe documentos ni datos personales de salud por este chat.",
+      "agentWelcome": "Puedo responder preguntas sobre Harbor Health. No envíe documentos ni datos personales de salud por este chat.",
       "agentPlaceholder": "¿Qué le gustaría saber sobre Harbor Health?",
       "agentOutOfScope": "Este asistente responde sobre el producto, no sobre resultados médicos o tratamientos. Para una consulta sobre su salud, contacte con su profesional.",
       "agentUnknown": "No dispongo de información confirmada sobre ese punto. Puede consultarlo con el equipo de Harbor.",
@@ -214,7 +214,7 @@
       "resetView": "Restablecer encuadre"
     },
     "en": {
-      "brandRelationship": "Harbor Health, a Harbor Living product.",
+      "brandRelationship": "Laboratory result explanations.",
       "scope": "Harbor Health provides explanatory information. It does not diagnose or prescribe treatment. Individual results must be interpreted by your healthcare professional.",
       "demoNotice": "Illustrative example. No patient data; not a substitute for medical assessment.",
       "availability": "Content and feature availability may vary by country, language and access.",
@@ -224,7 +224,7 @@
       "exploreLabel": "Discover Harbor"
     },
     "nl": {
-      "brandRelationship": "Harbor Health, een product van Harbor Living.",
+      "brandRelationship": "Uitleg over laboratoriumuitslagen.",
       "scope": "Harbor Health biedt toelichtende informatie. Het stelt geen diagnoses en schrijft geen behandelingen voor. Je zorgprofessional interpreteert je individuele uitslagen.",
       "demoNotice": "Illustratief voorbeeld. Geen patiëntgegevens; geen vervanging van medische beoordeling.",
       "availability": "Beschikbaarheid van inhoud en functies kan verschillen per land, taal en toegang.",
@@ -234,7 +234,7 @@
       "exploreLabel": "Ontdek Harbor"
     },
     "fr": {
-      "brandRelationship": "Harbor Health, un produit Harbor Living.",
+      "brandRelationship": "Explications de résultats de laboratoire.",
       "scope": "Harbor Health fournit des informations explicatives. Il ne pose pas de diagnostic et ne prescrit pas de traitement. L’interprétation individuelle relève de votre professionnel de santé.",
       "demoNotice": "Exemple illustratif. Sans données de patients ; ne remplace pas une évaluation médicale.",
       "availability": "La disponibilité des contenus et fonctions peut varier selon le pays, la langue et l’accès.",
@@ -244,7 +244,7 @@
       "exploreLabel": "Découvrir Harbor"
     },
     "pt": {
-      "brandRelationship": "Harbor Health, um produto da Harbor Living.",
+      "brandRelationship": "Explicações de resultados laboratoriais.",
       "scope": "O Harbor Health oferece informação explicativa. Não faz diagnósticos nem indica tratamentos. A interpretação individual cabe ao seu profissional de saúde.",
       "demoNotice": "Exemplo ilustrativo. Sem dados de pacientes; não substitui avaliação médica.",
       "availability": "A disponibilidade de conteúdo e funções pode variar conforme país, idioma e acesso.",
@@ -254,7 +254,7 @@
       "exploreLabel": "Conhecer Harbor"
     },
     "de": {
-      "brandRelationship": "Harbor Health, ein Produkt von Harbor Living.",
+      "brandRelationship": "Erklärungen zu Laborergebnissen.",
       "scope": "Harbor Health bietet erläuternde Informationen. Es stellt keine Diagnosen und verordnet keine Behandlung. Individuelle Ergebnisse beurteilt deine medizinische Fachperson.",
       "demoNotice": "Illustratives Beispiel. Keine Patientendaten; kein Ersatz für eine medizinische Beurteilung.",
       "availability": "Inhalte und Funktionen können je nach Land, Sprache und Zugang unterschiedlich verfügbar sein.",
@@ -264,7 +264,7 @@
       "exploreLabel": "Harbor kennenlernen"
     },
     "pap": {
-      "brandRelationship": "Harbor Health, un produkto di Harbor Living.",
+      "brandRelationship": "Splikashon di resultadonan di laboratorio.",
       "scope": "Harbor Health ta ofresé informashon splikativo. E no ta hasi diagnóstiko ni indiká tratamentu. Bo profeshonal di salú ta interpretá bo resultadonan individual.",
       "demoNotice": "Ehempel ilustrativo. Sin datonan di pashènt; no ta remplasá evaluashon médiko.",
       "availability": "Disponibilidat di kontenido i funshonnan por varia segun pais, idioma i akseso.",

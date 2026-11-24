@@ -2,7 +2,7 @@
 
 ## Producto y alcance
 
-Web comercial de Harbor Health, submarca de Harbor Living. No es la aplicación autenticada ni un servicio clínico. Combina un recorrido ilustrativo interactivo con capturas aportadas del producto, recortadas y saneadas sin datos identificables ni valores clínicos personales. No se suben documentos ni se atienden consultas médicas aquí.
+Web comercial de Harbor Health, servicio de explicación general de resultados de laboratorio. No realiza pruebas, no es la aplicación autenticada ni sustituye una consulta clínica. Las vistas comerciales incluyen capturas del producto saneadas, sin datos identificables ni valores clínicos personales. No se suben documentos ni se atienden consultas médicas en la landing.
 
 Hay seis vistas en siete idiomas (`es/en/nl/fr/pt/de/pap`): home, funcionamiento, ejemplo, conocimiento y límites, profesionales y acceso. La home editorial se escribe en español; las traducciones siguen en borrador. Idioma y mercado son dimensiones distintas: traducir una página no acredita cobertura clínica.
 
@@ -21,7 +21,7 @@ No cambiar IDs al traducir. No duplicar copy público en componentes ni introduc
 
 - Lora para títulos; Poppins para párrafos e interfaz, servidas localmente desde las dependencias de fuentes.
 - Navy `#061a33`, teal `#01919f`, azul Health `#4971d1`; `#3558b0` es una adaptación funcional para acciones, no un color oficial nuevo.
-- Health pertenece a Living; no se mezcla con Family ni se usa Verified como certificación sin evidencia.
+- Harbor Living y Harbor Health tienen recorridos comerciales distintos. La vista de Living presenta el producto para el bienestar y la seguridad del hogar; Health explica resultados de laboratorio. No se usa Verified como certificación sin evidencia.
 - Cabecera compacta existente: símbolo aportado + `BrandWordmark.astro`. Un lockup horizontal oficial sigue pendiente de aprobación.
 - Sin badges de relleno, actividad clínica ficticia ni tarjetas repetidas por sistema. Iconografía necesaria desde Lucide.
 
@@ -51,6 +51,8 @@ Scroll nativo, sin scroll-jacking ni navegación dependiente de animaciones. No 
 ## SEO, privacidad y medición
 
 Sin `SITE_URL` real o aprobaciones, la preview queda noindex, sin canonical inventado y con sitemap público vacío. Los endpoints `llms.txt`/`llms-full.txt` no exportan borradores ni metadatos internos. No declarar precios, reseñas, certificaciones o funciones no verificadas en schema.
+
+Las rutas `/en/legal/harbor-health/` y `/en/legal/harbor-living/` muestran las versiones inglesas aprobadas de noviembre de 2026, desde `content/legal/`. El texto está disponible para todos los mercados, también sin JavaScript e impreso. En publicación, ambas rutas se incluyen en el sitemap y en el índice `llms.txt`. No existen traducciones de los términos ni se crean variantes por IP. El reenvío a Part A enlaza al artículo 16 de Living. La parte de alquiler y los avisos de privacidad no forman parte de los documentos entregados: no se infiere ni sustituye su contenido. Las vistas de Living en los siete idiomas viven bajo `/{locale}/harbor-living/`, con contenido en `content/living.json`. La raíz lleva a Living; no se mueve la app ni se cambian los destinos autenticados.
 
 GA4 **o** GTM, nunca ambos; sin IDs reales no hay envío externo. Se requiere consentimiento y se respetan GPC/DNT. Los eventos solo admiten propiedades enumeradas: no documentos, valores clínicos, nombres, preguntas libres ni URLs/query completas. Un clic de acceso no demuestra venta ni registro.
 

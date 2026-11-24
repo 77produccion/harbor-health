@@ -2,6 +2,7 @@
 import type { HomeScene } from '../../lib/content';
 import HomeAction from './HomeAction.astro';
 import ProductCapture from '../ProductCapture.astro';
+import LegalLinks from '../LegalLinks.astro';
 import { getUI, getLocale } from '../../lib/i18n';
 import { site } from '../../lib/content';
 interface Props {
@@ -52,9 +53,10 @@ const locale = getLocale(Astro.url.pathname);
             <span>{line}</span>
           ))}
         </p>
-        <p>{ui.footer.relationship}</p>
+        <p>{site.sharedCopy[locale].brandRelationship}</p>
       </div>
       <p>{ui.footer.scope}</p>
+      <LegalLinks />
       <button type="button" class="hw-link" data-consent-open hidden>
         {ui.footer.measurement}
       </button>

@@ -1,0 +1,129 @@
+---
+import CommercialLayout from '../../../layouts/CommercialLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { getPageRoutes } from '../../../lib/content';
+import { relatedClause, termsDocuments } from '../../../lib/legal';
+
+export function getStaticPaths() {
+  return Object.entries(termsDocuments).map(([document, terms]) => ({
+    params: { document }, props: { terms },
+  }));
+}
+
+const { terms } = Astro.props;
+const routes = await getPageRoutes('en');
+const living = terms.brand === 'Harbor Living';
+
+type Block = { kind: string; text: string; label?: string };
+function groupBlocks(blocks: Block[]) {
+  const groups: Block[][] = [];
+  for (const block of blocks) {
+    const last = groups.at(-1);
+    if (block.kind !== 'clause' && last?.[0]?.kind === block.kind) last.push(block);
+    else groups.push([block]);
+  }
+  return groups;
+}
+---
+
+<CommercialLayout title={terms.title} description={terms.description} branded={{ name: terms.brand, kind: 'legal', route: terms.route }} publishable hideLanguageSelector>
+  <Header routes={routes} />
+  <main id="contenido" class:list={['terms-page', { 'terms-living': living }]}>
+    <header class="terms-header">
+      <div class="terms-width">
+        <a class="terms-brand" href={living ? '/en/harbor-living/' : '/en/'}>{terms.brand}</a>
+        <h1>{terms.title}</h1>
+        <time datetime={terms.versionMonth}>{terms.version}</time>
+      </div>
+    </header>
+    <div class="terms-width terms-grid">
+      <nav class="terms-index" aria-label="Articles">
+        <h2>Contents</h2>
+        <ol>
+          {terms.sections.map((section) => (
+            <li><a href={`#article-${section.number}`}>{section.title}</a></li>
+          ))}
+        </ol>
+      </nav>
+      <article aria-label={terms.title}>
+        {terms.sections.map((section) => (
+          <section id={`article-${section.number}`} aria-labelledby={`article-${section.number}-title`}>
+            <h2 id={`article-${section.number}-title`}>Article {section.number}. {section.title}</h2>
+            {groupBlocks(section.blocks).map((group) => {
+              const [first] = group;
+              if (first.kind !== 'clause') return (
+                <ul class:list={{ 'terms-subclauses': first.kind === 'subclause' }}>
+                  {group.map((block) => {
+                    const colon = block.kind === 'bullet' ? block.text.indexOf(':') : -1;
+                    return (
+                      <li>
+                        {colon >= 0
+                          ? <><strong>{block.text.slice(0, colon + 1)}</strong>{block.text.slice(colon + 1)}</>
+                          : <>{block.label && `${block.label} `}{block.text}</>}
+                      </li>
+                    );
+                  })}
+                </ul>
+              );
+              const label = first.label ?? '';
+              const link = relatedClause(terms, label);
+              const index = link ? first.text.indexOf(link.text) : -1;
+              return (
+                <p id={`clause-${label.replace('.', '-')}`}>
+                  <span class="terms-number">{label}</span>
+                  <span>{link && index >= 0 ? <>{first.text.slice(0, index)}<a href={link.href}>{link.text}</a>{first.text.slice(index + link.text.length)}</> : first.text}</span>
+                </p>
+              );
+            })}
+          </section>
+        ))}
+      </article>
+    </div>
+  </main>
+  <Footer />
+</CommercialLayout>
+
+<style>
+  .terms-page { --terms-accent: #3558b0; color: #061a33; background: #fff; }
+  .terms-living { --terms-accent: #006f78; }
+  .terms-width { width: min(72rem, calc(100% - clamp(2rem, 10vw, 8rem))); margin-inline: auto; }
+  .terms-header {
+    padding-block: clamp(6rem, 12vw, 10rem) clamp(2.5rem, 6vw, 5rem);
+    background: radial-gradient(ellipse at 95% 0, #01919f14, transparent 65%), #f3f7fa;
+    border-block-end: 3px solid var(--terms-accent);
+  }
+  .terms-brand { color: var(--terms-accent); font-weight: 600; text-underline-offset: .2em; }
+  h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.12; max-width: 20ch; margin-block: .6em .4em; }
+  time { color: #384c61; }
+  .terms-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem; padding-block: 2.5rem 5rem; }
+  @media (min-width: 55rem) {
+    .terms-grid { grid-template-columns: minmax(12rem, 1fr) minmax(0, 3fr); gap: clamp(2rem, 6vw, 5rem); }
+  }
+  .terms-index { align-self: start; padding: 1.25rem; background: #f3f7fa; border-inline-start: 2px solid var(--terms-accent); }
+  h2 { font-size: clamp(1.2rem, 2vw, 1.55rem); line-height: 1.35; }
+  .terms-index ol { padding-inline-start: 1.5rem; margin-block-end: 0; display: grid; gap: .35rem; }
+  .terms-index a, article a { color: var(--terms-accent); text-decoration: underline; text-underline-offset: .18em; }
+  article { min-width: 0; line-height: 1.75; overflow-wrap: anywhere; }
+  article section + section { margin-block-start: 2.5rem; }
+  article h2 { border-bottom: 1px solid #d3dee7; padding-block-end: .6rem; margin-block-end: 1rem; }
+  article p { display: grid; grid-template-columns: 3.5ch minmax(0, 1fr); gap: 1ch; margin-block: .75rem; }
+  .terms-number { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  article ul { padding-inline-start: 1.4em; margin-block: .75rem; }
+  article li + li { margin-block-start: .55rem; }
+  .terms-subclauses { list-style: none; padding-inline-start: 4.5ch; }
+  article section, article p { scroll-margin-top: 7rem; }
+  article section:target h2, article p:target { background: #eaf4fb; }
+  @media print {
+    :global(body:has(.terms-page) > :not(.terms-page)) { display: none !important; }
+    .terms-header, .terms-grid { padding-block: .6rem; }
+    .terms-page, .terms-header, .terms-index { background: #fff; color: #000; }
+    .terms-width { width: 100%; }
+    .terms-grid { display: block; }
+    .terms-index { display: none; }
+    article { font-size: 10pt; }
+    h1 { font-size: 24pt; max-width: none; }
+    h2 { break-after: avoid; }
+    article p, article li { orphans: 3; widows: 3; }
+  }
+</style>

@@ -19,14 +19,14 @@ test('la home real tiene ocho escenas en el cuerpo y no duplica sections en YAML
   assert.deepEqual(home.scenes.map(scene => scene.id), ['hero', 'documents', 'levels', 'consultation', 'knowledge', 'professionals', 'faq', 'closing']);
 });
 test('editar el cuerpo MDX cambia la proyección consumida por la página', () => {
-  const edited = body.replace('Tu próxima consulta empieza aquí.', 'Documentos y preguntas para tu consulta.');
+  const edited = body.replace('Comprende tus resultados de laboratorio.', 'Documentos y preguntas para tu consulta.');
   const result = projectSceneSections(parseScenes(edited, site, 'es'));
   assert.equal(result[0].title, 'Documentos y preguntas para tu consulta.');
 });
 test('las escenas rechazan imports, expresiones, scripts, props ejecutables y URLs arbitrarias', () => {
   assert.throws(() => parseScenes(`import x from 'x'\n\n${body}`, site, 'es'));
   assert.throws(() => parseScenes(body.replace('kind="product-hero"', 'kind="product-hero" onClick={run()}'), site, 'es'));
-  assert.throws(() => parseScenes(body.replace('Organiza tus documentos', '{process.env.SECRET}\n\nOrganiza tus documentos'), site, 'es'));
+  assert.throws(() => parseScenes(body.replace('Conoce qué mide cada análisis', '{process.env.SECRET}\n\nConoce qué mide cada análisis'), site, 'es'));
   assert.throws(() => parseScenes(body.replace('action:access', 'javascript:alert(1)'), site, 'es'));
   assert.throws(() => parseScenes(body.replace('kind="product-hero"', 'kind="custom"'), site, 'es'));
 });
