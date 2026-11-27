@@ -39,20 +39,28 @@
   },
   "footer": {
     "relationship": "Un produit Harbor Living.",
-    "measurement": "Préférences de mesure",
+    "measurement": "Paramètres des cookies",
+    "legal": "Informations légales et confidentialité",
     "copyright": "Harbor Health",
     "scope": "Informations éducatives. Ni diagnostic ni recommandation de traitement.",
     "preview": "Contenu commercial en cours de révision."
   },
   "consent": {
-    "title": "Vous choisissez ce qui est mesuré",
-    "description": "La mesure facultative aide à comprendre l’utilisation du site. Aucun document, résultat, question écrite ou donnée de santé n’est envoyé aux outils d’analyse.",
+    "title": "Cookies et mesure d’audience",
+    "description": "Avec votre accord, nous mesurons les visites et les interactions sur la page d’accueil de Harbor Health.",
     "accept": "Autoriser la mesure",
     "reject": "Nécessaires uniquement",
     "close": "Fermer les préférences",
-    "unconfigured": "Aucun fournisseur d’analyse n’est configuré pour cet aperçu. Aucun événement n’est transmis à des services externes.",
+    "unconfigured": "La mesure d’audience est désactivée.",
     "privacySignal": "Votre navigateur demande de ne pas être suivi. Nous respectons ce choix.",
-    "request": "Autorisez-vous la mesure de l’utilisation du site ? Elle est facultative."
+    "request": "Pouvons-nous mesurer les visites et les interactions sur la page d’accueil de Harbor Health ?",
+    "notice": "Notice sur les cookies",
+    "necessary": "Stockage nécessaire",
+    "necessaryDescription": "Votre navigateur mémorise votre choix de confidentialité pour les prochaines visites.",
+    "optional": "Mesure facultative",
+    "statusAccepted": "Mesure d’audience autorisée.",
+    "statusRejected": "Stockage nécessaire uniquement.",
+    "statusUnset": "Vous n’avez pas encore fait de choix."
   },
   "a11y": {
     "skip": "Aller au contenu",

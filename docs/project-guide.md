@@ -54,7 +54,9 @@ Sin `SITE_URL` real o aprobaciones, la preview queda noindex, sin canonical inve
 
 Las rutas `/{locale}/legal/harbor-health/` y `/{locale}/legal/harbor-living/` muestran interfaz y texto completo en los siete idiomas. Los originales ingleses de noviembre de 2026 están en `content/legal/`; las traducciones asistidas y versionadas están en `content/legal/translations/`. El selector cambia de versión en el mismo documento y cada traducción enlaza al original. No hay traducción en tiempo de ejecución ni necesidad de JavaScript para leer o imprimir. Las traducciones se mantienen sin indexar y fuera de `hreflang`, sitemap y `llms.txt` hasta su revisión legal; con dominio configurado cada traducción tiene un canonical propio. El reenvío a Part A conserva el idioma al enlazar al artículo 16 de Living. La parte de alquiler y los avisos de privacidad no forman parte de los documentos entregados. Las páginas de Living usan `/{locale}/harbor-living/`; la raíz lleva a Living, sin mover la app ni cambiar sus accesos.
 
-GA4 **o** GTM, nunca ambos; sin IDs reales no hay envío externo. Se requiere consentimiento y se respetan GPC/DNT. Los eventos solo admiten propiedades enumeradas: no documentos, valores clínicos, nombres, preguntas libres ni URLs/query completas. Un clic de acceso no demuestra venta ni registro.
+El aviso y los ajustes de cookies están disponibles desde el pie de las páginas públicas. El aviso de `/{locale}/cookies/` usa el contenido de `content/legal/cookies.json`. La elección de medición se guarda en el almacenamiento local y tiene una vigencia de 180 días.
+
+La medición está desactivada por defecto. La portada pública de Harbor Health puede cargar GA4 o GTM con un ID configurado, consentimiento válido y GPC/DNT inactivos. Los eventos admiten únicamente propiedades enumeradas y un clic de acceso mide el paso al portal. Antes de activar la medición, verifica el alcance, las cookies y los eventos de la configuración del proveedor en un navegador. Si se usa GTM, comprueba cada etiqueta del contenedor y refleja su inventario en el aviso.
 
 ## Estado antes de lanzamiento
 

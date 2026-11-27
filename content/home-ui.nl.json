@@ -39,20 +39,28 @@
   },
   "footer": {
     "relationship": "Een product van Harbor Living.",
-    "measurement": "Meetvoorkeuren",
+    "measurement": "Cookie-instellingen",
+    "legal": "Juridische informatie en privacy",
     "copyright": "Harbor Health",
     "scope": "Educatieve informatie. Geen diagnoses of behandeladviezen.",
     "preview": "Commerciële inhoud wordt beoordeeld."
   },
   "consent": {
-    "title": "Jij bepaalt wat wordt gemeten",
-    "description": "Optionele meting helpt ons het gebruik van deze website te begrijpen. We sturen geen documenten, uitslagen, geschreven vragen of gezondheidsgegevens naar analytics.",
+    "title": "Cookies en meting",
+    "description": "Met je toestemming meten we bezoeken aan en interacties op de homepage van Harbor Health.",
     "accept": "Meting toestaan",
     "reject": "Alleen noodzakelijk",
     "close": "Sluit voorkeuren",
-    "unconfigured": "Voor deze preview is geen analyticsaanbieder ingesteld. Er worden geen gebeurtenissen naar externe diensten verstuurd.",
+    "unconfigured": "De meting staat uit.",
     "privacySignal": "Je browser vraagt om niet gevolgd te worden. We respecteren die voorkeur.",
-    "request": "Mogen we het gebruik van deze website meten? Meting is optioneel."
+    "request": "Mogen we bezoeken aan en interacties op de homepage van Harbor Health meten?",
+    "notice": "Cookieverklaring",
+    "necessary": "Noodzakelijke opslag",
+    "necessaryDescription": "Je browser onthoudt je privacykeuze voor volgende bezoeken.",
+    "optional": "Optionele meting",
+    "statusAccepted": "Meting toegestaan.",
+    "statusRejected": "Alleen noodzakelijke opslag.",
+    "statusUnset": "Je hebt nog geen keuze gemaakt."
   },
   "a11y": {
     "skip": "Ga naar inhoud",

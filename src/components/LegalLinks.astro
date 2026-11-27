@@ -1,23 +1,48 @@
 ---
-import { getLocale } from '../lib/i18n';
+import { getLocale, getUI } from '../lib/i18n';
 import { legalUI, termsDocuments, termsRoute, termsSlugs } from '../lib/legal';
+import { cookiesRoute } from '../lib/cookies';
 
 const locale = getLocale(Astro.url.pathname);
+const ui = getUI(Astro.url.pathname);
 const { title } = legalUI[locale];
+const currentRoute = Astro.url.pathname.replace(/\/?$/, '/');
+const noticeRoute = cookiesRoute(locale);
 ---
 
-<nav class="legal-links" aria-label={title}>
+<nav class="legal-links" aria-label={ui.footer.legal}>
   {termsSlugs.map((slug) => {
     const route = termsRoute(locale, slug);
     return (
-      <a href={route} aria-current={Astro.url.pathname.replace(/\/?$/, '/') === route ? 'page' : undefined}>
+      <a href={route} aria-current={currentRoute === route ? 'page' : undefined}>
         {title} · {termsDocuments[slug].brand}
       </a>
     );
   })}
+  <a href={noticeRoute} aria-current={currentRoute === noticeRoute ? 'page' : undefined}>
+    {ui.consent.notice}
+  </a>
+  <button type="button" data-consent-open aria-haspopup="dialog" aria-controls="cookie-settings" hidden>
+    {ui.footer.measurement}
+  </button>
 </nav>
 
 <style>
-  .legal-links { display: flex; flex-wrap: wrap; gap: .35rem 1.5rem; font-size: .82rem; }
-  .legal-links a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+  .legal-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.5rem; font-size: .82rem; }
+  .legal-links a, .legal-links button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+  .legal-links button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+  }
 </style>
