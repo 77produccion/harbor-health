@@ -39,20 +39,28 @@
   },
   "footer": {
     "relationship": "Um produto da Harbor Living.",
-    "measurement": "Preferências de medição",
+    "measurement": "Configurações de cookies",
+    "legal": "Informações legais e privacidade",
     "copyright": "Harbor Health",
     "scope": "Informação educativa. Não faz diagnósticos nem recomenda tratamentos.",
     "preview": "Conteúdo comercial em revisão."
   },
   "consent": {
-    "title": "Você escolhe o que é medido",
-    "description": "A medição opcional ajuda a entender o uso deste site. Não enviamos documentos, resultados, perguntas escritas nem dados de saúde para análise.",
+    "title": "Cookies e medição",
+    "description": "Com sua autorização, medimos visitas e interações na página inicial do Harbor Health.",
     "accept": "Permitir medição",
     "reject": "Apenas necessárias",
     "close": "Fechar preferências",
-    "unconfigured": "Esta visualização não tem um provedor de análise configurado. Não envia eventos a serviços externos.",
+    "unconfigured": "A medição está desativada.",
     "privacySignal": "Seu navegador solicita não ser rastreado. Respeitamos essa preferência.",
-    "request": "Você permite medir o uso deste site? A medição é opcional."
+    "request": "Podemos medir as visitas e as interações na página inicial do Harbor Health?",
+    "notice": "Aviso de cookies",
+    "necessary": "Armazenamento necessário",
+    "necessaryDescription": "Seu navegador guarda sua escolha de privacidade para as próximas visitas.",
+    "optional": "Medição opcional",
+    "statusAccepted": "Medição autorizada.",
+    "statusRejected": "Somente armazenamento necessário.",
+    "statusUnset": "Você ainda não fez uma escolha."
   },
   "a11y": {
     "skip": "Ir para o conteúdo",

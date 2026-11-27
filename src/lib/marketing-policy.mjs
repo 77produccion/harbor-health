@@ -1,3 +1,16 @@
+export const CONSENT_STORAGE_KEY = 'harbor:measurement-consent:v1';
+export const CONSENT_VALIDITY_MS = 180 * 86400000;
+export const ANALYTICS_COOKIE_PREFIX = 'harbor_health';
+export const ANALYTICS_COOKIE_MAX_AGE = 30 * 86400;
+
+const analyticsCookieName = new RegExp(`^${ANALYTICS_COOKIE_PREFIX}_{1,2}ga(?:_[a-zA-Z0-9]+)?$`);
+
+export function analyticsCookieNames(cookieHeader) {
+  return cookieHeader.split(';')
+    .map((cookie) => cookie.trim().split('=', 1)[0])
+    .filter((name) => analyticsCookieName.test(name));
+}
+
 const sceneIds = [
   'hero',
   'documents',
@@ -22,15 +35,18 @@ const rules = {
   pdf_example_generated: { count: 'count' },
 };
 
-export function readConsent(value, now = Date.now()) {
+export function readConsent(value, now = Date.now(), provider) {
   if (!value || value.version !== 1 || !['accepted', 'rejected'].includes(value.choice))
     return null;
   if (
     typeof value.at !== 'number' ||
     !Number.isFinite(value.at) ||
     value.at > now ||
-    now - value.at >= 180 * 86400000
+    now - value.at >= CONSENT_VALIDITY_MS
   )
+    return null;
+  // An earlier opt-in without an identified provider cannot enable a new service.
+  if (value.choice === 'accepted' && provider !== undefined && value.provider !== provider)
     return null;
   return value.choice;
 }

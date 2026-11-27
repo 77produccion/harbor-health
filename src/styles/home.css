@@ -847,57 +847,6 @@ summary:focus-visible {
 .hw-footer-bottom > p {
   max-width: 350px;
 }
-.hw-consent-dialog {
-  width: min(100% - 40px, 580px);
-  padding: 45px;
-  border: 1px solid var(--hw-line);
-  border-radius: 12px;
-  color: var(--hw-ink);
-  background: var(--hw-paper);
-}
-.hw-consent-dialog::backdrop {
-  background: #061a3399;
-}
-.hw-consent-dialog h2 {
-  font: 400 35px/1.2 var(--hw-serif);
-  margin: 0 0 25px;
-  letter-spacing: -0.035em;
-}
-.hw-consent-dialog p {
-  font: 400 15px/1.9 var(--hw-sans);
-  margin: 0 0 25px;
-}
-.hw-dialog-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  border: 0;
-  background: transparent;
-}
-.hw-consent-request {
-  position: fixed;
-  z-index: 40;
-  bottom: 20px;
-  left: var(--hw-gutter);
-  right: var(--hw-gutter);
-  padding: 20px 24px;
-  background: #fff;
-  border: 1px solid var(--hw-line);
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  box-shadow: 0 8px 40px #061a3326;
-  border-radius: 8px;
-}
-.hw-consent-request p {
-  margin: 0 auto 0 0;
-  font: 400 14px/1.8 var(--hw-sans);
-}
 /* ---------------------------------------------------------------- rediseño v3
    Una composición editorial: panel navy de producto, líneas de contorno,
    secciones con contraste propio y una coreografía GSAP visible. */
@@ -1326,9 +1275,6 @@ summary:focus-visible {
 .hw-brand-slogan span {
   display: block;
 }
-.hw-footer-bottom .hw-link {
-  color: #dbe7f3;
-}
 
 @media (max-width: 999px) {
   .hw-hero::before {
@@ -1642,9 +1588,6 @@ summary:focus-visible {
   .hw-footer-bottom {
     grid-template-columns: 1fr 1fr;
   }
-  .hw-footer-bottom > button {
-    justify-self: start;
-  }
 }
 @media (max-width: 639px) {
   :root {
@@ -1935,26 +1878,6 @@ summary:focus-visible {
   }
   .hw-footer-bottom p {
     margin-top: 12px;
-  }
-  .hw-consent-dialog {
-    padding: 45px 25px 30px;
-  }
-  .hw-consent-dialog h2 {
-    font-size: 30px;
-  }
-  .hw-consent-dialog .hw-actions {
-    flex-direction: column;
-  }
-  .hw-consent-request {
-    flex-wrap: wrap;
-    gap: 14px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    padding: 20px;
-  }
-  .hw-consent-request p {
-    flex-basis: 100%;
   }
 }
 @media (max-width: 359px) {

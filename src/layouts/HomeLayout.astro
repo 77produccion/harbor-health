@@ -45,14 +45,12 @@ const ui = getUI(Astro.url.pathname);
   </head>
   <body class="cinematic-site">
     <slot />
-    <Consent />
+    <Consent enabledOnPage />
     <LanguageSelector />
     <script type="application/json" id="harbor-product-ui" set:html={serializeJsonLd(ui.product)} />
     <script>
       import { initHome } from '../scripts/home';
-      import { initMarketing } from '../scripts/marketing';
       initHome();
-      initMarketing();
     </script>
   </body>
 </html>

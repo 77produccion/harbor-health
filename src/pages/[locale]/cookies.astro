@@ -1,0 +1,128 @@
+---
+import CommercialLayout from '../../layouts/CommercialLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getPageRoutes } from '../../lib/content';
+import { cookiesContact, cookiesCopy, cookiesRoute } from '../../lib/cookies';
+import { locales } from '../../lib/i18n';
+import { legalUI } from '../../lib/legal';
+import {
+  ANALYTICS_COOKIE_PREFIX,
+  CONSENT_STORAGE_KEY,
+  measurementConfig,
+} from '../../lib/marketing-policy.mjs';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale }, props: { locale } }));
+}
+
+const { locale } = Astro.props;
+const copy = cookiesCopy[locale];
+const routes = await getPageRoutes(locale);
+const languageRoutes = locales.map((lang) => ({ locale: lang, route: cookiesRoute(lang) }));
+const { provider } = measurementConfig(import.meta.env.PUBLIC_GA4_ID, import.meta.env.PUBLIC_GTM_ID);
+const portalStorage = [
+  { names: ['harbor-health.session-token', 'session_token'], description: copy.portalSession },
+  { names: ['harbor-health.csrf-token', 'harbor-health.callback-url'], description: copy.portalSecurity },
+  { names: ['harbor_health_language', 'harbor_health_appearance'], description: copy.portalPreferences },
+];
+---
+
+<CommercialLayout
+  title={copy.title}
+  description={copy.description}
+  branded={{ name: 'Harbor Living', kind: 'legal', route: cookiesRoute(locale) }}
+  languageRoutes={languageRoutes}
+>
+  <Header routes={routes} />
+  <main id="contenido" class="cookie-notice">
+    <div class="cookie-notice-content">
+      <h1>{copy.title}</h1>
+      <p>{copy.description}</p>
+      {locale !== 'en' && <p><a href={cookiesRoute('en')} hreflang="en">{legalUI[locale].original}</a></p>}
+
+      <section aria-labelledby="cookies-public-title">
+        <h2 id="cookies-public-title">{copy.siteTitle}</h2>
+        <dl>
+          <dt><code>{CONSENT_STORAGE_KEY}</code></dt>
+          <dd>{copy.siteChoice}</dd>
+        </dl>
+      </section>
+
+      <section aria-labelledby="cookies-portal-title">
+        <h2 id="cookies-portal-title">{copy.portalTitle}</h2>
+        <dl>
+          {portalStorage.map(({ names, description }) => (
+            <div>
+              <dt>{names.map((name) => <code>{name}</code>)}</dt>
+              <dd>{description}</dd>
+            </div>
+          ))}
+        </dl>
+        <p>{copy.appStorage}</p>
+      </section>
+
+      <section aria-labelledby="cookies-measurement-title">
+        <h2 id="cookies-measurement-title">{copy.measurementTitle}</h2>
+        <p>{provider === 'none' ? copy.measurementOff : copy.measurementOn}</p>
+        {provider === 'ga4' && (
+          <dl>
+            <dt><code>{ANALYTICS_COOKIE_PREFIX}_*</code></dt>
+            <dd>{copy.gaCookies}</dd>
+          </dl>
+        )}
+        {provider === 'gtm' && <p>{copy.tagManager}</p>}
+        <button type="button" data-consent-open aria-haspopup="dialog" aria-controls="cookie-settings" hidden>{copy.settings}</button>
+      </section>
+
+      <section aria-labelledby="cookies-contact-title">
+        <h2 id="cookies-contact-title">{copy.contactTitle}</h2>
+        <p><a href={`mailto:${cookiesContact}`}>{cookiesContact}</a></p>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</CommercialLayout>
+
+<style>
+  .cookie-notice {
+    background: var(--paper);
+    color: var(--ink);
+    padding-block: clamp(7rem, 14vw, 10rem) clamp(3rem, 9vw, 6rem);
+  }
+  .cookie-notice-content {
+    width: min(47rem, calc(100% - 2.5rem));
+    margin-inline: auto;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.12;
+    margin-block: 0 1rem;
+  }
+  h2 {
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+    margin-block: 0 .75rem;
+  }
+  section {
+    border-block-start: 1px solid var(--line);
+    margin-block-start: 2rem;
+    padding-block-start: 1.5rem;
+  }
+  dl > div + div { margin-block-start: 1rem; }
+  dt { display: flex; flex-wrap: wrap; gap: .2em .9em; font-weight: 600; }
+  dd { margin: .25rem 0 0; }
+  a { color: var(--blue-dark); text-decoration: underline; text-underline-offset: .2em; }
+  button {
+    min-height: 44px;
+    padding: .55rem .9rem;
+    border: 1px solid var(--blue-dark);
+    border-radius: .35rem;
+    background: transparent;
+    color: var(--blue-dark);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button:hover { background: #3558b00b; }
+</style>
