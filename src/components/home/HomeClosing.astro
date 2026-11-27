@@ -56,7 +56,7 @@ const locale = getLocale(Astro.url.pathname);
         <p>{site.sharedCopy[locale].brandRelationship}</p>
       </div>
       <p>{ui.footer.scope}</p>
-      <LegalLinks />
+      <LegalLinks showHealthAccountDeletion />
       <button type="button" class="hw-link" data-consent-open hidden>
         {ui.footer.measurement}
       </button>

@@ -1,0 +1,100 @@
+---
+import CommercialLayout from '../../layouts/CommercialLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getPageRoutes } from '../../lib/content';
+import { locales } from '../../lib/i18n';
+import { termsRoute } from '../../lib/legal';
+import {
+  accountDeletionCopy,
+  accountDeletionEmail,
+  accountDeletionMailto,
+  accountDeletionRoute,
+} from '../../lib/account-deletion';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale }, props: { locale } }));
+}
+
+const { locale } = Astro.props;
+const copy = accountDeletionCopy[locale];
+const routes = await getPageRoutes(locale);
+const languageRoutes = locales.map((lang) => ({ locale: lang, route: accountDeletionRoute(lang) }));
+---
+
+<CommercialLayout
+  title={copy.title}
+  description={copy.description}
+  branded={{ name: 'Harbor Health', kind: 'brand', route: accountDeletionRoute(locale) }}
+  languageRoutes={languageRoutes}
+>
+  <Header routes={routes} />
+  <main id="contenido" class="deletion-page">
+    <div class="deletion-content">
+      <h1>{copy.title}</h1>
+      <p>{copy.description}</p>
+      <a class="request-deletion" href={accountDeletionMailto(locale)}>{copy.action}</a>
+      <p>{copy.addressLabel} <bdi>{accountDeletionEmail}</bdi>. {copy.subjectLabel} <q>{copy.subject}</q>.</p>
+      <p>{copy.instructions}</p>
+      <p>{copy.privacy}</p>
+
+      <section aria-labelledby="deletion-data-title">
+        <h2 id="deletion-data-title">{copy.dataTitle}</h2>
+        <p>{copy.retention}</p>
+        <p><a href={`${termsRoute(locale, 'harbor-health')}#clause-10-3`}>{copy.terms}</a></p>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</CommercialLayout>
+
+<style>
+  .deletion-page {
+    background: #f3f7fa;
+    color: #061a33;
+    padding-block: clamp(7rem, 14vw, 10rem) clamp(3rem, 9vw, 6rem);
+  }
+  .deletion-content {
+    width: min(42rem, calc(100% - 2.5rem));
+    margin-inline: auto;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.12;
+    margin: 0 0 1rem;
+  }
+  h2 {
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+    margin: 0 0 .75rem;
+  }
+  section {
+    border-block-start: 1px solid #ccd6df;
+    margin-block-start: 2rem;
+    padding-block-start: 1.5rem;
+  }
+  a {
+    color: #3558b0;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+  .request-deletion {
+    display: inline-flex;
+    align-items: center;
+    min-height: 3rem;
+    padding: .65rem 1rem;
+    border-radius: .35rem;
+    background: #3558b0;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .request-deletion:hover {
+    background: #28478f;
+  }
+  a:focus-visible {
+    outline: 3px solid #3558b0;
+    outline-offset: 3px;
+  }
+</style>

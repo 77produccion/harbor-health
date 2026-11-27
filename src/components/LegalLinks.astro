@@ -1,20 +1,31 @@
 ---
 import { getLocale } from '../lib/i18n';
 import { legalUI, termsDocuments, termsRoute, termsSlugs } from '../lib/legal';
+import { accountDeletionCopy, accountDeletionRoute } from '../lib/account-deletion';
 
+interface Props { showHealthAccountDeletion?: boolean }
+const { showHealthAccountDeletion = false } = Astro.props;
 const locale = getLocale(Astro.url.pathname);
 const { title } = legalUI[locale];
+const currentRoute = Astro.url.pathname.replace(/\/?$/, '/');
+const deletionRoute = accountDeletionRoute(locale);
+const deletionCopy = accountDeletionCopy[locale];
 ---
 
-<nav class="legal-links" aria-label={title}>
+<nav class="legal-links" aria-label={showHealthAccountDeletion ? deletionCopy.navigation : title}>
   {termsSlugs.map((slug) => {
     const route = termsRoute(locale, slug);
     return (
-      <a href={route} aria-current={Astro.url.pathname.replace(/\/?$/, '/') === route ? 'page' : undefined}>
+      <a href={route} aria-current={currentRoute === route ? 'page' : undefined}>
         {title} · {termsDocuments[slug].brand}
       </a>
     );
   })}
+  {showHealthAccountDeletion && (
+    <a href={deletionRoute} aria-current={currentRoute === deletionRoute ? 'page' : undefined}>
+      {deletionCopy.title}
+    </a>
+  )}
 </nav>
 
 <style>
