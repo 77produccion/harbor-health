@@ -41,6 +41,8 @@ const languageRoutes = locales.map((lang) => ({ locale: lang, route: accountDele
       <section aria-labelledby="deletion-data-title">
         <h2 id="deletion-data-title">{copy.dataTitle}</h2>
         <p>{copy.retention}</p>
+        <p>{copy.auditRetention}</p>
+        <p>{copy.familyScope}</p>
         <p><a href={`${termsRoute(locale, 'harbor-health')}#clause-10-3`}>{copy.terms}</a></p>
       </section>
     </div>

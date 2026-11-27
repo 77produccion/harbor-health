@@ -14,6 +14,8 @@
       "privacy": "Evita enviar contraseñas, resultados médicos o documentos adjuntos.",
       "dataTitle": "Qué ocurre con tus datos",
       "retention": "Una vez cerrada la cuenta, Harbor Health elimina tus resultados y explicaciones en un plazo de 30 días, salvo que la ley exija conservarlos por más tiempo.",
+      "auditRetention": "Para fines de auditoría, Harbor Health conserva registros de seguridad y una referencia interna de la cuenta sin credenciales.",
+      "familyScope": "Si también quieres eliminar tu cuenta de Harbor Family, solicítalo por separado.",
       "terms": "Consulta los términos de Harbor Health sobre el cierre de la cuenta"
     },
     "en": {
@@ -29,6 +31,8 @@
       "privacy": "Keep passwords, medical results and attachments out of your email.",
       "dataTitle": "What happens to your data",
       "retention": "After your account closes, Harbor Health deletes your results and explanations within 30 days, unless the law requires longer retention.",
+      "auditRetention": "For auditing, Harbor Health retains security records and an internal account reference without credentials.",
+      "familyScope": "If you also want to delete your Harbor Family account, submit a separate request.",
       "terms": "Read the Harbor Health terms on account closure"
     },
     "nl": {
@@ -44,6 +48,8 @@
       "privacy": "Stuur geen wachtwoorden, medische uitslagen of bijlagen mee.",
       "dataTitle": "Wat er met je gegevens gebeurt",
       "retention": "Nadat je account is gesloten, verwijdert Harbor Health je uitslagen en uitleg binnen 30 dagen, tenzij de wet voorschrijft dat die langer moeten worden bewaard.",
+      "auditRetention": "Voor audits bewaart Harbor Health beveiligingslogboeken en een interne accountreferentie zonder inloggegevens.",
+      "familyScope": "Wil je ook je Harbor Family-account verwijderen? Dien dan een apart verzoek in.",
       "terms": "Lees de voorwaarden van Harbor Health over het sluiten van je account"
     },
     "fr": {
@@ -59,6 +65,8 @@
       "privacy": "N’envoyez ni mot de passe, ni résultats médicaux, ni pièce jointe.",
       "dataTitle": "Ce qu’il advient de vos données",
       "retention": "Une fois votre compte fermé, Harbor Health supprime vos résultats et leurs explications dans un délai de 30 jours, sauf si la loi exige de les conserver plus longtemps.",
+      "auditRetention": "À des fins d’audit, Harbor Health conserve des journaux de sécurité et un identifiant interne de compte sans données de connexion.",
+      "familyScope": "Si vous souhaitez aussi supprimer votre compte Harbor Family, faites une demande distincte.",
       "terms": "Consulter les conditions de Harbor Health sur la fermeture du compte"
     },
     "pt": {
@@ -74,6 +82,8 @@
       "privacy": "Evite enviar senhas, resultados médicos ou anexos.",
       "dataTitle": "O que acontece com seus dados",
       "retention": "Após o encerramento da conta, o Harbor Health exclui seus resultados e explicações em até 30 dias, salvo se a lei exigir que sejam mantidos por mais tempo.",
+      "auditRetention": "Para fins de auditoria, o Harbor Health mantém registros de segurança e uma referência interna da conta sem credenciais de acesso.",
+      "familyScope": "Se também quiser excluir sua conta do Harbor Family, envie uma solicitação separada.",
       "terms": "Consulte os termos do Harbor Health sobre o encerramento da conta"
     },
     "de": {
@@ -89,6 +99,8 @@
       "privacy": "Sende keine Passwörter, medizinischen Befunde oder Anhänge.",
       "dataTitle": "Was mit deinen Daten passiert",
       "retention": "Nach der Schließung deines Kontos löscht Harbor Health deine Ergebnisse und Erläuterungen innerhalb von 30 Tagen, sofern das Gesetz keine längere Aufbewahrung verlangt.",
+      "auditRetention": "Für Prüfzwecke speichert Harbor Health Sicherheitsprotokolle und eine interne Kontoreferenz ohne Zugangsdaten.",
+      "familyScope": "Wenn du auch dein Harbor Family-Konto löschen möchtest, stelle dafür einen eigenen Antrag.",
       "terms": "Lies die Bedingungen von Harbor Health zur Kontoschließung"
     },
     "pap": {
@@ -104,6 +116,8 @@
       "privacy": "No manda kontraseña, resultado médiko ni dokumento atachá.",
       "dataTitle": "Loke ta pasa ku bo datonan",
       "retention": "Despues ku e kuenta sera, Harbor Health ta eliminá bo resultadonan i splikashonnan den 30 dia, a ménos ku lei eksigí pa warda nan mas tempu.",
+      "auditRetention": "Pa auditoria, Harbor Health ta warda registronan di seguridat i un referensia interno di kuenta sin datonan di akseso.",
+      "familyScope": "Si bo ke eliminá bo kuenta di Harbor Family tambe, manda un petishon separá.",
       "terms": "Lesa e kondishonnan di Harbor Health tokante sera bo kuenta"
     }
   }

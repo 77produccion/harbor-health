@@ -22,6 +22,8 @@ for (const [locale, copy] of Object.entries(content.translations)) {
     await expect(main.getByText('info@myharborliving.com', { exact: true })).toBeVisible();
     await expect(main.getByText(copy.subject, { exact: true })).toBeVisible();
     await expect(main.getByText(copy.retention)).toBeVisible();
+    await expect(main.getByText(copy.auditRetention)).toBeVisible();
+    await expect(main.getByText(copy.familyScope)).toBeVisible();
     await expect(page.getByRole('contentinfo').getByRole('link', { name: copy.title })).toHaveAttribute('aria-current', 'page');
     await page.locator('.language-trigger').click();
     for (const translated of Object.keys(content.translations)) {
