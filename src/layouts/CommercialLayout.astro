@@ -10,6 +10,7 @@ import '../styles/site-header.css';
 import '../styles/cinematic.css';
 import '../styles/motion-policy.css';
 import SeoHead from '../components/SeoHead.astro';
+import Consent from '../components/home/Consent.astro';
 import LanguageSelector from '../components/LanguageSelector.astro';
 import { getLocale } from '../lib/i18n';
 interface Props {
@@ -35,6 +36,7 @@ const locale = getLocale(Astro.url.pathname);
   </head>
   <body class="cinematic-site">
     <slot />
+    <Consent />
     <LanguageSelector translations={languageRoutes ?? branded?.alternates} />
     <script>
       import { initMotion } from '../scripts/motion';

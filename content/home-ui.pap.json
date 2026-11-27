@@ -39,20 +39,28 @@
   },
   "footer": {
     "relationship": "Un produkto di Harbor Living.",
-    "measurement": "Preferensianan di midimentu",
+    "measurement": "Ajustenan di cookies",
+    "legal": "Informashon legal i privasidat",
     "copyright": "Harbor Health",
     "scope": "Informashon edukativo. No ta hasi diagnóstiko ni rekomendá tratamentu.",
     "preview": "Kontenido komersial bou di revishon."
   },
   "consent": {
-    "title": "Bo ta skohe kiko ta wordu midí",
-    "description": "Midimentu opshonal ta yuda komprondé uso di e wèpsait. Nos no ta manda dokumentonan, resultadonan, preguntanan skirbí ni datonan di salú pa análisi.",
+    "title": "Cookies i midimentu",
+    "description": "Ku bo pèrmit, nos ta midi bishita i interakshon riba e página di inicio di Harbor Health.",
     "accept": "Permití midimentu",
     "reject": "Solamente nesesario",
     "close": "Sera preferensianan",
-    "unconfigured": "E bista aki no tin un proveedó di análisi konfigurá. E no ta manda eventonan na servisio eksterno.",
+    "unconfigured": "Midimentu ta desaktivá.",
     "privacySignal": "Bo nabegadó ta pidi pa no sigui bo. Nos ta respetá e preferensia ei.",
-    "request": "Bo ta permití midí uso di e wèpsait? Midimentu ta opshonal."
+    "request": "Nos por midi bishita i interakshon riba e página di inicio di Harbor Health?",
+    "notice": "Aviso di cookies",
+    "necessary": "Almasenamentu nesesario",
+    "necessaryDescription": "Bo nabegadó ta warda bo desishon tokante privasidat pa próksimo bishitanan.",
+    "optional": "Midimentu opshonal",
+    "statusAccepted": "Bo a permití midimentu.",
+    "statusRejected": "Solamente almasenamentu nesesario.",
+    "statusUnset": "Bo no a skohe ainda."
   },
   "a11y": {
     "skip": "Bai na kontenido",

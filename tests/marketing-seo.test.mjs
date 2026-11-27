@@ -1,6 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { safeEvent, safeAttribution, measurementConfig, readConsent } from '../src/lib/marketing-policy.mjs';
+import {
+  CONSENT_VALIDITY_MS,
+  analyticsCookieNames,
+  safeEvent,
+  safeAttribution,
+  measurementConfig,
+  readConsent,
+} from '../src/lib/marketing-policy.mjs';
 import { resolveSiteUrl, buildMetadata, serializeJsonLd, publicKnowledge } from '../src/lib/seo-policy.mjs';
 
 test('eventos solo admiten propiedades enumeradas y nunca texto clínico', () => {
@@ -17,7 +24,30 @@ test('el consentimiento ausente, vencido o fechado en el futuro no activa medici
   assert.equal(readConsent({ version: 1, choice: 'accepted' }, now), null);
   assert.equal(readConsent({ version: 1, choice: 'accepted', at: now + 1 }, now), null);
   assert.equal(readConsent({ version: 1, choice: 'accepted', at: now - 181 * 86400000 }, now), null);
+  assert.equal(readConsent({ version: 1, choice: 'accepted', at: now - CONSENT_VALIDITY_MS }, now), null);
   assert.equal(readConsent({ version: 1, choice: 'accepted', at: now - 1000 }, now), 'accepted');
+  assert.equal(readConsent({ version: 1, choice: 'rejected', at: now - 1000 }, now), 'rejected');
+});
+
+test('cada proveedor de medición exige su propio permiso explícito', () => {
+  const now = 1800000000000;
+  const accepted = { version: 1, choice: 'accepted', at: now - 1000 };
+  const configured = 'ga4:G-TEST123';
+  assert.equal(readConsent(accepted, now, configured), null);
+  assert.equal(readConsent({ ...accepted, provider: 'gtm:GTM-OTHER' }, now, configured), null);
+  assert.equal(readConsent({ ...accepted, provider: configured }, now, configured), 'accepted');
+  assert.equal(readConsent({ ...accepted, choice: 'rejected' }, now, configured), 'rejected');
+});
+
+test('la retirada solo alcanza las cookies de medición con el prefijo de Harbor Health', () => {
+  const cookies = 'session_token=private; _ga=external; _ga_X=external; harbor_health_language=es; '
+    + 'harbor_health_ga=client; harbor_health_ga_ID24=a=b; harbor_health__ga_GA3=other; '
+    + 'harbor_health_ga_other_cookie=retained; clinic_harbor_health_ga=retained';
+  assert.deepEqual(analyticsCookieNames(cookies), [
+    'harbor_health_ga',
+    'harbor_health_ga_ID24',
+    'harbor_health__ga_GA3',
+  ]);
 });
 
 test('atribución ignora parámetros desconocidos, click IDs y campañas no autorizadas', () => {

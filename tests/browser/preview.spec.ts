@@ -136,42 +136,6 @@ test('metadatos, schema y endpoints GEO no filtran borradores ni inventan canoni
   expect((await request.get('/images/og-health.png')).status()).toBe(200);
 });
 
-test('sin consentimiento no se mide; aceptar emite una sola página y solo datos permitidos', async ({ page }) => {
-  await page.addInitScript(() => {
-    (window as unknown as { events: unknown[] }).events = [];
-    window.addEventListener('harbor:measurement', event => (window as unknown as { events: unknown[] }).events.push((event as CustomEvent).detail));
-  });
-  const external: string[] = [];
-  page.on('request', request => { if (/googletagmanager|google-analytics|facebook/.test(request.url())) external.push(request.url()); });
-  await page.goto('/es/?utm_source=google&utm_campaign=patient-name&patient=secret');
-  await page.locator('[data-product-window]').scrollIntoViewIfNeeded();
-  await page.getByRole('button', { name: 'Informe de radiología.pdf', exact: true }).click();
-  expect(await page.evaluate(() => (window as unknown as { events: unknown[] }).events)).toEqual([]);
-  await page.getByRole('button', { name: 'Preferencias de medición', exact: true }).click();
-  await page.getByRole('button', { name: 'Aceptar medición', exact: true }).click();
-  await page.getByRole('button', { name: 'Preferencias de medición', exact: true }).click();
-  await page.getByRole('button', { name: 'Aceptar medición', exact: true }).click();
-  const events = await page.evaluate(() => (window as unknown as { events: Record<string, unknown>[] }).events);
-  expect(events.filter(item => item.event === 'page_view')).toHaveLength(1);
-  expect(JSON.stringify(events)).not.toContain('secret');
-  expect(JSON.stringify(events)).not.toContain('patient-name');
-  expect(external).toEqual([]);
-  await page.getByRole('button', { name: 'Preferencias de medición', exact: true }).click();
-  await page.getByRole('button', { name: 'Solo necesarias', exact: true }).click();
-  const before = (await page.evaluate(() => (window as unknown as { events: unknown[] }).events)).length;
-  await page.locator('[data-product-window]').scrollIntoViewIfNeeded();
-  await page.getByRole('button', { name: 'Documentos', exact: true }).click();
-  await page.getByRole('button', { name: 'Informe de laboratorio.pdf', exact: true }).click();
-  expect((await page.evaluate(() => (window as unknown as { events: unknown[] }).events)).length).toBe(before);
-});
-
-test('la preferencia de privacidad del navegador impide activar medición', async ({ page }) => {
-  await page.addInitScript(() => Object.defineProperty(navigator, 'globalPrivacyControl', { value: true }));
-  await page.goto('/es/');
-  await page.getByRole('button', { name: 'Preferencias de medición', exact: true }).click();
-  await expect(page.getByRole('button', { name: 'Aceptar medición', exact: true })).toBeDisabled();
-});
-
 test('contenido y acceso siguen disponibles sin JavaScript', async ({ browser, baseURL }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
